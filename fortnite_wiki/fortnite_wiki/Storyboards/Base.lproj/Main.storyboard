@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wLQ-YX-0dw">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BurbankBigCondensed-Bold.otf">
+            <string>BurbankBigCondensed-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--weapons-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="weapons" id="BYZ-38-t0r" customClass="WeaponViewController" customModule="fortnite_wiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="WEAPONS" id="X8h-eA-3o9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="133.5832083958021"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vgj-jM-vbs">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wLQ-YX-0dw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="fill" id="bmz-gl-MPq">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="selectedImageTintColor" red="1" green="0.70739477569999998" blue="0.066106098739999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gli-Ab-9Yi" kind="relationship" relationship="viewControllers" id="Xcq-yA-WTz"/>
+                        <segue destination="Nue-w2-LlX" kind="relationship" relationship="viewControllers" id="f8T-TA-0eS"/>
+                        <segue destination="gYa-yz-JnT" kind="relationship" relationship="viewControllers" id="K22-b5-bj9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8C-w8-3wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="134"/>
+        </scene>
+        <!--Weapons-->
+        <scene sceneID="K8t-Yp-F6u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gli-Ab-9Yi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weapons" id="I1D-mL-Lg4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3qh-NE-45u">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4FR-MX-ngU">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hax-ME-sbW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1t-7y-dxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="134"/>
+        </scene>
+        <!--ITEMS-->
+        <scene sceneID="ocj-qW-Rag">
+            <objects>
+                <viewController id="tLl-Wy-8sT" customClass="ItemsViewController" customModule="fortnite_wiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q1K-GO-7qK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zor-Q5-81C"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ITEMS" id="6fd-9v-nn9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7If-he-h2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="949"/>
+        </scene>
+        <!--StyleGuide-->
+        <scene sceneID="oEn-qc-MLO">
+            <objects>
+                <viewController id="gYa-yz-JnT" customClass="StyleGuideViewController" customModule="fortnite_wiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="myK-mF-cZx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burbank Big Condensed Bold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLn-Ah-4y5">
+                                <rect key="frame" x="16" y="85" width="246" height="24"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary color : F6D844" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sT6-pW-gon">
+                                <rect key="frame" x="16" y="117" width="178" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G8M-As-Y9m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.84705882349999995" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary color : B83DF2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4q-XS-e4L">
+                                <rect key="frame" x="16" y="141" width="178" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="S6y-8O-lmf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
+                                <color key="textColor" red="0.72156862745098038" green="0.23921568627450979" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2B-T2-wWP">
+                                <rect key="frame" x="16" y="182" width="343" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UI Elements :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MB-2P-4J6">
+                                <rect key="frame" x="16" y="232" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P0Y-G8-n7p">
+                                <rect key="frame" x="16" y="317" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Common"/>
+                                    <segment title="Atypical"/>
+                                    <segment title="Rare"/>
+                                    <segment title="Epic"/>
+                                    <segment title="Legendary"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weapons switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDn-lA-fin">
+                                <rect key="frame" x="16" y="284" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BLn-Ah-4y5" firstAttribute="leading" secondItem="sT6-pW-gon" secondAttribute="leading" id="AuL-Yj-PeQ"/>
+                            <constraint firstItem="l8W-KV-oyQ" firstAttribute="trailing" secondItem="BLn-Ah-4y5" secondAttribute="trailing" constant="113" id="Or2-mm-a3w"/>
+                            <constraint firstItem="k4q-XS-e4L" firstAttribute="top" secondItem="sT6-pW-gon" secondAttribute="bottom" constant="3" id="SPY-QR-W8W"/>
+                            <constraint firstItem="l8W-KV-oyQ" firstAttribute="bottom" secondItem="k4q-XS-e4L" secondAttribute="bottom" constant="567" id="V1n-G0-M1i"/>
+                            <constraint firstItem="sT6-pW-gon" firstAttribute="trailing" secondItem="k4q-XS-e4L" secondAttribute="trailing" id="cGY-DI-MQZ"/>
+                            <constraint firstItem="BLn-Ah-4y5" firstAttribute="leading" secondItem="myK-mF-cZx" secondAttribute="leadingMargin" id="dpJ-fQ-xSL"/>
+                            <constraint firstItem="l8W-KV-oyQ" firstAttribute="trailing" secondItem="sT6-pW-gon" secondAttribute="trailing" constant="181" id="hJV-La-OFV"/>
+                            <constraint firstItem="BLn-Ah-4y5" firstAttribute="top" secondItem="l8W-KV-oyQ" secondAttribute="top" constant="41" id="odV-fD-mtR"/>
+                            <constraint firstItem="sT6-pW-gon" firstAttribute="top" secondItem="BLn-Ah-4y5" secondAttribute="bottom" constant="8" symbolic="YES" id="q6J-on-osC"/>
+                            <constraint firstItem="sT6-pW-gon" firstAttribute="leading" secondItem="k4q-XS-e4L" secondAttribute="leading" id="vAZ-so-324"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l8W-KV-oyQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="StyleGuide" badgeValue="Dev" id="Hp0-37-b98"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVl-9k-10R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807.20000000000005" y="1705.4187192118227"/>
+        </scene>
+        <!--Items-->
+        <scene sceneID="KLj-6x-2kt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nue-w2-LlX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Items" id="wWP-Gr-trQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="XqB-dC-or3">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tLl-Wy-8sT" kind="relationship" relationship="rootViewController" id="59z-JQ-9SM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLC-Dx-LFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="949"/>
+        </scene>
+    </scenes>
+</document>
