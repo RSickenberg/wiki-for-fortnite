@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Colors {
+class BackgroundColors {
     var gl:CAGradientLayer!
     
     init() {
@@ -20,4 +20,12 @@ class Colors {
         self.gl.colors = [colorTop, colorBottom]
         self.gl.locations = [0.0, 1.0]
     }
+}
+
+class CommonAtypicalRareColors {
+    
+}
+
+class EpicLegendaryColors {
+    
 }

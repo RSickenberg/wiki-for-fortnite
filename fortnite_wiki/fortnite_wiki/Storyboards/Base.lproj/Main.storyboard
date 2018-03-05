@@ -128,21 +128,18 @@
                                 <color key="textColor" red="0.72156862745098038" green="0.23921568627450979" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2B-T2-wWP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2B-T2-wWP">
                                 <rect key="frame" x="16" y="182" width="343" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UI Elements :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MB-2P-4J6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Elements :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MB-2P-4J6">
                                 <rect key="frame" x="16" y="232" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P0Y-G8-n7p">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P0Y-G8-n7p">
                                 <rect key="frame" x="16" y="317" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Common"/>
                                     <segment title="Atypical"/>
@@ -152,9 +149,44 @@
                                 </segments>
                                 <color key="tintColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weapons switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDn-lA-fin">
-                                <rect key="frame" x="16" y="284" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weapons switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDn-lA-fin">
+                                <rect key="frame" x="58" y="283" width="110" height="21"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common grey :  969696" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-4E-5h8">
+                                <rect key="frame" x="58" y="427" width="157" height="21"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atypical green :  4FCA00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf8-5w-dLa">
+                                <rect key="frame" x="58" y="464" width="160" height="21"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                <color key="textColor" red="0.30980392156862746" green="0.792156862745098" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rare blue :  00BFFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3R-QG-jCS">
+                                <rect key="frame" x="59" y="500" width="123" height="21"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.74901960784313726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epic purple :  B83DF2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ua3-B9-VhV">
+                                <rect key="frame" x="58" y="534" width="138" height="21"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                <color key="textColor" red="0.72156862745098038" green="0.23921568627450979" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legendary Gold :  E6BB0E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-vC-Dwn">
+                                <rect key="frame" x="59" y="568" width="164" height="21"/>
+                                <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                <color key="textColor" red="0.90196078431372551" green="0.73333333333333328" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weapons rank colors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaW-0M-ITh">
+                                <rect key="frame" x="16" y="391" width="140" height="21"/>
                                 <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -162,16 +194,39 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="m3R-QG-jCS" firstAttribute="leading" secondItem="l8W-KV-oyQ" secondAttribute="leading" constant="59" id="0eg-F5-eKZ"/>
+                            <constraint firstItem="EDn-lA-fin" firstAttribute="top" secondItem="5MB-2P-4J6" secondAttribute="bottom" constant="30" id="4AE-bf-Pi7"/>
                             <constraint firstItem="BLn-Ah-4y5" firstAttribute="leading" secondItem="sT6-pW-gon" secondAttribute="leading" id="AuL-Yj-PeQ"/>
+                            <constraint firstItem="p2B-T2-wWP" firstAttribute="trailing" secondItem="myK-mF-cZx" secondAttribute="trailingMargin" id="B0H-MU-Jpn"/>
+                            <constraint firstItem="p2B-T2-wWP" firstAttribute="trailing" secondItem="P0Y-G8-n7p" secondAttribute="trailing" id="Klf-ej-Ju2"/>
                             <constraint firstItem="l8W-KV-oyQ" firstAttribute="trailing" secondItem="BLn-Ah-4y5" secondAttribute="trailing" constant="113" id="Or2-mm-a3w"/>
+                            <constraint firstItem="p2B-T2-wWP" firstAttribute="leading" secondItem="5MB-2P-4J6" secondAttribute="leading" id="QVJ-mG-iQF"/>
+                            <constraint firstItem="EDn-lA-fin" firstAttribute="leading" secondItem="l8W-KV-oyQ" secondAttribute="leading" constant="58" id="Rfe-04-epu"/>
                             <constraint firstItem="k4q-XS-e4L" firstAttribute="top" secondItem="sT6-pW-gon" secondAttribute="bottom" constant="3" id="SPY-QR-W8W"/>
+                            <constraint firstItem="p2B-T2-wWP" firstAttribute="top" secondItem="k4q-XS-e4L" secondAttribute="bottom" constant="20" id="SbX-jP-NAT"/>
+                            <constraint firstItem="l8W-KV-oyQ" firstAttribute="bottom" secondItem="P0Y-G8-n7p" secondAttribute="bottom" constant="384" id="T60-6d-878"/>
                             <constraint firstItem="l8W-KV-oyQ" firstAttribute="bottom" secondItem="k4q-XS-e4L" secondAttribute="bottom" constant="567" id="V1n-G0-M1i"/>
+                            <constraint firstItem="m3R-QG-jCS" firstAttribute="leading" secondItem="bqy-vC-Dwn" secondAttribute="leading" id="Vc4-LR-t67"/>
+                            <constraint firstItem="GFl-4E-5h8" firstAttribute="leading" secondItem="EDn-lA-fin" secondAttribute="leading" id="Y0C-Qc-v8G"/>
+                            <constraint firstItem="P0Y-G8-n7p" firstAttribute="top" secondItem="EDn-lA-fin" secondAttribute="bottom" constant="13" id="bGY-Ly-U6f"/>
+                            <constraint firstItem="yaW-0M-ITh" firstAttribute="leading" secondItem="P0Y-G8-n7p" secondAttribute="leading" id="cDT-4s-pnL"/>
                             <constraint firstItem="sT6-pW-gon" firstAttribute="trailing" secondItem="k4q-XS-e4L" secondAttribute="trailing" id="cGY-DI-MQZ"/>
+                            <constraint firstItem="m3R-QG-jCS" firstAttribute="top" secondItem="uf8-5w-dLa" secondAttribute="bottom" constant="15" id="d61-Xx-c82"/>
                             <constraint firstItem="BLn-Ah-4y5" firstAttribute="leading" secondItem="myK-mF-cZx" secondAttribute="leadingMargin" id="dpJ-fQ-xSL"/>
+                            <constraint firstItem="GFl-4E-5h8" firstAttribute="top" secondItem="yaW-0M-ITh" secondAttribute="bottom" constant="15" id="ewi-pq-0vT"/>
+                            <constraint firstItem="uf8-5w-dLa" firstAttribute="top" secondItem="GFl-4E-5h8" secondAttribute="bottom" constant="16" id="f1c-xH-Y3x"/>
+                            <constraint firstItem="p2B-T2-wWP" firstAttribute="leading" secondItem="k4q-XS-e4L" secondAttribute="leading" id="fvm-i2-94A"/>
                             <constraint firstItem="l8W-KV-oyQ" firstAttribute="trailing" secondItem="sT6-pW-gon" secondAttribute="trailing" constant="181" id="hJV-La-OFV"/>
+                            <constraint firstItem="GFl-4E-5h8" firstAttribute="leading" secondItem="uf8-5w-dLa" secondAttribute="leading" id="kNa-VM-xCU"/>
+                            <constraint firstItem="5MB-2P-4J6" firstAttribute="leading" secondItem="P0Y-G8-n7p" secondAttribute="leading" id="ka0-TQ-r18"/>
+                            <constraint firstItem="yaW-0M-ITh" firstAttribute="top" secondItem="P0Y-G8-n7p" secondAttribute="bottom" constant="46" id="mQ0-EC-W0h"/>
                             <constraint firstItem="BLn-Ah-4y5" firstAttribute="top" secondItem="l8W-KV-oyQ" secondAttribute="top" constant="41" id="odV-fD-mtR"/>
+                            <constraint firstItem="5MB-2P-4J6" firstAttribute="top" secondItem="p2B-T2-wWP" secondAttribute="bottom" constant="48" id="pnh-sz-VHO"/>
                             <constraint firstItem="sT6-pW-gon" firstAttribute="top" secondItem="BLn-Ah-4y5" secondAttribute="bottom" constant="8" symbolic="YES" id="q6J-on-osC"/>
+                            <constraint firstItem="uf8-5w-dLa" firstAttribute="leading" secondItem="ua3-B9-VhV" secondAttribute="leading" id="rA6-OP-kkF"/>
+                            <constraint firstItem="ua3-B9-VhV" firstAttribute="top" secondItem="m3R-QG-jCS" secondAttribute="bottom" constant="13" id="tkm-lB-ley"/>
                             <constraint firstItem="sT6-pW-gon" firstAttribute="leading" secondItem="k4q-XS-e4L" secondAttribute="leading" id="vAZ-so-324"/>
+                            <constraint firstItem="bqy-vC-Dwn" firstAttribute="top" secondItem="ua3-B9-VhV" secondAttribute="bottom" constant="13" id="weK-KZ-rT9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l8W-KV-oyQ"/>
                     </view>

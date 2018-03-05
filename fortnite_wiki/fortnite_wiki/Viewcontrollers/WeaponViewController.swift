@@ -10,7 +10,7 @@ import UIKit
 
 class WeaponViewController: UIViewController {
     
-    let colors = Colors()
+    let colors = BackgroundColors()
 
     override func viewDidLoad() {
         super.viewDidLoad()
