@@ -23,9 +23,9 @@ class BackgroundColors {
 }
 
 class CommonAtypicalRareColors {
-    
+    // TODO: Same as Background Colors but with grey, green and blue value
 }
 
 class EpicLegendaryColors {
-    
+    // TODO: Same as Background Colors but with purple and gold
 }

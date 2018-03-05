@@ -13,11 +13,13 @@
 		073A371D204D7CBA001D4AF5 /* fortnite_wiki.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 073A371B204D7CBA001D4AF5 /* fortnite_wiki.xcdatamodeld */; };
 		073A371F204D7CBB001D4AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073A371E204D7CBB001D4AF5 /* Assets.xcassets */; };
 		073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073A3720204D7CBB001D4AF5 /* LaunchScreen.storyboard */; };
-		073A372F204D8BBF001D4AF5 /* BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A372E204D8BBF001D4AF5 /* BackgroundColors.swift */; };
+		073A372F204D8BBF001D4AF5 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */; };
 		073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */; };
 		073A3736204D8EF5001D4AF5 /* StyleGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3735204D8EF5001D4AF5 /* StyleGuideViewController.swift */; };
 		073A3739204D90B9001D4AF5 /* BurbankBigCondensed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 073A3738204D90B8001D4AF5 /* BurbankBigCondensed-Bold.otf */; };
 		073A373B204D93B5001D4AF5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373A204D93B5001D4AF5 /* DetailsViewController.swift */; };
+		073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373C204DAA34001D4AF5 /* Weapons.swift */; };
+		073A373F204DAB00001D4AF5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373E204DAB00001D4AF5 /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +31,13 @@
 		073A371E204D7CBB001D4AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073A3721204D7CBB001D4AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		073A3723204D7CBB001D4AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		073A372E204D8BBF001D4AF5 /* BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColors.swift; sourceTree = "<group>"; };
+		073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
 		073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		073A3735204D8EF5001D4AF5 /* StyleGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuideViewController.swift; sourceTree = "<group>"; };
 		073A3738204D90B8001D4AF5 /* BurbankBigCondensed-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigCondensed-Bold.otf"; sourceTree = "<group>"; };
 		073A373A204D93B5001D4AF5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		073A373C204DAA34001D4AF5 /* Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
+		073A373E204DAB00001D4AF5 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 		073A372B204D7D19001D4AF5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				073A373C204DAA34001D4AF5 /* Weapons.swift */,
+				073A373E204DAB00001D4AF5 /* Items.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,7 +124,7 @@
 		073A372D204D8BB6001D4AF5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				073A372E204D8BBF001D4AF5 /* BackgroundColors.swift */,
+				073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,9 +219,11 @@
 			files = (
 				073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */,
 				073A3717204D7CBA001D4AF5 /* WeaponViewController.swift in Sources */,
-				073A372F204D8BBF001D4AF5 /* BackgroundColors.swift in Sources */,
+				073A372F204D8BBF001D4AF5 /* ColorsGradient.swift in Sources */,
 				073A371D204D7CBA001D4AF5 /* fortnite_wiki.xcdatamodeld in Sources */,
+				073A373F204DAB00001D4AF5 /* Items.swift in Sources */,
 				073A373B204D93B5001D4AF5 /* DetailsViewController.swift in Sources */,
+				073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */,
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,
 				073A3736204D8EF5001D4AF5 /* StyleGuideViewController.swift in Sources */,
 			);
