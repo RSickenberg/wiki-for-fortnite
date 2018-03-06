@@ -17,4 +17,6 @@ class Items: NSObject {
         
         ItemsList = [0:"nil"]
     }
+    
+    // Init with demo data
 }
