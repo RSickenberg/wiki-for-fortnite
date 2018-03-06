@@ -4,6 +4,7 @@
 //
 //  Created by Romain Sickenberg on 05.03.18.
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
+//  TODO : Update this code with pod 'ChameleonFramework'
 //
 
 import Foundation

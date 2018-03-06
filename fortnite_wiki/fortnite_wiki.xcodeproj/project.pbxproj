@@ -21,8 +21,7 @@
 		073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373C204DAA34001D4AF5 /* Weapons.swift */; };
 		073A373F204DAB00001D4AF5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373E204DAB00001D4AF5 /* Items.swift */; };
 		0749725D204E7169006048C6 /* DetailsForObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749725C204E7169006048C6 /* DetailsForObject.swift */; };
-		075A646C204EBDCE0037BFCE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 075A646B204EBDCE0037BFCE /* Podfile */; };
-		B39427EFA9082B7E7D389C4E /* Pods_fortnite_wiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABD0565788192566CF7B2FF /* Pods_fortnite_wiki.framework */; };
+		1A05834039A5E23DEF24A5E2 /* Pods_fortnite_wiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98597B857F35F0A60A7C1736 /* Pods_fortnite_wiki.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +41,9 @@
 		073A373C204DAA34001D4AF5 /* Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
 		073A373E204DAB00001D4AF5 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		0749725C204E7169006048C6 /* DetailsForObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsForObject.swift; sourceTree = "<group>"; };
-		075A646B204EBDCE0037BFCE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		1481948235EC324636F16834 /* Pods-fortnite_wiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortnite_wiki.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki.debug.xcconfig"; sourceTree = "<group>"; };
-		8ABD0565788192566CF7B2FF /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C27BA26EB7EF6FAE05E84964 /* Pods-fortnite_wiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortnite_wiki.release.xcconfig"; path = "Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki.release.xcconfig"; sourceTree = "<group>"; };
+		98597B857F35F0A60A7C1736 /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE6DE1288F159920BD2D6F2F /* Pods-fortnite_wiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortnite_wiki.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki.debug.xcconfig"; sourceTree = "<group>"; };
+		E5E3AA7A968D5C8402676C3A /* Pods-fortnite_wiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortnite_wiki.release.xcconfig"; path = "../Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39427EFA9082B7E7D389C4E /* Pods_fortnite_wiki.framework in Frameworks */,
+				1A05834039A5E23DEF24A5E2 /* Pods_fortnite_wiki.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +63,8 @@
 			children = (
 				073A3713204D7CBA001D4AF5 /* fortnite_wiki */,
 				073A3712204D7CBA001D4AF5 /* Products */,
-				6D1E387BA8BCABAC4CBE7762 /* Pods */,
-				DF7D679B42741B89B947D545 /* Frameworks */,
+				B2EC384F9A8649C39A32BEC8 /* Pods */,
+				6C3915AA364A1D1A55999915 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,7 +81,6 @@
 			children = (
 				073A3730204D8E14001D4AF5 /* Protocols */,
 				073A3714204D7CBA001D4AF5 /* AppDelegate.swift */,
-				075A646B204EBDCE0037BFCE /* Podfile */,
 				073A372D204D8BB6001D4AF5 /* Helpers */,
 				073A372B204D7D19001D4AF5 /* Models */,
 				073A372A204D7CDC001D4AF5 /* Viewcontrollers */,
@@ -157,21 +154,21 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		6D1E387BA8BCABAC4CBE7762 /* Pods */ = {
+		6C3915AA364A1D1A55999915 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1481948235EC324636F16834 /* Pods-fortnite_wiki.debug.xcconfig */,
-				C27BA26EB7EF6FAE05E84964 /* Pods-fortnite_wiki.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DF7D679B42741B89B947D545 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8ABD0565788192566CF7B2FF /* Pods_fortnite_wiki.framework */,
+				98597B857F35F0A60A7C1736 /* Pods_fortnite_wiki.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2EC384F9A8649C39A32BEC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5E3AA7A968D5C8402676C3A /* Pods-fortnite_wiki.release.xcconfig */,
+				DE6DE1288F159920BD2D6F2F /* Pods-fortnite_wiki.debug.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 073A3726204D7CBB001D4AF5 /* Build configuration list for PBXNativeTarget "fortnite_wiki" */;
 			buildPhases = (
-				B1BCA11289F90BF66CFB3A93 /* [CP] Check Pods Manifest.lock */,
+				2BEDFAFCD5702485F0A7C387 /* [CP] Check Pods Manifest.lock */,
 				073A370D204D7CBA001D4AF5 /* Sources */,
 				073A370E204D7CBA001D4AF5 /* Frameworks */,
 				073A370F204D7CBA001D4AF5 /* Resources */,
-				8998CFBE051B8EE5BA938D20 /* [CP] Embed Pods Frameworks */,
-				EB2582271D768235FA4E8720 /* [CP] Copy Pods Resources */,
+				1A97CD785BEED4B085C5DF53 /* [CP] Embed Pods Frameworks */,
+				F94F736ABE48C5892FE2EBA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				075A646C204EBDCE0037BFCE /* Podfile in Resources */,
 				073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */,
 				073A371F204D7CBB001D4AF5 /* Assets.xcassets in Resources */,
 				073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */,
@@ -247,13 +243,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8998CFBE051B8EE5BA938D20 /* [CP] Embed Pods Frameworks */ = {
+		1A97CD785BEED4B085C5DF53 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -262,10 +258,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B1BCA11289F90BF66CFB3A93 /* [CP] Check Pods Manifest.lock */ = {
+		2BEDFAFCD5702485F0A7C387 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,7 +279,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB2582271D768235FA4E8720 /* [CP] Copy Pods Resources */ = {
+		F94F736ABE48C5892FE2EBA3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,7 +291,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -340,63 +336,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		073A3724204D7CBB001D4AF5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
 		073A3725204D7CBB001D4AF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,25 +386,9 @@
 			};
 			name = Release;
 		};
-		073A3727204D7CBB001D4AF5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1481948235EC324636F16834 /* Pods-fortnite_wiki.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8268QCG5CG;
-				INFOPLIST_FILE = "$(SRCROOT)/fortnite_wiki/Ressources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.romainsickenberg.fortnite-wiki";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		073A3728204D7CBB001D4AF5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C27BA26EB7EF6FAE05E84964 /* Pods-fortnite_wiki.release.xcconfig */;
+			baseConfigurationReference = E5E3AA7A968D5C8402676C3A /* Pods-fortnite_wiki.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,14 +402,80 @@
 			};
 			name = Release;
 		};
+		079C95E2204EC5EE006199C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		079C95E3204EC5EE006199C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6DE1288F159920BD2D6F2F /* Pods-fortnite_wiki.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8268QCG5CG;
+				INFOPLIST_FILE = "$(SRCROOT)/fortnite_wiki/Ressources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romainsickenberg.fortnite-wiki";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		073A370C204D7CBA001D4AF5 /* Build configuration list for PBXProject "fortnite_wiki" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				073A3724204D7CBB001D4AF5 /* Debug */,
 				073A3725204D7CBB001D4AF5 /* Release */,
+				079C95E2204EC5EE006199C8 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -494,8 +483,8 @@
 		073A3726204D7CBB001D4AF5 /* Build configuration list for PBXNativeTarget "fortnite_wiki" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				073A3727204D7CBB001D4AF5 /* Debug */,
 				073A3728204D7CBB001D4AF5 /* Release */,
+				079C95E3204EC5EE006199C8 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
