@@ -82,6 +82,7 @@ class Weapons: NSObject {
     }
     
     init(weaponId: Int, weaponName: String, weaponColor: String, weaponImg: String, damage: Int, criticalHitChance: Int, criticalHitDmg: Int, fireRate: Float, magazineSize: Int, range: Int, durability: Int, reloadTime: Float, ammoCost: Int, impact: Int, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateNormal: Float, firingRateBurst: Float, environementDamage: Float, impactDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
+        
         self.weaponId = weaponId
         self.weaponName = weaponName
         self.weaponColor = weaponColor
