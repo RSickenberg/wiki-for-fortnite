@@ -4,5 +4,5 @@
 
 # 0.0.2
 
-- Models & UI ready for dev
+- Models & UI ready for dev & StyleGuide
 - Pods

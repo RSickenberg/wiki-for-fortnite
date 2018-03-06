@@ -21,6 +21,9 @@
 		073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373C204DAA34001D4AF5 /* Weapons.swift */; };
 		073A373F204DAB00001D4AF5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373E204DAB00001D4AF5 /* Items.swift */; };
 		0749725D204E7169006048C6 /* DetailsForObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749725C204E7169006048C6 /* DetailsForObject.swift */; };
+		07B26FE8204ED15C008F9E3A /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = 07B26FE5204ED15C008F9E3A /* changelog.md */; };
+		07B26FE9204ED15C008F9E3A /* toDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07B26FE6204ED15C008F9E3A /* toDo.txt */; };
+		07B26FEA204ED15C008F9E3A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 07B26FE7204ED15C008F9E3A /* README.md */; };
 		1A05834039A5E23DEF24A5E2 /* Pods_fortnite_wiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98597B857F35F0A60A7C1736 /* Pods_fortnite_wiki.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		073A373C204DAA34001D4AF5 /* Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
 		073A373E204DAB00001D4AF5 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		0749725C204E7169006048C6 /* DetailsForObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsForObject.swift; sourceTree = "<group>"; };
+		07B26FE5204ED15C008F9E3A /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = changelog.md; path = ../../../changelog.md; sourceTree = "<group>"; };
+		07B26FE6204ED15C008F9E3A /* toDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = toDo.txt; path = ../../../toDo.txt; sourceTree = "<group>"; };
+		07B26FE7204ED15C008F9E3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
 		98597B857F35F0A60A7C1736 /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6DE1288F159920BD2D6F2F /* Pods-fortnite_wiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortnite_wiki.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki.debug.xcconfig"; sourceTree = "<group>"; };
 		E5E3AA7A968D5C8402676C3A /* Pods-fortnite_wiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortnite_wiki.release.xcconfig"; path = "../Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +133,9 @@
 				073A371E204D7CBB001D4AF5 /* Assets.xcassets */,
 				073A3723204D7CBB001D4AF5 /* Info.plist */,
 				073A371B204D7CBA001D4AF5 /* fortnite_wiki.xcdatamodeld */,
+				07B26FE5204ED15C008F9E3A /* changelog.md */,
+				07B26FE7204ED15C008F9E3A /* README.md */,
+				07B26FE6204ED15C008F9E3A /* toDo.txt */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -233,9 +242,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B26FE8204ED15C008F9E3A /* changelog.md in Resources */,
 				073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */,
 				073A371F204D7CBB001D4AF5 /* Assets.xcassets in Resources */,
+				07B26FEA204ED15C008F9E3A /* README.md in Resources */,
 				073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */,
+				07B26FE9204ED15C008F9E3A /* toDo.txt in Resources */,
 				073A3739204D90B9001D4AF5 /* BurbankBigCondensed-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
