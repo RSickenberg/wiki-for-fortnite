@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A2E7B2050766A00541779 /* WeaponsLevels.swift */; };
+		07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07378F2320506C38008B48D8 /* WeaponsDetails.swift */; };
 		073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3714204D7CBA001D4AF5 /* AppDelegate.swift */; };
 		073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073A3718204D7CBA001D4AF5 /* Main.storyboard */; };
 		073A371D204D7CBA001D4AF5 /* fortnite_wiki.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 073A371B204D7CBA001D4AF5 /* fortnite_wiki.xcdatamodeld */; };
@@ -19,7 +21,7 @@
 		073A373B204D93B5001D4AF5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373A204D93B5001D4AF5 /* DetailsViewController.swift */; };
 		073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373C204DAA34001D4AF5 /* Weapons.swift */; };
 		073A373F204DAB00001D4AF5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373E204DAB00001D4AF5 /* Items.swift */; };
-		0749725D204E7169006048C6 /* DetailsForObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749725C204E7169006048C6 /* DetailsForObject.swift */; };
+		0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749725C204E7169006048C6 /* DetailsForObjects.swift */; };
 		07B26FE8204ED15C008F9E3A /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = 07B26FE5204ED15C008F9E3A /* changelog.md */; };
 		07B26FE9204ED15C008F9E3A /* toDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07B26FE6204ED15C008F9E3A /* toDo.txt */; };
 		07B26FEA204ED15C008F9E3A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 07B26FE7204ED15C008F9E3A /* README.md */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070A2E7B2050766A00541779 /* WeaponsLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsLevels.swift; sourceTree = "<group>"; };
+		07378F2320506C38008B48D8 /* WeaponsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsDetails.swift; sourceTree = "<group>"; };
 		073A3711204D7CBA001D4AF5 /* fortnite_wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortnite_wiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073A3714204D7CBA001D4AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		073A3719204D7CBA001D4AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,7 +46,7 @@
 		073A373A204D93B5001D4AF5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		073A373C204DAA34001D4AF5 /* Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
 		073A373E204DAB00001D4AF5 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
-		0749725C204E7169006048C6 /* DetailsForObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsForObject.swift; sourceTree = "<group>"; };
+		0749725C204E7169006048C6 /* DetailsForObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsForObjects.swift; sourceTree = "<group>"; };
 		07B26FE5204ED15C008F9E3A /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = changelog.md; path = ../../../changelog.md; sourceTree = "<group>"; };
 		07B26FE6204ED15C008F9E3A /* toDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = toDo.txt; path = ../../../toDo.txt; sourceTree = "<group>"; };
 		07B26FE7204ED15C008F9E3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
@@ -64,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07378F2520506C3C008B48D8 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				07378F2320506C38008B48D8 /* WeaponsDetails.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		073A3708204D7CBA001D4AF5 = {
 			isa = PBXGroup;
 			children = (
@@ -119,9 +131,10 @@
 		073A372B204D7D19001D4AF5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				07378F2520506C3C008B48D8 /* Details */,
 				073A373C204DAA34001D4AF5 /* Weapons.swift */,
 				073A373E204DAB00001D4AF5 /* Items.swift */,
-				0749725C204E7169006048C6 /* DetailsForObject.swift */,
+				0749725C204E7169006048C6 /* DetailsForObjects.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */,
+				070A2E7B2050766A00541779 /* WeaponsLevels.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -316,12 +330,14 @@
 				07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */,
 				073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */,
 				073A372F204D8BBF001D4AF5 /* ColorsGradient.swift in Sources */,
-				0749725D204E7169006048C6 /* DetailsForObject.swift in Sources */,
+				0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */,
 				073A371D204D7CBA001D4AF5 /* fortnite_wiki.xcdatamodeld in Sources */,
+				07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */,
 				073A373F204DAB00001D4AF5 /* Items.swift in Sources */,
 				073A373B204D93B5001D4AF5 /* DetailsViewController.swift in Sources */,
 				073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */,
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,
+				070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */,
 				073A3736204D8EF5001D4AF5 /* StyleGuideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

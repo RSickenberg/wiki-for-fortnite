@@ -29,7 +29,6 @@ class DetailsViewController: UIViewController {
         backgroundLayer?.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
     }
-    
 
     /*
     // MARK: - Navigation

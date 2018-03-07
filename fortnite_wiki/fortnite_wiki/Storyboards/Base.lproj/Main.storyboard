@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -82,14 +83,30 @@
                                     <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weaponId" id="Y5F-PF-481">
+                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weaponId" id="Y5F-PF-481" customClass="WeaponCollectionCell" customModule="fortnite_wiki" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ghq-6q-voz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ghq-6q-voz" firstAttribute="width" secondItem="Y5F-PF-481" secondAttribute="height" multiplier="1:1" id="06F-2r-Wey"/>
+                                            <constraint firstItem="ghq-6q-voz" firstAttribute="leading" secondItem="Y5F-PF-481" secondAttribute="leading" id="2Rz-XA-EM3"/>
+                                            <constraint firstItem="ghq-6q-voz" firstAttribute="top" secondItem="Y5F-PF-481" secondAttribute="top" id="KRS-jR-EG5"/>
+                                            <constraint firstAttribute="trailing" secondItem="ghq-6q-voz" secondAttribute="trailing" id="M2c-29-pdx"/>
+                                            <constraint firstAttribute="bottom" secondItem="ghq-6q-voz" secondAttribute="bottom" id="eBe-HG-Vty"/>
+                                            <constraint firstItem="ghq-6q-voz" firstAttribute="leading" secondItem="Y5F-PF-481" secondAttribute="leading" id="j8R-MU-Svm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellimageView" destination="ghq-6q-voz" id="nX3-2O-lPf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -109,7 +126,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="WEAPONS" id="ThC-yU-fPC"/>
                     <connections>
-                        <outlet property="CollectionView" destination="z1h-Hz-J9q" id="oPL-2f-XT3"/>
+                        <outlet property="collectionView" destination="z1h-Hz-J9q" id="oPL-2f-XT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M93-UU-5em" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -227,9 +244,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="gOQ-Is-YiM">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="gOQ-Is-YiM">
                                 <rect key="frame" x="168" y="692" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -237,9 +253,11 @@
                         <constraints>
                             <constraint firstItem="m3R-QG-jCS" firstAttribute="leading" secondItem="l8W-KV-oyQ" secondAttribute="leading" constant="59" id="0eg-F5-eKZ"/>
                             <constraint firstItem="EDn-lA-fin" firstAttribute="top" secondItem="5MB-2P-4J6" secondAttribute="bottom" constant="30" id="4AE-bf-Pi7"/>
+                            <constraint firstItem="gOQ-Is-YiM" firstAttribute="leading" secondItem="l8W-KV-oyQ" secondAttribute="leading" constant="168" id="9OI-jI-9eO"/>
                             <constraint firstItem="BLn-Ah-4y5" firstAttribute="leading" secondItem="sT6-pW-gon" secondAttribute="leading" id="AuL-Yj-PeQ"/>
                             <constraint firstItem="p2B-T2-wWP" firstAttribute="trailing" secondItem="myK-mF-cZx" secondAttribute="trailingMargin" id="B0H-MU-Jpn"/>
                             <constraint firstItem="p2B-T2-wWP" firstAttribute="trailing" secondItem="P0Y-G8-n7p" secondAttribute="trailing" id="Klf-ej-Ju2"/>
+                            <constraint firstItem="gOQ-Is-YiM" firstAttribute="bottom" secondItem="l8W-KV-oyQ" secondAttribute="bottom" id="M1P-H5-bEW"/>
                             <constraint firstItem="l8W-KV-oyQ" firstAttribute="trailing" secondItem="BLn-Ah-4y5" secondAttribute="trailing" constant="113" id="Or2-mm-a3w"/>
                             <constraint firstItem="p2B-T2-wWP" firstAttribute="leading" secondItem="5MB-2P-4J6" secondAttribute="leading" id="QVJ-mG-iQF"/>
                             <constraint firstItem="EDn-lA-fin" firstAttribute="leading" secondItem="l8W-KV-oyQ" secondAttribute="leading" constant="58" id="Rfe-04-epu"/>
@@ -254,6 +272,7 @@
                             <constraint firstItem="sT6-pW-gon" firstAttribute="trailing" secondItem="k4q-XS-e4L" secondAttribute="trailing" id="cGY-DI-MQZ"/>
                             <constraint firstItem="m3R-QG-jCS" firstAttribute="top" secondItem="uf8-5w-dLa" secondAttribute="bottom" constant="15" id="d61-Xx-c82"/>
                             <constraint firstItem="BLn-Ah-4y5" firstAttribute="leading" secondItem="myK-mF-cZx" secondAttribute="leadingMargin" id="dpJ-fQ-xSL"/>
+                            <constraint firstItem="gOQ-Is-YiM" firstAttribute="centerX" secondItem="P0Y-G8-n7p" secondAttribute="centerX" id="dvd-vi-i9N"/>
                             <constraint firstItem="GFl-4E-5h8" firstAttribute="top" secondItem="yaW-0M-ITh" secondAttribute="bottom" constant="15" id="ewi-pq-0vT"/>
                             <constraint firstItem="uf8-5w-dLa" firstAttribute="top" secondItem="GFl-4E-5h8" secondAttribute="bottom" constant="16" id="f1c-xH-Y3x"/>
                             <constraint firstItem="p2B-T2-wWP" firstAttribute="leading" secondItem="k4q-XS-e4L" secondAttribute="leading" id="fvm-i2-94A"/>
@@ -294,23 +313,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ar_burst" translatesAutoresizingMaskIntoConstraints="NO" id="vMs-kN-OB5">
-                                <rect key="frame" x="67" y="44" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="u1U-fV-sbm">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="u1U-fV-sbm">
                                 <rect key="frame" x="168" y="741" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ar_scar" translatesAutoresizingMaskIntoConstraints="NO" id="vMs-kN-OB5">
+                                <rect key="frame" x="112" y="331" width="150" height="150"/>
+                                <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vMs-kN-OB5" firstAttribute="centerY" secondItem="gtJ-uv-aJe" secondAttribute="centerY" id="13j-qp-Sam"/>
+                            <constraint firstItem="vMs-kN-OB5" firstAttribute="centerX" secondItem="u1U-fV-sbm" secondAttribute="centerX" id="AbB-S1-xns"/>
+                            <constraint firstItem="vMs-kN-OB5" firstAttribute="leading" secondItem="cVZ-WL-AWG" secondAttribute="leading" constant="112" id="B3J-Yb-qdl"/>
+                            <constraint firstItem="u1U-fV-sbm" firstAttribute="leading" secondItem="cVZ-WL-AWG" secondAttribute="leading" constant="168" id="H2Z-cd-0Qo"/>
+                            <constraint firstItem="u1U-fV-sbm" firstAttribute="bottom" secondItem="cVZ-WL-AWG" secondAttribute="bottom" id="Rye-35-Ab7"/>
+                            <constraint firstItem="vMs-kN-OB5" firstAttribute="top" secondItem="cVZ-WL-AWG" secondAttribute="top" constant="287" id="cZ7-bX-fdi"/>
+                            <constraint firstItem="vMs-kN-OB5" firstAttribute="centerX" secondItem="gtJ-uv-aJe" secondAttribute="centerX" id="mxH-Rr-Mhc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cVZ-WL-AWG"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="fGz-6C-bM8" appends="YES" id="V3A-03-lNH"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="RIF-Z1-aDT"/>
+                    <connections>
+                        <outlet property="demoWeaponImageView" destination="vMs-kN-OB5" id="aUP-M1-p9Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGE-Tq-cz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="fGz-6C-bM8">
@@ -348,6 +378,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ar_burst" width="42" height="42"/>
+        <image name="ar_scar" width="170" height="170"/>
     </resources>
 </document>
