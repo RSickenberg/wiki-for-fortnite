@@ -12,6 +12,12 @@ class StyleGuideViewController: UIViewController {
     
     let colors = BackgroundColors()
     
+    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+        performSegue(withIdentifier: "more_styleGuide", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
