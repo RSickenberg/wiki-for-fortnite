@@ -13,6 +13,7 @@ class WeaponsDetails: NSObject {
     var detailLevel: Int
     var weaponId: Int
     var damage: Int
+    var damageHead: Double
     var criticalHitChance: Int
     var criticalHitDmg: Int
     var fireRate: Float
@@ -46,6 +47,7 @@ class WeaponsDetails: NSObject {
         detailLevel = 0
         weaponId = 0
         damage = 0
+        damageHead = 0
         criticalHitChance = 0
         criticalHitDmg = 0
         fireRate = 0.0
@@ -75,11 +77,12 @@ class WeaponsDetails: NSObject {
         super.init()
     }
     
-    init(detailLevel:Int, weaponId: Int, damage: Int, criticalHitChance: Int, criticalHitDmg: Int, fireRate: Float, magazineSize: Int, range: Int, durability: Int, reloadTime: Float, ammoCost: Int, impact: Int, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateNormal: Float, firingRateBurst: Float, environementDamage: Float, impactDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
+    init(detailLevel:Int, weaponId: Int, damage: Int, damageHead: Double, criticalHitChance: Int, criticalHitDmg: Int, fireRate: Float, magazineSize: Int, range: Int, durability: Int, reloadTime: Float, ammoCost: Int, impact: Int, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateNormal: Float, firingRateBurst: Float, environementDamage: Float, impactDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
 
         self.detailLevel = detailLevel
         self.weaponId = weaponId
         self.damage = damage
+        self.damageHead = damageHead
         self.criticalHitChance = criticalHitChance
         self.criticalHitDmg = criticalHitDmg
         self.fireRate = fireRate

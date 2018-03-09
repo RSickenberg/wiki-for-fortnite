@@ -93,19 +93,44 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ghq-6q-voz">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 </imageView>
+                                                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tis-zT-qqq">
+                                                    <rect key="frame" x="0.0" y="93" width="150" height="57"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJq-c6-Tzz">
+                                                            <rect key="frame" x="8" y="39" width="134" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="jD2-TI-q5K"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
+                                                            <color key="textColor" red="0.98671478426395942" green="0.87770517621609578" blue="0.34140021667784981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="JJq-c6-Tzz" firstAttribute="leading" secondItem="tis-zT-qqq" secondAttribute="leading" constant="8" id="DK1-Ya-C3K"/>
+                                                        <constraint firstItem="JJq-c6-Tzz" firstAttribute="centerX" secondItem="tis-zT-qqq" secondAttribute="centerX" id="Vef-cl-ue7"/>
+                                                        <constraint firstItem="JJq-c6-Tzz" firstAttribute="top" secondItem="tis-zT-qqq" secondAttribute="top" constant="39" id="xdg-cb-YLP"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <constraints>
                                             <constraint firstItem="ghq-6q-voz" firstAttribute="width" secondItem="Y5F-PF-481" secondAttribute="height" multiplier="1:1" id="06F-2r-Wey"/>
                                             <constraint firstItem="ghq-6q-voz" firstAttribute="leading" secondItem="Y5F-PF-481" secondAttribute="leading" id="2Rz-XA-EM3"/>
+                                            <constraint firstItem="tis-zT-qqq" firstAttribute="trailing" secondItem="ghq-6q-voz" secondAttribute="trailing" id="7AD-zn-SZ3"/>
+                                            <constraint firstItem="tis-zT-qqq" firstAttribute="top" secondItem="Y5F-PF-481" secondAttribute="top" constant="93" id="9xF-kD-Tzl"/>
                                             <constraint firstItem="ghq-6q-voz" firstAttribute="top" secondItem="Y5F-PF-481" secondAttribute="top" id="KRS-jR-EG5"/>
                                             <constraint firstAttribute="trailing" secondItem="ghq-6q-voz" secondAttribute="trailing" id="M2c-29-pdx"/>
+                                            <constraint firstItem="tis-zT-qqq" firstAttribute="leading" secondItem="ghq-6q-voz" secondAttribute="leading" id="Xwh-Wm-Ol2"/>
                                             <constraint firstAttribute="bottom" secondItem="ghq-6q-voz" secondAttribute="bottom" id="eBe-HG-Vty"/>
                                             <constraint firstItem="ghq-6q-voz" firstAttribute="leading" secondItem="Y5F-PF-481" secondAttribute="leading" id="j8R-MU-Svm"/>
+                                            <constraint firstItem="tis-zT-qqq" firstAttribute="bottom" secondItem="ghq-6q-voz" secondAttribute="bottom" id="uHv-GQ-87m"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="cellGradientName" destination="tis-zT-qqq" id="dP7-e4-Bs8"/>
                                             <outlet property="cellimageView" destination="ghq-6q-voz" id="nX3-2O-lPf"/>
+                                            <outlet property="weaponName" destination="JJq-c6-Tzz" id="efO-OG-Ahc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -127,11 +152,90 @@
                     <navigationItem key="navigationItem" title="WEAPONS" id="ThC-yU-fPC"/>
                     <connections>
                         <outlet property="collectionView" destination="z1h-Hz-J9q" id="oPL-2f-XT3"/>
+                        <segue destination="b3M-qE-rbg" kind="show" identifier="weaponDetail" id="Hrg-Bg-Urk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M93-UU-5em" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117.5999999999999" y="133.74384236453201"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="vss-S6-Ma8">
+            <objects>
+                <viewController id="b3M-qE-rbg" customClass="DetailsViewController" customModule="fortnite_wiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fOl-40-aCm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" indicatorStyle="black" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ve-l6-mVE">
+                                <rect key="frame" x="0.0" y="86" width="375" height="643"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBe-Vz-X3c">
+                                        <rect key="frame" x="0.0" y="113" width="375" height="83"/>
+                                    </view>
+                                    <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IZW-6N-Dmr">
+                                        <rect key="frame" x="8" y="10" width="359" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="dKU-E1-mdF"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Common"/>
+                                            <segment title="Atypical"/>
+                                            <segment title="Rare"/>
+                                            <segment title="Epic"/>
+                                            <segment title="Legendary"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        
+                                        <connections>
+                                            <action selector="levelOfWeaponSwitch:" destination="b3M-qE-rbg" eventType="valueChanged" id="18i-oB-0hH"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-QK-key">
+                                        <rect key="frame" x="112" y="79" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="ESn-AD-pIT"/>
+                                            <constraint firstAttribute="width" constant="150" id="OBx-Tm-2Ym"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IZW-6N-Dmr" firstAttribute="centerX" secondItem="lzr-QK-key" secondAttribute="centerX" id="8Nw-61-vgx"/>
+                                    <constraint firstItem="IZW-6N-Dmr" firstAttribute="trailing" secondItem="2Ve-l6-mVE" secondAttribute="trailingMargin" id="Bu3-3P-ZhY"/>
+                                    <constraint firstItem="lzr-QK-key" firstAttribute="top" secondItem="IZW-6N-Dmr" secondAttribute="bottom" constant="42" id="SHw-nR-BWt"/>
+                                    <constraint firstItem="rBe-Vz-X3c" firstAttribute="centerY" secondItem="lzr-QK-key" secondAttribute="centerY" id="ba6-QX-9Ai"/>
+                                    <constraint firstItem="rBe-Vz-X3c" firstAttribute="top" secondItem="IZW-6N-Dmr" secondAttribute="bottom" constant="76" id="cTG-Hg-XG9"/>
+                                    <constraint firstItem="IZW-6N-Dmr" firstAttribute="leading" secondItem="2Ve-l6-mVE" secondAttribute="leadingMargin" id="gzG-29-7P9"/>
+                                    <constraint firstAttribute="bottom" secondItem="lzr-QK-key" secondAttribute="bottom" constant="414" id="ics-nj-nrn"/>
+                                    <constraint firstItem="lzr-QK-key" firstAttribute="centerX" secondItem="2Ve-l6-mVE" secondAttribute="centerX" id="jEw-yG-KqI"/>
+                                    <constraint firstItem="rBe-Vz-X3c" firstAttribute="centerX" secondItem="lzr-QK-key" secondAttribute="centerX" id="kGb-Nj-Af1"/>
+                                    <constraint firstItem="rBe-Vz-X3c" firstAttribute="leading" secondItem="2Ve-l6-mVE" secondAttribute="leading" id="qnh-rp-8Op"/>
+                                    <constraint firstItem="IZW-6N-Dmr" firstAttribute="top" secondItem="2Ve-l6-mVE" secondAttribute="topMargin" id="wDO-S7-Nom"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Ve-l6-mVE" firstAttribute="top" secondItem="fOl-40-aCm" secondAttribute="topMargin" constant="-2" id="G14-i6-qDe"/>
+                            <constraint firstItem="2Ve-l6-mVE" firstAttribute="leading" secondItem="fOl-40-aCm" secondAttribute="leading" id="HZT-6u-mvb"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ve-l6-mVE" secondAttribute="trailing" id="QrW-u3-5Wa"/>
+                            <constraint firstItem="2Ve-l6-mVE" firstAttribute="bottom" secondItem="jX8-jL-Bav" secondAttribute="bottom" id="h6N-dq-mcK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jX8-jL-Bav"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="VZY-zK-Cbc">
+                        <barButtonItem key="rightBarButtonItem" title="Star" id="KPT-6l-rt8"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="UIBackgroundView" destination="rBe-Vz-X3c" id="iFh-BL-P7z"/>
+                        <outlet property="detailsViewTitle" destination="VZY-zK-Cbc" id="eDh-OL-isC"/>
+                        <outlet property="levelOfWeaponSwitch" destination="IZW-6N-Dmr" id="Lxx-JS-P4W"/>
+                        <outlet property="weaponImage" destination="lzr-QK-key" id="0A4-OA-fIb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="03b-qn-kNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2120.8000000000002" y="133.74384236453201"/>
         </scene>
         <!--ITEMS-->
         <scene sceneID="ocj-qW-Rag">

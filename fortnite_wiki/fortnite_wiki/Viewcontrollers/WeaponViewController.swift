@@ -11,6 +11,8 @@ import ChameleonFramework
 
 class WeaponCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellimageView: UIImageView!
+    @IBOutlet weak var cellGradientName: UIView!
+    @IBOutlet weak var weaponName: UILabel!
 }
 
 class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -18,6 +20,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     let colors = BackgroundColors()
     let list = DetailsForObjects()
     var cellParentId: Int = 0
+    var index: Int?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -27,6 +30,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        index = 0
     }
     
     func backgroundGradient() {
@@ -55,9 +59,12 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.layer.shadowOpacity = 1
         cell.layer.shadowColor = UIColor.flatBlack.cgColor
         
+        cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
+        cell.weaponName.text = weapon.weaponName
+        
         switch weapon.weaponColor {
         case 0, 1, 2:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
             break
         case 3, 4:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "B83DF2")!, UIColor.init(hexString: "E6BB0E")!])
@@ -71,6 +78,29 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         // Configure the cell
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let feedback = UIImpactFeedbackGenerator(style: .light)
+        index = indexPath.row
+        
+        feedback.impactOccurred()
+        performSegue(withIdentifier: "weaponDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier! {
+        case "weaponDetail":
+            let dataToDisplay: DetailsViewController = segue.destination as! DetailsViewController
+            
+            
+            dataToDisplay.index = self.index!
+            dataToDisplay.weaponInfo = list.getWeaponsByIndex(index: self.index!)
+            dataToDisplay.weaponDetails = list.getDetailsByWeaponId(weaponId: list.getWeaponsByIndex(index: self.index!).weaponId)
+        default:
+            break
+        }
     }
     
 }

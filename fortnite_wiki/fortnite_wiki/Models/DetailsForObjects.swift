@@ -40,6 +40,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.detailLevel = 0
         weaponsDetails.weaponId = 0
         weaponsDetails.damage = 27
+        weaponsDetails.damageHead = 67.5
         weaponsDetails.criticalHitChance = 0
         weaponsDetails.criticalHitDmg = 0
         weaponsDetails.fireRate = 1.75
@@ -73,6 +74,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.detailLevel = 1
         weaponsDetails.weaponId = 0
         weaponsDetails.damage = 29
+        weaponsDetails.damageHead = 72.5
         weaponsDetails.criticalHitChance = 0
         weaponsDetails.criticalHitDmg = 0
         weaponsDetails.fireRate = 1.75
@@ -105,6 +107,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.detailLevel = 2
         weaponsDetails.weaponId = 0
         weaponsDetails.damage = 30
+        weaponsDetails.damageHead = 75
         weaponsDetails.criticalHitChance = 0
         weaponsDetails.criticalHitDmg = 0
         weaponsDetails.fireRate = 1.75
@@ -145,6 +148,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.detailLevel = 3
         weaponsDetails.weaponId = 3
         weaponsDetails.damage = 35
+        weaponsDetails.damageHead = 70
         weaponsDetails.criticalHitChance = 0
         weaponsDetails.criticalHitDmg = 0
         weaponsDetails.fireRate = 5.5
@@ -178,6 +182,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.detailLevel = 4
         weaponsDetails.weaponId = 3
         weaponsDetails.damage = 36
+        weaponsDetails.damageHead = 72
         weaponsDetails.criticalHitChance = 0
         weaponsDetails.criticalHitDmg = 0
         weaponsDetails.fireRate = 5.5
@@ -203,6 +208,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.recoilMinAngle = -25
         weaponsDetails.recoilDownsights = 0.5
         
+        self.addDetailsToDB(weaponsDetails)
     }
     
     func addToDB(_ weapons: Weapons) {
@@ -239,6 +245,30 @@ class DetailsForObjects: NSObject {
         let key = weaponsDetails.index(where: { $0.weaponId == weaponId && $0.detailLevel == weaponLevel })
     
         return weaponsDetails[key!]
+    }
+    
+    func countNumberOfLevelsByWeaponId(_ weaponId: Int) -> Int {
+        var numberOfLevels: Int = 0
+        
+        for detail in weaponsDetails {
+            if detail.weaponId == weaponId {
+                numberOfLevels += 1
+            }
+        }
+        
+        return numberOfLevels
+    }
+    
+    func getLevelsByWeaponId(_ weaponId: Int) -> [Int] {
+        var levels = [Int]()
+        
+        for detail in weaponsDetails {
+            if detail.weaponId == weaponId {
+                levels.append(detail.detailLevel)
+            }
+        }
+        
+        return levels
     }
     
 }

@@ -7,20 +7,40 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class DetailsViewController: UIViewController {
     
     let colors = BackgroundColors()
 
+    @IBOutlet weak var detailsViewTitle: UINavigationItem!
+    @IBOutlet weak var levelOfWeaponSwitch: UISegmentedControl!
+    @IBAction func levelOfWeaponSwitch(_ sender: UISegmentedControl) {
+        // Change level here
+        let feedback = UISelectionFeedbackGenerator()
+        feedback.selectionChanged()
+        
+        print(levelOfWeaponSwitch.titleForSegment(at: levelOfWeaponSwitch.selectedSegmentIndex)!)
+        weaponDetails.detailLevel = levelOfWeaponSwitch.selectedSegmentIndex
+    }
+    @IBOutlet weak var weaponImage: UIImageView!
+    @IBOutlet weak var UIBackgroundView: UIView!
+    
+    var index: Int = 0
+    var weaponInfo = Weapons()
+    var weaponDetails = WeaponsDetails()
+    var weaponModel = DetailsForObjects()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         backgroundGradient()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        detailsViewTitle.title = weaponInfo.weaponName
+        weaponImage.image = UIImage(named: weaponInfo.weaponImg)
+        
+        getGradientValueforBackgroundImage()
+        prepareSegment()
     }
     
     func backgroundGradient() {
@@ -28,6 +48,41 @@ class DetailsViewController: UIViewController {
         let backgroundLayer = colors.gl
         backgroundLayer?.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
+    }
+    
+    func prepareSegment() {
+        levelOfWeaponSwitch.removeAllSegments()
+        let listOfLevels = weaponModel.getLevelsByWeaponId(weaponInfo.weaponId)
+        let titles = ["Common", "Atypical", "Rare", "Epic", "Legendary"]
+        
+        for listOfLevel in listOfLevels {
+            levelOfWeaponSwitch.insertSegment(withTitle: titles[listOfLevel], at: levelOfWeaponSwitch.numberOfSegments, animated: false)
+        }
+        
+        levelOfWeaponSwitch.selectedSegmentIndex = 0
+    }
+    
+    func getGradientValueforBackgroundImage() {
+        
+        switch weaponDetails.detailLevel {
+        case 0 :
+            UIBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: UIBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "969696")!, UIColor.clear])
+            break
+        case 1 :
+            UIBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: UIBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "4FCA00")!, UIColor.clear])
+            break
+        case 2 :
+            UIBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: UIBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "00BFFF")!, UIColor.clear])
+            break
+        case 3 :
+            UIBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: UIBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "B83DF2")!, UIColor.clear])
+            break
+        case 4 :
+            UIBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: UIBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "E6BB0E")!, UIColor.clear])
+            break
+        default:
+            break
+        }
     }
 
     /*
