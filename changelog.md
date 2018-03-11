@@ -14,3 +14,4 @@
 - Scroll view on details
 - Table on details
 - Background color changing on details
+- Complete rework of model, moved details away
