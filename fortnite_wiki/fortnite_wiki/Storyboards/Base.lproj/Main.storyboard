@@ -183,7 +183,7 @@
                                             <segment title="Epic"/>
                                             <segment title="Legendary"/>
                                         </segments>
-                                        <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="levelOfWeaponSwitch:" destination="b3M-qE-rbg" eventType="valueChanged" id="18i-oB-0hH"/>
                                         </connections>
@@ -272,7 +272,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kr-6O-7xp">
-                                        <rect key="frame" x="0.0" y="608" width="375" height="2"/>
+                                        <rect key="frame" x="0.0" y="609" width="375" height="2"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="k6F-j1-qZu"/>
@@ -333,7 +333,7 @@
                                     <constraint firstItem="f98-XW-7LL" firstAttribute="baseline" secondItem="fdt-fY-SfN" secondAttribute="baseline" id="M3E-x3-37C"/>
                                     <constraint firstAttribute="trailing" secondItem="rBe-Vz-X3c" secondAttribute="trailing" id="Nvb-af-YAd"/>
                                     <constraint firstItem="rBe-Vz-X3c" firstAttribute="top" secondItem="IZW-6N-Dmr" secondAttribute="bottom" constant="8" id="O7m-yX-n2S"/>
-                                    <constraint firstItem="6kr-6O-7xp" firstAttribute="top" secondItem="gYr-n4-86Z" secondAttribute="bottom" constant="33" id="OFu-rx-Wbz"/>
+                                    <constraint firstItem="6kr-6O-7xp" firstAttribute="top" secondItem="gYr-n4-86Z" secondAttribute="bottom" constant="34" id="OFu-rx-Wbz"/>
                                     <constraint firstItem="f98-XW-7LL" firstAttribute="firstBaseline" secondItem="fdt-fY-SfN" secondAttribute="firstBaseline" id="P3g-6b-pRO"/>
                                     <constraint firstItem="fdt-fY-SfN" firstAttribute="trailing" secondItem="iY3-qO-1I9" secondAttribute="trailing" id="RCv-ea-exo"/>
                                     <constraint firstItem="3Dm-LQ-6XN" firstAttribute="baseline" secondItem="DvX-qc-AA7" secondAttribute="baseline" id="SE9-lc-Rt0"/>
@@ -347,11 +347,11 @@
                                     <constraint firstItem="lzr-QK-key" firstAttribute="centerX" secondItem="2Ve-l6-mVE" secondAttribute="centerX" constant="8.5" id="Uo9-bd-uSV"/>
                                     <constraint firstItem="u9x-cI-4co" firstAttribute="top" secondItem="vfB-QE-lxd" secondAttribute="bottom" constant="3" id="VRb-Z9-g9M"/>
                                     <constraint firstItem="f98-XW-7LL" firstAttribute="trailing" secondItem="DvX-qc-AA7" secondAttribute="trailing" id="W1D-bR-som"/>
-                                    <constraint firstItem="6kr-6O-7xp" firstAttribute="bottom" secondItem="lNq-7f-2LO" secondAttribute="bottom" id="XQI-08-krt"/>
+                                    <constraint firstItem="6kr-6O-7xp" firstAttribute="bottom" secondItem="lNq-7f-2LO" secondAttribute="bottom" constant="1" id="XQI-08-krt"/>
                                     <constraint firstItem="DvX-qc-AA7" firstAttribute="leading" secondItem="gYr-n4-86Z" secondAttribute="trailing" constant="24" id="YE0-mT-EEc"/>
                                     <constraint firstItem="DvX-qc-AA7" firstAttribute="firstBaseline" secondItem="m1I-kZ-fAj" secondAttribute="firstBaseline" id="YIl-c5-VU7"/>
                                     <constraint firstItem="IZW-6N-Dmr" firstAttribute="leading" secondItem="2Ve-l6-mVE" secondAttribute="leadingMargin" id="YVq-Qw-8kj"/>
-                                    <constraint firstItem="6kr-6O-7xp" firstAttribute="top" secondItem="DvX-qc-AA7" secondAttribute="bottom" constant="44" id="YwE-FQ-auA"/>
+                                    <constraint firstItem="6kr-6O-7xp" firstAttribute="top" secondItem="DvX-qc-AA7" secondAttribute="bottom" constant="45" id="YwE-FQ-auA"/>
                                     <constraint firstItem="rBe-Vz-X3c" firstAttribute="leading" secondItem="bNN-xt-2Gq" secondAttribute="leading" id="aYu-Ky-Tx5"/>
                                     <constraint firstItem="3Dm-LQ-6XN" firstAttribute="top" secondItem="YAd-4u-Mwn" secondAttribute="bottom" constant="6" id="bpp-WE-tIG"/>
                                     <constraint firstItem="DvX-qc-AA7" firstAttribute="leading" secondItem="3Dm-LQ-6XN" secondAttribute="trailing" constant="8" symbolic="YES" id="c4b-iY-3ho"/>
@@ -382,7 +382,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2Ve-l6-mVE" firstAttribute="width" secondItem="fOl-40-aCm" secondAttribute="width" id="26H-Q0-xRI"/>
                             <constraint firstItem="2Ve-l6-mVE" firstAttribute="bottom" secondItem="jX8-jL-Bav" secondAttribute="bottom" id="UK1-Gg-5Ft"/>
