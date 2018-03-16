@@ -68,6 +68,7 @@ class DetailsViewController: UIViewController {
         
         prepareSegment()
         getGradientValueforBackgroundImage()
+        
     }
     
     func backgroundGradient() {
