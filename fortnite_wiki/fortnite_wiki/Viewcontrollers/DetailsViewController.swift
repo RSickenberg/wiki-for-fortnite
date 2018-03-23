@@ -48,6 +48,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var uiBackgroundView: UIView!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var spreadLabel: UILabel!
+    @IBOutlet weak var recoilLabel: UILabel!
     
     ///////////////////////////////////////////////////////////
     
@@ -62,6 +63,11 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var downsightsTitle: UILabel!
     @IBOutlet weak var standingTitle: UILabel!
     @IBOutlet weak var crouchingTitle: UILabel!
+    @IBOutlet weak var horizontalRecoilTitle: UIView!
+    @IBOutlet weak var verticalRecoilTitle: UILabel!
+    @IBOutlet weak var angleMaxTitle: UILabel!
+    @IBOutlet weak var angleMinTitle: UILabel!
+    @IBOutlet weak var downsightsRecoilTitle: UILabel!
     
     ///////////////////////////////////////////////////////////
     
@@ -82,6 +88,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var crouchingSpreadLabel: UILabel!
     
     ///////////////////////////////////////////////////////////
+    
+    @IBOutlet weak var horizontalLabel: UILabel!
+    @IBOutlet weak var verticalLabel: UILabel!
+    @IBOutlet weak var angleMaxLabel: UILabel!
+    @IBOutlet weak var angleMinLabel: UILabel!
+    @IBOutlet weak var downsightsRecoilLabel: UILabel!
+    
     
     var index: Int = 0
     var weaponInfo = Weapons()
@@ -168,11 +181,17 @@ class DetailsViewController: UIViewController {
         downsightsSpreadLabel.text = String(details.spreadDownsights)
         crouchingSpreadLabel.text = String(details.spreadCrouching)
         
+        horizontalLabel.text = String(details.recoilHorizontal)
+        verticalLabel.text = String(details.recoilVertical)
+        angleMaxLabel.text = String(details.recoilMaxAngle)
+        angleMinLabel.text = String(details.recoilMinAngle)
+        downsightsRecoilLabel.text = String(details.recoilDownsights)
+        
     }
     
     func styleLabels() {
         let shadowColor = UIColor.black.cgColor
-        let shadowRadius: CGFloat = 2.0
+        let shadowRadius: CGFloat = 2.1
         let shadowOpactity: Float = 0.8
         let shadowOffset = CGSize(width: 0, height: 0)
         
@@ -325,6 +344,73 @@ class DetailsViewController: UIViewController {
         crouchingSpreadLabel.layer.shadowOpacity = shadowOpactity
         crouchingSpreadLabel.layer.shadowOffset = shadowOffset
         crouchingSpreadLabel.layer.masksToBounds = false
+        
+        recoilLabel.layer.shadowColor = shadowColor
+        recoilLabel.layer.shadowRadius = shadowRadius
+        recoilLabel.layer.shadowOpacity = shadowOpactity
+        recoilLabel.layer.shadowOffset = shadowOffset
+        recoilLabel.layer.masksToBounds = false
+        
+        horizontalRecoilTitle.layer.shadowColor = shadowColor
+        horizontalRecoilTitle.layer.shadowRadius = shadowRadius
+        horizontalRecoilTitle.layer.shadowOpacity = shadowOpactity
+        horizontalRecoilTitle.layer.shadowOffset = shadowOffset
+        horizontalRecoilTitle.layer.masksToBounds = false
+        
+        verticalRecoilTitle.layer.shadowColor = shadowColor
+        verticalRecoilTitle.layer.shadowRadius = shadowRadius
+        verticalRecoilTitle.layer.shadowOpacity = shadowOpactity
+        verticalRecoilTitle.layer.shadowOffset = shadowOffset
+        verticalRecoilTitle.layer.masksToBounds = false
+        
+        angleMaxTitle.layer.shadowColor = shadowColor
+        angleMaxTitle.layer.shadowRadius = shadowRadius
+        angleMaxTitle.layer.shadowOpacity = shadowOpactity
+        angleMaxTitle.layer.shadowOffset = shadowOffset
+        angleMaxTitle.layer.masksToBounds = false
+        
+        angleMinTitle.layer.shadowColor = shadowColor
+        angleMinTitle.layer.shadowRadius = shadowRadius
+        angleMinTitle.layer.shadowOpacity = shadowOpactity
+        angleMinTitle.layer.shadowOffset = shadowOffset
+        angleMinTitle.layer.masksToBounds = false
+        
+        downsightsRecoilTitle.layer.shadowColor = shadowColor
+        downsightsRecoilTitle.layer.shadowRadius = shadowRadius
+        downsightsRecoilTitle.layer.shadowOpacity = shadowOpactity
+        downsightsRecoilTitle.layer.shadowOffset = shadowOffset
+        downsightsRecoilTitle.layer.masksToBounds = false
+        
+        horizontalLabel.layer.shadowColor = shadowColor
+        horizontalLabel.layer.shadowRadius = shadowRadius
+        horizontalLabel.layer.shadowOpacity = shadowOpactity
+        horizontalLabel.layer.shadowOffset = shadowOffset
+        horizontalLabel.layer.masksToBounds = false
+        
+        verticalLabel.layer.shadowColor = shadowColor
+        verticalLabel.layer.shadowRadius = shadowRadius
+        verticalLabel.layer.shadowOpacity = shadowOpactity
+        verticalLabel.layer.shadowOffset = shadowOffset
+        verticalLabel.layer.masksToBounds = false
+        
+        angleMaxLabel.layer.shadowColor = shadowColor
+        angleMaxLabel.layer.shadowRadius = shadowRadius
+        angleMaxLabel.layer.shadowOpacity = shadowOpactity
+        angleMaxLabel.layer.shadowOffset = shadowOffset
+        angleMaxLabel.layer.masksToBounds = false
+        
+        angleMinLabel.layer.shadowColor = shadowColor
+        angleMinLabel.layer.shadowRadius = shadowRadius
+        angleMinLabel.layer.shadowOpacity = shadowOpactity
+        angleMinLabel.layer.shadowOffset = shadowOffset
+        angleMinLabel.layer.masksToBounds = false
+        
+        downsightsRecoilLabel.layer.shadowColor = shadowColor
+        downsightsRecoilLabel.layer.shadowRadius = shadowRadius
+        downsightsRecoilLabel.layer.shadowOpacity = shadowOpactity
+        downsightsRecoilLabel.layer.shadowOffset = shadowOffset
+        downsightsRecoilLabel.layer.masksToBounds = false
+        
     }
 
     /*
