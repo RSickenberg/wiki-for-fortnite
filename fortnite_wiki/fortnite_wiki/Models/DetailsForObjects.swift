@@ -11,6 +11,9 @@
 //          Purple : color 3 / detailLevel 3
 //          Gold :  color 4 / detailLevel 4
 //
+//
+//  Since 3.4, weapons can have dissociated style, or colors, like: green / blue
+//  For new methods, please, take note of this.
 
 import Foundation
 
@@ -43,7 +46,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.damageHead = 67.5
         weaponsDetails.criticalHitChance = 0
         weaponsDetails.criticalHitDmg = 0
-        weaponsDetails.fireRate = 1.75
+        weaponsDetails.fireRate = 4.06
         weaponsDetails.magazineSize = 30
         weaponsDetails.range = 1
         weaponsDetails.durability = 100
@@ -56,7 +59,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.spreadDownsights = 0.65
         weaponsDetails.spreadStanding = 0.55
         weaponsDetails.spreadCrouching = 0.75
-        weaponsDetails.firingRateNormal = 1.75
+        weaponsDetails.firingRateNormal = 4.06
         weaponsDetails.firingRateBurst = 12
         weaponsDetails.environementDamage = 30
         weaponsDetails.impactDamage = 40
@@ -77,7 +80,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.damageHead = 72.5
         weaponsDetails.criticalHitChance = 0
         weaponsDetails.criticalHitDmg = 0
-        weaponsDetails.fireRate = 1.75
+        weaponsDetails.fireRate = 4.06
         weaponsDetails.magazineSize = 30
         weaponsDetails.range = 1
         weaponsDetails.durability = 100
@@ -90,7 +93,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.spreadDownsights = 0.65
         weaponsDetails.spreadStanding = 0.55
         weaponsDetails.spreadCrouching = 0.75
-        weaponsDetails.firingRateNormal = 1.75
+        weaponsDetails.firingRateNormal = 4.06
         weaponsDetails.firingRateBurst = 12
         weaponsDetails.environementDamage = 30
         weaponsDetails.impactDamage = 42
@@ -110,7 +113,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.damageHead = 75
         weaponsDetails.criticalHitChance = 0
         weaponsDetails.criticalHitDmg = 0
-        weaponsDetails.fireRate = 1.75
+        weaponsDetails.fireRate = 4.06
         weaponsDetails.magazineSize = 30
         weaponsDetails.range = 1
         weaponsDetails.durability = 100
@@ -123,7 +126,7 @@ class DetailsForObjects: NSObject {
         weaponsDetails.spreadDownsights = 0.65
         weaponsDetails.spreadStanding = 0.55
         weaponsDetails.spreadCrouching = 0.75
-        weaponsDetails.firingRateNormal = 1.75
+        weaponsDetails.firingRateNormal = 4.06
         weaponsDetails.firingRateBurst = 12
         weaponsDetails.environementDamage = 30
         weaponsDetails.impactDamage = 44
@@ -181,6 +184,81 @@ class DetailsForObjects: NSObject {
         
         weaponsDetails.detailLevel = 4
         weaponsDetails.weaponId = 3
+        weaponsDetails.damage = 36
+        weaponsDetails.damageHead = 72
+        weaponsDetails.criticalHitChance = 0
+        weaponsDetails.criticalHitDmg = 0
+        weaponsDetails.fireRate = 5.5
+        weaponsDetails.magazineSize = 30
+        weaponsDetails.range = 1
+        weaponsDetails.durability = 100
+        weaponsDetails.reloadTime = 2.1
+        weaponsDetails.ammoCost = 1
+        weaponsDetails.impact = 31
+        weaponsDetails.spreadBase = 0.15
+        weaponsDetails.spreadSprint = 1.5
+        weaponsDetails.spreadJump = 1.25
+        weaponsDetails.spreadDownsights = 0.6
+        weaponsDetails.spreadStanding = 0.55
+        weaponsDetails.spreadCrouching = 0.8
+        weaponsDetails.firingRateNormal = 5.5
+        weaponsDetails.firingRateBurst = 5
+        weaponsDetails.environementDamage = 33
+        weaponsDetails.impactDamage = 31
+        weaponsDetails.recoilHorizontal = 0.25
+        weaponsDetails.recoilVertical = 3.15
+        weaponsDetails.recoilMaxAngle = 25
+        weaponsDetails.recoilMinAngle = -25
+        weaponsDetails.recoilDownsights = 0.5
+        
+        self.addDetailsToDB(weaponsDetails)
+        
+        weaponsData = Weapons()
+        weaponsDetails = WeaponsDetails()
+        
+        weaponsData.weaponId = 4
+        weaponsData.detailId = 4
+        weaponsData.weaponParentId = 3
+        weaponsData.weaponName = "Shotgun special"
+        weaponsData.weaponColor = 1
+        weaponsData.weaponImg = "nil"
+        
+        weaponsDetails.detailLevel = 1
+        weaponsDetails.weaponId = 4
+        weaponsDetails.damage = 35
+        weaponsDetails.damageHead = 70
+        weaponsDetails.criticalHitChance = 0
+        weaponsDetails.criticalHitDmg = 0
+        weaponsDetails.fireRate = 5.5
+        weaponsDetails.magazineSize = 30
+        weaponsDetails.range = 1
+        weaponsDetails.durability = 100
+        weaponsDetails.reloadTime = 2.1
+        weaponsDetails.ammoCost = 1
+        weaponsDetails.impact = 29
+        weaponsDetails.spreadBase = 0.15
+        weaponsDetails.spreadSprint = 1.5
+        weaponsDetails.spreadJump = 1.25
+        weaponsDetails.spreadDownsights = 0.6
+        weaponsDetails.spreadStanding = 0.55
+        weaponsDetails.spreadCrouching = 0.8
+        weaponsDetails.firingRateNormal = 5.5
+        weaponsDetails.firingRateBurst = 5
+        weaponsDetails.environementDamage = 33
+        weaponsDetails.impactDamage = 29
+        weaponsDetails.recoilHorizontal = 0.25
+        weaponsDetails.recoilVertical = 3.237
+        weaponsDetails.recoilMaxAngle = 25
+        weaponsDetails.recoilMinAngle = -25
+        weaponsDetails.recoilDownsights = 0.5
+        
+        self.addToDB(weaponsData)
+        self.addDetailsToDB(weaponsDetails)
+        
+        weaponsDetails = WeaponsDetails()
+        
+        weaponsDetails.detailLevel = 2
+        weaponsDetails.weaponId = 4
         weaponsDetails.damage = 36
         weaponsDetails.damageHead = 72
         weaponsDetails.criticalHitChance = 0
