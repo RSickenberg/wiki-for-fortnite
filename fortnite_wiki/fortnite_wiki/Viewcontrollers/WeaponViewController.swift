@@ -51,6 +51,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weaponId", for: indexPath) as! WeaponCollectionCell
         let weapon = list.getWeaponsByIndex(index: indexPath.row)
+        let listOfLevels = list.getLevelsByWeaponId(weapon.weaponId)
         
         // Set the style of the cell
         cell.layer.cornerRadius = 6.0
@@ -62,23 +63,23 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.weaponName.text = weapon.weaponName
         
-        switch weapon.weaponColor {
-        case 0,1,2:
+        // Deal with combinaisons of all the weapon's colors
+        switch listOfLevels {
+        case [0,1,2]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
             break
-        case 1,2:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
+        case [1,2]:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
             break
-        case 3, 4:
+        case [3,4]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "B83DF2")!, UIColor.init(hexString: "E6BB0E")!])
         default:
             cell.backgroundColor = UIColor.black
             break
         }
         
-        cell.cellimageView.image = UIImage(named: weapon.weaponImg)
         
-        // Configure the cell
+        cell.cellimageView.image = UIImage(named: weapon.weaponImg)
         
         return cell
     }
@@ -96,7 +97,6 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         switch segue.identifier! {
         case "weaponDetail":
             let dataToDisplay: DetailsViewController = segue.destination as! DetailsViewController
-            
             
             dataToDisplay.index = self.index!
             dataToDisplay.weaponInfo = list.getWeaponsByIndex(index: self.index!)
