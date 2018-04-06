@@ -57,7 +57,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         // Set the style of the cell
         cell.layer.cornerRadius = 6.5
         cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowRadius = 2.1
+        cell.layer.shadowRadius = 5.0
         cell.layer.shadowOpacity = 1
         cell.layer.shadowColor = UIColor.black.cgColor
         
