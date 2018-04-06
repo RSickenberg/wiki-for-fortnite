@@ -52,16 +52,18 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weaponId", for: indexPath) as! WeaponCollectionCell
         let weapon = list.getWeaponsByIndex(index: indexPath.row)
         let listOfLevels = list.getLevelsByWeaponId(weapon.weaponId)
+        let shadowsOptions = ShadowLayers()
         
         // Set the style of the cell
-        cell.layer.cornerRadius = 6.0
-        cell.layer.shadowOffset = CGSize.zero
-        cell.layer.shadowRadius = 12.0
+        cell.layer.cornerRadius = 6.5
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.layer.shadowRadius = 2.1
         cell.layer.shadowOpacity = 1
-        cell.layer.shadowColor = UIColor.flatBlack.cgColor
+        cell.layer.shadowColor = UIColor.black.cgColor
         
         cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.weaponName.text = weapon.weaponName
+        shadowsOptions.setLayer(label: cell.weaponName)
         
         // Deal with combinaisons of all the weapon's colors
         switch listOfLevels {

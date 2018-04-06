@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A2E7B2050766A00541779 /* WeaponsLevels.swift */; };
+		071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E386020775BBE006CAFD2 /* ShadowLayers.swift */; };
 		07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07378F2320506C38008B48D8 /* WeaponsDetails.swift */; };
 		073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3714204D7CBA001D4AF5 /* AppDelegate.swift */; };
 		073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073A3718204D7CBA001D4AF5 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		070A2E7B2050766A00541779 /* WeaponsLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsLevels.swift; sourceTree = "<group>"; };
+		071E386020775BBE006CAFD2 /* ShadowLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLayers.swift; sourceTree = "<group>"; };
 		07378F2320506C38008B48D8 /* WeaponsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsDetails.swift; sourceTree = "<group>"; };
 		073A3711204D7CBA001D4AF5 /* fortnite_wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortnite_wiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073A3714204D7CBA001D4AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */,
 				070A2E7B2050766A00541779 /* WeaponsLevels.swift */,
+				071E386020775BBE006CAFD2 /* ShadowLayers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				073A371D204D7CBA001D4AF5 /* fortnite_wiki.xcdatamodeld in Sources */,
 				07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */,
 				073A373F204DAB00001D4AF5 /* Items.swift in Sources */,
+				071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */,
 				073A373B204D93B5001D4AF5 /* DetailsViewController.swift in Sources */,
 				073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */,
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,

@@ -63,7 +63,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var downsightsTitle: UILabel!
     @IBOutlet weak var standingTitle: UILabel!
     @IBOutlet weak var crouchingTitle: UILabel!
-    @IBOutlet weak var horizontalRecoilTitle: UIView!
+    @IBOutlet weak var horizontalRecoilTitle: UILabel!
     @IBOutlet weak var verticalRecoilTitle: UILabel!
     @IBOutlet weak var angleMaxTitle: UILabel!
     @IBOutlet weak var angleMinTitle: UILabel!
@@ -191,17 +191,10 @@ class DetailsViewController: UIViewController {
     
     func styleLabels() {
         let labels = [detailsLabel,damageHeadTitle,fireRateTitle,magazineTitle,impactTitle,reloadTitle,damageLabel,headLabel,fireRateLabel,magazineSizeLabel,impactLabel,reloadLabel,spreadLabel,baseTitle,sprintTitle,jumpFallTitle,downsightsTitle,standingTitle,crouchingTitle,baseSpreadLabel,sprintSpreadLabel,jumpSpreadLabel,standingSpreadLabel,downsightsSpreadLabel,crouchingSpreadLabel,recoilLabel,horizontalRecoilTitle,verticalRecoilTitle,angleMaxTitle,angleMinTitle,downsightsRecoilTitle,horizontalLabel,verticalLabel,angleMaxLabel,angleMinLabel,downsightsRecoilLabel]
-        let shadowColor = UIColor.black.cgColor
-        let shadowRadius: CGFloat = 2.1
-        let shadowOpactity: Float = 0.8
-        let shadowOffset = CGSize(width: 0, height: 0)
+        let shadowOptions = ShadowLayers()
         
         for label in labels {
-            label?.layer.shadowColor = shadowColor
-            label?.layer.shadowRadius = shadowRadius
-            label?.layer.shadowOpacity = shadowOpactity
-            label?.layer.shadowOffset = shadowOffset
-            label?.layer.masksToBounds = false
+            shadowOptions.setLayer(label: label!)
         }
         
     }
