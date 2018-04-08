@@ -19,8 +19,10 @@ If you wanna add more stats for a Weapon / Item, you need to go trought `Models/
 
 ## Road Map
 
-- Set demo data (Now).
+- Set demo data.
 - Add collection view and style it.
 - Clean
 - Tests
-- V.1
+- V.1 : Live !
+- V.1.1 : Use of Core Data for data
+- V.1.2 : Go in prod.
