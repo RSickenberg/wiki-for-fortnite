@@ -15,3 +15,13 @@
 - Table on details
 - Background color changing on details
 - Complete rework of model, moved details away
+
+# 0.0.4
+
+- Stacked views for table data
+- UI shadow on labels
+- Helper for shadow
+- Avoid multiple call to the same method
+- Reduce usage of memory
+- Updated the method to create the background color of the tiles due to new 3.4 version of fortnite (new combinaisons of colors)
+- Cleanup
