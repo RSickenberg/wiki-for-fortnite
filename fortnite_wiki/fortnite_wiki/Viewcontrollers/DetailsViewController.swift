@@ -46,9 +46,15 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var weaponImage: UIImageView!
     @IBOutlet weak var uiBackgroundView: UIView!
+    @IBOutlet weak var overallLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var spreadLabel: UILabel!
     @IBOutlet weak var recoilLabel: UILabel!
+    
+    ///////////////////////////////////////////////////////////
+    
+    @IBOutlet weak var dpsTitle: UILabel!
+    @IBOutlet weak var envdmgTitle: UILabel!
     
     ///////////////////////////////////////////////////////////
     
@@ -68,6 +74,11 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var angleMaxTitle: UILabel!
     @IBOutlet weak var angleMinTitle: UILabel!
     @IBOutlet weak var downsightsRecoilTitle: UILabel!
+    
+    ///////////////////////////////////////////////////////////
+    
+    @IBOutlet weak var dpsLabel: UILabel!
+    @IBOutlet weak var envdmgLabel: UILabel!
     
     ///////////////////////////////////////////////////////////
     
@@ -167,6 +178,9 @@ class DetailsViewController: UIViewController {
         
         let details = weaponModel.getDetailsByWeaponIdAndLevel(weaponId: weaponInfo.weaponId, weaponLevel: level)
         
+        dpsLabel.text = String(Float(details.damage)*details.fireRate)
+        envdmgLabel.text = String(details.environementDamage)
+        
         damageLabel.text = String(details.damage)
         headLabel.text = String(details.damageHead)
         fireRateLabel.text = String(details.fireRate)
@@ -190,7 +204,7 @@ class DetailsViewController: UIViewController {
     }
     
     func styleLabels() {
-        let labels = [detailsLabel,damageHeadTitle,fireRateTitle,magazineTitle,impactTitle,reloadTitle,damageLabel,headLabel,fireRateLabel,magazineSizeLabel,impactLabel,reloadLabel,spreadLabel,baseTitle,sprintTitle,jumpFallTitle,downsightsTitle,standingTitle,crouchingTitle,baseSpreadLabel,sprintSpreadLabel,jumpSpreadLabel,standingSpreadLabel,downsightsSpreadLabel,crouchingSpreadLabel,recoilLabel,horizontalRecoilTitle,verticalRecoilTitle,angleMaxTitle,angleMinTitle,downsightsRecoilTitle,horizontalLabel,verticalLabel,angleMaxLabel,angleMinLabel,downsightsRecoilLabel]
+        let labels = [overallLabel, dpsTitle, envdmgTitle, dpsLabel, envdmgLabel, detailsLabel,damageHeadTitle,fireRateTitle,magazineTitle,impactTitle,reloadTitle,damageLabel,headLabel,fireRateLabel,magazineSizeLabel,impactLabel,reloadLabel,spreadLabel,baseTitle,sprintTitle,jumpFallTitle,downsightsTitle,standingTitle,crouchingTitle,baseSpreadLabel,sprintSpreadLabel,jumpSpreadLabel,standingSpreadLabel,downsightsSpreadLabel,crouchingSpreadLabel,recoilLabel,horizontalRecoilTitle,verticalRecoilTitle,angleMaxTitle,angleMinTitle,downsightsRecoilTitle,horizontalLabel,verticalLabel,angleMaxLabel,angleMinLabel,downsightsRecoilLabel]
         let shadowOptions = ShadowLayers()
         
         for label in labels {
