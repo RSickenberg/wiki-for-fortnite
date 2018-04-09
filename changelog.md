@@ -31,3 +31,4 @@
 
 - Overall UI progression.
 - Dmgs + head in oveall instead details
+- FireRate moved up in overall, Env dmgs is now in details
