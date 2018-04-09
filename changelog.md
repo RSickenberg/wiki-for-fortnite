@@ -30,5 +30,6 @@
 > Alpha + WIP.
 
 - Overall UI progression.
-- Dmgs + head in oveall instead details
-- FireRate moved up in overall, Env dmgs is now in details
+- Dmgs + head in oveall instead details.
+- FireRate moved up in overall, Env dmgs is now in details.
+- iPhone SE and more is fixed now.
