@@ -27,7 +27,7 @@
 - Cleanup.
 
 # 0.0.5
-> Alpha + WIP.
+> Alpha
 
 - UI : Overall progression.
 - UI : Dmgs + head in oveall instead details.
