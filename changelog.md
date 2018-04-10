@@ -1,35 +1,37 @@
 # 0.0.1
 
-- Sketch and Wireframes.
+- GENERAL : Sketch and Wireframes.
 
 # 0.0.2
 
-- Models & UI ready for dev & StyleGuide.
-- Pods.
+- ALL : Models & UI ready for dev & StyleGuide.
+- BACKEND : Pods.
 
 # 0.0.3
 
-- View & Segues for collections.
-- Data displayed for each objects.
-- Scroll view on details.
-- Table on details.
-- Background color changing on details.
-- Complete rework of model, moved details away.
+- UI : View & Segues for collections.
+- UI & BACKEND : Data displayed for each objects.
+- UI : Scroll view on details.
+- UI : Table on details.
+- UI : Background color changing on details.
+- BACKEND : Complete rework of model, moved details away.
 
 # 0.0.4
 
-- Stacked views for table data.
-- UI shadow on labels.
-- Helper for shadow.
-- Avoid multiple call to the same method.
-- Reduce usage of memory.
-- Updated the method to create the background color of the tiles due to new 3.4 version of fortnite (new combinaisons of colors).
+- UI : Stacked views for table data.
+- UI : Shadow on labels.
+- BACKEND : Helper for shadow.
+- BACKEND : Avoid multiple call to the same method.
+- BACKEND : Reduce usage of memory.
+- BACKEND : Updated the method to create the background color of the tiles due to new 3.4 version of fortnite (new combinaisons of colors).
 - Cleanup.
 
 # 0.0.5
 > Alpha + WIP.
 
-- Overall UI progression.
-- Dmgs + head in oveall instead details.
-- FireRate moved up in overall, Env dmgs is now in details.
-- iPhone SE and more is fixed now.
+- UI : Overall progression.
+- UI : Dmgs + head in oveall instead details.
+- UI : FireRate moved up in overall, Env dmgs is now in details.
+- UI : iPhone SE and more is fixed now.
+- ARCHIVEMENT : iPad version !
+- UI : Constraints are done.

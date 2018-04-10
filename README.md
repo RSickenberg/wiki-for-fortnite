@@ -21,9 +21,10 @@ If you wanna add more stats for a Weapon / Item, you need to go trought `Models/
 
 - Set demo data.
 - Add collection view and style it.
+- Add NSCoreData
+- iPad version (v.0.0.5)
 - Clean.
 - Tests.
 - V.1 : Live !
 - V.1.1 : Use of Core Data.
 - V.1.2 : Go in prod.
-- V.1.3 : iPad version ?
