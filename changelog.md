@@ -35,3 +35,8 @@
 - UI : iPhone SE and more is fixed now.
 - ARCHIVEMENT : iPad version !
 - UI : Constraints are done.
+
+# 0.0.6
+> Alpha + WIP
+
+- BACKEND: Model for Items & Details for this last one.

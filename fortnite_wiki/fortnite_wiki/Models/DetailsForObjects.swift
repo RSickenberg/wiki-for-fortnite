@@ -21,15 +21,17 @@ class DetailsForObjects: NSObject {
     
     private var weaponsCollection = [Weapons]()
     private var weaponsDetails = [WeaponsDetails]()
-    private var parentCollection = [Weapons]()
+    
+    private var itemsCollection = [Items]()
+    private var itemsDetails = [ItemsDetails]()
     
     override init() {
         super.init()
         
-        self.loadDemoData()
+        self.loadWeaponsDemoData()
     }
     
-    func loadDemoData() {
+    func loadWeaponsDemoData() {
         var weaponsData = Weapons()
         var weaponsDetails = WeaponsDetails()
         

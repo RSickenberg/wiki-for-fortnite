@@ -10,13 +10,33 @@ import Foundation
 
 class Items: NSObject {
     
-    var ItemsList = [Int:String]()
+    var itemId: Int
+    var detailId: Int
+    var itemName: String
+    var itemColor: Int
+    var itemImg: String
     
     override init() {
-        super.init()
-        
-        ItemsList = [0:"nil"]
+        itemId = 0
+        detailId = 0
+        itemName = ""
+        itemColor = 0
+        itemImg = ""
     }
     
-    // Init with demo data
+    init(itemId: Int, detailId: Int, itemName: String, itemColor: Int, itemImg: String) {
+        self.itemId = itemId
+        self.detailId = detailId
+        self.itemName = itemName
+        self.itemColor = itemColor
+        self.itemImg = itemImg
+    }
+    
+    override var description: String {
+        get {
+            let newDescription: String = "Model for items"
+            
+            return newDescription
+        }
+    }
 }
