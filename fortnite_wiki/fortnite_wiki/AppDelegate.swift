@@ -15,12 +15,15 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var settings: UserDefaults?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
         //Fabric.with([Crashlytics.self])
+        if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            print("/!\\ Reminders: Update versions after each tags !")
+            print("Version : " + text)
+        }
         return true
     }
 
