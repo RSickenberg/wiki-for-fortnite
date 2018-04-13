@@ -10,7 +10,7 @@
 import UIKit
 import ChameleonFramework
 
-class DetailsViewController: UIViewController {
+class DetailsWeaponViewController: UIViewController {
     
     let colors = BackgroundColors()
 

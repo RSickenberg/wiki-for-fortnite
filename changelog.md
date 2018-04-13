@@ -39,4 +39,9 @@
 # 0.0.6
 > Alpha + WIP
 
-- BACKEND: Model for Items & Details for this last one.
+- BACKEND : Model for Items & Details for this last one.
+- BACKEND : The segues & delegates are ok.
+- UI : Item collection view.
+- UI : Detail for Item.
+- UI : New background view for image view in details.
+- UI : New changes are apply to iPad version.

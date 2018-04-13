@@ -15,6 +15,7 @@ class ItemsDetails: NSObject {
     var isExplosive: Bool
     var isOneUse: Bool
     var heal: Int
+    var shield: Int
     var delay: Float
     var damages: Int
     var location: String
@@ -25,17 +26,19 @@ class ItemsDetails: NSObject {
         isExplosive = false
         isOneUse = false
         heal = 0
+        shield = 0
         delay = 0.0
         damages = 0
         location = ""
     }
     
-    init(itemId: Int, isHeal: Bool, isExplosive: Bool, isOneUse: Bool, heal: Int, delay: Float, damages: Int, location: String) {
+    init(itemId: Int, isHeal: Bool, isExplosive: Bool, isOneUse: Bool, heal: Int, shield: Int, delay: Float, damages: Int, location: String) {
         self.itemId = itemId
         self.isHeal = isHeal
         self.isExplosive = isExplosive
         self.isOneUse = isOneUse
         self.heal = heal
+        self.shield = shield
         self.delay = delay
         self.damages = damages
         self.location = location

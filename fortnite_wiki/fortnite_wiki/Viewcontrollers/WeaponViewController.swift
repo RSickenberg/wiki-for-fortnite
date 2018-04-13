@@ -60,12 +60,11 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.layer.shadowRadius = 5.0
         cell.layer.shadowOpacity = 1
         cell.layer.shadowColor = UIColor.black.cgColor
-        
         cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.weaponName.text = weapon.weaponName
+        
         shadowsOptions.setLayer(label: cell.weaponName)
         
-        // Deal with combinaisons of all the weapon's colors
         switch listOfLevels {
         case [0,1,2]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
@@ -98,11 +97,11 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         switch segue.identifier! {
         case "weaponDetail":
-            let dataToDisplay: DetailsViewController = segue.destination as! DetailsViewController
+            let dataToDisplay: DetailsWeaponViewController = segue.destination as! DetailsWeaponViewController
             
             dataToDisplay.index = self.index!
             dataToDisplay.weaponInfo = list.getWeaponsByIndex(index: self.index!)
-            dataToDisplay.weaponDetails = list.getDetailsByWeaponId(weaponId: list.getWeaponsByIndex(index: self.index!).weaponId)
+            dataToDisplay.weaponDetails = list.getDetailsByWeaponId(weaponId: dataToDisplay.weaponInfo.weaponId)
         default:
             break
         }

@@ -40,6 +40,20 @@ class ShadowLayers: NSObject {
         label.layer.shadowOffset = shadowOffset
     }
     
+    func setLayer(view: UIView) {
+        view.layer.shadowColor = shadowColor
+        view.layer.shadowRadius = shadowRadius
+        view.layer.shadowOpacity = shadowOpacity
+        view.layer.shadowOffset = shadowOffset
+    }
+    
+    func setLayer(image: UIImageView) {
+        image.layer.shadowColor = shadowColor
+        image.layer.shadowRadius = shadowRadius
+        image.layer.shadowOpacity = shadowOpacity
+        image.layer.shadowOffset = shadowOffset
+    }
+    
     override var description: String {
         get {
             let newDescription: String = "Helper for Shadows values"
