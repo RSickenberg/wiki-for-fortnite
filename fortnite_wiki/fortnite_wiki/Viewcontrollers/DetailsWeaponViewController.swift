@@ -13,7 +13,7 @@ import ChameleonFramework
 class DetailsWeaponViewController: UIViewController {
     
     let colors = BackgroundColors()
-    let BackgroundFormater = UIBackgroundView()
+    let BackgroundFormater = FormatLevels()
     let feedback = UISelectionFeedbackGenerator()
 
     @IBOutlet weak var titleNavigation: UINavigationItem!

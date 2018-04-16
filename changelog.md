@@ -50,3 +50,5 @@
 - BACKEND : Version of the app is print on app load. /!\ UPDATE IT AFTER ALL TAGS
 - BACKEND : New setLayer for cell.
 - BACKEND : Global code cleanup.
+- UI : Corner radius on BackgroundImageView.
+- BACKEND : Moved in helper the set background color by levels.

@@ -20,6 +20,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     let feedback = UIImpactFeedbackGenerator(style: .light)
     let colors = BackgroundColors()
     let list = DetailsForObjects()
+    let levels = FormatLevels()
     var cellParentId: Int = 0
     var index: Int?
     
@@ -59,19 +60,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.weaponName.text = weapon.weaponName
 
-        switch listOfLevels {
-        case [0,1,2]:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
-            break
-        case [1,2]:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
-            break
-        case [3,4]:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "B83DF2")!, UIColor.init(hexString: "E6BB0E")!])
-        default:
-            cell.backgroundColor = UIColor.black
-            break
-        }
+        levels.formatCellGradients(cell: cell, levels: listOfLevels)
 
         cell.cellimageView.image = UIImage(named: weapon.weaponImg)
         return cell

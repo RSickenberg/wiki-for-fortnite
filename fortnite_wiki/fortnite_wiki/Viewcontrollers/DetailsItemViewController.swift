@@ -16,7 +16,7 @@ class DetailsItemViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIView!
     let shadows = ShadowLayers()
     let colors = BackgroundColors()
-    let BackgroundFormater = UIBackgroundView()
+    let BackgroundFormater = FormatLevels()
     var index: Int = 0
     var itemInfo = Items()
     var itemDetails = ItemsDetails()

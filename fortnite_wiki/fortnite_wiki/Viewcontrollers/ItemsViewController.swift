@@ -22,6 +22,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     let feedback = UIImpactFeedbackGenerator(style: .light)
     let colors = BackgroundColors()
     let list = DetailsForObjects()
+    let levels = FormatLevels()
     var cellParentId: Int = 0
     var index: Int?
     
@@ -50,7 +51,6 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemsId", for: indexPath) as! ItemsCollectionCell
         let item = list.getItemByIndex(index: indexPath.row)
-        let level = item.itemColor
         let shadowsOptions = ShadowLayers()
 
         shadowsOptions.setLayer(cell: cell)
@@ -59,27 +59,8 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.cellImageView.image = UIImage(named: item.itemImg)
         cell.cellItemLabel.text = item.itemName
-        
-        switch level {
-        case 0:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4A4A4A")!, HexColor("969696")!])
-            break
-        case 1:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("037E00")!, HexColor("69E41A")!])
-            break
-        case 2:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("004080")!, HexColor("00BFFF")!])
-            break
-        case 3:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("530080")!, HexColor("D257FF")!])
-            break
-        case 4:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("805600")!, HexColor("FFD528")!])
-            break
-        default:
-            cell.backgroundColor = UIColor.black
-            break
-        }
+
+        levels.formatCellGradient(cell: cell, level: item.itemColor)
         
         return cell
     }
