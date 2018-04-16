@@ -17,6 +17,7 @@ class WeaponCollectionCell: UICollectionViewCell {
 
 class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    let feedback = UIImpactFeedbackGenerator(style: .light)
     let colors = BackgroundColors()
     let list = DetailsForObjects()
     var cellParentId: Int = 0
@@ -27,7 +28,6 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundGradient()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         index = 0
@@ -53,18 +53,12 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         let weapon = list.getWeaponsByIndex(index: indexPath.row)
         let listOfLevels = list.getLevelsByWeaponId(weapon.weaponId)
         let shadowsOptions = ShadowLayers()
-        
-        // Set the style of the cell
-        cell.layer.cornerRadius = 6.5
-        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowRadius = 5.0
-        cell.layer.shadowOpacity = 1
-        cell.layer.shadowColor = UIColor.black.cgColor
+
+        shadowsOptions.setLayer(label: cell.weaponName)
+        shadowsOptions.setLayer(cell: cell)
         cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.weaponName.text = weapon.weaponName
-        
-        shadowsOptions.setLayer(label: cell.weaponName)
-        
+
         switch listOfLevels {
         case [0,1,2]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
@@ -78,23 +72,18 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
             cell.backgroundColor = UIColor.black
             break
         }
-        
-        
+
         cell.cellimageView.image = UIImage(named: weapon.weaponImg)
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let feedback = UIImpactFeedbackGenerator(style: .light)
         index = indexPath.row
-        
         feedback.impactOccurred()
         performSegue(withIdentifier: "weaponDetail", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         switch segue.identifier! {
         case "weaponDetail":
             let dataToDisplay: DetailsWeaponViewController = segue.destination as! DetailsWeaponViewController

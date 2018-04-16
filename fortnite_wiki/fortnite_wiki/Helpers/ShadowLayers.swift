@@ -53,6 +53,15 @@ class ShadowLayers: NSObject {
         image.layer.shadowOpacity = shadowOpacity
         image.layer.shadowOffset = shadowOffset
     }
+
+    func setLayer(cell: UICollectionViewCell) {
+        cell.layer.shadowColor = shadowColor
+        cell.layer.shadowRadius = shadowRadius
+        cell.layer.shadowOpacity = shadowOpacity
+        cell.layer.shadowOffset = shadowOffset
+
+        cell.layer.cornerRadius = 6.5
+    }
     
     override var description: String {
         get {

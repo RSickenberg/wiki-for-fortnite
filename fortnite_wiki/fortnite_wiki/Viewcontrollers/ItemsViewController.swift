@@ -19,6 +19,7 @@ class ItemsCollectionCell: UICollectionViewCell {
 class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    let feedback = UIImpactFeedbackGenerator(style: .light)
     let colors = BackgroundColors()
     let list = DetailsForObjects()
     var cellParentId: Int = 0
@@ -27,7 +28,6 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundGradient()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -52,16 +52,11 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let item = list.getItemByIndex(index: indexPath.row)
         let level = item.itemColor
         let shadowsOptions = ShadowLayers()
-        
-        // TODO: Move in helper
-        cell.layer.cornerRadius = 6.5
-        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowRadius = 2.0
-        cell.layer.shadowOpacity = 0.5
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
-        
+
+        shadowsOptions.setLayer(cell: cell)
         shadowsOptions.setLayer(label: cell.cellItemLabel)
+
+        cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.cellImageView.image = UIImage(named: item.itemImg)
         cell.cellItemLabel.text = item.itemName
         
@@ -90,9 +85,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let feedback = UIImpactFeedbackGenerator(style: .light)
         index = indexPath.row
-        
         feedback.impactOccurred()
         performSegue(withIdentifier: "itemDetail", sender: self)
     }
@@ -101,7 +94,6 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         switch segue.identifier {
         case "itemDetail" :
             let dataToDisplay: DetailsItemViewController = segue.destination as! DetailsItemViewController
-            
             dataToDisplay.index = self.index!
             dataToDisplay.itemInfo = list.getItemByIndex(index: self.index!)
             dataToDisplay.itemDetails = list.getDetailsByItemId(itemId: dataToDisplay.itemInfo.itemId)

@@ -14,32 +14,31 @@ class DetailsWeaponViewController: UIViewController {
     
     let colors = BackgroundColors()
     let BackgroundFormater = UIBackgroundView()
+    let feedback = UISelectionFeedbackGenerator()
 
     @IBOutlet weak var titleNavigation: UINavigationItem!
     @IBOutlet weak var detailsViewTitle: UINavigationItem!
     @IBOutlet weak var levelOfWeaponSwitch: UISegmentedControl!
     @IBAction func levelOfWeaponSwitch(_ sender: UISegmentedControl) {
         // Change level here
-        let feedback = UISelectionFeedbackGenerator()
         feedback.selectionChanged()
-        
         switch levelOfWeaponSwitch.titleForSegment(at: levelOfWeaponSwitch.selectedSegmentIndex)! {
         case "Common":
-            populateLabelsByValueAndLevels(0)
             BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 0)
+            populateLabelsByValueAndLevels(0)
             break
         case "Atypical":
-            populateLabelsByValueAndLevels(1)
             BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 1)
+            populateLabelsByValueAndLevels(1)
         case "Rare":
-            populateLabelsByValueAndLevels(2)
             BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 2)
+            populateLabelsByValueAndLevels(2)
         case "Epic":
-            populateLabelsByValueAndLevels(3)
             BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 3)
+            populateLabelsByValueAndLevels(3)
         case "Legendary":
-            populateLabelsByValueAndLevels(4)
             BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 4)
+            populateLabelsByValueAndLevels(4)
         default:
             break
         }
@@ -138,11 +137,9 @@ class DetailsWeaponViewController: UIViewController {
         levelOfWeaponSwitch.removeAllSegments()
         let listOfLevels = weaponModel.getLevelsByWeaponId(weaponInfo.weaponId)
         let titles = ["Common", "Atypical", "Rare", "Epic", "Legendary"]
-        
         for listOfLevel in listOfLevels {
             levelOfWeaponSwitch.insertSegment(withTitle: titles[listOfLevel], at: levelOfWeaponSwitch.numberOfSegments, animated: false)
         }
-        
         levelOfWeaponSwitch.selectedSegmentIndex = 0
     }
     
@@ -171,10 +168,7 @@ class DetailsWeaponViewController: UIViewController {
     }
     
     func populateLabelsByValueAndLevels(_ level: Int) {
-        //let listOfLevels = weaponModel.getLevelsByWeaponId(weaponInfo.weaponId)
-        
         let details = weaponModel.getDetailsByWeaponIdAndLevel(weaponId: weaponInfo.weaponId, weaponLevel: level)
-        
         dpsLabel.text = String(Float(details.damage)*details.fireRate)
         envdmgLabel.text = String(details.environementDamage)
         
@@ -191,7 +185,7 @@ class DetailsWeaponViewController: UIViewController {
         standingSpreadLabel.text = String(details.spreadStanding)
         downsightsSpreadLabel.text = String(details.spreadDownsights)
         crouchingSpreadLabel.text = String(details.spreadCrouching)
-        
+
         horizontalLabel.text = String(details.recoilHorizontal)
         verticalLabel.text = String(details.recoilVertical)
         angleMaxLabel.text = String(details.recoilMaxAngle)
@@ -203,7 +197,6 @@ class DetailsWeaponViewController: UIViewController {
     func styleLabels() {
         let labels = [overallLabel, dpsTitle, envdmgTitle, dpsLabel, envdmgLabel, detailsLabel,damageHeadTitle,fireRateTitle,magazineTitle,impactTitle,reloadTitle,damageLabel,headLabel,fireRateLabel,magazineSizeLabel,impactLabel,reloadLabel,spreadLabel,baseTitle,sprintTitle,jumpFallTitle,downsightsTitle,standingTitle,crouchingTitle,baseSpreadLabel,sprintSpreadLabel,jumpSpreadLabel,standingSpreadLabel,downsightsSpreadLabel,crouchingSpreadLabel,recoilLabel,horizontalRecoilTitle,verticalRecoilTitle,angleMaxTitle,angleMinTitle,downsightsRecoilTitle,horizontalLabel,verticalLabel,angleMaxLabel,angleMinLabel,downsightsRecoilLabel]
         let shadowOptions = ShadowLayers()
-        
         for label in labels {
             shadowOptions.setLayer(label: label!)
         }

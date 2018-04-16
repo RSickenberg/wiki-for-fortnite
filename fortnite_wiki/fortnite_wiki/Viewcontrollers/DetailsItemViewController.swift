@@ -24,10 +24,8 @@ class DetailsItemViewController: UIViewController {
     
     override func viewDidLoad() {
         backgroundGradient()
-        
         itemImage.image = UIImage(named: itemInfo.itemImg)
         titleView.title = itemInfo.itemName
-        
         getGradientValueForBackgroundImage()
     }
     

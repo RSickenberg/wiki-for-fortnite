@@ -46,3 +46,7 @@
 - UI : New background view for image view in details.
 - UI : New changes are apply to iPad version.
 - UI : Graphical improvements for UIBackgroundImage.
+- UI : Constraints update due to recent changes.
+- BACKEND : Version of the app is print on app load. /!\ UPDATE IT AFTER ALL TAGS
+- BACKEND : New setLayer for cell.
+- BACKEND : Global code cleanup.
