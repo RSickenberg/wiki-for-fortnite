@@ -40,7 +40,7 @@
         <!--Weapons-->
         <scene sceneID="K8t-Yp-F6u">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gli-Ab-9Yi" sceneMemberID="viewController">
+                <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="gli-Ab-9Yi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Weapons" id="I1D-mL-Lg4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3qh-NE-45u">
@@ -682,12 +682,12 @@
                                             <constraint firstAttribute="trailing" secondItem="mVg-eS-0Kh" secondAttribute="trailing" constant="5" id="aDq-Kk-f5h"/>
                                             <constraint firstAttribute="trailing" secondItem="IZW-6N-Dmr" secondAttribute="trailing" constant="2" id="bo5-uE-6js"/>
                                             <constraint firstAttribute="trailing" secondItem="YAd-4u-Mwn" secondAttribute="trailing" id="cl1-IE-3h7"/>
+                                            <constraint firstItem="rBe-Vz-X3c" firstAttribute="centerX" secondItem="HtC-4Q-Gf4" secondAttribute="centerX" id="d6a-sW-5oU"/>
                                             <constraint firstItem="gLK-Ib-fP1" firstAttribute="top" secondItem="6kr-6O-7xp" secondAttribute="bottom" constant="79" id="fem-hl-ar0"/>
                                             <constraint firstItem="l1J-jr-g3v" firstAttribute="trailing" secondItem="dQv-A8-REa" secondAttribute="trailing" id="gHS-yW-jJq"/>
                                             <constraint firstItem="l1J-jr-g3v" firstAttribute="top" secondItem="pcX-gT-J7U" secondAttribute="bottom" constant="10" id="gIn-VB-2hk"/>
                                             <constraint firstItem="t1Q-LY-Mxm" firstAttribute="leading" secondItem="IZW-6N-Dmr" secondAttribute="leading" id="h0I-qF-iZY"/>
                                             <constraint firstItem="B9L-tr-zPh" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" id="jGb-3d-wXs"/>
-                                            <constraint firstItem="rBe-Vz-X3c" firstAttribute="leading" secondItem="bNN-xt-2Gq" secondAttribute="leading" constant="34" id="jZ7-YT-DNZ"/>
                                             <constraint firstAttribute="trailing" secondItem="jRY-L2-DLF" secondAttribute="trailing" constant="5" id="ktx-rY-43E"/>
                                             <constraint firstItem="jRY-L2-DLF" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" constant="5" id="mmz-VL-gSL"/>
                                             <constraint firstAttribute="trailing" secondItem="bNN-xt-2Gq" secondAttribute="trailing" id="mtL-Sa-UkH"/>
@@ -1231,7 +1231,7 @@
         <!--Items-->
         <scene sceneID="KLj-6x-2kt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nue-w2-LlX" sceneMemberID="viewController">
+                <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="Nue-w2-LlX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Items" id="wWP-Gr-trQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="XqB-dC-or3">
