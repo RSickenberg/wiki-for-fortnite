@@ -45,3 +45,4 @@
 - UI : Detail for Item.
 - UI : New background view for image view in details.
 - UI : New changes are apply to iPad version.
+- UI : Graphical improvements for UIBackgroundImage.

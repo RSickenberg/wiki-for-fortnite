@@ -13,6 +13,7 @@ import ChameleonFramework
 class DetailsWeaponViewController: UIViewController {
     
     let colors = BackgroundColors()
+    let BackgroundFormater = UIBackgroundView()
 
     @IBOutlet weak var titleNavigation: UINavigationItem!
     @IBOutlet weak var detailsViewTitle: UINavigationItem!
@@ -25,20 +26,20 @@ class DetailsWeaponViewController: UIViewController {
         switch levelOfWeaponSwitch.titleForSegment(at: levelOfWeaponSwitch.selectedSegmentIndex)! {
         case "Common":
             populateLabelsByValueAndLevels(0)
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "969696")!, UIColor.clear])
+            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 0)
             break
         case "Atypical":
             populateLabelsByValueAndLevels(1)
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "4FCA00")!, UIColor.clear])
+            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 1)
         case "Rare":
             populateLabelsByValueAndLevels(2)
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "00BFFF")!, UIColor.clear])
+            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 2)
         case "Epic":
             populateLabelsByValueAndLevels(3)
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "B83DF2")!, UIColor.clear])
+            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 3)
         case "Legendary":
             populateLabelsByValueAndLevels(4)
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "E6BB0E")!, UIColor.clear])
+            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 4)
         default:
             break
         }
@@ -146,26 +147,22 @@ class DetailsWeaponViewController: UIViewController {
     }
     
     func getGradientValueforBackgroundImage() {
-        
+
+        BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: weaponDetails.detailLevel)
         switch weaponDetails.detailLevel {
         case 0 :
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "969696")!, UIColor.clear])
             populateLabelsByValueAndLevels(0)
             break
         case 1 :
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "4FCA00")!, UIColor.clear])
             populateLabelsByValueAndLevels(1)
             break
         case 2 :
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "00BFFF")!, UIColor.clear])
             populateLabelsByValueAndLevels(2)
             break
         case 3 :
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "B83DF2")!, UIColor.clear])
             populateLabelsByValueAndLevels(3)
             break
         case 4 :
-            uiBackgroundView.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: uiBackgroundView.frame, colors: [UIColor.clear ,UIColor.init(hexString: "E6BB0E")!, UIColor.clear])
             populateLabelsByValueAndLevels(4)
             break
         default:

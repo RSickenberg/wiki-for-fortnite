@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import ChameleonFramework
 
 class BackgroundColors {
     var gl:CAGradientLayer!
