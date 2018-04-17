@@ -18,14 +18,17 @@ class ItemsCollectionCell: UICollectionViewCell {
 
 class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+
     let feedback = UIImpactFeedbackGenerator(style: .light)
     let colors = BackgroundColors()
     let list = DetailsForObjects()
     let levels = FormatLevels()
+
     var cellParentId: Int = 0
     var index: Int?
-    
+
+    @IBOutlet weak var collectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundGradient()
@@ -53,15 +56,14 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let item = list.getItemByIndex(index: indexPath.row)
         let shadowsOptions = ShadowLayers()
 
-        shadowsOptions.setLayer(cell: cell)
-        shadowsOptions.setLayer(label: cell.cellItemLabel)
+        levels.formatCellGradient(cell: cell, level: item.itemColor)
+        shadowsOptions.setShadow(label: cell.cellItemLabel)
 
         cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.cellImageView.image = UIImage(named: item.itemImg)
         cell.cellItemLabel.text = item.itemName
 
-        levels.formatCellGradient(cell: cell, level: item.itemColor)
-        
+
         return cell
     }
     

@@ -54,7 +54,7 @@ class FormatLevels: NSObject {
         
         view.layer.borderWidth = 8.5
         view.layer.borderColor = UIColor.flatWhite.cgColor
-        shadows.setLayer(view: view)
+        shadows.setShadow(view: view)
 
         view.layer.cornerRadius = 6.5
     }
@@ -73,6 +73,8 @@ class FormatLevels: NSObject {
             cell.backgroundColor = UIColor.black
             break
         }
+
+        shadows.setShadow(cell: cell)
     }
 
     func formatCellGradient(cell: UICollectionViewCell, level: Int) {
@@ -96,11 +98,13 @@ class FormatLevels: NSObject {
             cell.backgroundColor = UIColor.black
             break
         }
+
+        shadows.setShadow(cell: cell)
     }
     
     override var description: String {
         get {
-            let newDescription = "Formater for UIBackground"
+            let newDescription = "Helper for Levels cell / Background formatter."
             return newDescription
         }
     }

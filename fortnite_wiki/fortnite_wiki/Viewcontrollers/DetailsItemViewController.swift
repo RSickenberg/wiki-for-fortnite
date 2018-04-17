@@ -10,18 +10,20 @@ import Foundation
 import ChameleonFramework
 
 class DetailsItemViewController: UIViewController {
-    
-    @IBOutlet weak var itemImage: UIImageView!
-    @IBOutlet weak var titleView: UINavigationItem!
-    @IBOutlet weak var backgroundImageView: UIView!
+
     let shadows = ShadowLayers()
     let colors = BackgroundColors()
     let BackgroundFormater = FormatLevels()
+
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var titleView: UINavigationItem!
+    @IBOutlet weak var backgroundImageView: UIView!
+
     var index: Int = 0
     var itemInfo = Items()
     var itemDetails = ItemsDetails()
     var itemModel = DetailsForObjects()
-    
+
     override func viewDidLoad() {
         backgroundGradient()
         itemImage.image = UIImage(named: itemInfo.itemImg)
@@ -38,7 +40,7 @@ class DetailsItemViewController: UIViewController {
     
     func getGradientValueForBackgroundImage() {
         BackgroundFormater.formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.itemColor)
-        shadows.setLayer(image: itemImage)
+        shadows.setShadow(image: itemImage)
     }
     
 }

@@ -33,28 +33,28 @@ class ShadowLayers: NSObject {
         self.maskToBounds = maskToBounds
     }
     
-    func setLayer(label: UILabel) {
+    func setShadow(label: UILabel) {
         label.layer.shadowColor = shadowColor
         label.layer.shadowRadius = shadowRadius
         label.layer.shadowOpacity = shadowOpacity
         label.layer.shadowOffset = shadowOffset
     }
     
-    func setLayer(view: UIView) {
+    func setShadow(view: UIView) {
         view.layer.shadowColor = shadowColor
         view.layer.shadowRadius = shadowRadius
         view.layer.shadowOpacity = shadowOpacity
         view.layer.shadowOffset = shadowOffset
     }
     
-    func setLayer(image: UIImageView) {
+    func setShadow(image: UIImageView) {
         image.layer.shadowColor = shadowColor
         image.layer.shadowRadius = shadowRadius
         image.layer.shadowOpacity = shadowOpacity
         image.layer.shadowOffset = shadowOffset
     }
 
-    func setLayer(cell: UICollectionViewCell) {
+    func setShadow(cell: UICollectionViewCell) {
         cell.layer.shadowColor = shadowColor
         cell.layer.shadowRadius = shadowRadius
         cell.layer.shadowOpacity = shadowOpacity

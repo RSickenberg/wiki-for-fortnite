@@ -13,8 +13,9 @@ import ChameleonFramework
 class DetailsWeaponViewController: UIViewController {
     
     let colors = BackgroundColors()
-    let BackgroundFormater = FormatLevels()
+    let BackgroundFormatter = FormatLevels()
     let feedback = UISelectionFeedbackGenerator()
+    let shadowOptions = ShadowLayers()
 
     @IBOutlet weak var titleNavigation: UINavigationItem!
     @IBOutlet weak var detailsViewTitle: UINavigationItem!
@@ -24,20 +25,20 @@ class DetailsWeaponViewController: UIViewController {
         feedback.selectionChanged()
         switch levelOfWeaponSwitch.titleForSegment(at: levelOfWeaponSwitch.selectedSegmentIndex)! {
         case "Common":
-            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 0)
+            BackgroundFormatter.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 0)
             populateLabelsByValueAndLevels(0)
             break
         case "Atypical":
-            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 1)
+            BackgroundFormatter.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 1)
             populateLabelsByValueAndLevels(1)
         case "Rare":
-            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 2)
+            BackgroundFormatter.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 2)
             populateLabelsByValueAndLevels(2)
         case "Epic":
-            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 3)
+            BackgroundFormatter.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 3)
             populateLabelsByValueAndLevels(3)
         case "Legendary":
-            BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 4)
+            BackgroundFormatter.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: 4)
             populateLabelsByValueAndLevels(4)
         default:
             break
@@ -145,7 +146,8 @@ class DetailsWeaponViewController: UIViewController {
     
     func getGradientValueforBackgroundImage() {
 
-        BackgroundFormater.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: weaponDetails.detailLevel)
+        BackgroundFormatter.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: weaponDetails.detailLevel)
+        shadowOptions.setShadow(image: weaponImage)
         switch weaponDetails.detailLevel {
         case 0 :
             populateLabelsByValueAndLevels(0)
@@ -196,21 +198,10 @@ class DetailsWeaponViewController: UIViewController {
     
     func styleLabels() {
         let labels = [overallLabel, dpsTitle, envdmgTitle, dpsLabel, envdmgLabel, detailsLabel,damageHeadTitle,fireRateTitle,magazineTitle,impactTitle,reloadTitle,damageLabel,headLabel,fireRateLabel,magazineSizeLabel,impactLabel,reloadLabel,spreadLabel,baseTitle,sprintTitle,jumpFallTitle,downsightsTitle,standingTitle,crouchingTitle,baseSpreadLabel,sprintSpreadLabel,jumpSpreadLabel,standingSpreadLabel,downsightsSpreadLabel,crouchingSpreadLabel,recoilLabel,horizontalRecoilTitle,verticalRecoilTitle,angleMaxTitle,angleMinTitle,downsightsRecoilTitle,horizontalLabel,verticalLabel,angleMaxLabel,angleMinLabel,downsightsRecoilLabel]
-        let shadowOptions = ShadowLayers()
         for label in labels {
-            shadowOptions.setLayer(label: label!)
+            shadowOptions.setShadow(label: label!)
         }
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

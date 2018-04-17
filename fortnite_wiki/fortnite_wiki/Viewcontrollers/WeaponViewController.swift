@@ -55,14 +55,13 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         let listOfLevels = list.getLevelsByWeaponId(weapon.weaponId)
         let shadowsOptions = ShadowLayers()
 
-        shadowsOptions.setLayer(label: cell.weaponName)
-        shadowsOptions.setLayer(cell: cell)
+        levels.formatCellGradients(cell: cell, levels: listOfLevels)
+        shadowsOptions.setShadow(label: cell.weaponName)
+
         cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
         cell.weaponName.text = weapon.weaponName
-
-        levels.formatCellGradients(cell: cell, levels: listOfLevels)
-
         cell.cellimageView.image = UIImage(named: weapon.weaponImg)
+
         return cell
     }
     
@@ -76,7 +75,6 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         switch segue.identifier! {
         case "weaponDetail":
             let dataToDisplay: DetailsWeaponViewController = segue.destination as! DetailsWeaponViewController
-            
             dataToDisplay.index = self.index!
             dataToDisplay.weaponInfo = list.getWeaponsByIndex(index: self.index!)
             dataToDisplay.weaponDetails = list.getDetailsByWeaponId(weaponId: dataToDisplay.weaponInfo.weaponId)
