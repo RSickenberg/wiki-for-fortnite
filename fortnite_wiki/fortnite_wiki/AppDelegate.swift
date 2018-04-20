@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         //Fabric.with([Crashlytics.self])
         if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            print("/!\\ Reminders: Update versions after each tags !")
             print("Version : " + text)
         }
         return true

@@ -37,7 +37,7 @@
 - UI : Constraints are done.
 
 # 0.0.6
-> Alpha + WIP
+> Alpha
 
 - BACKEND : Model for Items & Details for this last one.
 - BACKEND : The segues & delegates are ok.
@@ -54,4 +54,6 @@
 - BACKEND : Moved in helper the set background color by levels.
 - UI : Details for items & shadows on labels.
 - BACKEND : Conditions for labels in items.
-- BACKEND : Code cleanup.
+
+# 0.0.7
+> Alpha + WIP
