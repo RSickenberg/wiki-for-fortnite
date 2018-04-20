@@ -9,38 +9,41 @@
 import Foundation
 
 class ItemsDetails: NSObject {
-    
+
     var itemId: Int
     var isHeal: Bool
     var isExplosive: Bool
-    var isOneUse: Bool
     var heal: Int
     var shield: Int
     var delay: Float
     var damages: Int
     var location: String
-    
+    var capacity: Int
+    var comment: String
+
     override init() {
         itemId = 0
         isHeal = false
         isExplosive = false
-        isOneUse = false
         heal = 0
         shield = 0
         delay = 0.0
         damages = 0
         location = ""
+        capacity = 0
+        comment = ""
     }
-    
-    init(itemId: Int, isHeal: Bool, isExplosive: Bool, isOneUse: Bool, heal: Int, shield: Int, delay: Float, damages: Int, location: String) {
+
+    init(itemId: Int, isHeal: Bool, isExplosive: Bool, heal: Int, shield: Int, delay: Float, damages: Int, location: String, capacity: Int, comment: String) {
         self.itemId = itemId
         self.isHeal = isHeal
         self.isExplosive = isExplosive
-        self.isOneUse = isOneUse
         self.heal = heal
         self.shield = shield
         self.delay = delay
         self.damages = damages
         self.location = location
+        self.capacity = capacity
+        self.comment = comment
     }
 }

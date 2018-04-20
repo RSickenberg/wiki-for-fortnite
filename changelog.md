@@ -53,3 +53,5 @@
 - UI : Corner radius on BackgroundImageView.
 - BACKEND : Moved in helper the set background color by levels.
 - UI : Details for items & shadows on labels.
+- BACKEND : Conditions for labels in items.
+- BACKEND : Code cleanup.

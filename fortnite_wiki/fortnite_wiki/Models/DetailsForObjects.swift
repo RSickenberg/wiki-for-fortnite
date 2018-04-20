@@ -18,31 +18,31 @@
 import Foundation
 
 class DetailsForObjects: NSObject {
-    
+
     private var weaponsCollection = [Weapons]()
     private var weaponsDetails = [WeaponsDetails]()
-    
+
     private var itemsCollection = [Items]()
     private var itemsDetails = [ItemsDetails]()
-    
+
     override init() {
         super.init()
-        
+
         self.loadWeaponsDemoData()
         self.loadItemsDemoData()
     }
-    
+
     func loadWeaponsDemoData() {
         var weaponsData = Weapons()
         var weaponsDetails = WeaponsDetails()
-        
+
         weaponsData.weaponId = 0
         weaponsData.detailId = 0
         weaponsData.weaponParentId = 0
         weaponsData.weaponName = "Assault Riffle (burst)"
         weaponsData.weaponColor = 0
         weaponsData.weaponImg = "ar_burst"
-        
+
         weaponsDetails.detailLevel = 0
         weaponsDetails.weaponId = 0
         weaponsDetails.damage = 27
@@ -71,12 +71,12 @@ class DetailsForObjects: NSObject {
         weaponsDetails.recoilMaxAngle = 25
         weaponsDetails.recoilMinAngle = -25
         weaponsDetails.recoilDownsights = 0.5
-        
+
         self.addWeaponToDB(weaponsData)
         self.addWeaponDetailsToDB(weaponsDetails)
-        
+
         weaponsDetails = WeaponsDetails()
-        
+
         weaponsDetails.detailLevel = 1
         weaponsDetails.weaponId = 0
         weaponsDetails.damage = 29
@@ -105,9 +105,9 @@ class DetailsForObjects: NSObject {
         weaponsDetails.recoilMaxAngle = 25
         weaponsDetails.recoilMinAngle = -25
         weaponsDetails.recoilDownsights = 0.5
-        
+
         self.addWeaponDetailsToDB(weaponsDetails)
-        
+
         weaponsDetails = WeaponsDetails()
 
         weaponsDetails.detailLevel = 2
@@ -138,19 +138,19 @@ class DetailsForObjects: NSObject {
         weaponsDetails.recoilMaxAngle = 25
         weaponsDetails.recoilMinAngle = -25
         weaponsDetails.recoilDownsights = 0.5
-        
+
         self.addWeaponDetailsToDB(weaponsDetails)
-        
+
         weaponsData = Weapons()
         weaponsDetails = WeaponsDetails()
-        
+
         weaponsData.weaponId = 3
         weaponsData.detailId = 3
         weaponsData.weaponParentId = 3
         weaponsData.weaponName = "Assault Riffle (SCAR)"
         weaponsData.weaponColor = 3
         weaponsData.weaponImg = "ar_scar"
-        
+
         weaponsDetails.detailLevel = 3
         weaponsDetails.weaponId = 3
         weaponsDetails.damage = 35
@@ -179,12 +179,12 @@ class DetailsForObjects: NSObject {
         weaponsDetails.recoilMaxAngle = 25
         weaponsDetails.recoilMinAngle = -25
         weaponsDetails.recoilDownsights = 0.5
-        
+
         self.addWeaponToDB(weaponsData)
         self.addWeaponDetailsToDB(weaponsDetails)
-        
+
         weaponsDetails = WeaponsDetails()
-        
+
         weaponsDetails.detailLevel = 4
         weaponsDetails.weaponId = 3
         weaponsDetails.damage = 36
@@ -213,125 +213,140 @@ class DetailsForObjects: NSObject {
         weaponsDetails.recoilMaxAngle = 25
         weaponsDetails.recoilMinAngle = -25
         weaponsDetails.recoilDownsights = 0.5
-        
+
         self.addWeaponDetailsToDB(weaponsDetails)
     }
-    
+
     func addWeaponToDB(_ weapon: Weapons) {
         weaponsCollection.append(weapon)
     }
-    
+
     func addWeaponDetailsToDB(_ details: WeaponsDetails) {
         weaponsDetails.append(details)
     }
-    
+
     func getAllWeapons() -> [Weapons] {
         return weaponsCollection
     }
-    
+
     func getAllWeaponsDetails() -> [WeaponsDetails] {
         return weaponsDetails
     }
-    
+
     func getWeaponsByIndex(index: Int) -> Weapons {
         return weaponsCollection[index]
     }
-    
+
     func countWeapons() -> Int {
         return weaponsCollection.count
     }
-    
-    
+
+
     func getDetailsByWeaponId(weaponId: Int) -> WeaponsDetails {
         let key = weaponsDetails.index(where: { $0.weaponId == weaponId })
-        
+
         return weaponsDetails[key!]
     }
-    
+
     func getDetailsByWeaponIdAndLevel(weaponId: Int, weaponLevel: Int) -> WeaponsDetails {
         let key = weaponsDetails.index(where: { $0.weaponId == weaponId && $0.detailLevel == weaponLevel })
-    
+
         return weaponsDetails[key!]
     }
-    
+
     func countNumberOfLevelsByWeaponId(_ weaponId: Int) -> Int {
         var numberOfLevels: Int = 0
-        
+
         for detail in weaponsDetails {
             if detail.weaponId == weaponId {
                 numberOfLevels += 1
             }
         }
-        
+
         return numberOfLevels
     }
-    
+
     func getLevelsByWeaponId(_ weaponId: Int) -> [Int] {
         var levels = [Int]()
-        
+
         for detail in weaponsDetails {
             if detail.weaponId == weaponId {
                 levels.append(detail.detailLevel)
             }
         }
-        
+
         return levels
     }
-    
+
     ////////////////////////////////////////////////////////////////////////////////////////////// ITEMS
-    
+
     func loadItemsDemoData() {
         var itemData = Items()
         var itemDetais = ItemsDetails()
         
         itemData.itemId = 0
         itemData.detailId = 0
-        itemData.itemName = "Medium Shield"
-        itemData.itemColor = 2
-        itemData.itemImg = "shield_50"
-        
+        itemData.itemName = "Explosive grenade"
+        itemData.itemColor = 0
+        itemData.itemImg = "explosive_gre"
+
         itemDetais.itemId = 0
-        itemDetais.isHeal = true
-        itemDetais.isExplosive = false
-        itemDetais.isOneUse = true
-        itemDetais.heal = 0
-        itemDetais.shield = 50
-        itemDetais.delay = 5.0
-        itemDetais.damages = 0
-        itemDetais.location = "Ground, chest, drop"
-        
+        itemDetais.isExplosive = true
+        itemDetais.damages = 100
+        itemDetais.capacity = 9
+        itemDetais.location = "ground, chest, drop"
+        itemDetais.comment = "Lorum ipsum dolor sit amet constructor"
+
         addItemToDB(itemData)
         addItemDetailsToDB(itemDetais)
-        
+
+        itemData = Items()
+        itemDetais = ItemsDetails()
+
+        itemData.itemId = 1
+        itemData.detailId = 1
+        itemData.itemName = "Medium shield"
+        itemData.itemColor = 2
+        itemData.itemImg = "shield_50"
+
+        itemDetais.itemId = 1
+        itemDetais.isHeal = true
+        itemDetais.shield = 50
+        itemDetais.delay = 5.0
+        itemDetais.location = "ground, chest, drop"
+        itemDetais.capacity = 3
+
+        addItemToDB(itemData)
+        addItemDetailsToDB(itemDetais)
     }
-    
+
     func addItemToDB(_ items: Items) {
         itemsCollection.append(items)
     }
-    
+
     func addItemDetailsToDB(_ details: ItemsDetails) {
         itemsDetails.append(details)
     }
-    
+
     func getAllItems() -> [Items] {
         return itemsCollection
     }
-    
+
     func getAllItemsDetails() -> [ItemsDetails] {
         return itemsDetails
     }
-    
+
     func getItemByIndex(index: Int) -> Items {
         return itemsCollection[index]
     }
-    
+
     func countItems() -> Int {
         return itemsCollection.count
     }
-    
+
     func getDetailsByItemId(itemId: Int) -> ItemsDetails {
-        let key = itemsDetails.index(where: {$0.itemId == itemId})
-        
+        let key = itemsDetails.index(where: { $0.itemId == itemId })
+
         return itemsDetails[key!]
     }
 }

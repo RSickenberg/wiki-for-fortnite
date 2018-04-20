@@ -10,7 +10,7 @@ import Foundation
 import ChameleonFramework
 
 class WeaponsLevels: NSObject {
-    
+
     struct levels {
         var grey = 0
         var green = 1
@@ -30,7 +30,7 @@ class FormatLevels: NSObject {
     let color4 = [HexColor("FFD528")!, HexColor("805600")!]
 
     func formatUIBackgroundViewFromLevel(view: UIView, level: Int) {
-        
+
         switch level {
         case 0:
             view.backgroundColor = GradientColor(UIGradientStyle.radial, frame: view.frame, colors: color0)
@@ -47,11 +47,11 @@ class FormatLevels: NSObject {
         case 4:
             view.backgroundColor = GradientColor(UIGradientStyle.radial, frame: view.frame, colors: color4)
             break
-        default :
+        default:
             view.backgroundColor = GradientColor(UIGradientStyle.radial, frame: view.frame, colors: color1)
             break
         }
-        
+
         view.layer.borderWidth = 8.5
         view.layer.borderColor = UIColor.flatWhite.cgColor
         shadows.setShadow(view: view)
@@ -61,13 +61,13 @@ class FormatLevels: NSObject {
 
     func formatCellGradients(cell: UICollectionViewCell, levels: [Int]) {
         switch levels {
-        case [0,1,2]:
+        case [0, 1, 2]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
             break
-        case [1,2]:
+        case [1, 2]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
             break
-        case [3,4]:
+        case [3, 4]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "B83DF2")!, UIColor.init(hexString: "E6BB0E")!])
         default:
             cell.backgroundColor = UIColor.black
@@ -101,7 +101,7 @@ class FormatLevels: NSObject {
 
         shadows.setShadow(cell: cell)
     }
-    
+
     override var description: String {
         get {
             let newDescription = "Helper for Levels cell / Background formatter."

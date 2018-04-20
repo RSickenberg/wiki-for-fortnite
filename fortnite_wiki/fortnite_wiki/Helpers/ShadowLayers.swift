@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class ShadowLayers: NSObject {
-    
+
     var shadowColor: CGColor
     var shadowRadius: CGFloat
     var shadowOpacity: Float
     var shadowOffset: CGSize
     var maskToBounds: Bool
-    
+
     override init() {
         shadowColor = UIColor.black.cgColor
         shadowRadius = 2.1
@@ -24,7 +24,7 @@ class ShadowLayers: NSObject {
         shadowOffset = CGSize(width: 0, height: 0)
         maskToBounds = false
     }
-    
+
     init(shadowColor: CGColor, shadowRadius: CGFloat, shadowOpacity: Float, shadowOffset: CGSize, maskToBounds: Bool) {
         self.shadowColor = shadowColor
         self.shadowRadius = shadowRadius
@@ -32,21 +32,21 @@ class ShadowLayers: NSObject {
         self.shadowOffset = shadowOffset
         self.maskToBounds = maskToBounds
     }
-    
+
     func setShadow(label: UILabel) {
         label.layer.shadowColor = shadowColor
         label.layer.shadowRadius = shadowRadius
         label.layer.shadowOpacity = shadowOpacity
         label.layer.shadowOffset = shadowOffset
     }
-    
+
     func setShadow(view: UIView) {
         view.layer.shadowColor = shadowColor
         view.layer.shadowRadius = shadowRadius
         view.layer.shadowOpacity = shadowOpacity
         view.layer.shadowOffset = shadowOffset
     }
-    
+
     func setShadow(image: UIImageView) {
         image.layer.shadowColor = shadowColor
         image.layer.shadowRadius = shadowRadius
@@ -62,11 +62,11 @@ class ShadowLayers: NSObject {
 
         cell.layer.cornerRadius = 6.5
     }
-    
+
     override var description: String {
         get {
             let newDescription: String = "Helper for Shadows values"
-            
+
             return newDescription
         }
     }
