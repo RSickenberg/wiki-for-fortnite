@@ -52,3 +52,4 @@
 - BACKEND : Global code cleanup.
 - UI : Corner radius on BackgroundImageView.
 - BACKEND : Moved in helper the set background color by levels.
+- UI : Details for items & shadows on labels.
