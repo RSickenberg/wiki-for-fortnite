@@ -57,3 +57,5 @@
 
 # 0.0.7
 > Alpha + WIP
+
+- UI : Appicon
