@@ -803,9 +803,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="32R-SJ-R8p">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="32R-SJ-R8p">
                                 <rect key="frame" x="0.0" y="85" width="375" height="641"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="t3K-h2-UUu">
                                     <size key="itemSize" width="150" height="150"/>
@@ -872,6 +871,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="32R-SJ-R8p" firstAttribute="leading" secondItem="zor-Q5-81C" secondAttribute="leading" id="6D8-Z4-Osf"/>
+                            <constraint firstItem="zor-Q5-81C" firstAttribute="bottom" secondItem="32R-SJ-R8p" secondAttribute="bottom" constant="3" id="Yid-x7-GXu"/>
+                            <constraint firstItem="zor-Q5-81C" firstAttribute="top" secondItem="32R-SJ-R8p" secondAttribute="top" constant="3" id="evN-kC-TYw"/>
+                            <constraint firstItem="zor-Q5-81C" firstAttribute="trailing" secondItem="32R-SJ-R8p" secondAttribute="trailing" id="sW7-sr-CiZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zor-Q5-81C"/>
                     </view>
                     <navigationItem key="navigationItem" title="ITEMS" id="6fd-9v-nn9"/>
@@ -1069,7 +1074,7 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dnT-q6-9Sv" secondAttribute="trailing" constant="277" id="06Z-uL-YD7"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dnT-q6-9Sv" secondAttribute="trailing" constant="180" id="06Z-uL-YD7"/>
                                             <constraint firstAttribute="trailing" secondItem="GbO-4Q-QNn" secondAttribute="trailing" id="1sf-Hb-T9T"/>
                                             <constraint firstItem="BCp-rP-w7n" firstAttribute="top" secondItem="Yys-bZ-3KV" secondAttribute="bottom" constant="10" id="4xn-pQ-J9d"/>
                                             <constraint firstItem="BCp-rP-w7n" firstAttribute="top" secondItem="aba-oU-xnl" secondAttribute="bottom" constant="77" id="6I7-Ly-C0U"/>
@@ -1090,7 +1095,7 @@
                                             <constraint firstItem="Cgy-q5-FX7" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="Wi3-hR-INY"/>
                                             <constraint firstItem="GUn-s4-L5V" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="YFK-sd-Des"/>
                                             <constraint firstItem="JO3-hp-HIW" firstAttribute="leading" secondItem="dnT-q6-9Sv" secondAttribute="leading" id="YhA-fI-DA0"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JO3-hp-HIW" secondAttribute="trailing" constant="280" id="Z4j-K1-DJW"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JO3-hp-HIW" secondAttribute="trailing" constant="20" symbolic="YES" id="Z4j-K1-DJW"/>
                                             <constraint firstItem="jiO-lM-ieS" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="azT-Ys-da0"/>
                                             <constraint firstItem="bzr-uc-xRF" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" constant="5" id="bxV-YA-Qjb"/>
                                             <constraint firstAttribute="trailing" secondItem="fan-UY-jR4" secondAttribute="trailing" constant="5" id="cQ2-Fh-z1P"/>
