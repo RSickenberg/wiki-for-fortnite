@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ItemsDetails: NSObject {
+class ItemsDetails: NSObject, Decodable {
 
     var itemId: Int
     var isHeal: Bool

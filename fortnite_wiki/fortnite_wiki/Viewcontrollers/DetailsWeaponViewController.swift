@@ -108,24 +108,15 @@ class DetailsWeaponViewController: UIViewController {
     @IBOutlet weak var angleMinLabel: UILabel!
     @IBOutlet weak var downsightsRecoilLabel: UILabel!
 
-
     var index: Int = 0
     var weaponInfo = Weapons()
     var weaponDetails = WeaponsDetails()
-    var weaponModel = DetailsForObjects()
+    var weaponModel = JsonService.list
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        backgroundGradient()
-        detailsViewTitle.title = weaponInfo.weaponName
-        weaponImage.image = UIImage(named: weaponInfo.weaponImg)
-        weaponImage.layer.zPosition = 1
-        levelOfWeaponSwitch.layer.zPosition = 0.9
-
-        prepareSegment()
-        getGradientValueforBackgroundImage()
-        styleLabels()
+        prepareVisuals()
     }
 
     func backgroundGradient() {
@@ -137,12 +128,28 @@ class DetailsWeaponViewController: UIViewController {
 
     func prepareSegment() {
         levelOfWeaponSwitch.removeAllSegments()
-        let listOfLevels = weaponModel.getLevelsByWeaponId(weaponInfo.weaponId)
+        let listOfLevels = weaponModel.getLevelsByWeaponId(weaponInfo.id)
         let titles = ["Common", "Atypical", "Rare", "Epic", "Legendary"]
         for listOfLevel in listOfLevels {
             levelOfWeaponSwitch.insertSegment(withTitle: titles[listOfLevel], at: levelOfWeaponSwitch.numberOfSegments, animated: false)
         }
         levelOfWeaponSwitch.selectedSegmentIndex = 0
+    }
+    
+    func prepareVisuals() {
+        backgroundGradient()
+        
+        detailsViewTitle.title = weaponInfo.name
+        weaponModel.setImageByWeaponId(weaponInfo.id, imageView: weaponImage)
+        
+        weaponImage.layer.zPosition = 1
+        levelOfWeaponSwitch.layer.zPosition = 0.9
+        levelOfWeaponSwitch.layer.cornerRadius = 3.4
+        levelOfWeaponSwitch.layer.masksToBounds = true
+        
+        prepareSegment()
+        getGradientValueforBackgroundImage()
+        styleLabels()
     }
 
     func getGradientValueforBackgroundImage() {
@@ -170,7 +177,7 @@ class DetailsWeaponViewController: UIViewController {
     }
 
     func populateLabelsByValueAndLevels(_ level: Int) {
-        let details = weaponModel.getDetailsByWeaponIdAndLevel(weaponId: weaponInfo.weaponId, weaponLevel: level)
+        let details = weaponModel.getDetailsByWeaponIdAndLevel(weaponId: weaponInfo.id, weaponLevel: level)
         dpsLabel.text = String(Float(details.damage) * details.fireRate)
         envdmgLabel.text = String(details.environementDamage)
 

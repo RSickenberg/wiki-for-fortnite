@@ -8,6 +8,11 @@ target 'fortnite_wiki' do
   # Pods for fortnite_wik
   pod 'Crashlytics'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'PKHUD'
+  pod 'AlamofireImage'
+  pod 'Hero'
   #pod 'ShadowView'
 
 end

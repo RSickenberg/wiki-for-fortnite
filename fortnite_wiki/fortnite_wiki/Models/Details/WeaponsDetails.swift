@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WeaponsDetails: NSObject {
+class WeaponsDetails: NSObject, Decodable {
 
     var detailLevel: Int
     var weaponId: Int

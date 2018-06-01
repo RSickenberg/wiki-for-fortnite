@@ -10,42 +10,29 @@
 
 import Foundation
 
-class Weapons: NSObject {
+class Weapons: Decodable {
     
-    var weaponId: Int
+    var id: Int
     var detailId: Int
-    var weaponParentId: Int
-    var weaponName: String
-    var weaponColor: Int
-    var weaponImg: String
+    var name: String
+    var color: Int
+    var img: String
     
-    override init() {
-        weaponId = 0
+    init() {
+        id = 0
         detailId = 0
-        weaponParentId = 0
-        weaponName = ""
-        weaponColor = 0
-        weaponImg = ""
-        
-        super.init()
+        name = ""
+        color = 0
+        img = ""
     }
     
-    init(weaponId: Int, detailId: Int, weaponParentId: Int, weaponName: String, weaponColor: Int, weaponImg: String) {
+    init(id: Int, detailId: Int, name: String, color: Int, img: String) {
         
-        self.weaponId = weaponId
+        self.id = id
         self.detailId = detailId
-        self.weaponParentId = weaponParentId
-        self.weaponName = weaponName
-        self.weaponColor = weaponColor
-        self.weaponImg = weaponImg
+        self.name = name
+        self.color = color
+        self.img = img
     }
     
-    override var description: String {
-        
-        get {
-            let newDescription: String = "Model for weapons"
-            
-            return newDescription
-        }
-    }
 }

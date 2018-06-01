@@ -46,12 +46,12 @@ class DetailsItemViewController: UIViewController {
     var index: Int = 0
     var itemInfo = Items()
     var itemDetails = ItemsDetails()
-    var itemModel = DetailsForObjects()
+    var itemModel = JsonService.list
 
     override func viewDidLoad() {
         backgroundGradient()
-        itemImage.image = UIImage(named: itemInfo.itemImg)
-        titleView.title = itemInfo.itemName
+        itemModel.setImageByItemId(itemInfo.id, imageView: itemImage)
+        titleView.title = itemInfo.name
         getGradientValueForBackgroundImage()
 
         styleLabels()
@@ -66,7 +66,7 @@ class DetailsItemViewController: UIViewController {
     }
 
     func getGradientValueForBackgroundImage() {
-        BackgroundFormater.formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.itemColor)
+        BackgroundFormater.formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
         shadows.setShadow(image: itemImage)
     }
 

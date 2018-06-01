@@ -59,3 +59,9 @@
 > Alpha + WIP
 
 - UI : Appicon
+- BACKEND : Internet fetch from JSON at www.rsickenberg.me/secret/json/fortnite/prod.json OR staging.json.
+- BACKEND : Images is fetched from www.rsickenberg.me/secret/json/fortnite/imgs/...
+- BACKEND : Better performance, NSOBJECT removed.
+- BACKEND & UI : Image placeholder on load 😍
+- UI : Added background color for WeaponLevelSwich
+- UI : Tab icon

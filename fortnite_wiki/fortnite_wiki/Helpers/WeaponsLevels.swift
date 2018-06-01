@@ -9,8 +9,7 @@
 import Foundation
 import ChameleonFramework
 
-class WeaponsLevels: NSObject {
-
+class WeaponsLevels {
     struct levels {
         var grey = 0
         var green = 1
@@ -20,7 +19,7 @@ class WeaponsLevels: NSObject {
     }
 }
 
-class FormatLevels: NSObject {
+class FormatLevels {
 
     let shadows = ShadowLayers()
     let color0 = [HexColor("969696")!, HexColor("4A4A4A")!]
@@ -62,13 +61,13 @@ class FormatLevels: NSObject {
     func formatCellGradients(cell: UICollectionViewCell, levels: [Int]) {
         switch levels {
         case [0, 1, 2]:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "969696")!, UIColor.init(hexString: "969696")!, UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("969696")!, HexColor("969696")!, HexColor("4FCA00")!, HexColor("00BFFF")!])
             break
         case [1, 2]:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "4FCA00")!, UIColor.init(hexString: "00BFFF")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4FCA00")!, HexColor("00BFFF")!])
             break
         case [3, 4]:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [UIColor.init(hexString: "B83DF2")!, UIColor.init(hexString: "E6BB0E")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("B83DF2")!, HexColor("E6BB0E")!])
         default:
             cell.backgroundColor = UIColor.black
             break
@@ -100,12 +99,5 @@ class FormatLevels: NSObject {
         }
 
         shadows.setShadow(cell: cell)
-    }
-
-    override var description: String {
-        get {
-            let newDescription = "Helper for Levels cell / Background formatter."
-            return newDescription
-        }
     }
 }

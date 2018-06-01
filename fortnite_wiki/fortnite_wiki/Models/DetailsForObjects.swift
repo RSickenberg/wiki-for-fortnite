@@ -16,206 +16,15 @@
 //  For new methods, please, take note of this.
 
 import Foundation
+import UIKit
+import AlamofireImage
 
-class DetailsForObjects: NSObject {
-
+class DetailsForObjects {
     private var weaponsCollection = [Weapons]()
     private var weaponsDetails = [WeaponsDetails]()
 
     private var itemsCollection = [Items]()
     private var itemsDetails = [ItemsDetails]()
-
-    override init() {
-        super.init()
-
-        self.loadWeaponsDemoData()
-        self.loadItemsDemoData()
-    }
-
-    func loadWeaponsDemoData() {
-        var weaponsData = Weapons()
-        var weaponsDetails = WeaponsDetails()
-
-        weaponsData.weaponId = 0
-        weaponsData.detailId = 0
-        weaponsData.weaponParentId = 0
-        weaponsData.weaponName = "Assault Riffle (burst)"
-        weaponsData.weaponColor = 0
-        weaponsData.weaponImg = "ar_burst"
-
-        weaponsDetails.detailLevel = 0
-        weaponsDetails.weaponId = 0
-        weaponsDetails.damage = 27
-        weaponsDetails.damageHead = 67.5
-        weaponsDetails.criticalHitChance = 0
-        weaponsDetails.criticalHitDmg = 0
-        weaponsDetails.fireRate = 4.06
-        weaponsDetails.magazineSize = 30
-        weaponsDetails.range = 1
-        weaponsDetails.durability = 100
-        weaponsDetails.reloadTime = 2.9
-        weaponsDetails.ammoCost = 1
-        weaponsDetails.impact = 40
-        weaponsDetails.spreadBase = 0.175
-        weaponsDetails.spreadSprint = 1.5
-        weaponsDetails.spreadJump = 1.25
-        weaponsDetails.spreadDownsights = 0.65
-        weaponsDetails.spreadStanding = 0.55
-        weaponsDetails.spreadCrouching = 0.75
-        weaponsDetails.firingRateNormal = 4.06
-        weaponsDetails.firingRateBurst = 12
-        weaponsDetails.environementDamage = 30
-        weaponsDetails.impactDamage = 40
-        weaponsDetails.recoilHorizontal = 0.25
-        weaponsDetails.recoilVertical = 1.925
-        weaponsDetails.recoilMaxAngle = 25
-        weaponsDetails.recoilMinAngle = -25
-        weaponsDetails.recoilDownsights = 0.5
-
-        self.addWeaponToDB(weaponsData)
-        self.addWeaponDetailsToDB(weaponsDetails)
-
-        weaponsDetails = WeaponsDetails()
-
-        weaponsDetails.detailLevel = 1
-        weaponsDetails.weaponId = 0
-        weaponsDetails.damage = 29
-        weaponsDetails.damageHead = 72.5
-        weaponsDetails.criticalHitChance = 0
-        weaponsDetails.criticalHitDmg = 0
-        weaponsDetails.fireRate = 4.06
-        weaponsDetails.magazineSize = 30
-        weaponsDetails.range = 1
-        weaponsDetails.durability = 100
-        weaponsDetails.reloadTime = 2.7
-        weaponsDetails.ammoCost = 1
-        weaponsDetails.impact = 42
-        weaponsDetails.spreadBase = 0.175
-        weaponsDetails.spreadSprint = 1.5
-        weaponsDetails.spreadJump = 1.25
-        weaponsDetails.spreadDownsights = 0.65
-        weaponsDetails.spreadStanding = 0.55
-        weaponsDetails.spreadCrouching = 0.75
-        weaponsDetails.firingRateNormal = 4.06
-        weaponsDetails.firingRateBurst = 12
-        weaponsDetails.environementDamage = 30
-        weaponsDetails.impactDamage = 42
-        weaponsDetails.recoilHorizontal = 0.25
-        weaponsDetails.recoilVertical = 1.8375
-        weaponsDetails.recoilMaxAngle = 25
-        weaponsDetails.recoilMinAngle = -25
-        weaponsDetails.recoilDownsights = 0.5
-
-        self.addWeaponDetailsToDB(weaponsDetails)
-
-        weaponsDetails = WeaponsDetails()
-
-        weaponsDetails.detailLevel = 2
-        weaponsDetails.weaponId = 0
-        weaponsDetails.damage = 30
-        weaponsDetails.damageHead = 75
-        weaponsDetails.criticalHitChance = 0
-        weaponsDetails.criticalHitDmg = 0
-        weaponsDetails.fireRate = 4.06
-        weaponsDetails.magazineSize = 30
-        weaponsDetails.range = 1
-        weaponsDetails.durability = 100
-        weaponsDetails.reloadTime = 2.6
-        weaponsDetails.ammoCost = 1
-        weaponsDetails.impact = 44
-        weaponsDetails.spreadBase = 0.175
-        weaponsDetails.spreadSprint = 1.5
-        weaponsDetails.spreadJump = 1.25
-        weaponsDetails.spreadDownsights = 0.65
-        weaponsDetails.spreadStanding = 0.55
-        weaponsDetails.spreadCrouching = 0.75
-        weaponsDetails.firingRateNormal = 4.06
-        weaponsDetails.firingRateBurst = 12
-        weaponsDetails.environementDamage = 30
-        weaponsDetails.impactDamage = 44
-        weaponsDetails.recoilHorizontal = 0.25
-        weaponsDetails.recoilVertical = 1.75
-        weaponsDetails.recoilMaxAngle = 25
-        weaponsDetails.recoilMinAngle = -25
-        weaponsDetails.recoilDownsights = 0.5
-
-        self.addWeaponDetailsToDB(weaponsDetails)
-
-        weaponsData = Weapons()
-        weaponsDetails = WeaponsDetails()
-
-        weaponsData.weaponId = 3
-        weaponsData.detailId = 3
-        weaponsData.weaponParentId = 3
-        weaponsData.weaponName = "Assault Riffle (SCAR)"
-        weaponsData.weaponColor = 3
-        weaponsData.weaponImg = "ar_scar"
-
-        weaponsDetails.detailLevel = 3
-        weaponsDetails.weaponId = 3
-        weaponsDetails.damage = 35
-        weaponsDetails.damageHead = 70
-        weaponsDetails.criticalHitChance = 0
-        weaponsDetails.criticalHitDmg = 0
-        weaponsDetails.fireRate = 5.5
-        weaponsDetails.magazineSize = 30
-        weaponsDetails.range = 1
-        weaponsDetails.durability = 100
-        weaponsDetails.reloadTime = 2.1
-        weaponsDetails.ammoCost = 1
-        weaponsDetails.impact = 29
-        weaponsDetails.spreadBase = 0.15
-        weaponsDetails.spreadSprint = 1.5
-        weaponsDetails.spreadJump = 1.25
-        weaponsDetails.spreadDownsights = 0.6
-        weaponsDetails.spreadStanding = 0.55
-        weaponsDetails.spreadCrouching = 0.8
-        weaponsDetails.firingRateNormal = 5.5
-        weaponsDetails.firingRateBurst = 5
-        weaponsDetails.environementDamage = 33
-        weaponsDetails.impactDamage = 29
-        weaponsDetails.recoilHorizontal = 0.25
-        weaponsDetails.recoilVertical = 3.237
-        weaponsDetails.recoilMaxAngle = 25
-        weaponsDetails.recoilMinAngle = -25
-        weaponsDetails.recoilDownsights = 0.5
-
-        self.addWeaponToDB(weaponsData)
-        self.addWeaponDetailsToDB(weaponsDetails)
-
-        weaponsDetails = WeaponsDetails()
-
-        weaponsDetails.detailLevel = 4
-        weaponsDetails.weaponId = 3
-        weaponsDetails.damage = 36
-        weaponsDetails.damageHead = 72
-        weaponsDetails.criticalHitChance = 0
-        weaponsDetails.criticalHitDmg = 0
-        weaponsDetails.fireRate = 5.5
-        weaponsDetails.magazineSize = 30
-        weaponsDetails.range = 1
-        weaponsDetails.durability = 100
-        weaponsDetails.reloadTime = 2.1
-        weaponsDetails.ammoCost = 1
-        weaponsDetails.impact = 31
-        weaponsDetails.spreadBase = 0.15
-        weaponsDetails.spreadSprint = 1.5
-        weaponsDetails.spreadJump = 1.25
-        weaponsDetails.spreadDownsights = 0.6
-        weaponsDetails.spreadStanding = 0.55
-        weaponsDetails.spreadCrouching = 0.8
-        weaponsDetails.firingRateNormal = 5.5
-        weaponsDetails.firingRateBurst = 5
-        weaponsDetails.environementDamage = 33
-        weaponsDetails.impactDamage = 31
-        weaponsDetails.recoilHorizontal = 0.25
-        weaponsDetails.recoilVertical = 3.15
-        weaponsDetails.recoilMaxAngle = 25
-        weaponsDetails.recoilMinAngle = -25
-        weaponsDetails.recoilDownsights = 0.5
-
-        self.addWeaponDetailsToDB(weaponsDetails)
-    }
 
     func addWeaponToDB(_ weapon: Weapons) {
         weaponsCollection.append(weapon)
@@ -236,11 +45,16 @@ class DetailsForObjects: NSObject {
     func getWeaponsByIndex(index: Int) -> Weapons {
         return weaponsCollection[index]
     }
+    
+    func getWeaponsByWeaponId(weaponId: Int) -> Weapons {
+        let key = weaponsCollection.index(where: { $0.id == weaponId })
+        
+        return weaponsCollection[key!]
+    }
 
     func countWeapons() -> Int {
         return weaponsCollection.count
     }
-
 
     func getDetailsByWeaponId(weaponId: Int) -> WeaponsDetails {
         let key = weaponsDetails.index(where: { $0.weaponId == weaponId })
@@ -277,48 +91,16 @@ class DetailsForObjects: NSObject {
 
         return levels
     }
+    
+    func setImageByWeaponId(_ weaponId: Int, imageView: UIImageView!){
+        let weapon = getWeaponsByWeaponId(weaponId: weaponId)
+        let url = (JsonService.shared.imagePath.url?.absoluteString)! + weapon.img
+        
+        imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "wPlaceHolder"), imageTransition: .crossDissolve(1))
+        
+    }
 
     ////////////////////////////////////////////////////////////////////////////////////////////// ITEMS
-
-    func loadItemsDemoData() {
-        var itemData = Items()
-        var itemDetais = ItemsDetails()
-        
-        itemData.itemId = 0
-        itemData.detailId = 0
-        itemData.itemName = "Explosive grenade"
-        itemData.itemColor = 0
-        itemData.itemImg = "explosive_gre"
-
-        itemDetais.itemId = 0
-        itemDetais.isExplosive = true
-        itemDetais.damages = 100
-        itemDetais.capacity = 9
-        itemDetais.location = "ground, chest, drop"
-        itemDetais.comment = "Lorum ipsum dolor sit amet constructor"
-
-        addItemToDB(itemData)
-        addItemDetailsToDB(itemDetais)
-
-        itemData = Items()
-        itemDetais = ItemsDetails()
-
-        itemData.itemId = 1
-        itemData.detailId = 1
-        itemData.itemName = "Medium shield"
-        itemData.itemColor = 2
-        itemData.itemImg = "shield_50"
-
-        itemDetais.itemId = 1
-        itemDetais.isHeal = true
-        itemDetais.shield = 50
-        itemDetais.delay = 5.0
-        itemDetais.location = "ground, chest, drop"
-        itemDetais.capacity = 3
-
-        addItemToDB(itemData)
-        addItemDetailsToDB(itemDetais)
-    }
 
     func addItemToDB(_ items: Items) {
         itemsCollection.append(items)
@@ -348,5 +130,13 @@ class DetailsForObjects: NSObject {
         let key = itemsDetails.index(where: { $0.itemId == itemId })
 
         return itemsDetails[key!]
+    }
+    
+    func setImageByItemId(_ itemId: Int, imageView: UIImageView!){
+        let key = itemsCollection.index(where: { $0.id == itemId })
+        let item = getItemByIndex(index: key!)
+        let url = (JsonService.shared.imagePath.url?.absoluteString)! + item.img
+        
+        imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolder"), imageTransition: .crossDissolve(1))
     }
 }

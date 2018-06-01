@@ -8,35 +8,28 @@
 
 import Foundation
 
-class Items: NSObject {
+class Items: Decodable {
 
-    var itemId: Int
+    var id: Int
     var detailId: Int
-    var itemName: String
-    var itemColor: Int
-    var itemImg: String
+    var name: String
+    var color: Int
+    var img: String
 
-    override init() {
-        itemId = 0
+    init() {
+        id = 0
         detailId = 0
-        itemName = ""
-        itemColor = 0
-        itemImg = ""
+        name = ""
+        color = 0
+        img = ""
     }
 
-    init(itemId: Int, detailId: Int, itemName: String, itemColor: Int, itemImg: String) {
-        self.itemId = itemId
+    init(id: Int, detailId: Int, name: String, color: Int, img: String) {
+        self.id = id
         self.detailId = detailId
-        self.itemName = itemName
-        self.itemColor = itemColor
-        self.itemImg = itemImg
+        self.name = name
+        self.color = color
+        self.img = img
     }
-
-    override var description: String {
-        get {
-            let newDescription: String = "Model for items"
-
-            return newDescription
-        }
-    }
+    
 }

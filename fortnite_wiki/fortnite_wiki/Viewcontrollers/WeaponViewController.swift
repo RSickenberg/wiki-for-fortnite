@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework
+import PKHUD
 
 class WeaponCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellimageView: UIImageView!
@@ -19,7 +20,8 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     let feedback = UIImpactFeedbackGenerator(style: .light)
     let colors = BackgroundColors()
-    let list = DetailsForObjects()
+    let list = JsonService.list
+    let shadowsOptions = ShadowLayers()
     let levels = FormatLevels()
     var cellParentId: Int = 0
     var index: Int?
@@ -29,9 +31,29 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundGradient()
+        getData()
         collectionView.delegate = self
         collectionView.dataSource = self
         index = 0
+    }
+    
+    func getData() {
+        HUD.show(.labeledProgress(title: "Loading", subtitle: nil))
+        
+        JsonImageCoordinator.shared.syncJsonWithImage() { [weak self] result in
+            switch result {
+            case .success(_):
+                HUD.hide(animated: true)
+                self?.reloadData()
+            case .failure(let error):
+                HUD.flash(.labeledError(title: "Oops", subtitle: "Please, reload the application."))
+                ErrorManager.showError("Network Error", error: error)
+            }
+        }
+    }
+    
+    func reloadData() {
+        collectionView?.reloadData()
     }
 
     func backgroundGradient() {
@@ -52,15 +74,15 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weaponId", for: indexPath) as! WeaponCollectionCell
         let weapon = list.getWeaponsByIndex(index: indexPath.row)
-        let listOfLevels = list.getLevelsByWeaponId(weapon.weaponId)
-        let shadowsOptions = ShadowLayers()
+        let listOfLevels = list.getLevelsByWeaponId(weapon.id)
 
         levels.formatCellGradients(cell: cell, levels: listOfLevels)
         shadowsOptions.setShadow(label: cell.weaponName)
+        shadowsOptions.setGradientShadow(cell: cell.cellGradientName)
+        
+        cell.weaponName.text = weapon.name
+        list.setImageByWeaponId(weapon.id, imageView: cell.cellimageView)
 
-        cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
-        cell.weaponName.text = weapon.weaponName
-        cell.cellimageView.image = UIImage(named: weapon.weaponImg)
 
         return cell
     }
@@ -76,8 +98,9 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         case "weaponDetail":
             let dataToDisplay: DetailsWeaponViewController = segue.destination as! DetailsWeaponViewController
             dataToDisplay.index = self.index!
+            dataToDisplay.weaponModel = list
             dataToDisplay.weaponInfo = list.getWeaponsByIndex(index: self.index!)
-            dataToDisplay.weaponDetails = list.getDetailsByWeaponId(weaponId: dataToDisplay.weaponInfo.weaponId)
+            dataToDisplay.weaponDetails = list.getDetailsByWeaponId(weaponId: dataToDisplay.weaponInfo.id)
         default:
             break
         }

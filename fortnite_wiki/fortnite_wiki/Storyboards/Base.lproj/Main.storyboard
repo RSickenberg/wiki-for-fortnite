@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wLQ-YX-0dw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wLQ-YX-0dw">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -41,7 +41,7 @@
         <scene sceneID="K8t-Yp-F6u">
             <objects>
                 <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="gli-Ab-9Yi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Weapons" id="I1D-mL-Lg4"/>
+                    <tabBarItem key="tabBarItem" title="Weapons" image="weaponTabIcon" id="I1D-mL-Lg4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3qh-NE-45u">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -173,8 +173,9 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtC-4Q-Gf4">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1529"/>
                                         <subviews>
-                                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IZW-6N-Dmr">
+                                            <segmentedControl clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IZW-6N-Dmr">
                                                 <rect key="frame" x="2" y="5" width="371" height="33"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="cHf-R7-WZW"/>
                                                 </constraints>
@@ -185,7 +186,7 @@
                                                     <segment title="Epic"/>
                                                     <segment title="Legendary"/>
                                                 </segments>
-                                                <color key="tintColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="levelOfWeaponSwitch:" destination="b3M-qE-rbg" eventType="valueChanged" id="18i-oB-0hH"/>
                                                 </connections>
@@ -384,7 +385,7 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iMc-er-eoX">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iMc-er-eoX">
                                                 <rect key="frame" x="7" y="1057" width="361" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Base" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vD-rR-ci0">
@@ -394,13 +395,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprint" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPn-TP-qEC">
-                                                        <rect key="frame" x="44.666666666666671" y="21" width="34.666666666666671" height="18"/>
+                                                        <rect key="frame" x="58" y="21" width="34.666666666666657" height="18"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jump    &amp;               fall" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msd-oX-xpu">
-                                                        <rect key="frame" x="97" y="0.0" width="45" height="60"/>
+                                                        <rect key="frame" x="114.33333333333331" y="0.0" width="45" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="EcO-2n-GCh"/>
                                                             <constraint firstAttribute="height" constant="60" id="MDo-fI-EDk"/>
@@ -410,13 +411,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downsights" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pKX-ev-bI2">
-                                                        <rect key="frame" x="159.33333333333334" y="21" width="66" height="18"/>
+                                                        <rect key="frame" x="165" y="21" width="66" height="18"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standing" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-oA-3qW">
-                                                        <rect key="frame" x="243" y="21.666666666666742" width="47" height="17"/>
+                                                        <rect key="frame" x="236" y="21.666666666666742" width="47" height="17"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -439,25 +440,25 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV2-fg-fQv">
-                                                        <rect key="frame" x="44.666666666666671" y="0.0" width="38.666666666666671" height="18"/>
+                                                        <rect key="frame" x="62.333333333333336" y="0.0" width="30.333333333333336" height="18"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7i-h8-InF">
-                                                        <rect key="frame" x="97" y="0.0" width="49" height="18"/>
+                                                        <rect key="frame" x="123.66666666666664" y="0.0" width="30.333333333333329" height="18"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoF-3r-db7">
-                                                        <rect key="frame" x="159.33333333333334" y="0.0" width="70" height="18"/>
+                                                        <rect key="frame" x="184.66666666666666" y="0.0" width="30.333333333333343" height="18"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3b-qB-wWT">
-                                                        <rect key="frame" x="243" y="0.0" width="51" height="18"/>
+                                                        <rect key="frame" x="246.00000000000003" y="0.0" width="30.333333333333343" height="18"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -599,7 +600,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBe-Vz-X3c">
-                                                <rect key="frame" x="34" y="58" width="308.33333333333331" height="304"/>
+                                                <rect key="frame" x="33.333333333333343" y="58" width="308.33333333333326" height="304"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-QK-key">
                                                         <rect key="frame" x="15.666666666666657" y="13" width="277" height="277"/>
@@ -1320,75 +1321,16 @@
                 <swipeGestureRecognizer direction="left" id="rUj-lG-DNT">
                     <connections>
                         <action selector="swipeRight:" destination="gYa-yz-JnT" id="8Xy-Vy-8Lc"/>
-                        <segue destination="Fni-2I-XYA" kind="presentation" modalTransitionStyle="flipHorizontal" id="x91-TE-Lt6"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-885" y="2203"/>
         </scene>
-        <!--Style Guide View Controller-->
-        <scene sceneID="tle-88-Thd">
-            <objects>
-                <viewController id="Fni-2I-XYA" customClass="StyleGuideViewController" customModule="fortnite_wiki" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gtJ-uv-aJe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xee-kU-Wby">
-                                <rect key="frame" x="149" y="741" width="77.666666666666686" height="37"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vx1-MS-sqW">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="37"/>
-                                        <subviews>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="u1U-fV-sbm">
-                                                <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="37"/>
-                                            </pageControl>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ar_scar" translatesAutoresizingMaskIntoConstraints="NO" id="vMs-kN-OB5">
-                                <rect key="frame" x="102.66666666666669" y="321" width="170" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="vMs-kN-OB5" secondAttribute="height" multiplier="1:1" id="GJq-b9-XpK"/>
-                                </constraints>
-                                <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="vMs-kN-OB5" firstAttribute="centerX" secondItem="gtJ-uv-aJe" secondAttribute="centerX" id="1kn-ch-kkx"/>
-                            <constraint firstItem="xee-kU-Wby" firstAttribute="bottom" secondItem="cVZ-WL-AWG" secondAttribute="bottom" id="5pV-XC-73g"/>
-                            <constraint firstItem="xee-kU-Wby" firstAttribute="leading" secondItem="cVZ-WL-AWG" secondAttribute="leading" constant="148.5" id="8F3-LK-SVI"/>
-                            <constraint firstItem="vMs-kN-OB5" firstAttribute="centerY" secondItem="gtJ-uv-aJe" secondAttribute="centerY" id="Nit-Qf-asJ"/>
-                            <constraint firstItem="cVZ-WL-AWG" firstAttribute="trailing" secondItem="xee-kU-Wby" secondAttribute="trailing" constant="148.5" id="d52-5L-3dP"/>
-                            <constraint firstItem="xee-kU-Wby" firstAttribute="centerX" secondItem="gtJ-uv-aJe" secondAttribute="centerX" id="sJi-q2-6kM"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cVZ-WL-AWG"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="fGz-6C-bM8" appends="YES" id="V3A-03-lNH"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" id="RIF-Z1-aDT"/>
-                    <connections>
-                        <outlet property="demoWeaponImageView" destination="vMs-kN-OB5" id="aUP-M1-p9Y"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yGE-Tq-cz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="fGz-6C-bM8">
-                    <connections>
-                        <action selector="swipeLeft:" destination="Fni-2I-XYA" id="iP7-KS-boq"/>
-                    </connections>
-                </swipeGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="2" y="2203"/>
-        </scene>
         <!--Items-->
         <scene sceneID="KLj-6x-2kt">
             <objects>
                 <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="Nue-w2-LlX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Items" id="wWP-Gr-trQ"/>
+                    <tabBarItem key="tabBarItem" title="Items" image="itemTabIcon" id="wWP-Gr-trQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="XqB-dC-or3">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1411,6 +1353,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ar_scar" width="170" height="170"/>
+        <image name="itemTabIcon" width="24" height="24"/>
+        <image name="weaponTabIcon" width="24" height="24"/>
     </resources>
 </document>

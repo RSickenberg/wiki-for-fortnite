@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import ChameleonFramework
 
-class ShadowLayers: NSObject {
+class ShadowLayers {
 
     var shadowColor: CGColor
     var shadowRadius: CGFloat
@@ -17,7 +18,7 @@ class ShadowLayers: NSObject {
     var shadowOffset: CGSize
     var maskToBounds: Bool
 
-    override init() {
+    init() {
         shadowColor = UIColor.black.cgColor
         shadowRadius = 2.1
         shadowOpacity = 0.8
@@ -60,14 +61,11 @@ class ShadowLayers: NSObject {
         cell.layer.shadowOpacity = shadowOpacity
         cell.layer.shadowOffset = shadowOffset
 
-        cell.layer.cornerRadius = 6.5
+        cell.layer.cornerRadius = 7.0
     }
-
-    override var description: String {
-        get {
-            let newDescription: String = "Helper for Shadows values"
-
-            return newDescription
-        }
+    
+    func setGradientShadow(cell: UIView) {
+        cell.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
     }
+    
 }

@@ -7,21 +7,19 @@
 //
 
 import UIKit
-import ChameleonFramework
+import PKHUD
 
 class ItemsCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellItemLabel: UILabel!
     @IBOutlet weak var cellGradientName: UIView!
-
 }
 
 class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-
     let feedback = UIImpactFeedbackGenerator(style: .light)
     let colors = BackgroundColors()
-    let list = DetailsForObjects()
+    let list = JsonService.list
     let levels = FormatLevels()
 
     var cellParentId: Int = 0
@@ -34,6 +32,8 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         backgroundGradient()
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        reloadData()
     }
 
     func backgroundGradient() {
@@ -41,6 +41,10 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let backgroundLayer = colors.gl
         backgroundLayer?.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
+    }
+
+    func reloadData() {
+        self.collectionView?.reloadData()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -56,13 +60,12 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let item = list.getItemByIndex(index: indexPath.row)
         let shadowsOptions = ShadowLayers()
 
-        levels.formatCellGradient(cell: cell, level: item.itemColor)
+        levels.formatCellGradient(cell: cell, level: item.color)
         shadowsOptions.setShadow(label: cell.cellItemLabel)
-
-        cell.cellGradientName.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.cellGradientName.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
-        cell.cellImageView.image = UIImage(named: item.itemImg)
-        cell.cellItemLabel.text = item.itemName
-
+        shadowsOptions.setGradientShadow(cell: cell.cellGradientName)
+        
+        cell.cellItemLabel.text = item.name
+        list.setImageByItemId(item.id, imageView: cell.cellImageView)
 
         return cell
     }
@@ -79,7 +82,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
             let dataToDisplay: DetailsItemViewController = segue.destination as! DetailsItemViewController
             dataToDisplay.index = self.index!
             dataToDisplay.itemInfo = list.getItemByIndex(index: self.index!)
-            dataToDisplay.itemDetails = list.getDetailsByItemId(itemId: dataToDisplay.itemInfo.itemId)
+            dataToDisplay.itemDetails = list.getDetailsByItemId(itemId: dataToDisplay.itemInfo.id)
             break
         default:
             break
