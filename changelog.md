@@ -65,3 +65,4 @@
 - BACKEND & UI : Image placeholder on load 😍
 - UI : Added background color for WeaponLevelSwich
 - UI : Tab icon
+- FIX: Fixed black background on split screen on iPad (tempo)
