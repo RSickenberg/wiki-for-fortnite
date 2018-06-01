@@ -56,7 +56,7 @@
 - BACKEND : Conditions for labels in items.
 
 # 0.0.7
-> Alpha + WIP
+> Alpha
 
 - UI : Appicon
 - BACKEND : Internet fetch from JSON at www.rsickenberg.me/secret/json/fortnite/prod.json OR staging.json.
@@ -65,3 +65,4 @@
 - BACKEND & UI : Image placeholder on load 😍
 - UI : Added background color for WeaponLevelSwich
 - UI : Tab icon
+- FIX: Fixed black background on split screen on iPad (tempo)
