@@ -62,7 +62,12 @@
 - BACKEND : Internet fetch from JSON at www.rsickenberg.me/secret/json/fortnite/prod.json OR staging.json.
 - BACKEND : Images is fetched from www.rsickenberg.me/secret/json/fortnite/imgs/...
 - BACKEND : Better performance, NSOBJECT removed.
-- BACKEND & UI : Image placeholder on load 😍
-- UI : Added background color for WeaponLevelSwich
-- UI : Tab icon
-- FIX: Fixed black background on split screen on iPad (tempo)
+- BACKEND & UI : Image placeholder on load 😍.
+- UI : Added background color for WeaponLevelSwich.
+- UI : Tab icon.
+- FIX : Fixed black background on split screen on iPad (tempo).
+
+# 0.0.8
+> Alpha
+
+- UI: Remove tabs on LauchScreenStoryboard.
