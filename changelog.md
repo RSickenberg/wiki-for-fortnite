@@ -74,3 +74,5 @@
 - UI : Remove gap on item's detail view.
 - Legal text in app preferences.
 - Prepare all the stuff for App Store ready.
+- APP : Remove iPad for now.
+- BUG : Fixed the network indicator.

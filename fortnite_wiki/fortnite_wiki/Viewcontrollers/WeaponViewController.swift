@@ -39,12 +39,14 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func getData() {
         HUD.show(.labeledProgress(title: "Loading", subtitle: nil))
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         JsonImageCoordinator.shared.syncJsonWithImage() { [weak self] result in
             switch result {
             case .success(_):
                 HUD.hide(animated: true)
                 self?.reloadData()
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             case .failure(let error):
                 HUD.flash(.labeledError(title: "Oops", subtitle: "Please, reload the application."))
                 ErrorManager.showError("Network Error", error: error)

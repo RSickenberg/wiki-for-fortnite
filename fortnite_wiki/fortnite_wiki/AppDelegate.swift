@@ -17,11 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var settings: UserDefaults?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         UIApplication.shared.statusBarStyle = .lightContent
         //Fabric.with([Crashlytics.self])
         if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             print("Version : " + text)
+        }
+        if let text = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            print("Build : " + text)
         }
         return true
     }
