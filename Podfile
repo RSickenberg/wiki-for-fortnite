@@ -12,7 +12,7 @@ target 'fortnite_wiki' do
   pod 'Alamofire'
   pod 'PKHUD'
   pod 'AlamofireImage'
-  pod 'Hero'
+  #pod 'Hero'
   #pod 'ShadowView'
 
 end

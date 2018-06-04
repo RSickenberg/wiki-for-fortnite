@@ -8,7 +8,6 @@ PODS:
   - Crashlytics (3.10.2):
     - Fabric (~> 1.7.7)
   - Fabric (1.7.7)
-  - Hero (1.2.0)
   - PKHUD (5.0.0)
   - SwiftyJSON (4.1.0)
 
@@ -17,7 +16,6 @@ DEPENDENCIES:
   - AlamofireImage
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Crashlytics
-  - Hero
   - PKHUD
   - SwiftyJSON
 
@@ -27,7 +25,6 @@ SPEC REPOS:
     - AlamofireImage
     - Crashlytics
     - Fabric
-    - Hero
     - PKHUD
     - SwiftyJSON
 
@@ -46,10 +43,9 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Crashlytics: 0360624eea1c978a743feddb2fb1ef8b37fb7a0d
   Fabric: bda89e242bce1b7b8ab264248cf3407774ce0095
-  Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 2fe36143162a2a39e3edc006b0955b9661dd7e87
+PODFILE CHECKSUM: 8498761a88f3cd35437fcc6332806cfb106c5da3
 
 COCOAPODS: 1.5.3

@@ -73,3 +73,4 @@
 - UI : Remove tabs on LauchScreenStoryboard.
 - UI : Remove gap on item's detail view.
 - Legal text in app preferences.
+- Prepare all the stuff for App Store ready.
