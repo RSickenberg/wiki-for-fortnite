@@ -23,7 +23,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wLQ-YX-0dw" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="fill" id="bmz-gl-MPq">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="bmz-gl-MPq">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="selectedImageTintColor" red="1" green="0.70739477569999998" blue="0.066106098739999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -895,14 +895,14 @@
             <objects>
                 <viewController id="4Wx-5e-YO4" customClass="DetailsItemViewController" customModule="fortnite_wiki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RFV-ZW-2a9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZg-ia-o80">
-                                <rect key="frame" x="0.0" y="88" width="375" height="1129"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="979"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMe-Mt-OY8">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1155"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="978"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6H-47-OP5">
                                                 <rect key="frame" x="40" y="21" width="296" height="291"/>
@@ -1080,7 +1080,7 @@
                                             <constraint firstItem="BCp-rP-w7n" firstAttribute="top" secondItem="Yys-bZ-3KV" secondAttribute="bottom" constant="10" id="4xn-pQ-J9d"/>
                                             <constraint firstItem="BCp-rP-w7n" firstAttribute="top" secondItem="aba-oU-xnl" secondAttribute="bottom" constant="77" id="6I7-Ly-C0U"/>
                                             <constraint firstItem="GbO-4Q-QNn" firstAttribute="top" secondItem="HbS-xZ-dJE" secondAttribute="bottom" constant="10" id="8B9-AW-iu1"/>
-                                            <constraint firstAttribute="bottom" secondItem="m6H-47-OP5" secondAttribute="bottom" constant="843" id="8Sx-dp-sMO"/>
+                                            <constraint firstAttribute="bottom" secondItem="m6H-47-OP5" secondAttribute="bottom" constant="666" id="8Sx-dp-sMO"/>
                                             <constraint firstItem="GbO-4Q-QNn" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="9m6-Sx-0Ky"/>
                                             <constraint firstItem="Cgy-q5-FX7" firstAttribute="top" secondItem="GbO-4Q-QNn" secondAttribute="bottom" constant="77" id="A3K-F6-WJU"/>
                                             <constraint firstItem="jiO-lM-ieS" firstAttribute="top" secondItem="bzr-uc-xRF" secondAttribute="bottom" constant="10" id="C69-np-p4d"/>
@@ -1113,7 +1113,7 @@
                                             <constraint firstItem="Cgy-q5-FX7" firstAttribute="top" secondItem="fan-UY-jR4" secondAttribute="bottom" constant="10" id="pnm-lT-rUL"/>
                                             <constraint firstItem="HbS-xZ-dJE" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" constant="5" id="poc-JI-pI1"/>
                                             <constraint firstItem="GUn-s4-L5V" firstAttribute="top" secondItem="m6H-47-OP5" secondAttribute="bottom" constant="150" id="qGu-7K-PBw"/>
-                                            <constraint firstAttribute="height" constant="1155" id="sDs-1b-k7o"/>
+                                            <constraint firstAttribute="height" constant="978" id="sDs-1b-k7o"/>
                                             <constraint firstItem="bzr-uc-xRF" firstAttribute="top" secondItem="BCp-rP-w7n" secondAttribute="bottom" constant="10" id="tvJ-6A-bLB"/>
                                             <constraint firstItem="aba-oU-xnl" firstAttribute="top" secondItem="Cgy-q5-FX7" secondAttribute="bottom" constant="151" id="vTS-V6-nRi"/>
                                             <constraint firstItem="aba-oU-xnl" firstAttribute="top" secondItem="JO3-hp-HIW" secondAttribute="bottom" constant="8" id="vcC-1k-v6x"/>
@@ -1125,7 +1125,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="UMe-Mt-OY8" firstAttribute="width" secondItem="xZg-ia-o80" secondAttribute="width" id="5f1-oh-oOz"/>
-                                    <constraint firstAttribute="bottom" secondItem="UMe-Mt-OY8" secondAttribute="bottom" id="XQN-5r-29U"/>
+                                    <constraint firstAttribute="bottom" secondItem="UMe-Mt-OY8" secondAttribute="bottom" constant="1" id="XQN-5r-29U"/>
                                     <constraint firstItem="UMe-Mt-OY8" firstAttribute="leading" secondItem="xZg-ia-o80" secondAttribute="leading" id="Xkr-EB-ZWQ"/>
                                     <constraint firstAttribute="trailing" secondItem="UMe-Mt-OY8" secondAttribute="trailing" id="Ybm-eQ-SSa"/>
                                     <constraint firstItem="UMe-Mt-OY8" firstAttribute="top" secondItem="xZg-ia-o80" secondAttribute="top" id="jfW-W1-VVO"/>
@@ -1142,7 +1142,7 @@
                         <viewLayoutGuide key="safeArea" id="rav-YR-ueQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="hd8-r6-SBy"/>
-                    <size key="freeformSize" width="375" height="1300"/>
+                    <size key="freeformSize" width="375" height="1150"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="m6H-47-OP5" id="76H-kR-guy"/>
                         <outlet property="detailsStackedTitle1" destination="dU1-cn-toH" id="a6Y-AQ-Nze"/>

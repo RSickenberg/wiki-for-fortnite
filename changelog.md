@@ -70,4 +70,6 @@
 # 0.0.8
 > Alpha
 
-- UI: Remove tabs on LauchScreenStoryboard.
+- UI : Remove tabs on LauchScreenStoryboard.
+- UI : Remove gap on item's detail view.
+- Legal text in app preferences.

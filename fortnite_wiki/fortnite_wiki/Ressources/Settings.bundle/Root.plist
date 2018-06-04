@@ -10,7 +10,13 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Version: 0.0.6</string>
+			<string>Fortnite is a registered trademark of Epic Games. All assets belong to Epic Games.</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Version: 0.0.8</string>
 		</dict>
 	</array>
 </dict>

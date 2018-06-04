@@ -55,6 +55,7 @@
 		073A373C204DAA34001D4AF5 /* Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
 		073A373E204DAB00001D4AF5 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		0749725C204E7169006048C6 /* DetailsForObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsForObjects.swift; sourceTree = "<group>"; };
+		0753242020C460FC006449A1 /* fortnite_wiki copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "fortnite_wiki copy-Info.plist"; path = "/Users/romainsickenberg/Desktop/FORTNITE_WIKI/fortnite_wiki/fortnite_wiki copy-Info.plist"; sourceTree = "<absolute>"; };
 		07631E26207F93A90078267B /* DetailsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemViewController.swift; sourceTree = "<group>"; };
 		076640782093516E0044900D /* JsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
 		07B26FE5204ED15C008F9E3A /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = changelog.md; path = ../../../changelog.md; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 				073A3712204D7CBA001D4AF5 /* Products */,
 				B2EC384F9A8649C39A32BEC8 /* Pods */,
 				6C3915AA364A1D1A55999915 /* Frameworks */,
+				0753242020C460FC006449A1 /* fortnite_wiki copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};

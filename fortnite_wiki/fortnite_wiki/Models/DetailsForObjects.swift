@@ -96,7 +96,7 @@ class DetailsForObjects {
         let weapon = getWeaponsByWeaponId(weaponId: weaponId)
         let url = (JsonService.shared.imagePath.url?.absoluteString)! + weapon.img
         
-        imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "wPlaceHolder"), imageTransition: .crossDissolve(1))
+        imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "wPlaceHolderGray"), imageTransition: .crossDissolve(1))
         
     }
 
@@ -137,6 +137,6 @@ class DetailsForObjects {
         let item = getItemByIndex(index: key!)
         let url = (JsonService.shared.imagePath.url?.absoluteString)! + item.img
         
-        imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolder"), imageTransition: .crossDissolve(1))
+        imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolderGray"), imageTransition: .crossDissolve(1))
     }
 }
