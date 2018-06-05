@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -739,9 +738,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jX8-jL-Bav"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="VZY-zK-Cbc">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="DZc-JB-gFf"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="VZY-zK-Cbc"/>
                     <size key="freeformSize" width="375" height="1700"/>
                     <connections>
                         <outlet property="angleMaxLabel" destination="elW-bt-xZ9" id="1fD-w5-VCj"/>
@@ -1356,4 +1353,5 @@
         <image name="itemTabIcon" width="24" height="24"/>
         <image name="weaponTabIcon" width="24" height="24"/>
     </resources>
+    <color key="tintColor" red="0.72156862749999995" green="0.23921568630000001" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -76,3 +76,6 @@
 - Prepare all the stuff for App Store ready.
 - APP : Remove iPad for now.
 - BUG : Fixed the network indicator.
+- APP : NSPhotoLibraryUsageDescription.
+- APP : >= iOS 11
+- UI : Back navigation Item is now white.

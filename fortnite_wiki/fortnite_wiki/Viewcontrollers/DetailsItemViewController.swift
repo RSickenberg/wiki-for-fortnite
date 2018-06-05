@@ -50,10 +50,8 @@ class DetailsItemViewController: UIViewController {
 
     override func viewDidLoad() {
         backgroundGradient()
-        itemModel.setImageByItemId(itemInfo.id, imageView: itemImage)
-        titleView.title = itemInfo.name
         getGradientValueForBackgroundImage()
-
+        prepareVisuals()
         styleLabels()
         displayValues()
     }
@@ -75,6 +73,13 @@ class DetailsItemViewController: UIViewController {
         for label in labels {
             shadows.setShadow(label: label!)
         }
+    }
+    
+    func prepareVisuals() {
+        itemModel.setImageByItemId(itemInfo.id, imageView: itemImage)
+        titleView.title = itemInfo.name
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.flatWhite
     }
 
     func displayValues() {
