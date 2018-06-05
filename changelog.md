@@ -79,3 +79,4 @@
 - APP : NSPhotoLibraryUsageDescription.
 - APP : >= iOS 11
 - UI : Back navigation Item is now white.
+- UI : Back navigation is now a true "back".
