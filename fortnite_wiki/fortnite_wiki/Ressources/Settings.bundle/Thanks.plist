@@ -26,12 +26,6 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Liip AG - WorkSpace - www.liip.ch</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
 			<string>All the Testflight testers</string>
 		</dict>
 	</array>

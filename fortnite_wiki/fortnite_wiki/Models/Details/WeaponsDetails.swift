@@ -14,14 +14,9 @@ class WeaponsDetails: NSObject, Decodable {
     var weaponId: Int
     var damage: Int
     var damageHead: Double
-    var criticalHitChance: Int
-    var criticalHitDmg: Int
     var fireRate: Float
     var magazineSize: Int
-    var range: Int
-    var durability: Int
     var reloadTime: Float
-    var ammoCost: Int
     var impact: Int
     
     var spreadBase: Float
@@ -35,7 +30,6 @@ class WeaponsDetails: NSObject, Decodable {
     var firingRateBurst: Float
     
     var environementDamage: Float
-    var impactDamage: Float
     
     var recoilHorizontal: Float
     var recoilVertical: Float
@@ -48,14 +42,9 @@ class WeaponsDetails: NSObject, Decodable {
         weaponId = 0
         damage = 0
         damageHead = 0
-        criticalHitChance = 0
-        criticalHitDmg = 0
         fireRate = 0.0
         magazineSize = 0
-        range = 0
-        durability = 0
         reloadTime = 0.0
-        ammoCost = 0
         impact = 0
         
         spreadBase = 0.0
@@ -67,7 +56,6 @@ class WeaponsDetails: NSObject, Decodable {
         firingRateNormal = 0.0
         firingRateBurst = 0.0
         environementDamage = 0.0
-        impactDamage = 0.0
         recoilHorizontal = 0.0
         recoilVertical = 0.0
         recoilMaxAngle = 0.0
@@ -77,20 +65,15 @@ class WeaponsDetails: NSObject, Decodable {
         super.init()
     }
     
-    init(detailLevel:Int, weaponId: Int, damage: Int, damageHead: Double, criticalHitChance: Int, criticalHitDmg: Int, fireRate: Float, magazineSize: Int, range: Int, durability: Int, reloadTime: Float, ammoCost: Int, impact: Int, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateNormal: Float, firingRateBurst: Float, environementDamage: Float, impactDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
+    init(detailLevel:Int, weaponId: Int, damage: Int, damageHead: Double, fireRate: Float, magazineSize: Int, reloadTime: Float, impact: Int, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateNormal: Float, firingRateBurst: Float, environementDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
 
         self.detailLevel = detailLevel
         self.weaponId = weaponId
         self.damage = damage
         self.damageHead = damageHead
-        self.criticalHitChance = criticalHitChance
-        self.criticalHitDmg = criticalHitDmg
         self.fireRate = fireRate
         self.magazineSize = magazineSize
-        self.range = range
-        self.durability = durability
         self.reloadTime = reloadTime
-        self.ammoCost = ammoCost
         self.impact = impact
         
         self.spreadBase = spreadBase
@@ -104,7 +87,6 @@ class WeaponsDetails: NSObject, Decodable {
         self.firingRateBurst = firingRateBurst
         
         self.environementDamage = environementDamage
-        self.impactDamage = impactDamage
         
         self.recoilHorizontal = recoilHorizontal
         self.recoilVertical = recoilVertical

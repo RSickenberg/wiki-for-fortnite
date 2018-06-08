@@ -25,7 +25,6 @@ class JsonService {
     
     static let shared = JsonService()
     static let list = DetailsForObjects()
-    static let imageCache = AutoPurgingImageCache()
     
     var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
