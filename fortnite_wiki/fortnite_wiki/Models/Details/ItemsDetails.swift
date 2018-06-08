@@ -15,7 +15,7 @@ class ItemsDetails: NSObject, Decodable {
     var isExplosive: Bool
     var heal: Int
     var shield: Int
-    var delay: Float
+    var delay: Double
     var damages: Int
     var location: String
     var capacity: Int
@@ -34,7 +34,7 @@ class ItemsDetails: NSObject, Decodable {
         comment = ""
     }
 
-    init(itemId: Int, isHeal: Bool, isExplosive: Bool, heal: Int, shield: Int, delay: Float, damages: Int, location: String, capacity: Int, comment: String) {
+    init(itemId: Int, isHeal: Bool, isExplosive: Bool, heal: Int, shield: Int, delay: Double, damages: Int, location: String, capacity: Int, comment: String) {
         self.itemId = itemId
         self.isHeal = isHeal
         self.isExplosive = isExplosive

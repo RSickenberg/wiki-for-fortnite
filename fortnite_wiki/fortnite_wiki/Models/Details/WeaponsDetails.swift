@@ -13,11 +13,11 @@ class WeaponsDetails: NSObject, Decodable {
     var detailLevel: Int
     var weaponId: Int
     var damage: Int
-    var damageHead: Double
+    var damageHead: Float
     var fireRate: Float
     var magazineSize: Int
     var reloadTime: Float
-    var impact: Int
+    var impact: Float
     
     var spreadBase: Float
     var spreadSprint: Float
@@ -65,7 +65,7 @@ class WeaponsDetails: NSObject, Decodable {
         super.init()
     }
     
-    init(detailLevel:Int, weaponId: Int, damage: Int, damageHead: Double, fireRate: Float, magazineSize: Int, reloadTime: Float, impact: Int, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateNormal: Float, firingRateBurst: Float, environementDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
+    init(detailLevel:Int, weaponId: Int, damage: Int, damageHead: Float, fireRate: Float, magazineSize: Int, reloadTime: Float, impact: Float, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateNormal: Float, firingRateBurst: Float, environementDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
 
         self.detailLevel = detailLevel
         self.weaponId = weaponId

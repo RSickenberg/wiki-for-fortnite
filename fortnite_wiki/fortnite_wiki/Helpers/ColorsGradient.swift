@@ -9,7 +9,6 @@
 
 import Foundation
 import UIKit
-import ChameleonFramework
 
 class BackgroundColors {
     var gl:CAGradientLayer!
@@ -22,12 +21,4 @@ class BackgroundColors {
         self.gl.colors = [colorTop, colorBottom]
         self.gl.locations = [0.0, 1.0]
     }
-}
-
-class CommonAtypicalRareColors {
-    // TODO: Same as Background Colors but with grey, green and blue value
-}
-
-class EpicLegendaryColors {
-    // TODO: Same as Background Colors but with purple and gold
 }
