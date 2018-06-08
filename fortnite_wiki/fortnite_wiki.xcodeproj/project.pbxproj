@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A2E7B2050766A00541779 /* WeaponsLevels.swift */; };
+		070E9E7D20CAB88900E0BEA9 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = 070E9E7A20CAB88900E0BEA9 /* fastlane */; };
+		070E9E7E20CAB88900E0BEA9 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 070E9E7B20CAB88900E0BEA9 /* Gemfile */; };
+		070E9E7F20CAB88900E0BEA9 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 070E9E7C20CAB88900E0BEA9 /* Gemfile.lock */; };
 		071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E386020775BBE006CAFD2 /* ShadowLayers.swift */; };
 		07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */; };
 		0733FC582080F626004ECD7D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0733FC572080F626004ECD7D /* Settings.bundle */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		070A2E7B2050766A00541779 /* WeaponsLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsLevels.swift; sourceTree = "<group>"; };
+		070E9E7A20CAB88900E0BEA9 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
+		070E9E7B20CAB88900E0BEA9 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		070E9E7C20CAB88900E0BEA9 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		071E386020775BBE006CAFD2 /* ShadowLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLayers.swift; sourceTree = "<group>"; };
 		07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonImageCoordinator.swift; sourceTree = "<group>"; };
 		0733FC572080F626004ECD7D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 				073A3712204D7CBA001D4AF5 /* Products */,
 				B2EC384F9A8649C39A32BEC8 /* Pods */,
 				6C3915AA364A1D1A55999915 /* Frameworks */,
+				070E9E7A20CAB88900E0BEA9 /* fastlane */,
+				070E9E7B20CAB88900E0BEA9 /* Gemfile */,
+				070E9E7C20CAB88900E0BEA9 /* Gemfile.lock */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,10 +300,13 @@
 			files = (
 				0733FC582080F626004ECD7D /* Settings.bundle in Resources */,
 				07B26FE8204ED15C008F9E3A /* changelog.md in Resources */,
+				070E9E7E20CAB88900E0BEA9 /* Gemfile in Resources */,
 				073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */,
+				070E9E7D20CAB88900E0BEA9 /* fastlane in Resources */,
 				073A371F204D7CBB001D4AF5 /* Assets.xcassets in Resources */,
 				07B26FEA204ED15C008F9E3A /* README.md in Resources */,
 				073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */,
+				070E9E7F20CAB88900E0BEA9 /* Gemfile.lock in Resources */,
 				07B26FE9204ED15C008F9E3A /* toDo.txt in Resources */,
 				073A3739204D90B9001D4AF5 /* BurbankBigCondensed-Bold.otf in Resources */,
 			);

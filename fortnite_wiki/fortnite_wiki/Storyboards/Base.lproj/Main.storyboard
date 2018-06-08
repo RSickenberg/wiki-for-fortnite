@@ -828,9 +828,9 @@
                                                     <rect key="frame" x="0.0" y="93" width="150" height="57"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psn-G8-pp2">
-                                                            <rect key="frame" x="8" y="39" width="134" height="15"/>
+                                                            <rect key="frame" x="8" y="34" width="134" height="20"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="15" id="G99-Qa-7lv"/>
+                                                                <constraint firstAttribute="height" constant="20" id="G99-Qa-7lv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
                                                             <color key="textColor" red="0.98671478430000004" green="0.87770517619999999" blue="0.34140021669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -838,7 +838,7 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="psn-G8-pp2" firstAttribute="top" secondItem="5ns-Yr-4UH" secondAttribute="top" constant="39" id="3PQ-ak-84F"/>
+                                                        <constraint firstItem="psn-G8-pp2" firstAttribute="top" secondItem="5ns-Yr-4UH" secondAttribute="top" constant="34" id="3PQ-ak-84F"/>
                                                         <constraint firstItem="psn-G8-pp2" firstAttribute="leading" secondItem="5ns-Yr-4UH" secondAttribute="leading" constant="8" id="bW0-zG-9fg"/>
                                                         <constraint firstItem="psn-G8-pp2" firstAttribute="centerX" secondItem="5ns-Yr-4UH" secondAttribute="centerX" id="ysN-yU-ofO"/>
                                                     </constraints>

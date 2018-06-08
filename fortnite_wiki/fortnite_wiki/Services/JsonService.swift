@@ -32,7 +32,6 @@ class JsonService {
     
     init() {
         if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
-            var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
             jsonPath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             imagePath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
         }
