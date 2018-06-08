@@ -95,20 +95,21 @@
                                                 <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tis-zT-qqq">
                                                     <rect key="frame" x="0.0" y="93" width="150" height="57"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJq-c6-Tzz">
-                                                            <rect key="frame" x="8" y="39" width="134" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJq-c6-Tzz">
+                                                            <rect key="frame" x="8" y="34" width="134" height="20"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="15" id="jD2-TI-q5K"/>
+                                                                <constraint firstAttribute="height" constant="20" id="jD2-TI-q5K"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
                                                             <color key="textColor" red="0.98671478426395942" green="0.87770517621609578" blue="0.34140021667784981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="JJq-c6-Tzz" firstAttribute="leading" secondItem="tis-zT-qqq" secondAttribute="leading" constant="8" id="DK1-Ya-C3K"/>
                                                         <constraint firstItem="JJq-c6-Tzz" firstAttribute="centerX" secondItem="tis-zT-qqq" secondAttribute="centerX" id="Vef-cl-ue7"/>
-                                                        <constraint firstItem="JJq-c6-Tzz" firstAttribute="top" secondItem="tis-zT-qqq" secondAttribute="top" constant="39" id="xdg-cb-YLP"/>
+                                                        <constraint firstItem="JJq-c6-Tzz" firstAttribute="top" secondItem="tis-zT-qqq" secondAttribute="top" constant="34" id="xdg-cb-YLP"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -158,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M93-UU-5em" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="134"/>
+            <point key="canvasLocation" x="1444" y="133.74384236453201"/>
         </scene>
         <!--Weapons details-->
         <scene sceneID="vss-S6-Ma8">
