@@ -4,13 +4,23 @@
 <dict>
 	<key>StringsTable</key>
 	<string>Root</string>
+	<key>Title</key>
+	<string>Fortnite Wiki Credits</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Fortnite is a registered trademark of Epic Games. All assets belong to Epic Games.</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Licences</string>
+			<key>File</key>
+			<string>Licences</string>
 		</dict>
 		<dict>
 			<key>Type</key>
