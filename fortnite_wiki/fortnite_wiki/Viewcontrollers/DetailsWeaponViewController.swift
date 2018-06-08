@@ -151,7 +151,7 @@ class DetailsWeaponViewController: UIViewController {
         getGradientValueforBackgroundImage()
         styleLabels()
         
-        self.navigationController?.navigationBar.tintColor = UIColor.flatWhite
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     func getGradientValueforBackgroundImage() {
