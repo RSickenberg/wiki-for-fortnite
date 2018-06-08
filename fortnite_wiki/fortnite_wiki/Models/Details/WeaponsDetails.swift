@@ -26,7 +26,6 @@ class WeaponsDetails: NSObject, Decodable {
     var spreadStanding: Float
     var spreadCrouching: Float
     
-    var firingRateNormal: Float
     var firingRateBurst: Float
     
     var environementDamage: Float
@@ -46,14 +45,12 @@ class WeaponsDetails: NSObject, Decodable {
         magazineSize = 0
         reloadTime = 0.0
         impact = 0
-        
         spreadBase = 0.0
         spreadSprint = 0.0
         spreadJump = 0.0
         spreadDownsights = 0.0
         spreadStanding = 0.0
         spreadCrouching = 0.0
-        firingRateNormal = 0.0
         firingRateBurst = 0.0
         environementDamage = 0.0
         recoilHorizontal = 0.0
@@ -65,7 +62,7 @@ class WeaponsDetails: NSObject, Decodable {
         super.init()
     }
     
-    init(detailLevel:Int, weaponId: Int, damage: Int, damageHead: Float, fireRate: Float, magazineSize: Int, reloadTime: Float, impact: Float, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateNormal: Float, firingRateBurst: Float, environementDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
+    init(detailLevel:Int, weaponId: Int, damage: Int, damageHead: Float, fireRate: Float, magazineSize: Int, reloadTime: Float, impact: Float, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateBurst: Float, environementDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
 
         self.detailLevel = detailLevel
         self.weaponId = weaponId
@@ -83,7 +80,6 @@ class WeaponsDetails: NSObject, Decodable {
         self.spreadStanding = spreadStanding
         self.spreadCrouching = spreadCrouching
         
-        self.firingRateNormal = firingRateNormal
         self.firingRateBurst = firingRateBurst
         
         self.environementDamage = environementDamage
