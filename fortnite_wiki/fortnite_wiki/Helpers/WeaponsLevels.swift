@@ -72,6 +72,7 @@ class FormatLevels {
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("B83DF2")!, HexColor("E6BB0E")!])
         default:
             cell.backgroundColor = UIColor.black
+            ErrorManager.showMessage("New update should be here!", message: "This black card should not be there.")
             break
         }
 
