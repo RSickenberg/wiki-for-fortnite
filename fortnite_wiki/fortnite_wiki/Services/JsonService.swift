@@ -5,6 +5,8 @@
 //  Created by Romain Sickenberg on 27.04.18.
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
 //
+//  /!\ DONT FORGET TO REMOVE STAGING BEFORE PROD!
+//
 
 import Foundation
 import Alamofire
@@ -27,6 +29,7 @@ class JsonService {
     static let list = DetailsForObjects()
     
     var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
+    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
     var json = [String: Any]()
     
