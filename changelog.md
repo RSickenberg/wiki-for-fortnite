@@ -80,6 +80,8 @@
 - APP : NSPhotoLibraryUsageDescription.
 - APP : >= iOS 11
 - APP : Licences and Thanks on the app settings.
+- APP : Message on first launch.
+- APP : Deeplinks.
 - BUG : Fixed the network indicator.
 - BACKEND : Remove unused fields from JSON.
 - General cleanup.

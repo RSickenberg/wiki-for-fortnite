@@ -10,6 +10,21 @@ import UIKit
 import ChameleonFramework
 import PKHUD
 
+extension UserDefaults {
+    // check for is first launch - only true on first invocation after app install, false on all further invocations
+    // Note: Store this value in AppDelegate if you have multiple places where you are checking for this flag$
+    // https://stackoverflow.com/questions/27208103/detect-first-launch-of-ios-app
+    static func isFirstLaunch() -> Bool {
+        let hasBeenLaunchedBeforeFlag = "hasBeenLaunchedBeforeFlag"
+        let isFirstLaunch = !UserDefaults.standard.bool(forKey: hasBeenLaunchedBeforeFlag)
+        if (isFirstLaunch) {
+            UserDefaults.standard.set(true, forKey: hasBeenLaunchedBeforeFlag)
+            UserDefaults.standard.synchronize()
+        }
+        return isFirstLaunch
+    }
+}
+
 class WeaponCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellimageView: UIImageView!
     @IBOutlet weak var cellGradientName: UIView!
@@ -36,6 +51,14 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         index = 0
     }
     
+    override func viewDidAppear(_ animated: Bool = true) {
+        let isFirstLaunch = UserDefaults.isFirstLaunch()
+        
+        if isFirstLaunch {
+            ErrorManager.showMessage("Welcome ! 😍", message: "Please, if you like this app, don't forget to rate it on the AppStore. ❤️")
+        }
+    }
+    
     func getData() {
         HUD.show(.labeledProgress(title: "Loading", subtitle: nil))
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -48,7 +71,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             case .failure(_):
                 HUD.flash(.labeledError(title: "Oops", subtitle: "Please, reload the application."))
-                ErrorManager.showMessage("Network Error", message: "API is in maintenance, or a new update is available.")
+                ErrorManager.showMessage("Network Error 😥", message: "API is in maintenance, or a new update is available.")
             }
         }
     }
