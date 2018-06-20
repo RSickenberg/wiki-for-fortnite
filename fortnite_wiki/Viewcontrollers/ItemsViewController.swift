@@ -29,11 +29,10 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        reloadData()
         backgroundGradient()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        reloadData()
     }
 
     func backgroundGradient() {

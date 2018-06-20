@@ -69,6 +69,7 @@ class WeaponsDetails: NSObject, Decodable {
         self.damage = damage
         self.damageHead = damageHead
         self.fireRate = fireRate
+        self.firingRateBurst = firingRateBurst
         self.magazineSize = magazineSize
         self.reloadTime = reloadTime
         self.impact = impact
@@ -79,8 +80,6 @@ class WeaponsDetails: NSObject, Decodable {
         self.spreadDownsights = spreadDownsights
         self.spreadStanding = spreadStanding
         self.spreadCrouching = spreadCrouching
-        
-        self.firingRateBurst = firingRateBurst
         
         self.environementDamage = environementDamage
         

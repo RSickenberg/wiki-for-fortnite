@@ -68,18 +68,18 @@
 - FIX : Fixed black background on split screen on iPad (tempo).
 
 # 0.0.8
-> Alpha
+> Beta + Testflight
 
 - UI : Remove tabs on LauchScreenStoryboard.
 - UI : Remove gap on item's detail view.
-- Legal text in app preferences.
-- Prepare all the stuff for App Store ready.
-- APP : Remove iPad for now.
-- BUG : Fixed the network indicator.
-- APP : NSPhotoLibraryUsageDescription.
-- APP : >= iOS 11
+- UI : New color combinaison for blue purple.
 - UI : Back navigation Item is now white.
 - UI : Back navigation is now a true "back".
+- UI : Translucent is now everywhere.
+- APP : Remove iPad for now.
+- APP : NSPhotoLibraryUsageDescription.
+- APP : >= iOS 11
+- APP : Licences and Thanks on the app settings.
+- BUG : Fixed the network indicator.
 - BACKEND : Remove unused fields from JSON.
-- UI : New color combinaison for blue purple.
-- General cleanup of project directory.
+- General cleanup.

@@ -49,9 +49,8 @@ class DetailsItemViewController: UIViewController {
     var itemModel = JsonService.list
 
     override func viewDidLoad() {
-        backgroundGradient()
-        getGradientValueForBackgroundImage()
         prepareVisuals()
+        getGradientValueForBackgroundImage()
         styleLabels()
         displayValues()
     }
@@ -76,60 +75,59 @@ class DetailsItemViewController: UIViewController {
     }
     
     func prepareVisuals() {
+        backgroundGradient()
         itemModel.setImageByItemId(itemInfo.id, imageView: itemImage)
         titleView.title = itemInfo.name
         
-        self.navigationController?.navigationBar.tintColor = UIColor.flatWhite
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     func displayValues() {
         let details = itemDetails
-
+        
         if (details.isExplosive) {
             overallStackedTitle1.text = "Damages"
             overallStackedValue1.text = String(details.damages)
-
+            
             overallStackedTitle2.isHidden = true
             overallStackedValue2.isHidden = true
-
+            
             overallStackedTitle3.text = "Capacity"
             overallStackedValue3.text = String(details.capacity)
-
+            
             detailsStackedTitle1.isHidden = true
             detailsStackedValue1.isHidden = true
-
+            
             detailsStackedTitle2.text = "Locations"
             detailsStackedValue2.text = details.location
         }
-
+        
         if (details.isHeal) {
             if (details.shield != 0) {
                 overallStackedTitle1.text = "Shield"
                 overallStackedValue1.text = String(details.shield)
-            }
-            else {
+            } else {
                 overallStackedTitle1.text = "Heal"
                 overallStackedValue1.text = String(details.heal)
             }
-
+            
             overallStackedTitle2.text = "Delay"
             overallStackedValue2.text = String(details.delay) + "s"
-
+            
             overallStackedTitle3.text = "Capacity"
             overallStackedValue3.text = String(details.capacity)
-
+            
             detailsStackedTitle1.isHidden = true
             detailsStackedValue1.isHidden = true
-
+            
             detailsStackedTitle2.text = "Locations"
             detailsStackedValue2.text = details.location
         }
-
+        
         if (details.comment != "") {
             detailsStackedTitle3.text = "Note"
             detailsStackedValue3.text = details.comment
-        }
-        else {
+        } else {
             detailsStackedTitle3.isHidden = true
             detailsStackedValue3.isHidden = true
         }

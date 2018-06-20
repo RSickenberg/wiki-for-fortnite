@@ -20,7 +20,6 @@
 		073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073A3720204D7CBB001D4AF5 /* LaunchScreen.storyboard */; };
 		073A372F204D8BBF001D4AF5 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */; };
 		073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */; };
-		073A3736204D8EF5001D4AF5 /* StyleGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3735204D8EF5001D4AF5 /* StyleGuideViewController.swift */; };
 		073A3739204D90B9001D4AF5 /* BurbankBigCondensed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 073A3738204D90B8001D4AF5 /* BurbankBigCondensed-Bold.otf */; };
 		073A373B204D93B5001D4AF5 /* DetailsWeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */; };
 		073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373C204DAA34001D4AF5 /* Weapons.swift */; };
@@ -53,7 +52,6 @@
 		073A3723204D7CBB001D4AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
 		073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
-		073A3735204D8EF5001D4AF5 /* StyleGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuideViewController.swift; sourceTree = "<group>"; };
 		073A3738204D90B8001D4AF5 /* BurbankBigCondensed-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigCondensed-Bold.otf"; sourceTree = "<group>"; };
 		073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWeaponViewController.swift; sourceTree = "<group>"; };
 		073A373C204DAA34001D4AF5 /* Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			children = (
 				07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */,
 				073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */,
-				073A3735204D8EF5001D4AF5 /* StyleGuideViewController.swift */,
 				073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */,
 				07631E26207F93A90078267B /* DetailsItemViewController.swift */,
 			);
@@ -376,7 +373,6 @@
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,
 				07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */,
 				070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */,
-				073A3736204D8EF5001D4AF5 /* StyleGuideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

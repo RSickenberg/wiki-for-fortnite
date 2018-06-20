@@ -29,8 +29,8 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundGradient()
         getData()
+        backgroundGradient()
         collectionView.delegate = self
         collectionView.dataSource = self
         index = 0
@@ -46,9 +46,9 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
                 HUD.hide(animated: true)
                 self?.reloadData()
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            case .failure(let error):
+            case .failure(_):
                 HUD.flash(.labeledError(title: "Oops", subtitle: "Please, reload the application."))
-                ErrorManager.showError("Network Error", error: error)
+                ErrorManager.showMessage("Network Error", message: "API is in maintenance, or a new update is available.")
             }
         }
     }
@@ -81,9 +81,9 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         shadowsOptions.setShadow(label: cell.weaponName)
         shadowsOptions.setGradientShadow(cell: cell.cellGradientName)
         
+        cell.cellGradientName.layer.zPosition = 10
         cell.weaponName.text = weapon.name
         list.setImageByWeaponId(weapon.id, imageView: cell.cellimageView)
-
 
         return cell
     }

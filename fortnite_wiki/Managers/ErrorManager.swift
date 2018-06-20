@@ -47,4 +47,5 @@ struct ErrorManager {
         
         viewController!.present(alert, animated: true, completion: nil)
     }
+    
 }
