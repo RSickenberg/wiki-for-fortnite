@@ -85,3 +85,8 @@
 - BUG : Fixed the network indicator.
 - BACKEND : Remove unused fields from JSON.
 - General cleanup.
+
+# 0.0.9
+> Beta + Testflight
+
+- APP : iPad version back on the track ! 🎉

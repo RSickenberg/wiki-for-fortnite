@@ -44,8 +44,8 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
         backgroundGradient()
+        getData()
         collectionView.delegate = self
         collectionView.dataSource = self
         index = 0
