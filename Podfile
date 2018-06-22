@@ -11,6 +11,7 @@ target 'fortnite_wiki' do
   pod 'Alamofire'
   pod 'PKHUD'
   pod 'AlamofireImage'
+  pod 'StatusAlert'
   #pod 'Hero'
   #pod 'ShadowView'
 

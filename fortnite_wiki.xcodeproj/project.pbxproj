@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A2E7B2050766A00541779 /* WeaponsLevels.swift */; };
-		070E9E7E20CAB88900E0BEA9 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 070E9E7B20CAB88900E0BEA9 /* Gemfile */; };
-		070E9E7F20CAB88900E0BEA9 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 070E9E7C20CAB88900E0BEA9 /* Gemfile.lock */; };
+		071D137620DCEF8B00688BFC /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D137520DCEF8B00688BFC /* MoreTableViewController.swift */; };
 		071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E386020775BBE006CAFD2 /* ShadowLayers.swift */; };
 		07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */; };
 		0733FC582080F626004ECD7D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0733FC572080F626004ECD7D /* Settings.bundle */; };
@@ -37,6 +36,7 @@
 		070A2E7B2050766A00541779 /* WeaponsLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsLevels.swift; sourceTree = "<group>"; };
 		070E9E7B20CAB88900E0BEA9 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		070E9E7C20CAB88900E0BEA9 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		071D137520DCEF8B00688BFC /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		071E386020775BBE006CAFD2 /* ShadowLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLayers.swift; sourceTree = "<group>"; };
 		07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonImageCoordinator.swift; sourceTree = "<group>"; };
 		0733FC572080F626004ECD7D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 				073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */,
 				073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */,
 				07631E26207F93A90078267B /* DetailsItemViewController.swift */,
+				071D137520DCEF8B00688BFC /* MoreTableViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -295,11 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0733FC582080F626004ECD7D /* Settings.bundle in Resources */,
-				070E9E7E20CAB88900E0BEA9 /* Gemfile in Resources */,
 				073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */,
 				073A371F204D7CBB001D4AF5 /* Assets.xcassets in Resources */,
 				073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */,
-				070E9E7F20CAB88900E0BEA9 /* Gemfile.lock in Resources */,
 				073A3739204D90B9001D4AF5 /* BurbankBigCondensed-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +317,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -325,6 +325,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -364,6 +365,7 @@
 				073A372F204D8BBF001D4AF5 /* ColorsGradient.swift in Sources */,
 				0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */,
 				076640792093516E0044900D /* JsonService.swift in Sources */,
+				071D137620DCEF8B00688BFC /* MoreTableViewController.swift in Sources */,
 				07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */,
 				073A373F204DAB00001D4AF5 /* Items.swift in Sources */,
 				071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */,
@@ -437,7 +439,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -448,7 +450,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -459,17 +461,19 @@
 			baseConfigurationReference = 8FE1399FF3E4426FDB040954 /* Pods-fortnite_wiki.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8268QCG5CG;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "$(SRCROOT)/fortnite_wiki/Ressources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fortnite-wiki";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fort-to-nite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -531,7 +535,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -542,6 +546,7 @@
 			baseConfigurationReference = 91C8F1776B59F91BF857D96A /* Pods-fortnite_wiki.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -552,7 +557,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fortnite-wiki";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fort-to-nite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

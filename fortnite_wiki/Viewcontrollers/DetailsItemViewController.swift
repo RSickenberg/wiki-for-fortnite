@@ -8,17 +8,46 @@
 
 import Foundation
 import ChameleonFramework
+import StatusAlert
 
 class DetailsItemViewController: UIViewController {
 
     let shadows = ShadowLayers()
     let colors = BackgroundColors()
     let BackgroundFormater = FormatLevels()
+    let likeAlert = StatusAlert.instantiate(
+        withImage: #imageLiteral(resourceName: "heartFullHighRes"),
+        title: "We love you too !",
+        message: "You can see your favorite on the other tab.",
+        canBePickedOrDismissed: true
+    )
+    let dontLike = StatusAlert.instantiate(
+        withImage: #imageLiteral(resourceName: "DislikeFullHighRes"),
+        title: "It's okay.",
+        message: "You can check other stuff.",
+        canBePickedOrDismissed: true
+    )
+    let likeStorage = UserDefaults()
 
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var titleView: UINavigationItem!
     @IBOutlet weak var backgroundImageView: UIView!
-
+    @IBOutlet weak var likeButton: UIBarButtonItem!
+    @IBAction func likeButton(_ sender: UIBarButtonItem) {
+        if likeButtonState! { // Not enabled
+            dontLike.showInKeyWindow()
+            likeButton.image = #imageLiteral(resourceName: "loveIconEmpty")
+            likeButtonState = false
+            likeStorage.removeObject(forKey: "item_like_\(itemInfo.id)")
+        }
+        else { // Enabled
+            likeAlert.showInKeyWindow()
+            likeButton.image = #imageLiteral(resourceName: "loveIconFull")
+            likeButtonState = true
+            likeStorage.set(true, forKey: "item_like_\(itemInfo.id)")
+        }
+    }
+    
     //////////////////////////////////////////////////////////
 
     @IBOutlet weak var overallTitle: UILabel!
@@ -47,12 +76,15 @@ class DetailsItemViewController: UIViewController {
     var itemInfo = Items()
     var itemDetails = ItemsDetails()
     var itemModel = JsonService.list
+    var likeButtonState: Bool?
 
     override func viewDidLoad() {
+        likeButtonState = false
         prepareVisuals()
         getGradientValueForBackgroundImage()
         styleLabels()
         displayValues()
+        getLikeStorage()
     }
 
     func backgroundGradient() {
@@ -65,6 +97,13 @@ class DetailsItemViewController: UIViewController {
     func getGradientValueForBackgroundImage() {
         BackgroundFormater.formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
         shadows.setShadow(image: itemImage)
+    }
+    
+    func getLikeStorage() {
+        if likeStorage.bool(forKey: "item_like_\(itemInfo.id)") {
+            likeButton.image = #imageLiteral(resourceName: "loveIconFull")
+            likeButtonState = true
+        }
     }
 
     func styleLabels() {

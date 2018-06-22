@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 import PKHUD
+import StatusAlert
 
 extension UserDefaults {
     // check for is first launch - only true on first invocation after app install, false on all further invocations
@@ -37,6 +38,12 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     let list = JsonService.list
     let shadowsOptions = ShadowLayers()
     let levels = FormatLevels()
+    let firstTime = StatusAlert.instantiate(
+        withImage: #imageLiteral(resourceName: "heartFullHighRes2"),
+        title: "Welcome!",
+        message: "Please, if you like this app, don't forget to rate it on the AppStore.",
+        canBePickedOrDismissed: false
+    )
     var cellParentId: Int = 0
     var index: Int?
 
@@ -55,7 +62,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         let isFirstLaunch = UserDefaults.isFirstLaunch()
         
         if isFirstLaunch {
-            ErrorManager.showMessage("Welcome ! 😍", message: "Please, if you like this app, don't forget to rate it on the AppStore. ❤️")
+            firstTime.showInKeyWindow()
         }
     }
     

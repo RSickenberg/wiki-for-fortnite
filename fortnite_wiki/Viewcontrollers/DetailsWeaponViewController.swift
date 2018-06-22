@@ -9,6 +9,7 @@
 
 import UIKit
 import ChameleonFramework
+import StatusAlert
 
 class DetailsWeaponViewController: UIViewController {
 
@@ -16,11 +17,40 @@ class DetailsWeaponViewController: UIViewController {
     let BackgroundFormatter = FormatLevels()
     let feedback = UISelectionFeedbackGenerator()
     let shadowOptions = ShadowLayers()
+    let likeAlert = StatusAlert.instantiate(
+        withImage: #imageLiteral(resourceName: "heartFullHighRes"),
+        title: "We love you too !",
+        message: "You can see your favorite on the other tab.",
+        canBePickedOrDismissed: true
+    )
+    let dontLike = StatusAlert.instantiate(
+        withImage: #imageLiteral(resourceName: "DislikeFullHighRes"),
+        title: "It's okay.",
+        message: "You can check other stuff.",
+        canBePickedOrDismissed: true
+    )
+    let likeStorage = UserDefaults()
+    var likeButtonState: Bool?
 
     @IBOutlet weak var titleNavigation: UINavigationItem!
     @IBOutlet weak var detailsViewTitle: UINavigationItem!
     @IBOutlet weak var levelOfWeaponSwitch: UISegmentedControl!
-
+    @IBOutlet weak var likeButton: UIBarButtonItem!
+    @IBAction func likeButton(_ sender: UIBarButtonItem!) {
+        if likeButtonState! { // Not enabled
+            dontLike.showInKeyWindow()
+            likeButton.image = #imageLiteral(resourceName: "loveIconEmpty")
+            likeButtonState = false
+            likeStorage.removeObject(forKey: "weapon_like_\(weaponInfo.id)")
+        }
+        else { // Enabled
+            likeAlert.showInKeyWindow()
+            likeButton.image = #imageLiteral(resourceName: "loveIconFull")
+            likeButtonState = true
+            likeStorage.set(true, forKey: "weapon_like_\(weaponInfo.id)")
+        }
+    }
+    
     @IBAction func levelOfWeaponSwitch(_ sender: UISegmentedControl) {
         // Change level here
         feedback.selectionChanged()
@@ -115,10 +145,12 @@ class DetailsWeaponViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        likeButtonState = false
 
         prepareVisuals()
+        getLikeStorage()
     }
-
+    
     func backgroundGradient() {
         view.backgroundColor = UIColor.clear
         let backgroundLayer = colors.gl
@@ -134,6 +166,13 @@ class DetailsWeaponViewController: UIViewController {
             levelOfWeaponSwitch.insertSegment(withTitle: titles[listOfLevel], at: levelOfWeaponSwitch.numberOfSegments, animated: false)
         }
         levelOfWeaponSwitch.selectedSegmentIndex = 0
+    }
+    
+    func getLikeStorage() {
+        if likeStorage.bool(forKey: "weapon_like_\(weaponInfo.id)") {
+            likeButton.image = #imageLiteral(resourceName: "loveIconFull")
+            likeButtonState = true
+        }
     }
     
     func prepareVisuals() {
