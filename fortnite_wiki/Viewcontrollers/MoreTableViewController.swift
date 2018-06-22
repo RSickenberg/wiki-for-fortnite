@@ -8,74 +8,79 @@
 
 import UIKit
 
+class MoreCell: UITableViewCell {
+    @IBOutlet weak var mainLabel: UILabel!
+}
+
 class MoreTableViewController: UITableViewController {
 
+    @IBOutlet var moreTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        prepareVisuals()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        ErrorManager.showMessage("You find this new tab !", message: "For this build (2), the rows show nothing.")
+    }
+    
+    func prepareVisuals() {
+        self.moreTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favorties", for: indexPath) as! MoreCell
+        cell.backgroundColor = UIColor(hexString:"547FF8")
+        cell.textLabel?.textColor = UIColor.white
+        cell.layoutMargins.bottom = CGFloat(10)
+        
+        switch indexPath.section {
+        case 0:
+            cell.mainLabel.text = "Your Favorites."
+            break
+        case 1:
+            cell.mainLabel.text = "Contact."
+            break
+        case 2:
+            cell.mainLabel.text = "Licences."
+            break
+        default:
+            break
+        }
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = tableView.cellForRow(at: indexPath)
+//    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Interactions"
+        } else if section == 1 {
+            return "About"
+        }
+        return nil
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section > 1 {
+            return CGFloat(0)
+        }
+        return CGFloat(20)
     }
-    */
 
     /*
     // MARK: - Navigation

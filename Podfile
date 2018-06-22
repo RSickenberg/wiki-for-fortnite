@@ -1,8 +1,8 @@
-project 'fortnite_wiki.xcodeproj'
+project 'fort-to-nite.xcodeproj'
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
 
-target 'fortnite_wiki' do
+target 'fort-to-nite' do
   use_frameworks!
 
   # Pods for fortnite_wik

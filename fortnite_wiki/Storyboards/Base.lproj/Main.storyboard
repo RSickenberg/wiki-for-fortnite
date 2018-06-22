@@ -488,7 +488,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elW-bt-xZ9">
-                                                        <rect key="frame" x="177.33333333333334" y="0.0" width="30.333333333333343" height="18"/>
+                                                        <rect key="frame" x="176.66666666666666" y="0.0" width="30.333333333333343" height="18"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -604,7 +604,7 @@
                                                 <rect key="frame" x="33.666666666666657" y="58" width="308" height="304"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-QK-key">
-                                                        <rect key="frame" x="15" y="13" width="278" height="278"/>
+                                                        <rect key="frame" x="15.333333333333343" y="13" width="278" height="278"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="lzr-QK-key" secondAttribute="height" multiplier="1:1" id="25q-SD-7Kb"/>
                                                         </constraints>
@@ -827,32 +827,36 @@
             </objects>
             <point key="canvasLocation" x="-887" y="2335"/>
         </scene>
-        <!--More Table View Controller-->
+        <!--More-->
         <scene sceneID="f7R-p8-2pR">
             <objects>
                 <tableViewController id="BXP-KK-g2h" customClass="MoreTableViewController" customModule="fortnite_wiki" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yXf-04-zP3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="121" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="7" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="yXf-04-zP3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.32941176470588235" green="0.49803921568627452" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.32941176470588235" green="0.49803921568627452" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="b2n-KW-VHt" style="IBUITableViewCellStyleDefault" id="Ioq-br-Chd">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favorties" textLabel="b2n-KW-VHt" rowHeight="121" style="IBUITableViewCellStyleDefault" id="Ioq-br-Chd" customClass="MoreCell" customModule="fortnite_wiki" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="121"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ioq-br-Chd" id="dWu-o8-5HD">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="120.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b2n-KW-VHt">
-                                            <rect key="frame" x="16" y="0.0" width="324" height="43.666666666666664"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b2n-KW-VHt">
+                                            <rect key="frame" x="16" y="0.0" width="324" height="120.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="31"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="mainLabel" destination="b2n-KW-VHt" id="fhj-QR-I6I"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -861,11 +865,14 @@
                             <outlet property="delegate" destination="BXP-KK-g2h" id="pth-Io-sqs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Pl0-6e-Frt"/>
+                    <navigationItem key="navigationItem" title="More" id="Pl0-6e-Frt"/>
+                    <connections>
+                        <outlet property="moreTableView" destination="yXf-04-zP3" id="7yN-DZ-RZS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxp-Ng-K3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650" y="2335"/>
+            <point key="canvasLocation" x="648.79999999999995" y="2334.9753694581282"/>
         </scene>
         <!--ITEMS-->
         <scene sceneID="ocj-qW-Rag">

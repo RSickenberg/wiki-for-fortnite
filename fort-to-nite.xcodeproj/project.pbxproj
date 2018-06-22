@@ -29,7 +29,7 @@
 		07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BDBDD7207D4FCB00BD5682 /* ItemsDetails.swift */; };
 		07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */; };
 		07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FC946C209C61970077D9B0 /* ErrorManager.swift */; };
-		9EC818B61DC3AC4D3CF35AC6 /* Pods_fortnite_wiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */; };
+		4078F27132FA6ADC3B857935 /* Pods_fort_to_nite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonImageCoordinator.swift; sourceTree = "<group>"; };
 		0733FC572080F626004ECD7D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		07378F2320506C38008B48D8 /* WeaponsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsDetails.swift; sourceTree = "<group>"; };
-		073A3711204D7CBA001D4AF5 /* fortnite_wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortnite_wiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		073A3711204D7CBA001D4AF5 /* fort-to-nite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fort-to-nite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		073A3714204D7CBA001D4AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		073A3719204D7CBA001D4AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073A371E204D7CBB001D4AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,9 +62,10 @@
 		07BDBDD7207D4FCB00BD5682 /* ItemsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDetails.swift; sourceTree = "<group>"; };
 		07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
 		07FC946C209C61970077D9B0 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
-		8FE1399FF3E4426FDB040954 /* Pods-fortnite_wiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortnite_wiki.release.xcconfig"; path = "Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki.release.xcconfig"; sourceTree = "<group>"; };
-		91C8F1776B59F91BF857D96A /* Pods-fortnite_wiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortnite_wiki.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki.debug.xcconfig"; sourceTree = "<group>"; };
+		0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fort_to_nite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99FDF51A974A26B2E116C33 /* Pods-fort-to-nite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fort-to-nite.release.xcconfig"; path = "Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite.release.xcconfig"; sourceTree = "<group>"; };
+		E531E0AFBF52C292F4A13E6C /* Pods-fort-to-nite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fort-to-nite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EC818B61DC3AC4D3CF35AC6 /* Pods_fortnite_wiki.framework in Frameworks */,
+				4078F27132FA6ADC3B857935 /* Pods_fort_to_nite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +112,7 @@
 		073A3712204D7CBA001D4AF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				073A3711204D7CBA001D4AF5 /* fortnite_wiki.app */,
+				073A3711204D7CBA001D4AF5 /* fort-to-nite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,8 +216,8 @@
 		60F826D321999B73E46CB9A5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8FE1399FF3E4426FDB040954 /* Pods-fortnite_wiki.release.xcconfig */,
-				91C8F1776B59F91BF857D96A /* Pods-fortnite_wiki.debug.xcconfig */,
+				D99FDF51A974A26B2E116C33 /* Pods-fort-to-nite.release.xcconfig */,
+				E531E0AFBF52C292F4A13E6C /* Pods-fort-to-nite.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -225,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */,
+				0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,9 +234,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		073A3710204D7CBA001D4AF5 /* fortnite_wiki */ = {
+		073A3710204D7CBA001D4AF5 /* fort-to-nite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 073A3726204D7CBB001D4AF5 /* Build configuration list for PBXNativeTarget "fortnite_wiki" */;
+			buildConfigurationList = 073A3726204D7CBB001D4AF5 /* Build configuration list for PBXNativeTarget "fort-to-nite" */;
 			buildPhases = (
 				B334DE41771C20C4D9F64314 /* [CP] Check Pods Manifest.lock */,
 				073A370D204D7CBA001D4AF5 /* Sources */,
@@ -246,9 +248,9 @@
 			);
 			dependencies = (
 			);
-			name = fortnite_wiki;
+			name = "fort-to-nite";
 			productName = fortnite_wiki;
-			productReference = 073A3711204D7CBA001D4AF5 /* fortnite_wiki.app */;
+			productReference = 073A3711204D7CBA001D4AF5 /* fort-to-nite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +287,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				073A3710204D7CBA001D4AF5 /* fortnite_wiki */,
+				073A3710204D7CBA001D4AF5 /* fort-to-nite */,
 			);
 		};
 /* End PBXProject section */
@@ -312,7 +314,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
@@ -329,7 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fortnite_wiki/Pods-fortnite_wiki-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B334DE41771C20C4D9F64314 /* [CP] Check Pods Manifest.lock */ = {
@@ -343,7 +345,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-fortnite_wiki-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-fort-to-nite-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -459,7 +461,7 @@
 		};
 		073A3728204D7CBB001D4AF5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FE1399FF3E4426FDB040954 /* Pods-fortnite_wiki.release.xcconfig */;
+			baseConfigurationReference = D99FDF51A974A26B2E116C33 /* Pods-fort-to-nite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
@@ -474,7 +476,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fort-to-nite";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fortnite-wiki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -545,7 +547,7 @@
 		};
 		079C95E3204EC5EE006199C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91C8F1776B59F91BF857D96A /* Pods-fortnite_wiki.debug.xcconfig */;
+			baseConfigurationReference = E531E0AFBF52C292F4A13E6C /* Pods-fort-to-nite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
@@ -559,7 +561,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fort-to-nite";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fortnite-wiki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -581,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		073A3726204D7CBB001D4AF5 /* Build configuration list for PBXNativeTarget "fortnite_wiki" */ = {
+		073A3726204D7CBB001D4AF5 /* Build configuration list for PBXNativeTarget "fort-to-nite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				073A3728204D7CBB001D4AF5 /* Release */,
