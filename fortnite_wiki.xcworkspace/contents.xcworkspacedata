@@ -5,7 +5,7 @@
       location = "group:fastlane">
    </FileRef>
    <FileRef
-      location = "group:fortnite_wiki.xcodeproj">
+      location = "group:/Users/romainsickenberg/Desktop/FORTNITE_WIKI/fort-to-nite.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

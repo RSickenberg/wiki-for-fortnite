@@ -90,3 +90,21 @@
 > Beta + Testflight
 
 - APP : iPad version back on the track ! 🎉
+- APP : Rename Fort-to-nite.
+- UI : You are now able to set favorites ! ❤️
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
