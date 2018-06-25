@@ -38,6 +38,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     let list = JsonService.list
     let shadowsOptions = ShadowLayers()
     let levels = FormatLevels()
+    let colors = BackgroundColors()
     let firstTime = StatusAlert.instantiate(
         withImage: #imageLiteral(resourceName: "heartFullHighRes2"),
         title: "Welcome!",
@@ -89,7 +90,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     func backgroundGradient() {
         view.backgroundColor = UIColor.clear
-        let backgroundLayer = BackgroundColors().gl
+        let backgroundLayer = colors.gl
         backgroundLayer?.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
     }

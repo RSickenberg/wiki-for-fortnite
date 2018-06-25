@@ -23,6 +23,7 @@
 		073A373B204D93B5001D4AF5 /* DetailsWeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */; };
 		073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373C204DAA34001D4AF5 /* Weapons.swift */; };
 		073A373F204DAB00001D4AF5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373E204DAB00001D4AF5 /* Items.swift */; };
+		07493C9A20DD45BC00B7C5D1 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07493C9920DD45BC00B7C5D1 /* FavoritesTableViewController.swift */; };
 		0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749725C204E7169006048C6 /* DetailsForObjects.swift */; };
 		07631E27207F93A90078267B /* DetailsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07631E26207F93A90078267B /* DetailsItemViewController.swift */; };
 		076640792093516E0044900D /* JsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076640782093516E0044900D /* JsonService.swift */; };
@@ -53,6 +54,7 @@
 		073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWeaponViewController.swift; sourceTree = "<group>"; };
 		073A373C204DAA34001D4AF5 /* Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
 		073A373E204DAB00001D4AF5 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		07493C9920DD45BC00B7C5D1 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		0749725C204E7169006048C6 /* DetailsForObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsForObjects.swift; sourceTree = "<group>"; };
 		07631E26207F93A90078267B /* DetailsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemViewController.swift; sourceTree = "<group>"; };
 		076640782093516E0044900D /* JsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		073A372A204D7CDC001D4AF5 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				07493C9820DD456200B7C5D1 /* More */,
 				07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */,
 				073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */,
 				073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */,
@@ -195,6 +198,14 @@
 				073A3738204D90B8001D4AF5 /* BurbankBigCondensed-Bold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		07493C9820DD456200B7C5D1 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				07493C9920DD45BC00B7C5D1 /* FavoritesTableViewController.swift */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 		07664077209351360044900D /* Services */ = {
@@ -362,6 +373,7 @@
 				07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */,
 				07631E27207F93A90078267B /* DetailsItemViewController.swift in Sources */,
 				07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */,
+				07493C9A20DD45BC00B7C5D1 /* FavoritesTableViewController.swift in Sources */,
 				07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */,
 				073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */,
 				073A372F204D8BBF001D4AF5 /* ColorsGradient.swift in Sources */,

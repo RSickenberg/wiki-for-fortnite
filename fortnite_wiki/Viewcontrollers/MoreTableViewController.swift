@@ -22,11 +22,6 @@ class MoreTableViewController: UITableViewController {
         prepareVisuals()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        ErrorManager.showMessage("You find this new tab !", message: "For this build (2), the rows show nothing.")
-    }
-    
     func prepareVisuals() {
         self.moreTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
@@ -62,9 +57,9 @@ class MoreTableViewController: UITableViewController {
         return 3
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "moreToFav", sender: self)
+    }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
