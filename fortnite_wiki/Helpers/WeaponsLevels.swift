@@ -103,4 +103,46 @@ class FormatLevels {
 
         shadows.setShadow(cell: cell)
     }
+    
+    func formatCellGradients(cell: UITableViewCell, levels: [Int]) {
+        switch levels {
+        case [0, 1, 2]:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("969696")!, HexColor("969696")!, HexColor("4FCA00")!, HexColor("00BFFF")!])
+            break
+        case [1, 2]:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4FCA00")!, HexColor("00BFFF")!])
+            break
+        case [2, 3]:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("00BFFF")!, HexColor("B83DF2")!])
+        case [3, 4]:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("B83DF2")!, HexColor("E6BB0E")!])
+        default:
+            cell.backgroundColor = UIColor.black
+            ErrorManager.showMessage("New update should be here!", message: "This black card should not be there.")
+            break
+        }
+    }
+    
+    func formatCellGradient(cell: UITableViewCell, level: Int) {
+        switch level {
+        case 0:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4A4A4A")!, HexColor("969696")!])
+            break
+        case 1:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("037E00")!, HexColor("69E41A")!])
+            break
+        case 2:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("004080")!, HexColor("00BFFF")!])
+            break
+        case 3:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("530080")!, HexColor("D257FF")!])
+            break
+        case 4:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("805600")!, HexColor("FFD528")!])
+            break
+        default:
+            cell.backgroundColor = UIColor.black
+            break
+        }
+    }
 }

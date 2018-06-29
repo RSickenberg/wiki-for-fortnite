@@ -116,6 +116,12 @@ class DetailsForObjects {
     func getAllItemsDetails() -> [ItemsDetails] {
         return itemsDetails
     }
+    
+    func getItemsByItemId(itemId: Int) -> Items {
+        let key = itemsCollection.index(where: { $0.id == itemId })
+        
+        return itemsCollection[key!]
+    }
 
     func getItemByIndex(index: Int) -> Items {
         return itemsCollection[index]
@@ -132,8 +138,7 @@ class DetailsForObjects {
     }
     
     func setImageByItemId(_ itemId: Int, imageView: UIImageView!){
-        let key = itemsCollection.index(where: { $0.id == itemId })
-        let item = getItemByIndex(index: key!)
+        let item = getItemsByItemId(itemId: itemId)
         let url = (JsonService.shared.imagePath.url?.absoluteString)! + item.img
         
         imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolderGray"), imageTransition: .crossDissolve(0.5))

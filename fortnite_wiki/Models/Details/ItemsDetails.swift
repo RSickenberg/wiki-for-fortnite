@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ItemsDetails: NSObject, Decodable {
+class ItemsDetails: Decodable {
 
     var itemId: Int
     var isHeal: Bool
@@ -21,7 +21,7 @@ class ItemsDetails: NSObject, Decodable {
     var capacity: Int
     var comment: String
 
-    override init() {
+    init() {
         itemId = 0
         isHeal = false
         isExplosive = false

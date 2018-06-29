@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WeaponsDetails: NSObject, Decodable {
+class WeaponsDetails: Decodable {
 
     var detailLevel: Int
     var weaponId: Int
@@ -36,7 +36,7 @@ class WeaponsDetails: NSObject, Decodable {
     var recoilMinAngle: Float
     var recoilDownsights: Float
     
-    override init() {
+    init() {
         detailLevel = 0
         weaponId = 0
         damage = 0
@@ -58,8 +58,6 @@ class WeaponsDetails: NSObject, Decodable {
         recoilMaxAngle = 0.0
         recoilMinAngle = 0.0
         recoilDownsights = 0.0
-        
-        super.init()
     }
     
     init(detailLevel:Int, weaponId: Int, damage: Int, damageHead: Float, fireRate: Float, magazineSize: Int, reloadTime: Float, impact: Float, spreadBase: Float, spreadSprint: Float, spreadJump: Float, spreadDownsights: Float, spreadStanding: Float, spreadCrouching: Float, firingRateBurst: Float, environementDamage: Float, recoilHorizontal: Float, recoilVertical: Float, recoilMaxAngle: Float, recoilMinAngle: Float, recoilDownsights: Float) {
@@ -88,14 +86,5 @@ class WeaponsDetails: NSObject, Decodable {
         self.recoilMaxAngle = recoilMaxAngle
         self.recoilMinAngle = recoilMinAngle
         self.recoilDownsights = recoilDownsights
-    }
-    
-    override var description: String {
-        
-        get {
-            let newDescription: String = "High details for Weapons"
-            
-            return newDescription
-        }
     }
 }
