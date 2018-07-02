@@ -38,71 +38,121 @@ class FavoritesTableViewController: UITableViewController {
     
     var matchedWeaponsIds: [Int] = []
     var matchedItemsIds: [Int] = []
-    var lastWeaponPrinted:Int?
-    var lastItemPrinted:Int?
+    var indexPathToWeaponId = [IndexPath : Int]()
+    var indexPathToItemId = [IndexPath : Int]()
     
+    lazy var refresh: UIRefreshControl! = {
+        let refreshControl = UIRefreshControl()
+        
+        refreshControl.addTarget(self, action: #selector(FavoritesTableViewController.reloadData(_:)), for: UIControlEvents.allEvents)
+        
+        refreshControl.tintColor = UIColor.flatPurple
+        
+        return refreshControl
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         favoritesTable.dataSource = self
         favoritesTable.delegate = self
+        favoritesTable.addSubview(self.refresh)
+        prepareVisuals()
         getFavorites()
+    }
+    
+    @objc private func reloadData(_ refreshControl: UIRefreshControl) {
+        getFavorites()
+        refreshControl.endRefreshing()
+        favoritesTable.reloadData()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return matchedWeaponsIds.count + matchedItemsIds.count
+        if section == 0 {
+            return matchedWeaponsIds.count
+        } else {
+            return matchedItemsIds.count
+        }
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoritesTable.dequeueReusableCell(withIdentifier: "favorite_cell", for: indexPath) as! FavoriteCell
-    
-        if matchedWeaponsIds.count > 0 {
-            for weaponId in matchedWeaponsIds {
-                let weapon = model.getWeaponsByWeaponId(weaponId: weaponId)
+        
+        if indexPath.section == 0 {
+            if matchedWeaponsIds.count > 0 {
+                let weapon = model.getWeaponsByWeaponId(weaponId: matchedWeaponsIds[indexPath.row])
                 cell.cellEntityName.text = weapon.name
                 model.setImageByWeaponId(weapon.id, imageView: cell.cellImage)
-                matchedWeaponsIds.remove(at: matchedWeaponsIds.index(where: { $0 == weapon.id })!)
                 FormatLevels().formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
+                indexPathToWeaponId.updateValue(weapon.id, forKey: indexPath)
                 return cell
             }
         }
-        
-        if matchedItemsIds.count > 0 {
-            for itemId in matchedItemsIds {
-                let item = model.getItemsByItemId(itemId: itemId)
+        else if indexPath.section == 1 {
+            if matchedItemsIds.count > 0 {
+                let item = model.getItemsByItemId(itemId: matchedItemsIds[indexPath.row])
                 cell.cellEntityName.text = item.name
                 model.setImageByItemId(item.id, imageView: cell.cellImage)
-                matchedItemsIds.remove(at: matchedItemsIds.index(where: { $0 == item.id })!)
                 FormatLevels().formatCellGradient(cell: cell, level: item.color)
+                indexPathToItemId.updateValue(item.id, forKey: indexPath)
                 return cell
             }
         }
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Weapons"
+        } else if section == 1 {
+            return "Items"
+        }
+        return nil
+    }
 
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return false
+        return true
     }
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            if indexPathToWeaponId.index(forKey: indexPath) != nil {
+                favoriteStorage.removeObject(forKey: "weapon_like_\(String(describing: indexPathToWeaponId[indexPath]!))")
+            }
+            
+            if indexPathToItemId.index(forKey: indexPath) != nil {
+                favoriteStorage.removeObject(forKey: "item_like_\(String(describing: indexPathToItemId[indexPath]!))")
+            }
+            
+            getFavorites()
+            
+            tableView.deleteRows(at: [indexPath], with: .none)
+            
+            favoritesTable.reloadData()
         }
+    }
+    
+    // MARK: - Visuals
+    
+    private func prepareVisuals() {
+        tableView.separatorColor = UIColor.black
     }
     
     // MARK: - Handle Data
     
     private func getFavorites() {
+        matchedItemsIds = []
+        matchedWeaponsIds = []
         let rangeOfWeaponsId = weapons.count
         let rangeOfItemsId = items.count
         var weaponId = 0

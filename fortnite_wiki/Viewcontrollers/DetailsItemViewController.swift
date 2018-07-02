@@ -106,14 +106,14 @@ class DetailsItemViewController: UIViewController {
         }
     }
 
-    func styleLabels() {
+    private func styleLabels() {
         let labels = [overallTitle, overallStackedTitle1, overallStackedTitle2, overallStackedTitle3, overallStackedValue1, overallStackedValue2, overallStackedValue3, detailsStackedTitle1, detailsStackedTitle2, detailsStackedTitle3, detailsTitle, detailsStackedValue1, detailsStackedValue2, detailsStackedValue3]
         for label in labels {
             shadows.setShadow(label: label!)
         }
     }
     
-    func prepareVisuals() {
+    private func prepareVisuals() {
         backgroundGradient()
         itemModel.setImageByItemId(itemInfo.id, imageView: itemImage)
         titleView.title = itemInfo.name

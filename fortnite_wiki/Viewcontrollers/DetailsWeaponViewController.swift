@@ -4,7 +4,6 @@
 //
 //  Created by Romain Sickenberg on 05.03.18.
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
-//  TODO: Find a way to reduce all the calls inside the model
 //
 
 import UIKit
@@ -175,7 +174,7 @@ class DetailsWeaponViewController: UIViewController {
         }
     }
     
-    func prepareVisuals() {
+    private func prepareVisuals() {
         backgroundGradient()
         
         detailsViewTitle.title = weaponInfo.name
@@ -217,7 +216,7 @@ class DetailsWeaponViewController: UIViewController {
         }
     }
 
-    func populateLabelsByValueAndLevels(_ level: Int) {
+    private func populateLabelsByValueAndLevels(_ level: Int) {
         let details = weaponModel.getDetailsByWeaponIdAndLevel(weaponId: weaponInfo.id, weaponLevel: level)
         dpsLabel.text = String(Float(details.damage) * details.fireRate)
         envdmgLabel.text = String(details.environementDamage)
@@ -244,7 +243,7 @@ class DetailsWeaponViewController: UIViewController {
 
     }
 
-    func styleLabels() {
+    private func styleLabels() {
         let labels = [overallLabel, dpsTitle, envdmgTitle, dpsLabel, envdmgLabel, detailsLabel, damageHeadTitle, fireRateTitle, magazineTitle, impactTitle, reloadTitle, damageLabel, headLabel, fireRateLabel, magazineSizeLabel, impactLabel, reloadLabel, spreadLabel, baseTitle, sprintTitle, jumpFallTitle, downsightsTitle, standingTitle, crouchingTitle, baseSpreadLabel, sprintSpreadLabel, jumpSpreadLabel, standingSpreadLabel, downsightsSpreadLabel, crouchingSpreadLabel, recoilLabel, horizontalRecoilTitle, verticalRecoilTitle, angleMaxTitle, angleMinTitle, downsightsRecoilTitle, horizontalLabel, verticalLabel, angleMaxLabel, angleMinLabel, downsightsRecoilLabel]
         for label in labels {
             shadowOptions.setShadow(label: label!)

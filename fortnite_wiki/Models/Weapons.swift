@@ -4,8 +4,6 @@
 //
 //  Created by Romain Sickenberg on 05.03.18.
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
-//  Todo: Make model for details only
-//  Todo: var detailId: Int
 //
 
 import Foundation

@@ -58,7 +58,9 @@ class MoreTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "moreToFav", sender: self)
+        if indexPath.section == 0 {
+            performSegue(withIdentifier: "moreToFav", sender: self)
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

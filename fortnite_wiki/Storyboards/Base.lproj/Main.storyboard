@@ -878,7 +878,7 @@
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="2334.9753694581282"/>
         </scene>
-        <!--Favorites Table View Controller-->
+        <!--Your favorites-->
         <scene sceneID="Iov-ad-2aC">
             <objects>
                 <tableViewController id="zB0-Je-Vz2" customClass="FavoritesTableViewController" customModule="fort_to_nite" customModuleProvider="target" sceneMemberID="viewController">
@@ -897,19 +897,16 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Weapon name" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmq-oQ-EqK">
                                             <rect key="frame" x="171" y="23" width="120" height="27"/>
                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="27"/>
-                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="D.range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKn-Mf-EBm">
                                             <rect key="frame" x="171" y="106" width="75.666666666666686" height="18"/>
                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
-                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FR.range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0l-ba-8NO">
                                             <rect key="frame" x="290.66666666666669" y="106" width="48.333333333333314" height="18"/>
                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
-                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="heartFullHighRes" translatesAutoresizingMaskIntoConstraints="NO" id="mix-qK-vLo">
@@ -934,6 +931,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="v0l-ba-8NO" secondAttribute="bottom" constant="10" id="ugK-um-a4Y"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="cellEntityName" destination="Wmq-oQ-EqK" id="OHc-vr-L0C"/>
                                     <outlet property="cellImage" destination="mix-qK-vLo" id="Ttj-up-jmm"/>
@@ -947,7 +945,7 @@
                             <outlet property="delegate" destination="zB0-Je-Vz2" id="WYW-Is-RQI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Lm4-4E-8yW">
+                    <navigationItem key="navigationItem" title="Your favorites" id="Lm4-4E-8yW">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="0W0-LF-5Vq">
                             <connections>
                                 <action selector="editFavoritesTable:" destination="zB0-Je-Vz2" id="ico-g5-Y3l"/>
@@ -999,7 +997,7 @@
                                                                 <constraint firstAttribute="height" constant="20" id="G99-Qa-7lv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
-                                                            <color key="textColor" red="0.98671478430000004" green="0.87770517619999999" blue="0.34140021669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.9882352941176471" green="0.8784313725490196" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
