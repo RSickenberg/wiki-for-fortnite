@@ -23,7 +23,6 @@ class Weapons: Decodable {
     }
     
     init(id: Int, name: String, color: Int, img: String) {
-        
         self.id = id
         self.name = name
         self.color = color

@@ -12,6 +12,8 @@ import StatusAlert
 
 class DetailsItemViewController: UIViewController {
 
+    // MARK: - Declarations
+
     let shadows = ShadowLayers()
     let colors = BackgroundColors()
     let BackgroundFormater = FormatLevels()
@@ -47,6 +49,8 @@ class DetailsItemViewController: UIViewController {
             likeStorage.set(true, forKey: "item_like_\(itemInfo.id)")
         }
     }
+
+    // MARK: - Outlets
     
     //////////////////////////////////////////////////////////
 
@@ -72,6 +76,8 @@ class DetailsItemViewController: UIViewController {
 
     /////////////////////////////////////////////////////////
 
+    // MARK: - Declarations
+
     var index: Int = 0
     var itemInfo = Items()
     var itemDetails = ItemsDetails()
@@ -87,23 +93,24 @@ class DetailsItemViewController: UIViewController {
         getLikeStorage()
     }
 
-    func backgroundGradient() {
-        view.backgroundColor = UIColor.clear
-        let backgroundLayer = colors.gl
-        backgroundLayer?.frame = view.frame
-        view.layer.insertSublayer(backgroundLayer!, at: 0)
-    }
+    // MARK: - Data
 
-    func getGradientValueForBackgroundImage() {
-        BackgroundFormater.formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
-        shadows.setShadow(image: itemImage)
-    }
-    
     func getLikeStorage() {
         if likeStorage.bool(forKey: "item_like_\(itemInfo.id)") {
             likeButton.image = #imageLiteral(resourceName: "loveIconFull")
             likeButtonState = true
         }
+    }
+
+    // MARK: - Visuals
+
+    private func backgroundGradient() {
+        colors.backgroundGradient(view: view)
+    }
+
+    private func getGradientValueForBackgroundImage() {
+        BackgroundFormater.formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
+        shadows.setShadow(image: itemImage)
     }
 
     private func styleLabels() {
@@ -145,7 +152,8 @@ class DetailsItemViewController: UIViewController {
             if (details.shield != 0) {
                 overallStackedTitle1.text = "Shield"
                 overallStackedValue1.text = String(details.shield)
-            } else {
+            }
+            else {
                 overallStackedTitle1.text = "Heal"
                 overallStackedValue1.text = String(details.heal)
             }
@@ -166,7 +174,8 @@ class DetailsItemViewController: UIViewController {
         if (details.comment != "") {
             detailsStackedTitle3.text = "Note"
             detailsStackedValue3.text = details.comment
-        } else {
+        }
+        else {
             detailsStackedTitle3.isHidden = true
             detailsStackedValue3.isHidden = true
         }

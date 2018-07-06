@@ -34,6 +34,8 @@ class WeaponCollectionCell: UICollectionViewCell {
 
 class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    // MARK: - Declarations
+
     let feedback = UIImpactFeedbackGenerator(style: .light)
     let list = JsonService.list
     let shadowsOptions = ShadowLayers()
@@ -66,6 +68,8 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
             firstTime.showInKeyWindow()
         }
     }
+
+    // MARK: - Data
     
     func getData() {
         HUD.show(.labeledProgress(title: "Loading", subtitle: nil))
@@ -88,12 +92,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectionView?.reloadData()
     }
 
-    func backgroundGradient() {
-        view.backgroundColor = UIColor.clear
-        let backgroundLayer = colors.gl
-        backgroundLayer?.frame = view.frame
-        view.layer.insertSublayer(backgroundLayer!, at: 0)
-    }
+    // MARK: - Collection View
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return list.countWeapons()
@@ -136,5 +135,11 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         default:
             break
         }
+    }
+
+    // MARK: - Visuals
+
+    private func backgroundGradient() {
+        colors.backgroundGradient(view: view)
     }
 }

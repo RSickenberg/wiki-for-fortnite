@@ -20,11 +20,14 @@ import UIKit
 import AlamofireImage
 
 class DetailsForObjects {
+    // MARK: - Array
     private var weaponsCollection = [Weapons]()
     private var weaponsDetails = [WeaponsDetails]()
 
     private var itemsCollection = [Items]()
     private var itemsDetails = [ItemsDetails]()
+
+    // MARK: - Weapons
 
     func addWeaponToDB(_ weapon: Weapons) {
         weaponsCollection.append(weapon)
@@ -100,6 +103,7 @@ class DetailsForObjects {
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////// ITEMS
+    // MARK: - Items
 
     func addItemToDB(_ items: Items) {
         itemsCollection.append(items)

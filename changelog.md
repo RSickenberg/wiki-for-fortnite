@@ -92,8 +92,10 @@
 - APP : iPad version back on the track ! 🎉
 - APP : Rename Fort-to-nite.
 - APP : New appicon.
+- APP : General ~~kenobi~~ cleanup.
 - UI : You are now able to set favorites ! ❤️
 - UI : More tab with Fav, contact, licences row.
+- BACKEND : Handle full functionality of Favorites.
 - BUG : Resize view from NIB disabled makes Scene not good with background.
 
 

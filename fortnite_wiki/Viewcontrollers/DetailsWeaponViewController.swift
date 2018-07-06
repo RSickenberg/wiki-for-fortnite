@@ -31,6 +31,8 @@ class DetailsWeaponViewController: UIViewController {
     let likeStorage = UserDefaults()
     var likeButtonState: Bool?
 
+    // MARK: - Outlets
+
     @IBOutlet weak var titleNavigation: UINavigationItem!
     @IBOutlet weak var detailsViewTitle: UINavigationItem!
     @IBOutlet weak var levelOfWeaponSwitch: UISegmentedControl!
@@ -137,6 +139,8 @@ class DetailsWeaponViewController: UIViewController {
     @IBOutlet weak var angleMinLabel: UILabel!
     @IBOutlet weak var downsightsRecoilLabel: UILabel!
 
+    // MARK: - Declarations
+
     var index: Int = 0
     var weaponInfo = Weapons()
     var weaponDetails = WeaponsDetails()
@@ -148,13 +152,6 @@ class DetailsWeaponViewController: UIViewController {
 
         prepareVisuals()
         getLikeStorage()
-    }
-    
-    func backgroundGradient() {
-        view.backgroundColor = UIColor.clear
-        let backgroundLayer = colors.gl
-        backgroundLayer?.frame = view.frame
-        view.layer.insertSublayer(backgroundLayer!, at: 0)
     }
 
     func prepareSegment() {
@@ -172,6 +169,12 @@ class DetailsWeaponViewController: UIViewController {
             likeButton.image = #imageLiteral(resourceName: "loveIconFull")
             likeButtonState = true
         }
+    }
+
+    // MARK: - Visuals
+
+    private func backgroundGradient() {
+        colors.backgroundGradient(view: view)
     }
     
     private func prepareVisuals() {
@@ -192,7 +195,7 @@ class DetailsWeaponViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
-    func getGradientValueforBackgroundImage() {
+    private func getGradientValueforBackgroundImage() {
         BackgroundFormatter.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: weaponDetails.detailLevel)
         shadowOptions.setShadow(image: weaponImage)
         switch weaponDetails.detailLevel {

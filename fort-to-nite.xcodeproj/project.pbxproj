@@ -17,7 +17,6 @@
 		073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073A3718204D7CBA001D4AF5 /* Main.storyboard */; };
 		073A371F204D7CBB001D4AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073A371E204D7CBB001D4AF5 /* Assets.xcassets */; };
 		073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073A3720204D7CBB001D4AF5 /* LaunchScreen.storyboard */; };
-		073A372F204D8BBF001D4AF5 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */; };
 		073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */; };
 		073A3739204D90B9001D4AF5 /* BurbankBigCondensed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 073A3738204D90B8001D4AF5 /* BurbankBigCondensed-Bold.otf */; };
 		073A373B204D93B5001D4AF5 /* DetailsWeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */; };
@@ -31,6 +30,7 @@
 		07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */; };
 		07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FC946C209C61970077D9B0 /* ErrorManager.swift */; };
 		4078F27132FA6ADC3B857935 /* Pods_fort_to_nite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */; };
+		9E41EA36299FF0FB96442ED7 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,6 @@
 		073A371E204D7CBB001D4AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073A3721204D7CBB001D4AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		073A3723204D7CBB001D4AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
 		073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		073A3738204D90B8001D4AF5 /* BurbankBigCondensed-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigCondensed-Bold.otf"; sourceTree = "<group>"; };
 		073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWeaponViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
 		07FC946C209C61970077D9B0 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fort_to_nite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsGradient.swift; path = fortnite_wiki/Helpers/ColorsGradient.swift; sourceTree = "<group>"; };
 		C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99FDF51A974A26B2E116C33 /* Pods-fort-to-nite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fort-to-nite.release.xcconfig"; path = "Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite.release.xcconfig"; sourceTree = "<group>"; };
 		E531E0AFBF52C292F4A13E6C /* Pods-fort-to-nite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fort-to-nite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,7 +185,6 @@
 		073A372D204D8BB6001D4AF5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				073A372E204D8BBF001D4AF5 /* ColorsGradient.swift */,
 				070A2E7B2050766A00541779 /* WeaponsLevels.swift */,
 				071E386020775BBE006CAFD2 /* ShadowLayers.swift */,
 			);
@@ -238,6 +237,7 @@
 			children = (
 				C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */,
 				0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */,
+				9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,7 +376,6 @@
 				07493C9A20DD45BC00B7C5D1 /* FavoritesTableViewController.swift in Sources */,
 				07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */,
 				073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */,
-				073A372F204D8BBF001D4AF5 /* ColorsGradient.swift in Sources */,
 				0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */,
 				076640792093516E0044900D /* JsonService.swift in Sources */,
 				071D137620DCEF8B00688BFC /* MoreTableViewController.swift in Sources */,
@@ -388,6 +387,7 @@
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,
 				07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */,
 				070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */,
+				9E41EA36299FF0FB96442ED7 /* ColorsGradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

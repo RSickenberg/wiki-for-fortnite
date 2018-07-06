@@ -21,4 +21,11 @@ class BackgroundColors {
         self.gl.colors = [colorTop, colorBottom]
         self.gl.locations = [0.0, 1.0]
     }
+
+    func backgroundGradient(view: UIView) {
+        view.backgroundColor = UIColor.clear
+        let backgroundLayer = colors.gl
+        backgroundLayer?.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer!, at: 0)
+    }
 }

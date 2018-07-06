@@ -24,9 +24,13 @@ enum ConnectionResult {
 }
 
 class JsonService {
+
+    // MARK: - Singletons
     
     static let shared = JsonService()
     static let list = DetailsForObjects()
+
+    // MARK: - Declarations
     
     //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
     var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
@@ -39,6 +43,8 @@ class JsonService {
             imagePath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
         }
     }
+
+    // MARK: - Promises
     
     func fetchJsonAlamo(completion: @escaping (ConnectionResult) -> ()) {
         Alamofire.request((jsonPath.url?.absoluteString)!, method: .get).validate().responseJSON() { [weak self] response in
