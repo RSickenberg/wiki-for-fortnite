@@ -17,6 +17,8 @@ class ItemsCollectionCell: UICollectionViewCell {
 
 class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    // MARK: - Declarations
+
     let feedback = UIImpactFeedbackGenerator(style: .light)
     let colors = BackgroundColors()
     let list = JsonService.list
@@ -35,16 +37,13 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
     }
 
-    func backgroundGradient() {
-        view.backgroundColor = UIColor.clear
-        let backgroundLayer = colors.gl
-        backgroundLayer?.frame = view.frame
-        view.layer.insertSublayer(backgroundLayer!, at: 0)
-    }
+    // MARK: - Data
 
     func reloadData() {
         self.collectionView?.reloadData()
     }
+
+    // MARK: - Collection view
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return list.countItems()
@@ -86,5 +85,9 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         default:
             break
         }
+    }
+
+    private func backgroundGradient() {
+        colors.backgroundGradient(view: view)
     }
 }

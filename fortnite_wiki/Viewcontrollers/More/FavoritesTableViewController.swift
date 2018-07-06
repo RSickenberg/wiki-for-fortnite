@@ -80,7 +80,7 @@ class FavoritesTableViewController: UITableViewController {
         refreshControl.endRefreshing()
     }
 
-    // MARK: - Table view data source
+    // MARK: - TableView
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         var number = 0
@@ -128,6 +128,8 @@ class FavoritesTableViewController: UITableViewController {
         if matchedWeaponsIds.count > 0 {
             if indexPath.section == 0 {
                 let weapon = model.getWeaponsByWeaponId(weaponId: matchedWeaponsIds[indexPath.row])
+                cell.entityDetail.text = getRangeOfDamages(weaponId: weapon.id)
+                cell.entityDetail2.isHidden = true
                 cell.cellEntityName.text = weapon.name
                 model.setImageByWeaponId(weapon.id, imageView: cell.cellImage)
                 FormatLevels().formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
@@ -139,6 +141,8 @@ class FavoritesTableViewController: UITableViewController {
             if indexPath.section == 1 || indexPath.section == 0 {
                 let item = model.getItemsByItemId(itemId: matchedItemsIds[indexPath.row])
                 cell.cellEntityName.text = item.name
+                cell.entityDetail.isHidden = true
+                cell.entityDetail2.isHidden = true
                 model.setImageByItemId(item.id, imageView: cell.cellImage)
                 FormatLevels().formatCellGradient(cell: cell, level: item.color)
                 indexPathToItemId.updateValue(item.id, forKey: indexPath)
@@ -171,12 +175,10 @@ class FavoritesTableViewController: UITableViewController {
         return nil
     }
 
-    // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if indexPathToWeaponId.index(forKey: indexPath) != nil {
@@ -251,6 +253,42 @@ class FavoritesTableViewController: UITableViewController {
         if weaponId + itemId == 0 {
             noFavorites.showInKeyWindow()
         }
+    }
+    
+    private func getRangeOfDamages(weaponId: Int) -> String {
+        let levels = model.getLevelsByWeaponId(weaponId)
+        var range: String = ""
+        
+        for level in levels {
+            if level == levels.first {
+                let minDamage = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
+                range.append("\(minDamage.damage)-")
+            }
+            if level == levels.last {
+                let maxDamage = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
+                range.append("\(maxDamage.damage)")
+            }
+        }
+        
+        return range
+    }
+    
+    private func getRangeOfFireRate(weaponId: Int) -> String {
+        let levels = model.getLevelsByWeaponId(weaponId)
+        var range: String = ""
+        
+        for level in levels {
+            if level == levels.first {
+                let minRange = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
+                range.append("\(minRange.fireRate)-")
+            }
+            if level == levels.last {
+                let maxRange = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
+                range.append("\(maxRange.fireRate)")
+            }
+        }
+        
+        return range
     }
 
 }

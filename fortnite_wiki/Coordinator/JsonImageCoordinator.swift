@@ -11,8 +11,12 @@ import Foundation
 
 class JsonImageCoordinator {
 
+    // MARK: - Singletons
+
     static let shared = JsonImageCoordinator()
     let json = JsonService.shared
+
+    // MARK: Data
 
     func syncJsonWithImage(completion: @escaping (ConnectionResult) -> ()) {
         json.fetchJsonAlamo() { [weak self] result in

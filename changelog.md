@@ -96,6 +96,7 @@
 - UI : You are now able to set favorites ! ❤️
 - UI : More tab with Fav, contact, licences row.
 - BACKEND : Handle full functionality of Favorites.
+- BACKEND : Range of Damages.
 - BUG : Resize view from NIB disabled makes Scene not good with background.
 
 
