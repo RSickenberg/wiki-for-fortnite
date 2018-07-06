@@ -28,8 +28,8 @@ class JsonService {
     static let shared = JsonService()
     static let list = DetailsForObjects()
     
-    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
-    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
+    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
+    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
     var json = [String: Any]()
     
@@ -46,10 +46,6 @@ class JsonService {
             print("JSON: Request: \(String(describing: response.request))")
             print("JSON: Response: \(String(describing: response.response))")
             print("JSON: Result: \(String(describing: response.result))")
-            
-            if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
-                ErrorManager.showMessage("Network debug", message: "Size: \(response.data?.count ?? 0) bytes    Response: \(response.result)")
-            }
             
             guard self != nil else { return }
 
@@ -75,13 +71,26 @@ class JsonService {
                         JsonService.list.addItemDetailsToDB(itemDetails)
                     }
                     
+                    if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
+                        ErrorManager.showMessage("Network debug", message: "Size: \(response.data?.count ?? 0) bytes    Response: \(response.result)")
+                    }
+                    
                     completion(.success(jsonObject))
                 }
                 catch let jsonErr {
+                    if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
+                        ErrorManager.showMessage("Json Status", message: jsonErr.localizedDescription)
+                        print(jsonErr)
+                    }
+                    
                     completion(.failure(jsonErr))
                 }
             }
             case .failure(let error):
+                if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
+                    ErrorManager.showMessage("Failure Status", message: error.localizedDescription)
+                }
+                
                 completion(.failure(error))
             }
         }

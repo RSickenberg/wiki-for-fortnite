@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StatusAlert
 
 class FavoriteCell: UITableViewCell {
     @IBOutlet weak var cellEntityName: UILabel!
@@ -35,6 +36,12 @@ class FavoritesTableViewController: UITableViewController {
     let weaponsDetails = JsonService.list.getAllWeaponsDetails()
     let favoriteStorage = UserDefaults.standard
     let shadows = ShadowLayers()
+    let noFavorites = StatusAlert.instantiate(
+        withImage: #imageLiteral(resourceName: "DislikeFullHighRes"),
+        title: "Oh!",
+        message: "It seems you don't have any favorties. Go love your favorites on the ❤️ top right corner",
+        canBePickedOrDismissed: true
+    )
     
     var matchedWeaponsIds: [Int] = []
     var matchedItemsIds: [Int] = []
@@ -61,31 +68,65 @@ class FavoritesTableViewController: UITableViewController {
         getFavorites()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        getFavorites()
+        self.favoritesTable.reloadData()
+    }
+    
     @objc private func reloadData(_ refreshControl: UIRefreshControl) {
         getFavorites()
-        refreshControl.endRefreshing()
         favoritesTable.reloadData()
+        refreshControl.endRefreshing()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        var number = 0
+        
+        if matchedWeaponsIds.count > 0 {
+            number = number + 1
+        }
+        
+        if matchedItemsIds.count > 0 {
+            number = number + 1
+        }
+        
+        if number == 0 {
+            favoritesTable.separatorStyle = .none
+        }
+        
+        return number
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        
+        if matchedItemsIds.count != 0 && matchedWeaponsIds.count != 0 {
+            if section == 0 {
+                return matchedWeaponsIds.count
+            }
+            else {
+                return matchedItemsIds.count
+            }
+        }
+        
+        if matchedItemsIds.count == 0 {
             return matchedWeaponsIds.count
-        } else {
+        }
+        
+        if matchedWeaponsIds.count == 0  {
             return matchedItemsIds.count
         }
+        
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoritesTable.dequeueReusableCell(withIdentifier: "favorite_cell", for: indexPath) as! FavoriteCell
         
-        if indexPath.section == 0 {
-            if matchedWeaponsIds.count > 0 {
+        if matchedWeaponsIds.count > 0 {
+            if indexPath.section == 0 {
                 let weapon = model.getWeaponsByWeaponId(weaponId: matchedWeaponsIds[indexPath.row])
                 cell.cellEntityName.text = weapon.name
                 model.setImageByWeaponId(weapon.id, imageView: cell.cellImage)
@@ -94,8 +135,8 @@ class FavoritesTableViewController: UITableViewController {
                 return cell
             }
         }
-        else if indexPath.section == 1 {
-            if matchedItemsIds.count > 0 {
+        if matchedItemsIds.count > 0 {
+            if indexPath.section == 1 || indexPath.section == 0 {
                 let item = model.getItemsByItemId(itemId: matchedItemsIds[indexPath.row])
                 cell.cellEntityName.text = item.name
                 model.setImageByItemId(item.id, imageView: cell.cellImage)
@@ -109,11 +150,24 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
+        
+        if matchedItemsIds.count != 0 && matchedWeaponsIds.count != 0 {
+            if section == 0 {
+                return "Weapons"
+            }
+            else {
+                return "Items"
+            }
+        }
+        
+        if matchedItemsIds.count == 0 {
             return "Weapons"
-        } else if section == 1 {
+        }
+        
+        if matchedWeaponsIds.count == 0  {
             return "Items"
         }
+
         return nil
     }
 
@@ -125,7 +179,6 @@ class FavoritesTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
             if indexPathToWeaponId.index(forKey: indexPath) != nil {
                 favoriteStorage.removeObject(forKey: "weapon_like_\(String(describing: indexPathToWeaponId[indexPath]!))")
             }
@@ -136,7 +189,30 @@ class FavoritesTableViewController: UITableViewController {
             
             getFavorites()
             
-            tableView.deleteRows(at: [indexPath], with: .none)
+            if indexPath.section == 0 {
+                if matchedWeaponsIds.count == 0 && matchedItemsIds.count == 0 {
+                    let indexSet = IndexSet(arrayLiteral: indexPath.section)
+                    tableView.deleteSections(indexSet, with: UITableViewRowAnimation.automatic)
+                }
+                    
+                if matchedWeaponsIds.count > 1 || matchedItemsIds.count > 1 {
+                    favoritesTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                }
+                
+                else {
+                    favoritesTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                }
+            }
+            
+            else {
+                if matchedItemsIds.count == 0 {
+                    let indexSet = IndexSet(arrayLiteral: indexPath.section)
+                    tableView.deleteSections(indexSet, with: UITableViewRowAnimation.automatic)
+                }
+                else {
+                    favoritesTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                }
+            }
             
             favoritesTable.reloadData()
         }
@@ -170,6 +246,10 @@ class FavoritesTableViewController: UITableViewController {
                 matchedItemsIds.append(itemId)
             }
             itemId = itemId + 1
+        }
+        
+        if weaponId + itemId == 0 {
+            noFavorites.showInKeyWindow()
         }
     }
 
