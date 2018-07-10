@@ -41,12 +41,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     let shadowsOptions = ShadowLayers()
     let levels = FormatLevels()
     let colors = BackgroundColors()
-    let firstTime = StatusAlert.instantiate(
-        withImage: #imageLiteral(resourceName: "heartFullHighRes2"),
-        title: "Welcome!",
-        message: "Please, if you like this app, don't forget to rate it on the AppStore.",
-        canBePickedOrDismissed: false
-    )
+    let firstTime = StatusAlert()
     var cellParentId: Int = 0
     var index: Int?
 
@@ -54,6 +49,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        statusAlert()
         backgroundGradient()
         getData()
         collectionView.delegate = self
@@ -141,5 +137,13 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     private func backgroundGradient() {
         colors.backgroundGradient(view: view)
+    }
+    
+    private func statusAlert() {
+        firstTime.image = #imageLiteral(resourceName: "heartFullHighRes2")
+        firstTime.title = "Welcome!"
+        firstTime.message = "Please, if you like this app, don't forget to rate it on the AppStore."
+        firstTime.canBePickedOrDismissed = true
+        firstTime.alertShowingDuration = TimeInterval(exactly: 6)!
     }
 }
