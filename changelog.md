@@ -98,6 +98,8 @@
 - UI : Favorites has white labels.
 - BACKEND : Handle full functionality of Favorites.
 - BACKEND : Range of Damages.
+- BACKEND : Pod updates.
+- BACKEND : Handle favorites changes on viewAppear.
 - BUG : Resize view from NIB disabled makes Scene not good with background.
 - BUG : Fixed when delete a favorite result to a crash, it should be ok.
 

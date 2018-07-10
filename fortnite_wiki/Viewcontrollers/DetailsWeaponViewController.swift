@@ -139,8 +139,14 @@ class DetailsWeaponViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         likeButtonState = false
+        statusAlert()
 
         prepareVisuals()
+        getLikeStorage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
         getLikeStorage()
     }
     
@@ -160,6 +166,9 @@ class DetailsWeaponViewController: UIViewController {
         if likeStorage.bool(forKey: "weapon_like_\(weaponInfo.id)") {
             likeButton.image = #imageLiteral(resourceName: "loveIconFull")
             likeButtonState = true
+        } else {
+            likeButton.image = #imageLiteral(resourceName: "loveIconEmpty")
+            likeButtonState = false
         }
     }
 
@@ -192,13 +201,13 @@ class DetailsWeaponViewController: UIViewController {
         likeAlert.title = "We love you too!"
         likeAlert.message = "You can see your favorites on the more tab."
         likeAlert.canBePickedOrDismissed = true
-        likeAlert.alertShowingDuration = TimeInterval(exactly: 3)!
+        likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
         
         dontLike.image = #imageLiteral(resourceName: "DislikeFullHighRes")
         dontLike.title = "It's okay."
         dontLike.message = "You check other stuff."
         dontLike.canBePickedOrDismissed = true
-        dontLike.alertShowingDuration = TimeInterval(exactly: 3)!
+        dontLike.alertShowingDuration = TimeInterval(exactly: 2)!
     }
 
     private func getGradientValueforBackgroundImage() {
