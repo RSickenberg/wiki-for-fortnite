@@ -36,7 +36,12 @@ class FavoritesTableViewController: UITableViewController {
     let weaponsDetails = JsonService.list.getAllWeaponsDetails()
     let favoriteStorage = UserDefaults.standard
     let shadows = ShadowLayers()
-    let noFavorites = StatusAlert()
+    let noFavorites = StatusAlert.instantiate(
+        withImage: #imageLiteral(resourceName: "DislikeFullHighRes"),
+        title: "Oh!",
+        message: "It seems you don't have any favorties. Go love your favorites on the ❤️ top right corner",
+        canBePickedOrDismissed: true
+    )
     
     var matchedWeaponsIds: [Int] = []
     var matchedItemsIds: [Int] = []
@@ -56,7 +61,7 @@ class FavoritesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        statusAlert()
+        //statusAlert()
         favoritesTable.dataSource = self
         favoritesTable.delegate = self
         favoritesTable.addSubview(self.refresh)
@@ -248,14 +253,15 @@ class FavoritesTableViewController: UITableViewController {
         shadows.setShadow(label: cell.entityDetail2)
     }
     
-    private func statusAlert() {
-        noFavorites.image = #imageLiteral(resourceName: "DislikeFullHighRes")
-        noFavorites.title = "Oh!"
-        noFavorites.message = "It seems you don't have any favorties. Go love your favorites on the ❤️ top right corner."
-        noFavorites.canBePickedOrDismissed = true
-        noFavorites.appearance = .copyCommon()
-        noFavorites.alertShowingDuration = TimeInterval(exactly: 5)!
-    }
+//    private func statusAlert() {
+//        StatusAlert.multiplePresentationsBehavior = .ignoreIfAlreadyPresenting
+//        noFavorites.image = #imageLiteral(resourceName: "DislikeFullHighRes")
+//        noFavorites.title = "Oh!"
+//        noFavorites.message = "It seems you don't have any favorties. Go love your favorites on the ❤️ top right corner."
+//        noFavorites.canBePickedOrDismissed = true
+//        noFavorites.appearance = .copyCommon()
+//        noFavorites.alertShowingDuration = TimeInterval(exactly: 5)!
+//    }
     
     // MARK: - Handle Data
     
