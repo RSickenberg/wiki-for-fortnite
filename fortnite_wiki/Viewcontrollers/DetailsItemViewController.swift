@@ -76,12 +76,8 @@ class DetailsItemViewController: UIViewController {
 
     override func viewDidLoad() {
         likeButtonState = false
-        statusAlert()
         prepareVisuals()
-        getGradientValueForBackgroundImage()
-        styleLabels()
         displayValues()
-        getLikeStorage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -134,7 +130,10 @@ class DetailsItemViewController: UIViewController {
     }
     
     private func prepareVisuals() {
+        statusAlert()
         backgroundGradient()
+        getGradientValueForBackgroundImage()
+        styleLabels()
         itemModel.setImageByItemId(itemInfo.id, imageView: itemImage)
         titleView.title = itemInfo.name
         

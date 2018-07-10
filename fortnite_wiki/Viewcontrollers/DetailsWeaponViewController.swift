@@ -139,10 +139,7 @@ class DetailsWeaponViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         likeButtonState = false
-        statusAlert()
-
         prepareVisuals()
-        getLikeStorage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -179,6 +176,7 @@ class DetailsWeaponViewController: UIViewController {
     }
     
     private func prepareVisuals() {
+        statusAlert()
         backgroundGradient()
         
         detailsViewTitle.title = weaponInfo.name
