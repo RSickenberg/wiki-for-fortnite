@@ -895,17 +895,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Weapon name" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmq-oQ-EqK">
-                                            <rect key="frame" x="171" y="23" width="120" height="27"/>
+                                            <rect key="frame" x="162.66666666666666" y="23" width="119.99999999999997" height="27"/>
                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="27"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="D.range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKn-Mf-EBm">
-                                            <rect key="frame" x="171" y="106" width="46" height="18"/>
+                                            <rect key="frame" x="162.66666666666666" y="106" width="42.333333333333343" height="18"/>
                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FR.range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0l-ba-8NO">
-                                            <rect key="frame" x="291" y="106" width="48" height="18"/>
+                                            <rect key="frame" x="282.66666666666669" y="106" width="48" height="18"/>
                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -919,15 +919,14 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="v0l-ba-8NO" firstAttribute="leading" secondItem="DKn-Mf-EBm" secondAttribute="trailing" constant="73.666666666666686" id="8Kk-ab-qhG"/>
+                                        <constraint firstItem="v0l-ba-8NO" firstAttribute="leading" secondItem="Wmq-oQ-EqK" secondAttribute="trailing" id="DF6-Rd-L6P"/>
                                         <constraint firstItem="v0l-ba-8NO" firstAttribute="top" secondItem="Wmq-oQ-EqK" secondAttribute="bottom" constant="56" id="FIX-qa-L20"/>
+                                        <constraint firstItem="Wmq-oQ-EqK" firstAttribute="leading" secondItem="mix-qK-vLo" secondAttribute="leading" constant="141" id="Lac-c7-006"/>
                                         <constraint firstItem="DKn-Mf-EBm" firstAttribute="centerY" secondItem="v0l-ba-8NO" secondAttribute="centerY" id="O47-ZF-qIa"/>
-                                        <constraint firstItem="DKn-Mf-EBm" firstAttribute="leading" secondItem="Wmq-oQ-EqK" secondAttribute="leading" id="PCK-Ja-XXg"/>
+                                        <constraint firstItem="DKn-Mf-EBm" firstAttribute="leading" secondItem="Wmq-oQ-EqK" secondAttribute="leading" id="Snq-gF-rki"/>
                                         <constraint firstItem="mix-qK-vLo" firstAttribute="centerY" secondItem="2lq-lY-5Mq" secondAttribute="centerY" id="ZWL-vz-10F"/>
                                         <constraint firstItem="mix-qK-vLo" firstAttribute="leading" secondItem="2lq-lY-5Mq" secondAttribute="leadingMargin" constant="5" id="hGu-sU-RG1"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="v0l-ba-8NO" secondAttribute="trailing" constant="20" id="sbp-cz-yqc"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="v0l-ba-8NO" secondAttribute="bottom" constant="10" id="ugK-um-a4Y"/>
-                                        <constraint firstItem="Wmq-oQ-EqK" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mix-qK-vLo" secondAttribute="trailing" constant="50" id="wDz-qY-amn"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>

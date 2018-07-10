@@ -66,12 +66,17 @@ class FavoritesTableViewController: UITableViewController {
         favoritesTable.addSubview(self.refresh)
         prepareVisuals()
         getFavorites()
+        favoritesTable.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getFavorites()
-        self.favoritesTable.reloadData()
+        favoritesTable.reloadData()
+        
+        if matchedWeaponsIds.count + matchedItemsIds.count == 0 {
+            noFavorites.showInKeyWindow()
+        }
     }
     
     @objc private func reloadData(_ refreshControl: UIRefreshControl) {
@@ -124,28 +129,35 @@ class FavoritesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoritesTable.dequeueReusableCell(withIdentifier: "favorite_cell", for: indexPath) as! FavoriteCell
+        FavoriteCellVisuals(cell)
         
         if matchedWeaponsIds.count > 0 {
             if indexPath.section == 0 {
                 let weapon = model.getWeaponsByWeaponId(weaponId: matchedWeaponsIds[indexPath.row])
+                
+                model.setImageByWeaponId(weapon.id, imageView: cell.cellImage)
                 cell.entityDetail.text = getRangeOfDamages(weaponId: weapon.id)
                 cell.entityDetail2.isHidden = true
                 cell.cellEntityName.text = weapon.name
-                model.setImageByWeaponId(weapon.id, imageView: cell.cellImage)
+                
                 FormatLevels().formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
                 indexPathToWeaponId.updateValue(weapon.id, forKey: indexPath)
+                
                 return cell
             }
         }
         if matchedItemsIds.count > 0 {
             if indexPath.section == 1 || indexPath.section == 0 {
                 let item = model.getItemsByItemId(itemId: matchedItemsIds[indexPath.row])
+                
+                model.setImageByItemId(item.id, imageView: cell.cellImage)
                 cell.cellEntityName.text = item.name
                 cell.entityDetail.isHidden = true
                 cell.entityDetail2.isHidden = true
-                model.setImageByItemId(item.id, imageView: cell.cellImage)
+                
                 FormatLevels().formatCellGradient(cell: cell, level: item.color)
                 indexPathToItemId.updateValue(item.id, forKey: indexPath)
+                
                 return cell
             }
         }
@@ -154,7 +166,6 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
         if matchedItemsIds.count != 0 && matchedWeaponsIds.count != 0 {
             if section == 0 {
                 return "Weapons"
@@ -200,6 +211,11 @@ class FavoritesTableViewController: UITableViewController {
                 if matchedWeaponsIds.count > 1 || matchedItemsIds.count > 1 {
                     favoritesTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
                 }
+                    
+                if (matchedItemsIds.count >= 1 && matchedWeaponsIds.count == 0) {
+                    let indexSet = IndexSet(arrayLiteral: indexPath.section)
+                    tableView.deleteSections(indexSet, with: UITableViewRowAnimation.automatic)
+                }
                 
                 else {
                     favoritesTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
@@ -226,6 +242,16 @@ class FavoritesTableViewController: UITableViewController {
         tableView.separatorColor = UIColor.black
     }
     
+    private func FavoriteCellVisuals(_ cell: FavoriteCell) {
+        cell.cellEntityName.textColor = UIColor.white
+        cell.entityDetail.textColor = UIColor.white
+        cell.entityDetail2.textColor = UIColor.white
+        
+        shadows.setShadow(label: cell.cellEntityName)
+        shadows.setShadow(label: cell.entityDetail)
+        shadows.setShadow(label: cell.entityDetail2)
+    }
+    
     // MARK: - Handle Data
     
     private func getFavorites() {
@@ -249,15 +275,11 @@ class FavoritesTableViewController: UITableViewController {
             }
             itemId = itemId + 1
         }
-        
-        if weaponId + itemId == 0 {
-            noFavorites.showInKeyWindow()
-        }
     }
     
     private func getRangeOfDamages(weaponId: Int) -> String {
         let levels = model.getLevelsByWeaponId(weaponId)
-        var range: String = ""
+        var range: String = "Damages : "
         
         for level in levels {
             if level == levels.first {
