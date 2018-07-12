@@ -203,36 +203,6 @@ class FavoritesTableViewController: UITableViewController {
             
             getFavorites()
             
-            if indexPath.section == 0 {
-                if matchedWeaponsIds.count == 0 && matchedItemsIds.count == 0 {
-                    let indexSet = IndexSet(arrayLiteral: indexPath.section)
-                    tableView.deleteSections(indexSet, with: UITableViewRowAnimation.automatic)
-                }
-                    
-                if matchedWeaponsIds.count > 1 || matchedItemsIds.count > 1 {
-                    favoritesTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-                }
-                    
-                if (matchedItemsIds.count >= 1 && matchedWeaponsIds.count == 0) {
-                    let indexSet = IndexSet(arrayLiteral: indexPath.section)
-                    tableView.deleteSections(indexSet, with: UITableViewRowAnimation.automatic)
-                }
-                
-                else {
-                    favoritesTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-                }
-            }
-            
-            else {
-                if matchedItemsIds.count == 0 {
-                    let indexSet = IndexSet(arrayLiteral: indexPath.section)
-                    tableView.deleteSections(indexSet, with: UITableViewRowAnimation.automatic)
-                }
-                else {
-                    favoritesTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-                }
-            }
-            
             favoritesTable.reloadData()
         }
     }
