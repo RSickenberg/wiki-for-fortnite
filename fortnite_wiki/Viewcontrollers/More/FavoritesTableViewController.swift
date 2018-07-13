@@ -47,6 +47,8 @@ class FavoritesTableViewController: UITableViewController {
     var matchedItemsIds: [Int] = []
     var indexPathToWeaponId = [IndexPath : Int]()
     var indexPathToItemId = [IndexPath : Int]()
+    var damageRangeForWeaponId = [Int : String]()
+    var dpsRangeForWeaponId = [Int : String]()
     
     lazy var refresh: UIRefreshControl! = {
         let refreshControl = UIRefreshControl()
@@ -137,8 +139,8 @@ class FavoritesTableViewController: UITableViewController {
                 let weapon = model.getWeaponsByWeaponId(weaponId: matchedWeaponsIds[indexPath.row])
                 
                 model.setImageByWeaponId(weapon.id, imageView: cell.cellImage)
-                cell.entityDetail.text = getRangeOfDamages(weaponId: weapon.id)
-                cell.entityDetail2.isHidden = true
+                cell.entityDetail.text = damageRangeForWeaponId[weapon.id]
+                cell.entityDetail2.text = dpsRangeForWeaponId[weapon.id]
                 cell.cellEntityName.text = weapon.name
                 
                 FormatLevels().formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
@@ -153,6 +155,8 @@ class FavoritesTableViewController: UITableViewController {
                 
                 model.setImageByItemId(item.id, imageView: cell.cellImage)
                 cell.cellEntityName.text = item.name
+                cell.entityDetail.text = "nil"
+                cell.entityDetail2.text = "nil"
                 cell.entityDetail.isHidden = true
                 cell.entityDetail2.isHidden = true
                 
@@ -164,6 +168,12 @@ class FavoritesTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let cell = favoritesTable.dequeueReusableCell(withIdentifier: "favorite_cell", for: indexPath) as! FavoriteCell
+        cell.entityDetail.text = nil
+        cell.entityDetail2.text = nil
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -246,6 +256,8 @@ class FavoritesTableViewController: UITableViewController {
         while weaponId <= rangeOfWeaponsId {
             if favoriteStorage.bool(forKey: "weapon_like_\(weaponId)") {
                 matchedWeaponsIds.append(weaponId)
+                damageRangeForWeaponId[weaponId] = getRangeOfDamages(weaponId: weaponId)
+                dpsRangeForWeaponId[weaponId] = getRangeOfDPSRate(weaponId: weaponId)
             }
             weaponId = weaponId + 1
         }
@@ -276,18 +288,18 @@ class FavoritesTableViewController: UITableViewController {
         return range
     }
     
-    private func getRangeOfFireRate(weaponId: Int) -> String {
+    private func getRangeOfDPSRate(weaponId: Int) -> String {
         let levels = model.getLevelsByWeaponId(weaponId)
-        var range: String = ""
+        var range: String = "DPS : "
         
         for level in levels {
             if level == levels.first {
                 let minRange = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
-                range.append("\(minRange.fireRate)-")
+                range.append("\(minRange.damage * Int(minRange.fireRate))-")
             }
             if level == levels.last {
                 let maxRange = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
-                range.append("\(maxRange.fireRate)")
+                range.append("\(maxRange.damage * Int(maxRange.fireRate))")
             }
         }
         
