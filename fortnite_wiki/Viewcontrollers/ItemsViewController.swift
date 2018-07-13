@@ -13,6 +13,17 @@ class ItemsCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellItemLabel: UILabel!
     @IBOutlet weak var cellGradientName: UIView!
+    
+    func configure() {
+        let shadowsOptions = ShadowLayers()
+        shadowsOptions.setShadow(label: cellItemLabel)
+        shadowsOptions.setGradientShadow(cell: cellGradientName)
+    }
+    
+    func modelData(_ item: Items) {
+        cellItemLabel.text = item.name
+        JsonService.list.setImageByItemId(item.id, imageView: cellImageView)
+    }
 }
 
 class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -20,7 +31,6 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     // MARK: - Declarations
 
     let feedback = UIImpactFeedbackGenerator(style: .light)
-    let colors = BackgroundColors()
     let list = JsonService.list
     let levels = FormatLevels()
 
@@ -56,14 +66,9 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemsId", for: indexPath) as! ItemsCollectionCell
         let item = list.getItemByIndex(index: indexPath.row)
-        let shadowsOptions = ShadowLayers()
-
+        cell.configure()
+        cell.modelData(item)
         levels.formatCellGradient(cell: cell, level: item.color)
-        shadowsOptions.setShadow(label: cell.cellItemLabel)
-        shadowsOptions.setGradientShadow(cell: cell.cellGradientName)
-        
-        cell.cellItemLabel.text = item.name
-        list.setImageByItemId(item.id, imageView: cell.cellImageView)
 
         return cell
     }
@@ -88,6 +93,6 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
 
     private func backgroundGradient() {
-        colors.backgroundGradient(view: view)
+        BackgroundColors().backgroundGradient(view: view)
     }
 }

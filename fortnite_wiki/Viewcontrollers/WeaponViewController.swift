@@ -30,6 +30,18 @@ class WeaponCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellimageView: UIImageView!
     @IBOutlet weak var cellGradientName: UIView!
     @IBOutlet weak var weaponName: UILabel!
+    
+    func configure() {
+        let shadowsOptions = ShadowLayers()
+        shadowsOptions.setShadow(label: weaponName)
+        shadowsOptions.setGradientShadow(cell: cellGradientName)
+        cellGradientName.layer.zPosition = 10
+    }
+    
+    func modelData(_ weapon: Weapons) {
+        weaponName.text = weapon.name
+        JsonService.list.setImageByWeaponId(weapon.id, imageView: cellimageView)
+    }
 }
 
 class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -38,9 +50,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     let feedback = UIImpactFeedbackGenerator(style: .light)
     let list = JsonService.list
-    let shadowsOptions = ShadowLayers()
     let levels = FormatLevels()
-    let colors = BackgroundColors()
     let firstTime = StatusAlert.instantiate(
         withImage: #imageLiteral(resourceName: "heartFullHighRes2"),
         title: "Welcome!",
@@ -109,12 +119,8 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         let listOfLevels = list.getLevelsByWeaponId(weapon.id)
 
         levels.formatCellGradients(cell: cell, levels: listOfLevels)
-        shadowsOptions.setShadow(label: cell.weaponName)
-        shadowsOptions.setGradientShadow(cell: cell.cellGradientName)
-        
-        cell.cellGradientName.layer.zPosition = 10
-        cell.weaponName.text = weapon.name
-        list.setImageByWeaponId(weapon.id, imageView: cell.cellimageView)
+        cell.configure()
+        cell.modelData(weapon)
 
         return cell
     }
@@ -141,7 +147,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     // MARK: - Visuals
 
     private func backgroundGradient() {
-        colors.backgroundGradient(view: view)
+        BackgroundColors().backgroundGradient(view: view)
     }
     
 //    private func statusAlert() {

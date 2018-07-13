@@ -10,10 +10,23 @@ import UIKit
 import StatusAlert
 
 class FavoriteCell: UITableViewCell {
+    let backgroundLevel = FormatLevels()
+    
     @IBOutlet weak var cellEntityName: UILabel!
     @IBOutlet weak var entityDetail: UILabel!
     @IBOutlet weak var entityDetail2: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
+    
+    func configure() {
+        let shadows = ShadowLayers()
+        cellEntityName.textColor = UIColor.white
+        entityDetail.textColor = UIColor.white
+        entityDetail2.textColor = UIColor.white
+        
+        shadows.setShadow(label: cellEntityName)
+        shadows.setShadow(label: entityDetail)
+        shadows.setShadow(label: entityDetail2)
+    }
 }
 
 class FavoritesTableViewController: UITableViewController {
@@ -35,7 +48,6 @@ class FavoritesTableViewController: UITableViewController {
     let itemsDetails = JsonService.list.getAllItemsDetails()
     let weaponsDetails = JsonService.list.getAllWeaponsDetails()
     let favoriteStorage = UserDefaults.standard
-    let shadows = ShadowLayers()
     let noFavorites = StatusAlert.instantiate(
         withImage: #imageLiteral(resourceName: "DislikeFullHighRes"),
         title: "Oh!",
@@ -132,7 +144,7 @@ class FavoritesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoritesTable.dequeueReusableCell(withIdentifier: "favorite_cell", for: indexPath) as! FavoriteCell
-        FavoriteCellVisuals(cell)
+        cell.configure()
         
         if matchedWeaponsIds.count > 0 {
             if indexPath.section == 0 {
@@ -143,7 +155,7 @@ class FavoritesTableViewController: UITableViewController {
                 cell.entityDetail2.text = dpsRangeForWeaponId[weapon.id]
                 cell.cellEntityName.text = weapon.name
                 
-                FormatLevels().formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
+                cell.backgroundLevel.formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
                 indexPathToWeaponId.updateValue(weapon.id, forKey: indexPath)
                 
                 return cell
@@ -160,7 +172,7 @@ class FavoritesTableViewController: UITableViewController {
                 cell.entityDetail.isHidden = true
                 cell.entityDetail2.isHidden = true
                 
-                FormatLevels().formatCellGradient(cell: cell, level: item.color)
+                cell.backgroundLevel.formatCellGradient(cell: cell, level: item.color)
                 indexPathToItemId.updateValue(item.id, forKey: indexPath)
                 
                 return cell
@@ -223,15 +235,15 @@ class FavoritesTableViewController: UITableViewController {
         tableView.separatorColor = UIColor.black
     }
     
-    private func FavoriteCellVisuals(_ cell: FavoriteCell) {
-        cell.cellEntityName.textColor = UIColor.white
-        cell.entityDetail.textColor = UIColor.white
-        cell.entityDetail2.textColor = UIColor.white
-        
-        shadows.setShadow(label: cell.cellEntityName)
-        shadows.setShadow(label: cell.entityDetail)
-        shadows.setShadow(label: cell.entityDetail2)
-    }
+//    private func FavoriteCellVisuals(_ cell: FavoriteCell) {
+//        cell.cellEntityName.textColor = UIColor.white
+//        cell.entityDetail.textColor = UIColor.white
+//        cell.entityDetail2.textColor = UIColor.white
+//
+//        shadows.setShadow(label: cell.cellEntityName)
+//        shadows.setShadow(label: cell.entityDetail)
+//        shadows.setShadow(label: cell.entityDetail2)
+//    }
     
 //    private func statusAlert() {
 //        StatusAlert.multiplePresentationsBehavior = .ignoreIfAlreadyPresenting
