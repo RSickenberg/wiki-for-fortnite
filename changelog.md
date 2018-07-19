@@ -93,6 +93,7 @@
 - APP : Rename Fort-to-nite.
 - APP : New appicon.
 - APP : General ~~kenobi~~ cleanup.
+- APP : Onboarding on first connection.
 - UI : You are now able to set favorites ! ❤️
 - UI : More tab with Fav, contact, licences row.
 - UI : Favorites has white labels.
@@ -102,17 +103,3 @@
 - BACKEND : Handle favorites changes on viewAppear.
 - BUG : Resize view from NIB disabled makes Scene not good with background.
 - BUG : Fixed when delete a favorite result to a crash, it should be ok.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
