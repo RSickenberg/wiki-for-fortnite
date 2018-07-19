@@ -26,6 +26,8 @@
 		0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749725C204E7169006048C6 /* DetailsForObjects.swift */; };
 		07631E27207F93A90078267B /* DetailsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07631E26207F93A90078267B /* DetailsItemViewController.swift */; };
 		076640792093516E0044900D /* JsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076640782093516E0044900D /* JsonService.swift */; };
+		079449B02100FEB400682F03 /* BurbankBigRegular-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */; };
+		07B1C9922100F47700DD7807 /* NewKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1C9912100F47700DD7807 /* NewKitViewController.swift */; };
 		07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BDBDD7207D4FCB00BD5682 /* ItemsDetails.swift */; };
 		07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */; };
 		07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FC946C209C61970077D9B0 /* ErrorManager.swift */; };
@@ -57,6 +59,8 @@
 		0749725C204E7169006048C6 /* DetailsForObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsForObjects.swift; sourceTree = "<group>"; };
 		07631E26207F93A90078267B /* DetailsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemViewController.swift; sourceTree = "<group>"; };
 		076640782093516E0044900D /* JsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
+		079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigRegular-Light.otf"; sourceTree = "<group>"; };
+		07B1C9912100F47700DD7807 /* NewKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKitViewController.swift; sourceTree = "<group>"; };
 		07B26FE5204ED15C008F9E3A /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = changelog.md; path = ../../changelog.md; sourceTree = "<group>"; };
 		07B26FE6204ED15C008F9E3A /* toDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = toDo.txt; path = ../../toDo.txt; sourceTree = "<group>"; };
 		07B26FE7204ED15C008F9E3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
 		07FC946C209C61970077D9B0 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fort_to_nite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsGradient.swift; path = fortnite_wiki/Helpers/ColorsGradient.swift; sourceTree = "<group>"; };
+		9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
 		C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99FDF51A974A26B2E116C33 /* Pods-fort-to-nite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fort-to-nite.release.xcconfig"; path = "Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite.release.xcconfig"; sourceTree = "<group>"; };
 		E531E0AFBF52C292F4A13E6C /* Pods-fort-to-nite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fort-to-nite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */,
 				07631E26207F93A90078267B /* DetailsItemViewController.swift */,
 				071D137520DCEF8B00688BFC /* MoreTableViewController.swift */,
+				07B1C9912100F47700DD7807 /* NewKitViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				070A2E7B2050766A00541779 /* WeaponsLevels.swift */,
+				9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */,
 				071E386020775BBE006CAFD2 /* ShadowLayers.swift */,
 			);
 			path = Helpers;
@@ -194,6 +200,7 @@
 		073A3737204D90AC001D4AF5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */,
 				073A3738204D90B8001D4AF5 /* BurbankBigCondensed-Bold.otf */,
 			);
 			path = Fonts;
@@ -237,7 +244,6 @@
 			children = (
 				C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */,
 				0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */,
-				9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 			files = (
 				0733FC582080F626004ECD7D /* Settings.bundle in Resources */,
 				073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */,
+				079449B02100FEB400682F03 /* BurbankBigRegular-Light.otf in Resources */,
 				073A371F204D7CBB001D4AF5 /* Assets.xcassets in Resources */,
 				073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */,
 				073A3739204D90B9001D4AF5 /* BurbankBigCondensed-Bold.otf in Resources */,
@@ -331,6 +338,7 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/WhatsNewKit/WhatsNewKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -339,6 +347,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WhatsNewKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -380,6 +389,7 @@
 				076640792093516E0044900D /* JsonService.swift in Sources */,
 				071D137620DCEF8B00688BFC /* MoreTableViewController.swift in Sources */,
 				07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */,
+				07B1C9922100F47700DD7807 /* NewKitViewController.swift in Sources */,
 				073A373F204DAB00001D4AF5 /* Items.swift in Sources */,
 				071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */,
 				073A373B204D93B5001D4AF5 /* DetailsWeaponViewController.swift in Sources */,

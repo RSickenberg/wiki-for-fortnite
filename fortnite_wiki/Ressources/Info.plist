@@ -28,6 +28,7 @@
 	<string>This app requires the usage of Photo library to cache the pictures from internet.</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>BurbankBigRegular-Light.otf</string>
 		<string>BurbankBigCondensed-Bold.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

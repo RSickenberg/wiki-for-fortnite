@@ -10,6 +10,7 @@ PODS:
   - Fabric (1.7.9)
   - PKHUD (5.1.0)
   - StatusAlert (0.11.0)
+  - WhatsNewKit (1.1.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Crashlytics
   - PKHUD
   - StatusAlert (~> 0.11.0)
+  - WhatsNewKit (~> 1.1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - Fabric
     - PKHUD
     - StatusAlert
+    - WhatsNewKit
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -45,7 +48,8 @@ SPEC CHECKSUMS:
   Fabric: a2917d3895e4c1569b9c3170de7320ea1b1e6661
   PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
   StatusAlert: 4b7de56a44ea0302fe95fef1fadb1733649f409a
+  WhatsNewKit: cbf39cf921649333c3ff5b54cd5be630158b960e
 
-PODFILE CHECKSUM: 625c438834abef35c964b1449510029c51cf1dfb
+PODFILE CHECKSUM: 63b56e494a078065dc947bb54d0f29c0450fe561
 
 COCOAPODS: 1.5.3

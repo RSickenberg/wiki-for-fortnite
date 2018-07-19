@@ -149,9 +149,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hvj-S8-2Lj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="WEAPONS" id="ThC-yU-fPC">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="1kw-Yz-yGn"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="WEAPONS" id="ThC-yU-fPC"/>
                     <connections>
                         <outlet property="collectionView" destination="z1h-Hz-J9q" id="oPL-2f-XT3"/>
                         <segue destination="b3M-qE-rbg" kind="show" identifier="weaponDetail" id="Hrg-Bg-Urk"/>
@@ -866,9 +864,7 @@
                             <outlet property="delegate" destination="BXP-KK-g2h" id="pth-Io-sqs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="More" id="Pl0-6e-Frt">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Hlc-11-Cow"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="More" id="Pl0-6e-Frt"/>
                     <connections>
                         <outlet property="moreTableView" destination="yXf-04-zP3" id="7yN-DZ-RZS"/>
                         <segue destination="zB0-Je-Vz2" kind="show" identifier="moreToFav" id="mTU-wm-tfl"/>
@@ -1050,9 +1046,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zor-Q5-81C"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ITEMS" id="6fd-9v-nn9">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="N6A-Q6-sPd"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="ITEMS" id="6fd-9v-nn9"/>
                     <connections>
                         <outlet property="collectionView" destination="32R-SJ-R8p" id="MMG-bt-p7q"/>
                         <segue destination="4Wx-5e-YO4" kind="show" identifier="itemDetail" id="gqq-TB-Jbq"/>
