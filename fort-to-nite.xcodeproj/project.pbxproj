@@ -27,7 +27,6 @@
 		07631E27207F93A90078267B /* DetailsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07631E26207F93A90078267B /* DetailsItemViewController.swift */; };
 		076640792093516E0044900D /* JsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076640782093516E0044900D /* JsonService.swift */; };
 		079449B02100FEB400682F03 /* BurbankBigRegular-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */; };
-		079449B2210101C500682F03 /* NewKitVersionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079449B1210101C500682F03 /* NewKitVersionStore.swift */; };
 		07B1C9922100F47700DD7807 /* NewKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1C9912100F47700DD7807 /* NewKitViewController.swift */; };
 		07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BDBDD7207D4FCB00BD5682 /* ItemsDetails.swift */; };
 		07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */; };
@@ -61,7 +60,6 @@
 		07631E26207F93A90078267B /* DetailsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemViewController.swift; sourceTree = "<group>"; };
 		076640782093516E0044900D /* JsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
 		079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigRegular-Light.otf"; sourceTree = "<group>"; };
-		079449B1210101C500682F03 /* NewKitVersionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKitVersionStore.swift; sourceTree = "<group>"; };
 		07B1C9912100F47700DD7807 /* NewKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKitViewController.swift; sourceTree = "<group>"; };
 		07B26FE5204ED15C008F9E3A /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = changelog.md; path = ../../changelog.md; sourceTree = "<group>"; };
 		07B26FE6204ED15C008F9E3A /* toDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = toDo.txt; path = ../../toDo.txt; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				076640782093516E0044900D /* JsonService.swift */,
-				079449B1210101C500682F03 /* NewKitVersionStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -394,7 +391,6 @@
 				07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */,
 				07B1C9922100F47700DD7807 /* NewKitViewController.swift in Sources */,
 				073A373F204DAB00001D4AF5 /* Items.swift in Sources */,
-				079449B2210101C500682F03 /* NewKitVersionStore.swift in Sources */,
 				071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */,
 				073A373B204D93B5001D4AF5 /* DetailsWeaponViewController.swift in Sources */,
 				073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */,

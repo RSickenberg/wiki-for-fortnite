@@ -60,7 +60,3 @@ class NewKitViewController {
         configuration: NewKitViewController().configuration
     )
 }
-
-class NewKitAppStoreVersion {
-    let version = WhatsNew.Version.current()
-}

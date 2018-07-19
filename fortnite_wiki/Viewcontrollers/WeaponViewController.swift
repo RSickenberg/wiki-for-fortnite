@@ -57,6 +57,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         message: "Please, if you like this app, don't forget to rate it on the AppStore.",
         canBePickedOrDismissed: false
     )
+    let isFirstLaunch = UserDefaults.isFirstLaunch()
     var cellParentId: Int = 0
     var index: Int?
 
@@ -74,7 +75,6 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        let isFirstLaunch = UserDefaults.isFirstLaunch()
         
         if isFirstLaunch {
             self.present(NewKitViewController.whatsNewViewController, animated: true)
