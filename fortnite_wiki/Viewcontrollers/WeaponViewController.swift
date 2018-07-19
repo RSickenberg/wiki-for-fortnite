@@ -72,11 +72,12 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         index = 0
     }
     
-    override func viewDidAppear(_ animated: Bool = true) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         let isFirstLaunch = UserDefaults.isFirstLaunch()
         
         if isFirstLaunch {
-            firstTime.showInKeyWindow()
+            self.present(NewKitViewController.whatsNewViewController, animated: true)
         }
     }
 
