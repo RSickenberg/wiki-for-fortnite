@@ -102,7 +102,7 @@
                                                                 <constraint firstAttribute="height" constant="20" id="jD2-TI-q5K"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
-                                                            <color key="textColor" red="0.98671478426395942" green="0.87770517621609578" blue="0.34140021667784981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                                         </label>
@@ -1003,7 +1003,7 @@
                                                                 <constraint firstAttribute="height" constant="20" id="G99-Qa-7lv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
-                                                            <color key="textColor" red="0.9882352941176471" green="0.8784313725490196" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
