@@ -10,6 +10,7 @@ PODS:
   - Fabric (1.7.9)
   - PKHUD (5.1.0)
   - StatusAlert (0.12.1)
+  - SwiftSpinner (1.5.0)
   - WhatsNewKit (1.1.1)
 
 DEPENDENCIES:
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Crashlytics
   - PKHUD
   - StatusAlert (~> 0.12.1)
+  - SwiftSpinner
   - WhatsNewKit (~> 1.1.1)
 
 SPEC REPOS:
@@ -29,6 +31,7 @@ SPEC REPOS:
     - Fabric
     - PKHUD
     - StatusAlert
+    - SwiftSpinner
     - WhatsNewKit
 
 EXTERNAL SOURCES:
@@ -48,8 +51,9 @@ SPEC CHECKSUMS:
   Fabric: a2917d3895e4c1569b9c3170de7320ea1b1e6661
   PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
   StatusAlert: 655a2b64184809e5cde031f7713dff3770965e8e
+  SwiftSpinner: 4c058c7a1d6b444dd2e1d70988ead40783097133
   WhatsNewKit: cbf39cf921649333c3ff5b54cd5be630158b960e
 
-PODFILE CHECKSUM: d1d283739760ea34e55e8e075e6bd76cd4c5b805
+PODFILE CHECKSUM: c5733ca1541fae5ec3f9ea822eaae9650ace0971
 
 COCOAPODS: 1.5.3

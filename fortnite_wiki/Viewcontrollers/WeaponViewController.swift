@@ -8,7 +8,7 @@
 
 import UIKit
 import ChameleonFramework
-import PKHUD
+import SwiftSpinner
 
 extension UserDefaults {
     // check for is first launch - only true on first invocation after app install, false on all further invocations
@@ -58,34 +58,37 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //statusAlert()
+        
+        if isFirstLaunch {
+            SwiftSpinner.hide()
+            self.present(NewKitViewController.whatsNewViewController, animated: true)
+        }
+        
         backgroundGradient()
         getData()
         collectionView.delegate = self
         collectionView.dataSource = self
         index = 0
-        
-        if isFirstLaunch {
-            HUD.hide()
-            self.present(NewKitViewController.whatsNewViewController, animated: true)
-        }
     }
 
     // MARK: - Data
     
     func getData() {
-        HUD.show(.labeledProgress(title: "Loading", subtitle: nil))
+        SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
+        
+        SwiftSpinner.show("Loading")
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         JsonImageCoordinator.shared.syncJsonWithImage() { [weak self] result in
             switch result {
             case .success(_):
-                HUD.hide(animated: true)
+                SwiftSpinner.hide()
                 self?.reloadData()
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             case .failure(_):
-                HUD.flash(.labeledError(title: "Oops", subtitle: "Please, reload the application."))
-                ErrorManager.showMessage("Network Error 😥", message: "API is in maintenance, or a new update is available.")
+                SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
+                    self?.getData()
+                }, subtitle: "API is in maintenance, or a new update is available.")
             }
         }
     }

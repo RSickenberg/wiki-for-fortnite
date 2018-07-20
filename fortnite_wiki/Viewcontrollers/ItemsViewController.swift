@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PKHUD
 
 class ItemsCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellImageView: UIImageView!

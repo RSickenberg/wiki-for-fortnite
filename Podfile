@@ -13,5 +13,5 @@ target 'fort-to-nite' do
   pod 'AlamofireImage'
   pod 'StatusAlert', '~> 0.12.1'
   pod 'WhatsNewKit', '~> 1.1.1'
-
+  pod 'SwiftSpinner'
 end
