@@ -11,9 +11,7 @@ target 'fort-to-nite' do
   pod 'Alamofire'
   pod 'PKHUD'
   pod 'AlamofireImage'
-  pod 'StatusAlert', '~> 0.11.0'
+  pod 'StatusAlert', '~> 0.12.1'
   pod 'WhatsNewKit', '~> 1.1.1'
-  #pod 'Hero'
-  #pod 'ShadowView'
 
 end

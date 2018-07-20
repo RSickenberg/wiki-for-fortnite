@@ -16,20 +16,10 @@ class DetailsWeaponViewController: UIViewController {
     let BackgroundFormatter = FormatLevels()
     let feedback = UISelectionFeedbackGenerator()
     let shadowOptions = ShadowLayers()
-    let likeAlert = StatusAlert.instantiate(
-        withImage: #imageLiteral(resourceName: "heartFullHighRes"),
-        title: "We love you too !",
-        message: "You can see your favorite on the other tab.",
-        canBePickedOrDismissed: true
-    )
-    let dontLike = StatusAlert.instantiate(
-        withImage: #imageLiteral(resourceName: "DislikeFullHighRes"),
-        title: "It's okay.",
-        message: "You can check other stuff.",
-        canBePickedOrDismissed: true
-    )
     let likeStorage = UserDefaults()
     var likeButtonState: Bool?
+    let likeAlert = StatusAlert()
+    let dontLikeAlert = StatusAlert()
 
     // MARK: - Outlets
 
@@ -39,7 +29,7 @@ class DetailsWeaponViewController: UIViewController {
     @IBOutlet weak var likeButton: UIBarButtonItem!
     @IBAction func likeButton(_ sender: UIBarButtonItem!) {
         if likeButtonState! { // Not enabled
-            dontLike.showInKeyWindow()
+            dontLikeAlert.showInKeyWindow()
             likeButton.image = #imageLiteral(resourceName: "loveIconEmpty")
             likeButtonState = false
             likeStorage.removeObject(forKey: "weapon_like_\(weaponInfo.id)")
@@ -186,7 +176,7 @@ class DetailsWeaponViewController: UIViewController {
     }
     
     private func prepareVisuals() {
-        //statusAlert()
+        statusAlert()
         backgroundGradient()
         
         detailsViewTitle.title = weaponInfo.name
@@ -204,19 +194,19 @@ class DetailsWeaponViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-//    private func statusAlert() {
-//        likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes")
-//        likeAlert.title = "We love you too!"
-//        likeAlert.message = "You can see your favorites on the more tab."
-//        likeAlert.canBePickedOrDismissed = true
-//        likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
-//
-//        dontLike.image = #imageLiteral(resourceName: "DislikeFullHighRes")
-//        dontLike.title = "It's okay."
-//        dontLike.message = "You check other stuff."
-//        dontLike.canBePickedOrDismissed = true
-//        dontLike.alertShowingDuration = TimeInterval(exactly: 2)!
-//    }
+    private func statusAlert() {
+        likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes2")
+        likeAlert.title = "It's liked !"
+        likeAlert.message = "You can see your favorites on the more tab."
+        likeAlert.canBePickedOrDismissed = true
+        likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
+
+        dontLikeAlert.image = #imageLiteral(resourceName: "DislikeFullHighRes")
+        dontLikeAlert.title = "It's okay."
+        dontLikeAlert.message = "You check other stuff."
+        dontLikeAlert.canBePickedOrDismissed = true
+        dontLikeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
+    }
 
     private func getGradientValueforBackgroundImage() {
         BackgroundFormatter.formatUIBackgroundViewFromLevel(view: uiBackgroundView, level: weaponDetails.detailLevel)

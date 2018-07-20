@@ -17,18 +17,8 @@ class DetailsItemViewController: UIViewController {
     let shadows = ShadowLayers()
     let colors = BackgroundColors()
     let BackgroundFormater = FormatLevels()
-    let likeAlert = StatusAlert.instantiate(
-        withImage: #imageLiteral(resourceName: "heartFullHighRes"),
-        title: "We love you too !",
-        message: "You can see your favorite on the other tab.",
-        canBePickedOrDismissed: true
-    )
-    let dontLike = StatusAlert.instantiate(
-        withImage: #imageLiteral(resourceName: "DislikeFullHighRes"),
-        title: "It's okay.",
-        message: "You can check other stuff.",
-        canBePickedOrDismissed: true
-    )
+    let likeAlert = StatusAlert()
+    let dontlikeAlert = StatusAlert()
     let likeStorage = UserDefaults()
 
     @IBOutlet weak var itemImage: UIImageView!
@@ -37,7 +27,7 @@ class DetailsItemViewController: UIViewController {
     @IBOutlet weak var likeButton: UIBarButtonItem!
     @IBAction func likeButton(_ sender: UIBarButtonItem) {
         if likeButtonState! { // Not enabled
-            dontLike.showInKeyWindow()
+            dontlikeAlert.showInKeyWindow()
             likeButton.image = #imageLiteral(resourceName: "loveIconEmpty")
             likeButtonState = false
             likeStorage.removeObject(forKey: "item_like_\(itemInfo.id)")
@@ -125,22 +115,22 @@ class DetailsItemViewController: UIViewController {
         }
     }
     
-//    private func statusAlert() {
-//        likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes")
-//        likeAlert.title = "We love you too!"
-//        likeAlert.message = "You can see your favorites on the more tab."
-//        likeAlert.canBePickedOrDismissed = true
-//        likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
-//
-//        dontLike.image = #imageLiteral(resourceName: "DislikeFullHighRes")
-//        dontLike.title = "It's okay."
-//        dontLike.message = "You check other stuff."
-//        dontLike.canBePickedOrDismissed = true
-//        dontLike.alertShowingDuration = TimeInterval(exactly: 2)!
-//    }
+    private func statusAlert() {
+        likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes2")
+        likeAlert.title = "It's liked !"
+        likeAlert.message = "You can see your favorites on the more tab."
+        likeAlert.canBePickedOrDismissed = true
+        likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
+
+        dontlikeAlert.image = #imageLiteral(resourceName: "DislikeFullHighRes")
+        dontlikeAlert.title = "It's okay."
+        dontlikeAlert.message = "You check other stuff."
+        dontlikeAlert.canBePickedOrDismissed = true
+        dontlikeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
+    }
     
     private func prepareVisuals() {
-        //statusAlert()
+        statusAlert()
         backgroundGradient()
         getGradientValueForBackgroundImage()
         styleLabels()
