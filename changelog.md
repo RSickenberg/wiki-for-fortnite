@@ -76,6 +76,7 @@
 - UI : Back navigation Item is now white.
 - UI : Back navigation is now a true "back".
 - UI : Translucent is now everywhere.
+- UI : New loader.
 - APP : Remove iPad for now.
 - APP : NSPhotoLibraryUsageDescription.
 - APP : >= iOS 11
