@@ -17,7 +17,7 @@ class NewKitViewController {
         configuration.apply(animation: .fade)
         configuration.titleView.titleFont = UIFont(name: "BurbankBigCondensed-Bold", size: 45)!
         configuration.itemsView.titleFont = UIFont(name: "BurbankBigCondensed-Bold", size: 34)!
-        configuration.itemsView.subtitleFont = UIFont(name: "BurbankBigRegular-Light", size: 22)!
+        configuration.itemsView.subtitleFont = UIFont(name: "BurbankBigRegular-Light", size: 21)!
         configuration.itemsView.autoTintImage = true
         configuration.completionButton.title = "Discover your app"
         let detailButton = WhatsNewViewController.DetailButton(
@@ -39,7 +39,7 @@ class NewKitViewController {
             ),
             WhatsNew.Item(
                 title: "Same design.",
-                subtitle: "Don't lost you head, we look like your favorite game !",
+                subtitle: "Don't loose you head, we look like your favorite game !",
                 image: #imageLiteral(resourceName: "windowDesign")
             )
             ,

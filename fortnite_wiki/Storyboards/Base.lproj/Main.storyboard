@@ -829,7 +829,7 @@
         <!--More-->
         <scene sceneID="f7R-p8-2pR">
             <objects>
-                <tableViewController id="BXP-KK-g2h" customClass="MoreTableViewController" customModule="fort_to_nite" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="favorites" id="BXP-KK-g2h" customClass="MoreTableViewController" customModule="fort_to_nite" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="121" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="7" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="yXf-04-zP3">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

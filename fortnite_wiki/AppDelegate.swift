@@ -13,6 +13,10 @@ import StatusAlert
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    enum ShortCut: String {
+        case favortites = "favorite"
+    }
 
     var window: UIWindow?
     var settings: UserDefaults?
@@ -28,6 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Build : " + text)
         }
         return true
+    }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(handleQuickAction(shortCutItem: shortcutItem))
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -51,5 +59,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+    }
+    
+    private func handleQuickAction(shortCutItem: UIApplicationShortcutItem) -> Bool {
+        guard let tabBar = self.window?.rootViewController as? UITabBarController else { return false }
+        
+        var quickActionHandled = false
+        let type = shortCutItem.type.components(separatedBy: ".").last!
+        if let shortCutType = ShortCut.init(rawValue: type) {
+            switch shortCutType {
+            case .favortites:
+                tabBar.selectedIndex = 2
+                
+                guard let nvc = tabBar.selectedViewController as? UINavigationController else { return false }
+                guard let vc = nvc.viewControllers.first as? MoreTableViewController else { return false }
+                nvc.popToRootViewController(animated: true)
+                vc.performSegue(withIdentifier: "moreToFav", sender: nil)
+                
+                quickActionHandled = true
+            }
+        }
+        return quickActionHandled
     }
 }

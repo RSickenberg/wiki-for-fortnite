@@ -66,6 +66,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         index = 0
         
         if isFirstLaunch {
+            HUD.hide()
             self.present(NewKitViewController.whatsNewViewController, animated: true)
         }
     }
