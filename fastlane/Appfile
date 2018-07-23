@@ -1,4 +1,4 @@
-app_identifier("me.romainsickenberg.fort-to-nite") # The bundle identifier of your app
+app_identifier("me.romainsickenberg.fortnite-wiki") # The bundle identifier of your app
 apple_id("romainsickenberg@yahoo.fr") # Your Apple email address
 
 itc_team_id("119120783") # iTunes Connect Team ID

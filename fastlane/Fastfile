@@ -25,7 +25,7 @@ platform :ios do
         podfile: "Podfile",
         try_repo_update_on_error: true
     )
-    build_app(scheme: "fort-to-nite")
+    build_app(scheme: "fort_to_nite")
     upload_to_testflight
   end
 end
