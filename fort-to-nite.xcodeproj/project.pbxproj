@@ -106,7 +106,7 @@
 		073A3708204D7CBA001D4AF5 = {
 			isa = PBXGroup;
 			children = (
-				073A3713204D7CBA001D4AF5 /* fortnite_wiki */,
+				073A3713204D7CBA001D4AF5 /* fort-to-nite */,
 				073A3712204D7CBA001D4AF5 /* Products */,
 				070E9E7B20CAB88900E0BEA9 /* Gemfile */,
 				070E9E7C20CAB88900E0BEA9 /* Gemfile.lock */,
@@ -123,7 +123,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		073A3713204D7CBA001D4AF5 /* fortnite_wiki */ = {
+		073A3713204D7CBA001D4AF5 /* fort-to-nite */ = {
 			isa = PBXGroup;
 			children = (
 				073A3714204D7CBA001D4AF5 /* AppDelegate.swift */,
@@ -136,7 +136,7 @@
 				073A3729204D7CC5001D4AF5 /* Storyboards */,
 				073A372C204D7D47001D4AF5 /* Ressources */,
 			);
-			path = fortnite_wiki;
+			path = "fort-to-nite";
 			sourceTree = "<group>";
 		};
 		073A3729204D7CC5001D4AF5 /* Storyboards */ = {
@@ -460,7 +460,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -494,7 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8268QCG5CG;
 				GCC_OPTIMIZATION_LEVEL = fast;
-				INFOPLIST_FILE = "$(SRCROOT)/fortnite_wiki/Ressources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/fort-to-nite/Ressources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -545,7 +545,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -579,7 +579,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8268QCG5CG;
-				INFOPLIST_FILE = "$(SRCROOT)/fortnite_wiki/Ressources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/fort-to-nite/Ressources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
