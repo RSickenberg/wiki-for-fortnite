@@ -145,11 +145,11 @@ class FavoritesTableViewController: UITableViewController {
                 let weapon = model.getWeaponsByWeaponId(weaponId: matchedWeaponsIds[indexPath.row])
                 
                 model.setImageByWeaponId(weapon.id, imageView: cell.cellImage)
+                cell.backgroundLevel.formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
                 cell.entityDetail.text = damageRangeForWeaponId[weapon.id]
                 cell.entityDetail2.text = dpsRangeForWeaponId[weapon.id]
                 cell.cellEntityName.text = weapon.name
                 
-                cell.backgroundLevel.formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
                 indexPathToWeaponId.updateValue(weapon.id, forKey: indexPath)
                 
                 return cell
@@ -160,13 +160,13 @@ class FavoritesTableViewController: UITableViewController {
                 let item = model.getItemsByItemId(itemId: matchedItemsIds[indexPath.row])
                 
                 model.setImageByItemId(item.id, imageView: cell.cellImage)
+                cell.backgroundLevel.formatCellGradient(cell: cell, level: item.color)
                 cell.cellEntityName.text = item.name
                 cell.entityDetail.text = "nil"
                 cell.entityDetail2.text = "nil"
                 cell.entityDetail.isHidden = true
                 cell.entityDetail2.isHidden = true
                 
-                cell.backgroundLevel.formatCellGradient(cell: cell, level: item.color)
                 indexPathToItemId.updateValue(item.id, forKey: indexPath)
                 
                 return cell
