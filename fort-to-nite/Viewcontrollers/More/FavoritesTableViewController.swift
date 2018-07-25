@@ -232,13 +232,13 @@ class FavoritesTableViewController: UITableViewController {
     
     
     private func statusAlert() {
-        StatusAlert.multiplePresentationsBehavior = .ignoreIfAlreadyPresenting
+        StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
         noFavorites.image = #imageLiteral(resourceName: "DislikeFullHighRes")
         noFavorites.title = "Oh!"
         noFavorites.message = "It seems you don't have any favorties. Go love your favorites on the ❤️ top right corner."
         noFavorites.canBePickedOrDismissed = true
         noFavorites.appearance = .copyCommon()
-        noFavorites.alertShowingDuration = TimeInterval(exactly: 5)!
+        noFavorites.alertShowingDuration = TimeInterval(exactly: 3)!
     }
     
     // MARK: - Handle Data
