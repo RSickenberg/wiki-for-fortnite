@@ -128,3 +128,4 @@
 - UI : UINavigationTitle have now the right font.
 - UI : UITabBarItems have now the right font.
 - UI : UITableViewHeaderFooter have now the right font.
+- UI : Status alert have now the right font.

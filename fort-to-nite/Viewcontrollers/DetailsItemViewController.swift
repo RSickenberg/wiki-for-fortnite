@@ -18,7 +18,7 @@ class DetailsItemViewController: UIViewController {
     let colors = BackgroundColors()
     let BackgroundFormater = FormatLevels()
     let likeAlert = StatusAlert()
-    let dontlikeAlert = StatusAlert()
+    let dontLikeAlert = StatusAlert()
     let likeStorage = UserDefaults()
 
     @IBOutlet weak var itemImage: UIImageView!
@@ -27,7 +27,7 @@ class DetailsItemViewController: UIViewController {
     @IBOutlet weak var likeButton: UIBarButtonItem!
     @IBAction func likeButton(_ sender: UIBarButtonItem) {
         if likeButtonState! { // Not enabled
-            dontlikeAlert.showInKeyWindow()
+            dontLikeAlert.showInKeyWindow()
             likeButton.image = #imageLiteral(resourceName: "loveIconEmpty")
             likeButtonState = false
             likeStorage.removeObject(forKey: "item_like_\(itemInfo.id)")
@@ -116,20 +116,25 @@ class DetailsItemViewController: UIViewController {
     }
     
     private func statusAlert() {
+        likeAlert.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
+        likeAlert.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
         likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes2")
         likeAlert.title = "It's liked !"
         likeAlert.message = "You can see your favorites on the more tab."
         likeAlert.canBePickedOrDismissed = true
         likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
 
-        dontlikeAlert.image = #imageLiteral(resourceName: "DislikeFullHighRes")
-        dontlikeAlert.title = "It's okay."
-        dontlikeAlert.message = "You check other stuff."
-        dontlikeAlert.canBePickedOrDismissed = true
-        dontlikeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
+        dontLikeAlert.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
+        dontLikeAlert.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
+        dontLikeAlert.image = #imageLiteral(resourceName: "DislikeFullHighRes")
+        dontLikeAlert.title = "It's okay."
+        dontLikeAlert.message = "You can check other stuff."
+        dontLikeAlert.canBePickedOrDismissed = true
+        dontLikeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
     }
     
     private func prepareVisuals() {
+        StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
         statusAlert()
         backgroundGradient()
         getGradientValueForBackgroundImage()

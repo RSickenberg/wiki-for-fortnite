@@ -176,6 +176,7 @@ class DetailsWeaponViewController: UIViewController {
     }
     
     private func prepareVisuals() {
+        StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
         statusAlert()
         backgroundGradient()
         
@@ -195,15 +196,19 @@ class DetailsWeaponViewController: UIViewController {
     }
     
     private func statusAlert() {
+        likeAlert.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
+        likeAlert.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
         likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes2")
         likeAlert.title = "It's liked !"
         likeAlert.message = "You can see your favorites on the more tab."
         likeAlert.canBePickedOrDismissed = true
         likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
 
+        dontLikeAlert.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
+        dontLikeAlert.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
         dontLikeAlert.image = #imageLiteral(resourceName: "DislikeFullHighRes")
         dontLikeAlert.title = "It's okay."
-        dontLikeAlert.message = "You check other stuff."
+        dontLikeAlert.message = "You can check other stuff."
         dontLikeAlert.canBePickedOrDismissed = true
         dontLikeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
     }

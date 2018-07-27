@@ -226,18 +226,19 @@ class FavoritesTableViewController: UITableViewController {
     // MARK: - Visuals
     
     private func prepareVisuals() {
+        StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
         statusAlert()
         tableView.separatorColor = UIColor.black
     }
     
     
     private func statusAlert() {
-        StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
+        noFavorites.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
+        noFavorites.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
         noFavorites.image = #imageLiteral(resourceName: "DislikeFullHighRes")
         noFavorites.title = "Oh!"
         noFavorites.message = "It seems you don't have any favorties. Go love your favorites on the ❤️ top right corner."
         noFavorites.canBePickedOrDismissed = true
-        noFavorites.appearance = .copyCommon()
         noFavorites.alertShowingDuration = TimeInterval(exactly: 3)!
     }
     
