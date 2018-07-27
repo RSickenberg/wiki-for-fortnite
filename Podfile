@@ -1,6 +1,6 @@
 project 'fort-to-nite.xcodeproj'
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.0'
+platform :ios, '10.0'
 
 target 'fort-to-nite' do
   use_frameworks!

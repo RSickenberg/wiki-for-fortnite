@@ -31,6 +31,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let text = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
             print("Build : " + text)
         }
+        UIBarButtonItem.appearance().setTitleTextAttributes(
+            [
+                NSAttributedStringKey.font : UIFont(name: "BurbankBigCondensed-bold", size: 19)!,
+                NSAttributedStringKey.foregroundColor : UIColor.white,
+            ], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes(
+            [
+                NSAttributedStringKey.font : UIFont(name: "BurbankBigCondensed-bold", size: 17)!,
+                NSAttributedStringKey.foregroundColor : UIColor.white,
+            ], for: .highlighted)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "BurbankBigCondensed-bold", size: 13)!], for: .normal)
         return true
     }
     

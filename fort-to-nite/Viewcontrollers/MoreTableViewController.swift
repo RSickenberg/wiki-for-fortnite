@@ -13,6 +13,8 @@ class MoreCell: UITableViewCell {
 }
 
 class MoreTableViewController: UITableViewController {
+    
+    // MARK: - Init
 
     @IBOutlet var moreTableView: UITableView!
     
@@ -22,9 +24,13 @@ class MoreTableViewController: UITableViewController {
         prepareVisuals()
     }
     
+    // MARK: - Visuals
+    
     func prepareVisuals() {
         self.moreTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
+    
+    // MARK: - TableView
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favorties", for: indexPath) as! MoreCell
@@ -78,15 +84,12 @@ class MoreTableViewController: UITableViewController {
         }
         return CGFloat(20)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.font = UIFont(name: "BurbankBigCondensed-Bold", size: 17)!
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .natural
     }
-    */
-
+    
 }

@@ -104,3 +104,27 @@
 - BACKEND : Handle favorites changes on viewAppear.
 - BUG : Resize view from NIB disabled makes Scene not good with background.
 - BUG : Fixed when delete a favorite result to a crash, it should be ok.
+
+# 1.0.0 🎉
+> Production
+
+- Ready for deployement.
+
+# 1.0.1
+> Production
+
+- APP: Removed credits.
+- FIX: Favorites popup when empty list is now dismissible.
+
+# 1.0.2
+> Production
+
+- BUG : Fixed a visual glitch on favorites table for iPad.
+
+# 1.0.3
+> Production
+
+- APP : Compatibility trough iOS 10. 
+- UI : UINavigationTitle have now the right font.
+- UI : UITabBarItems have now the right font.
+- UI : UITableViewHeaderFooter have now the right font.
