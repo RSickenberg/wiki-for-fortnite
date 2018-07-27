@@ -144,19 +144,33 @@ class DetailsItemViewController: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
+    
+    // MARK: - Values
 
-    func displayValues() {
+    private func displayValues() {
         let details = itemDetails
         
         if (details.isExplosive) {
-            overallStackedTitle1.text = "Damages"
-            overallStackedValue1.text = String(details.damages)
+            if (details.damages != 0) {
+                overallStackedTitle1.text = "Damages"
+                overallStackedValue1.text = String(details.damages)
+            }
+            else {
+                overallStackedTitle1.isHidden = true
+                overallStackedValue1.isHidden = true
+            }
             
             overallStackedTitle2.isHidden = true
             overallStackedValue2.isHidden = true
             
-            overallStackedTitle3.text = "Capacity"
-            overallStackedValue3.text = String(details.capacity)
+            if (details.capacity != 0) {
+                overallStackedTitle3.text = "Capacity"
+                overallStackedValue3.text = String(details.capacity)
+            }
+            else {
+                overallStackedTitle3.text = "Capacity"
+                overallStackedValue3.text = "No limit"
+            }
             
             detailsStackedTitle1.isHidden = true
             detailsStackedValue1.isHidden = true
@@ -166,23 +180,35 @@ class DetailsItemViewController: UIViewController {
         }
         
         if (details.isHeal) {
-            if (details.shield != 0) {
+            if details.shield != 0 && details.heal != 0 {
                 overallStackedTitle1.text = "Shield"
                 overallStackedValue1.text = String(details.shield)
+                overallStackedTitle2.text = "Heal"
+                overallStackedValue2.text = String(details.heal)
             }
-            else {
-                overallStackedTitle1.text = "Heal"
-                overallStackedValue1.text = String(details.heal)
+            else if details.shield == 0 && details.heal != 0 {
+                overallStackedTitle1.isHidden = true
+                overallStackedValue1.isHidden = true
+                overallStackedTitle2.text = "Heal"
+                overallStackedValue2.text = String(details.heal)
+            }
+            else if details.heal == 0 && details.shield != 0 {
+                overallStackedTitle1.text = "Shield"
+                overallStackedValue1.text = String(details.shield)
+                overallStackedTitle2.isHidden = true
+                overallStackedValue2.isHidden = true
             }
             
-            overallStackedTitle2.text = "Delay"
-            overallStackedValue2.text = String(details.delay) + "s"
+            if (details.capacity != 0) {
+                overallStackedTitle3.text = "Capacity"
+                overallStackedValue3.text = String(details.capacity)
+            } else {
+                overallStackedTitle3.text = "Capacity"
+                overallStackedValue3.text = "No limit"
+            }
             
-            overallStackedTitle3.text = "Capacity"
-            overallStackedValue3.text = String(details.capacity)
-            
-            detailsStackedTitle1.isHidden = true
-            detailsStackedValue1.isHidden = true
+            detailsStackedTitle1.text = "Delay"
+            detailsStackedValue1.text = String(details.delay) + "s"
             
             detailsStackedTitle2.text = "Locations"
             detailsStackedValue2.text = details.location
