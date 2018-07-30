@@ -129,3 +129,6 @@
 - UI : UITabBarItems have now the right font.
 - UI : UITableViewHeaderFooter have now the right font.
 - UI : Status alert have now the right font.
+- BUG : No items loaded when 3D touched.
+- BUG : Int * float result to 0.
+- BUG : Deletion may delete multiple rows.

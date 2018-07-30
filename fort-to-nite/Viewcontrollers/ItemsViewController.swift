@@ -45,6 +45,11 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        reloadData()
+    }
 
     // MARK: - Data
 

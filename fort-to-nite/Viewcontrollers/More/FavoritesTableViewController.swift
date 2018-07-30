@@ -151,6 +151,7 @@ class FavoritesTableViewController: UITableViewController {
                 cell.cellEntityName.text = weapon.name
                 
                 indexPathToWeaponId.updateValue(weapon.id, forKey: indexPath)
+                cell.tag = 0
                 
                 return cell
             }
@@ -168,6 +169,7 @@ class FavoritesTableViewController: UITableViewController {
                 cell.entityDetail2.isHidden = true
                 
                 indexPathToItemId.updateValue(item.id, forKey: indexPath)
+                cell.tag = 1
                 
                 return cell
             }
@@ -208,13 +210,16 @@ class FavoritesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let cell = favoritesTable.cellForRow(at: indexPath)
         if editingStyle == .delete {
-            if indexPathToWeaponId.index(forKey: indexPath) != nil {
+            if indexPathToWeaponId.index(forKey: indexPath) != nil && cell?.tag == 0 {
                 favoriteStorage.removeObject(forKey: "weapon_like_\(String(describing: indexPathToWeaponId[indexPath]!))")
+                indexPathToWeaponId[indexPath] = nil
             }
             
-            if indexPathToItemId.index(forKey: indexPath) != nil {
+            if indexPathToItemId.index(forKey: indexPath) != nil && cell?.tag == 1 {
                 favoriteStorage.removeObject(forKey: "item_like_\(String(describing: indexPathToItemId[indexPath]!))")
+                indexPathToItemId[indexPath] = nil
             }
             
             getFavorites()
@@ -294,11 +299,11 @@ class FavoritesTableViewController: UITableViewController {
         for level in levels {
             if level == levels.first {
                 let minRange = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
-                range.append("\(minRange.damage * Int(minRange.fireRate))-")
+                range.append("\(Float(minRange.damage) * (minRange.fireRate)) - ")
             }
             if level == levels.last {
                 let maxRange = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
-                range.append("\(maxRange.damage * Int(maxRange.fireRate))")
+                range.append("\(Float(maxRange.damage) * (maxRange.fireRate))")
             }
         }
         
