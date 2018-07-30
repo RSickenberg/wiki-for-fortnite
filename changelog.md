@@ -132,3 +132,8 @@
 - BUG : No items loaded when 3D touched.
 - BUG : Int * float result to 0.
 - BUG : Deletion may delete multiple rows.
+
+# 1.0.4
+> Production
+
+- UI : General fixes on weapon details.
