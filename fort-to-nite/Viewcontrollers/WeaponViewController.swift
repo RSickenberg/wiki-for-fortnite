@@ -74,21 +74,23 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     // MARK: - Data
     
     func getData() {
-        SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
-        
-        SwiftSpinner.show("Loading")
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        JsonImageCoordinator.shared.syncJsonWithImage() { [weak self] result in
-            switch result {
-            case .success(_):
-                SwiftSpinner.hide()
-                self?.reloadData()
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            case .failure(_):
-                SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
-                    self?.getData()
-                }, subtitle: "API is in maintenance, or a new update is available.")
+        if (list.countWeapons() == 0 ) {
+            SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
+
+            SwiftSpinner.show("Loading")
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
+            JsonImageCoordinator.shared.syncJsonWithImage() { [weak self] result in
+                switch result {
+                case .success(_):
+                    SwiftSpinner.hide()
+                    self?.reloadData()
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                case .failure(_):
+                    SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
+                        self?.getData()
+                    }, subtitle: "API is in maintenance, or a new update is available.")
+                }
             }
         }
     }

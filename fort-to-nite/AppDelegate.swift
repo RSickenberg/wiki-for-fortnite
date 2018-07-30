@@ -84,6 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 guard let nvc = tabBar.selectedViewController as? UINavigationController else { return false }
                 guard let vc = nvc.viewControllers.first as? MoreTableViewController else { return false }
+                WeaponViewController().getData()
                 nvc.popToRootViewController(animated: true)
                 vc.performSegue(withIdentifier: "moreToFav", sender: nil)
                 

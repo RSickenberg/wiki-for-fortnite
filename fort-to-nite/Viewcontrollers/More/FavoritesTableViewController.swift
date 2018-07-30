@@ -75,23 +75,32 @@ class FavoritesTableViewController: UITableViewController {
         favoritesTable.addSubview(self.refresh)
         prepareVisuals()
         getFavorites()
-        favoritesTable.reloadData()
+        reloadTable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getFavorites()
-        favoritesTable.reloadData()
         
         if matchedWeaponsIds.count + matchedItemsIds.count == 0 {
             noFavorites.showInKeyWindow()
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        reloadTable()
+    }
+
     @objc private func reloadData(_ refreshControl: UIRefreshControl) {
+        refreshControl.beginRefreshing()
         getFavorites()
-        favoritesTable.reloadData()
+        reloadTable()
         refreshControl.endRefreshing()
+    }
+
+    func reloadTable() {
+        favoritesTable?.reloadData()
     }
 
     // MARK: - TableView
@@ -224,20 +233,20 @@ class FavoritesTableViewController: UITableViewController {
             
             getFavorites()
             
-            favoritesTable.reloadData()
+            reloadTable()
         }
     }
     
     // MARK: - Visuals
     
     private func prepareVisuals() {
-        StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
-        statusAlert()
         tableView.separatorColor = UIColor.black
+        statusAlert()
     }
     
     
     private func statusAlert() {
+        StatusAlert.multiplePresentationsBehavior = .ignoreIfAlreadyPresenting
         noFavorites.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
         noFavorites.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
         noFavorites.image = #imageLiteral(resourceName: "DislikeFullHighRes")
@@ -247,6 +256,13 @@ class FavoritesTableViewController: UITableViewController {
         noFavorites.alertShowingDuration = TimeInterval(exactly: 3)!
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.font = UIFont(name: "BurbankBigCondensed-Bold", size: 17)!
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .natural
+    }
+
     // MARK: - Handle Data
     
     private func getFavorites() {

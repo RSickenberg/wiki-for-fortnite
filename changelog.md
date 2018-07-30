@@ -137,3 +137,4 @@
 > Production
 
 - UI : General fixes on weapon details.
+- UI : Font on favorite table is now compliant with font policy.
