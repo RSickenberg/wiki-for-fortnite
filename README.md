@@ -15,3 +15,5 @@ If you wanna add more stats for a Weapon / Item, you need to go trought `Models/
 - `Helpers/` is a folder for utilities.
 
 - Use less of StoryBoards possible.
+
+- `$ fastlane beta` for publish a new build
