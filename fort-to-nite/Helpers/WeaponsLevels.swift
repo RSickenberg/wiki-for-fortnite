@@ -68,8 +68,13 @@ class FormatLevels {
             break
         case [2, 3]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("00BFFF")!, HexColor("B83DF2")!])
+            break
+        case [2, 3, 4] :
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("00BFFF")!, HexColor("B83DF2")!, HexColor("E6BB0E")!])
+            break
         case [3, 4]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("B83DF2")!, HexColor("E6BB0E")!])
+            break
         default:
             cell.backgroundColor = UIColor.black
             ErrorManager.showMessage("New update should be here!", message: "This black card should not be there.")
@@ -114,8 +119,13 @@ class FormatLevels {
             break
         case [2, 3]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("00BFFF")!, HexColor("B83DF2")!])
+            break
+        case [2, 3, 4] :
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("00BFFF")!, HexColor("B83DF2")!, HexColor("E6BB0E")!])
+            break
         case [3, 4]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("B83DF2")!, HexColor("E6BB0E")!])
+            break
         default:
             cell.backgroundColor = UIColor.black
             ErrorManager.showMessage("New update should be here!", message: "This black card should not be there.")

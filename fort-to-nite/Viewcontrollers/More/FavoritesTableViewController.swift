@@ -141,6 +141,7 @@ class FavoritesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoritesTable.dequeueReusableCell(withIdentifier: "favorite_cell", for: indexPath) as! FavoriteCell
+        cell.frame = UIScreen.main.bounds.standardized
         cell.configure()
         
         if matchedWeaponsIds.count > 0 {
