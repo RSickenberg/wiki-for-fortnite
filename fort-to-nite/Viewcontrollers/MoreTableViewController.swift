@@ -88,7 +88,6 @@ class MoreTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.font = UIFont(name: "BurbankBigCondensed-Bold", size: 17)!
-        header.textLabel?.frame = header.frame
         header.textLabel?.textAlignment = .natural
     }
     

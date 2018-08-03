@@ -56,9 +56,7 @@ class FavoritesTableViewController: UITableViewController {
     
     lazy var refresh: UIRefreshControl! = {
         let refreshControl = UIRefreshControl()
-        
         refreshControl.addTarget(self, action: #selector(FavoritesTableViewController.reloadData(_:)), for: UIControlEvents.allEvents)
-        
         refreshControl.tintColor = UIColor.flatPurple
         
         return refreshControl
@@ -72,7 +70,6 @@ class FavoritesTableViewController: UITableViewController {
         favoritesTable.addSubview(self.refresh)
         prepareVisuals()
         getFavorites()
-        reloadTable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -256,7 +253,6 @@ class FavoritesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.font = UIFont(name: "BurbankBigCondensed-Bold", size: 17)!
-        header.textLabel?.frame = header.frame
         header.textLabel?.textAlignment = .natural
     }
 

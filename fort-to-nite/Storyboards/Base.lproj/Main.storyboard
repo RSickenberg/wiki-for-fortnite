@@ -838,7 +838,7 @@
         <scene sceneID="f7R-p8-2pR">
             <objects>
                 <tableViewController storyboardIdentifier="favorites" id="BXP-KK-g2h" customClass="MoreTableViewController" customModule="fort_to_nite" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="121" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="7" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="yXf-04-zP3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="121" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="yXf-04-zP3">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.32941176470588235" green="0.49803921568627452" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -886,13 +886,13 @@
         <scene sceneID="Iov-ad-2aC">
             <objects>
                 <tableViewController id="zB0-Je-Vz2" customClass="FavoritesTableViewController" customModule="fort_to_nite" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="145" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="vnX-Ug-fjb">
+                    <tableView key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="145" estimatedRowHeight="-1" sectionHeaderHeight="24" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="vnX-Ug-fjb">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.32941176470588235" green="0.49803921568627452" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="favorite_cell" rowHeight="145" id="GzR-e8-oO9" customClass="FavoriteCell" customModule="fort_to_nite" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="145"/>
+                                <rect key="frame" x="0.0" y="24" width="1024" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GzR-e8-oO9" id="2lq-lY-5Mq">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="144.5"/>
@@ -1234,7 +1234,7 @@
                                                 <rect key="frame" x="34" y="58" width="307" height="303"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7mM-It-K4G">
-                                                        <rect key="frame" x="18" y="13" width="277" height="277"/>
+                                                        <rect key="frame" x="15" y="13" width="277" height="277"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="7mM-It-K4G" secondAttribute="height" multiplier="1:1" id="ZzJ-JN-P8m"/>
                                                         </constraints>
