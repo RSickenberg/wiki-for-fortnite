@@ -65,6 +65,7 @@ class fort_to_niteUIScreenshots: XCTestCase {
         app.navigationBars["Medium shield"].buttons["Item"].tap()
         sleep(3)
         app.tabBars.buttons["More"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Your Favorites."]/*[[".cells.staticTexts[\"Your Favorites.\"]",".staticTexts[\"Your Favorites.\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         snapshot("05Favorites")
     }
     
