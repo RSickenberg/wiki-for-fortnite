@@ -15,8 +15,6 @@ class DetailsItemViewController: UIViewController {
     // MARK: - Declarations
 
     let shadows = ShadowLayers()
-    let colors = BackgroundColors()
-    let BackgroundFormater = FormatLevels()
     let likeAlert = StatusAlert()
     let dontLikeAlert = StatusAlert()
     let likeStorage = UserDefaults()
@@ -39,6 +37,12 @@ class DetailsItemViewController: UIViewController {
             likeStorage.set(true, forKey: "item_like_\(itemInfo.id)")
         }
     }
+
+    var index: Int = 0
+    var itemInfo = Items()
+    var itemDetails = ItemsDetails()
+    var itemModel = JsonService.list
+    var likeButtonState: Bool?
 
     // MARK: - Outlets
     
@@ -66,14 +70,6 @@ class DetailsItemViewController: UIViewController {
 
     /////////////////////////////////////////////////////////
 
-    // MARK: - Declarations
-
-    var index: Int = 0
-    var itemInfo = Items()
-    var itemDetails = ItemsDetails()
-    var itemModel = JsonService.list
-    var likeButtonState: Bool?
-
     override func viewDidLoad() {
         likeButtonState = false
         prepareVisuals()
@@ -100,11 +96,11 @@ class DetailsItemViewController: UIViewController {
     // MARK: - Visuals
 
     private func backgroundGradient() {
-        colors.backgroundGradient(view: view)
+        BackgroundColors().backgroundGradient(view: view)
     }
 
     private func getGradientValueForBackgroundImage() {
-        BackgroundFormater.formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
+        FormatLevels().formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
         shadows.setShadow(image: itemImage)
     }
 
@@ -119,7 +115,7 @@ class DetailsItemViewController: UIViewController {
         likeAlert.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
         likeAlert.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
         likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes2")
-        likeAlert.title = "It's liked !"
+        likeAlert.title = "It's liked!"
         likeAlert.message = "You can see your favorites on the more tab."
         likeAlert.canBePickedOrDismissed = true
         likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!

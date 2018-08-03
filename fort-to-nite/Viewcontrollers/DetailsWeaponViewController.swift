@@ -12,14 +12,18 @@ import StatusAlert
 
 class DetailsWeaponViewController: UIViewController {
 
-    let colors = BackgroundColors()
     let BackgroundFormatter = FormatLevels()
     let feedback = UISelectionFeedbackGenerator()
     let shadowOptions = ShadowLayers()
     let likeStorage = UserDefaults()
-    var likeButtonState: Bool?
     let likeAlert = StatusAlert()
     let dontLikeAlert = StatusAlert()
+
+    var likeButtonState: Bool?
+    var index: Int = 0
+    var weaponInfo = Weapons()
+    var weaponDetails = WeaponsDetails()
+    var weaponModel = JsonService.list
 
     // MARK: - Outlets
 
@@ -129,13 +133,6 @@ class DetailsWeaponViewController: UIViewController {
     @IBOutlet weak var angleMinLabel: UILabel!
     @IBOutlet weak var downsightsRecoilLabel: UILabel!
 
-    // MARK: - Declarations
-
-    var index: Int = 0
-    var weaponInfo = Weapons()
-    var weaponDetails = WeaponsDetails()
-    var weaponModel = JsonService.list
-
     override func viewDidLoad() {
         super.viewDidLoad()
         likeButtonState = false
@@ -172,7 +169,7 @@ class DetailsWeaponViewController: UIViewController {
     // MARK: - Visuals
 
     private func backgroundGradient() {
-        colors.backgroundGradient(view: view)
+        BackgroundColors().backgroundGradient(view: view)
     }
     
     private func prepareVisuals() {
@@ -199,7 +196,7 @@ class DetailsWeaponViewController: UIViewController {
         likeAlert.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
         likeAlert.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
         likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes2")
-        likeAlert.title = "It's liked !"
+        likeAlert.title = "It's liked!"
         likeAlert.message = "You can see your favorites on the more tab."
         likeAlert.canBePickedOrDismissed = true
         likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
@@ -261,7 +258,6 @@ class DetailsWeaponViewController: UIViewController {
         angleMaxLabel.text = String(details.recoilMaxAngle)
         angleMinLabel.text = String(details.recoilMinAngle)
         downsightsRecoilLabel.text = String(details.recoilDownsights)
-
     }
 
     private func styleLabels() {

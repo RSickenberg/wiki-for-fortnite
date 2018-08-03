@@ -74,7 +74,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     // MARK: - Data
     
     func getData() {
-        if (list.countWeapons() == 0 ) {
+        if (list.countWeapons() == 0 ) { // Used if data is fetched from somewhere else. (3D touch actions)
             SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
 
             SwiftSpinner.show("Loading")

@@ -43,10 +43,6 @@ class FavoritesTableViewController: UITableViewController {
     // MARK: - INIT
     
     let model = JsonService.list
-    let items = JsonService.list.getAllItems()
-    let weapons = JsonService.list.getAllWeapons()
-    let itemsDetails = JsonService.list.getAllItemsDetails()
-    let weaponsDetails = JsonService.list.getAllWeaponsDetails()
     let favoriteStorage = UserDefaults.standard
     let noFavorites = StatusAlert()
     
@@ -54,6 +50,7 @@ class FavoritesTableViewController: UITableViewController {
     var matchedItemsIds: [Int] = []
     var indexPathToWeaponId = [IndexPath : Int]()
     var indexPathToItemId = [IndexPath : Int]()
+
     var damageRangeForWeaponId = [Int : String]()
     var dpsRangeForWeaponId = [Int : String]()
     
@@ -268,8 +265,8 @@ class FavoritesTableViewController: UITableViewController {
     private func getFavorites() {
         matchedItemsIds = []
         matchedWeaponsIds = []
-        let rangeOfWeaponsId = weapons.count
-        let rangeOfItemsId = items.count
+        let rangeOfWeaponsId = model.getAllWeapons().count
+        let rangeOfItemsId = model.getAllItems().count
         var weaponId = 0
         var itemId = 0
         
