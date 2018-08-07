@@ -138,5 +138,11 @@
 
 - UI : General fixes on weapon details.
 - UI : Font on favorite table is now compliant with font policy.
-- UI : Some fixes are made
+- UI : Some fixes are made.
 - Colors : New combinaison.
+
+# 1.0.5
+> Dev
+
+- BACKEND : Order for weapons, items.
+- iPhone 5S, SE have now readable stats.

@@ -14,19 +14,23 @@ class Items: Decodable {
     var name: String
     var color: Int
     var img: String
+    var group: String
     
-    init() {
+    convenience init() {
+        self.init()
         id = 0
         name = ""
         color = 0
         img = ""
+        group = ""
     }
     
-    init(id: Int, name: String, color: Int, img: String) {
+    init(id: Int, name: String, color: Int, img: String, group: String) {
         self.id = id
         self.name = name
         self.color = color
         self.img = img
+        self.group = group
     }
     
 }

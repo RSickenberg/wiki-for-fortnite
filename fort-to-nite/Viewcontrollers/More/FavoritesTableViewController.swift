@@ -10,12 +10,15 @@ import UIKit
 import StatusAlert
 
 class FavoriteCell: UITableViewCell {
+    static var shared = FavoriteCell()
     let backgroundLevel = FormatLevels()
     
+    @IBOutlet weak var SuperView: UIView!
     @IBOutlet weak var cellEntityName: UILabel!
     @IBOutlet weak var entityDetail: UILabel!
     @IBOutlet weak var entityDetail2: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var stackView: UIStackView!
     
     func configure() {
         let shadows = ShadowLayers()
@@ -26,6 +29,10 @@ class FavoriteCell: UITableViewCell {
         shadows.setShadow(label: cellEntityName)
         shadows.setShadow(label: entityDetail)
         shadows.setShadow(label: entityDetail2)
+        
+        if UIScreen.main.nativeBounds.height == 1136 { // Set a special constraint for small screens
+            NSLayoutConstraint(item: stackView, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: SuperView, attribute: NSLayoutAttribute.trailingMargin, multiplier: 1, constant: 0).isActive = true
+        }
     }
 }
 
