@@ -10,7 +10,6 @@ import UIKit
 import StatusAlert
 
 class FavoriteCell: UITableViewCell {
-    static var shared = FavoriteCell()
     let backgroundLevel = FormatLevels()
     
     @IBOutlet weak var SuperView: UIView!

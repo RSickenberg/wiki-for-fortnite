@@ -23,14 +23,22 @@ class DetailsForObjects {
     // MARK: - Array
     private var weaponsCollection = [Weapons]()
     private var weaponsDetails = [WeaponsDetails]()
+    private var weaponsCategory = [Int]()
 
     private var itemsCollection = [Items]()
     private var itemsDetails = [ItemsDetails]()
+    private var itemsCategory = [Int]()
 
     // MARK: - Weapons
 
     func addWeaponToDB(_ weapon: Weapons) {
         weaponsCollection.append(weapon)
+    }
+    
+    func addWeaponCategoryToDB(_ category: Int) {
+        if !weaponsCategory.contains(category) {
+            weaponsCategory.append(category)
+        }
     }
 
     func addWeaponDetailsToDB(_ details: WeaponsDetails) {
@@ -107,6 +115,12 @@ class DetailsForObjects {
 
     func addItemToDB(_ items: Items) {
         itemsCollection.append(items)
+    }
+    
+    func addItemCategoryToDB(_ category: Int) {
+        if !itemsCategory.contains(category) {
+            itemsCategory.append(category)
+        }
     }
 
     func addItemDetailsToDB(_ details: ItemsDetails) {

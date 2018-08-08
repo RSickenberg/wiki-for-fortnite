@@ -77,7 +77,6 @@ class FormatLevels {
             break
         default:
             cell.backgroundColor = UIColor.black
-            ErrorManager.showMessage("New update should be here!", message: "This black card should not be there.")
             break
         }
 
@@ -128,7 +127,6 @@ class FormatLevels {
             break
         default:
             cell.backgroundColor = UIColor.black
-            ErrorManager.showMessage("New update should be here!", message: "This black card should not be there.")
             break
         }
     }

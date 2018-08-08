@@ -60,17 +60,23 @@ class JsonService {
             if let json = response.data {
                 do {
                     let jsonObject = try JSONDecoder().decode(jsonStruct.self, from: json)
+                    
+                    let weapons = jsonObject.weapons.sorted { $0.group < $1.group }
 
-                    for weapon in jsonObject.weapons {
+                    for weapon in weapons {
                         JsonService.list.addWeaponToDB(weapon)
+                        JsonService.list.addWeaponCategoryToDB(weapon.group)
                     }
 
                     for weaponDetails in jsonObject.details {
                         JsonService.list.addWeaponDetailsToDB(weaponDetails)
                     }
+                    
+                    let items = jsonObject.items.sorted { $0.group < $1.group }
 
-                    for item in jsonObject.items {
+                    for item in items {
                         JsonService.list.addItemToDB(item)
+                        JsonService.list.addItemCategoryToDB(item.group)
                     }
 
                     for itemDetails in jsonObject.itemDetails {
