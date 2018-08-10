@@ -86,12 +86,13 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
                 case .success(_):
                     SwiftSpinner.hide()
                     self?.reloadData()
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 case .failure(_):
                     SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
                         self?.getData()
                     }, subtitle: "API is in maintenance, or a new update is available.")
                 }
+                
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
         }
     }
