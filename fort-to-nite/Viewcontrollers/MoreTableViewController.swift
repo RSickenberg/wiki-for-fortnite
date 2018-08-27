@@ -40,13 +40,13 @@ class MoreTableViewController: UITableViewController {
         
         switch indexPath.section {
         case 0:
-            cell.mainLabel.text = "Your Favorites."
+            cell.mainLabel.text = "Your Favorites"
             break
         case 1:
-            cell.mainLabel.text = "Contact."
+            cell.mainLabel.text = "Donate"
             break
         case 2:
-            cell.mainLabel.text = "Licences."
+            cell.mainLabel.text = "Licences"
             break
         default:
             break
