@@ -5,12 +5,10 @@
 //  Created by Romain Sickenberg on 27.04.18.
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
 //
-//  /!\ DONT FORGET TO REMOVE STAGING BEFORE PROD!
 //
 
 import Foundation
 import Alamofire
-import AlamofireImage
 
 struct jsonStruct: Decodable {
     let weapons: [Weapons]

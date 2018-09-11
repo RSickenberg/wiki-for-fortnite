@@ -16,14 +16,17 @@ class DetailsWeaponViewController: UIViewController {
     let feedback = UISelectionFeedbackGenerator()
     let shadowOptions = ShadowLayers()
     let likeStorage = UserDefaults()
-    let likeAlert = StatusAlert()
-    let dontLikeAlert = StatusAlert()
 
     var likeButtonState: Bool?
     var index: Int = 0
     var weaponInfo = Weapons()
     var weaponDetails = WeaponsDetails()
     var weaponModel = JsonService.list
+    
+    struct likeActions {
+        let like: Bool
+        let dislike: Bool
+    }
 
     // MARK: - Outlets
 
@@ -33,12 +36,16 @@ class DetailsWeaponViewController: UIViewController {
     @IBOutlet weak var likeButton: UIBarButtonItem!
     @IBAction func likeButton(_ sender: UIBarButtonItem!) {
         if likeButtonState! { // Not enabled
+            let dontLikeAlert = StatusAlert()
+            statusAlert(statusAlertInstance: dontLikeAlert, action: likeActions(like: false, dislike: true))
             dontLikeAlert.showInKeyWindow()
             likeButton.image = #imageLiteral(resourceName: "loveIconEmpty")
             likeButtonState = false
             likeStorage.removeObject(forKey: "weapon_like_\(weaponInfo.id)")
         }
         else { // Enabled
+            let likeAlert = StatusAlert()
+            statusAlert(statusAlertInstance: likeAlert, action: likeActions(like: true, dislike: false))
             likeAlert.showInKeyWindow()
             likeButton.image = #imageLiteral(resourceName: "loveIconFull")
             likeButtonState = true
@@ -174,7 +181,6 @@ class DetailsWeaponViewController: UIViewController {
     
     private func prepareVisuals() {
         StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
-        statusAlert()
         backgroundGradient()
         
         detailsViewTitle.title = weaponInfo.name
@@ -192,22 +198,25 @@ class DetailsWeaponViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-    private func statusAlert() {
-        likeAlert.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
-        likeAlert.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
-        likeAlert.image = #imageLiteral(resourceName: "heartFullHighRes2")
-        likeAlert.title = "It's liked!"
-        likeAlert.message = "You can see your favorites on the more tab."
-        likeAlert.canBePickedOrDismissed = true
-        likeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
-
-        dontLikeAlert.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
-        dontLikeAlert.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
-        dontLikeAlert.image = #imageLiteral(resourceName: "DislikeFullHighRes")
-        dontLikeAlert.title = "It's okay."
-        dontLikeAlert.message = "You can check other stuff."
-        dontLikeAlert.canBePickedOrDismissed = true
-        dontLikeAlert.alertShowingDuration = TimeInterval(exactly: 2)!
+    private func statusAlert(statusAlertInstance: StatusAlert, action: likeActions) {
+        if action.like {
+            statusAlertInstance.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
+            statusAlertInstance.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
+            statusAlertInstance.image = #imageLiteral(resourceName: "heartFullHighRes2")
+            statusAlertInstance.title = "It's liked!"
+            statusAlertInstance.message = "You can see your favorites on the more tab."
+            statusAlertInstance.canBePickedOrDismissed = true
+            statusAlertInstance.alertShowingDuration = TimeInterval(exactly: 2)!
+        }
+        if action.dislike {
+            statusAlertInstance.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
+            statusAlertInstance.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
+            statusAlertInstance.image = #imageLiteral(resourceName: "DislikeFullHighRes")
+            statusAlertInstance.title = "It's okay."
+            statusAlertInstance.message = "You can check other stuff."
+            statusAlertInstance.canBePickedOrDismissed = true
+            statusAlertInstance.alertShowingDuration = TimeInterval(exactly: 2)!
+        }
     }
 
     private func getGradientValueforBackgroundImage() {

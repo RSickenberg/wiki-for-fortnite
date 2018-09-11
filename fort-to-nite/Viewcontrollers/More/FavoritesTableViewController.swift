@@ -4,13 +4,15 @@
 //
 //  Created by Romain Sickenberg on 22.06.18.
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
+// /! Present data like weaponCollection, never display on a view TO REWORK
 //
 
 import UIKit
 import StatusAlert
 
-class FavoriteCell: UITableViewCell {
-    let backgroundLevel = FormatLevels()
+// MARK:  Table cells
+
+class WeaponCell: UITableViewCell {
     
     @IBOutlet weak var SuperView: UIView!
     @IBOutlet weak var cellEntityName: UILabel!
@@ -18,20 +20,90 @@ class FavoriteCell: UITableViewCell {
     @IBOutlet weak var entityDetail2: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
+    var weaponId: Int!
     
     func configure() {
-        let shadows = ShadowLayers()
         cellEntityName.textColor = UIColor.white
         entityDetail.textColor = UIColor.white
         entityDetail2.textColor = UIColor.white
         
-        shadows.setShadow(label: cellEntityName)
-        shadows.setShadow(label: entityDetail)
-        shadows.setShadow(label: entityDetail2)
+        UITableViewCell.shadows.setShadow(label: cellEntityName)
+        UITableViewCell.shadows.setShadow(label: entityDetail)
+        UITableViewCell.shadows.setShadow(label: entityDetail2)
         
         if UIScreen.main.nativeBounds.height == 1136 { // Set a special constraint for small screens
             NSLayoutConstraint(item: stackView, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: SuperView, attribute: NSLayoutAttribute.trailingMargin, multiplier: 1, constant: 0).isActive = true
         }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        cellImage.af_cancelImageRequest()
+        cellImage.image = nil
+        cellEntityName.text = nil
+        entityDetail.text = nil
+        entityDetail2.text = nil
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.configure()
+    }
+    
+    func modelWeapon(_ weapon: Weapons, dmgRange: String?, dpsRange: String?) {
+        frame = UIScreen.main.bounds.standardized
+        JsonService.list.setImageByWeaponId(weapon.id, imageView: cellImage)
+        cellEntityName.text = weapon.name
+        entityDetail.text = dmgRange
+        entityDetail2.text = dpsRange
+        UITableViewCell.backgroundHelper.formatCellGradients(cell: self, levels: JsonService.list.getLevelsByWeaponId(weapon.id))
+        weaponId = weapon.id
+        tag = 0
+    }
+}
+
+private extension UITableViewCell {
+    static let backgroundHelper = FormatLevels()
+    static let shadows = ShadowLayers()
+}
+
+// MARK: -
+
+class ItemCell: UITableViewCell {
+    
+    @IBOutlet weak var cellEntityName: UILabel!
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellSuperView: UIView!
+    var itemId: Int!
+    
+    func configure() {
+        cellEntityName.textColor = UIColor.white
+        UITableViewCell.shadows.setShadow(label: cellEntityName)
+        
+        if UIScreen.main.nativeBounds.height == 1136 { // Set a special constraint for small screens
+            NSLayoutConstraint(item: cellImage, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: cellImage, attribute: NSLayoutAttribute.trailingMargin, multiplier: 1, constant: 0).isActive = true
+        }
+    }
+    
+    override func prepareForReuse() {
+        cellImage.af_cancelImageRequest()
+        cellImage.image = nil
+        cellEntityName.text = nil
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.configure()
+    }
+    
+    func modelItem(_ item: Items) {
+        frame = UIScreen.main.bounds.standardized
+        JsonService.list.setImageByItemId(item.id, imageView: cellImage)
+        cellEntityName.text = item.name
+        UITableViewCell.backgroundHelper.formatCellGradient(cell: self, level: item.color)
+        itemId = item.id
+        tag = 1
     }
 }
 
@@ -50,12 +122,9 @@ class FavoritesTableViewController: UITableViewController {
     
     let model = JsonService.list
     let favoriteStorage = UserDefaults.standard
-    let noFavorites = StatusAlert()
     
     var matchedWeaponsIds: [Int] = []
     var matchedItemsIds: [Int] = []
-    var indexPathToWeaponId = [IndexPath : Int]()
-    var indexPathToItemId = [IndexPath : Int]()
 
     var damageRangeForWeaponId = [Int : String]()
     var dpsRangeForWeaponId = [Int : String]()
@@ -81,15 +150,13 @@ class FavoritesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getFavorites()
+        reloadTable()
         
         if matchedWeaponsIds.count + matchedItemsIds.count == 0 {
+            let noFavorites = StatusAlert()
+            statusAlert(statusAlertInstance: noFavorites)
             noFavorites.showInKeyWindow()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(false)
-        reloadTable()
     }
 
     @objc private func reloadData(_ refreshControl: UIRefreshControl) {
@@ -123,8 +190,7 @@ class FavoritesTableViewController: UITableViewController {
         return number
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
         if matchedItemsIds.count != 0 && matchedWeaponsIds.count != 0 {
             if section == 0 {
                 return matchedWeaponsIds.count
@@ -146,52 +212,26 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = favoritesTable.dequeueReusableCell(withIdentifier: "favorite_cell", for: indexPath) as! FavoriteCell
-        cell.frame = UIScreen.main.bounds.standardized
-        cell.configure()
-        
-        if matchedWeaponsIds.count > 0 {
-            if indexPath.section == 0 {
+        let weaponCell = favoritesTable.dequeueReusableCell(withIdentifier: "weapon_cell", for: indexPath) as! WeaponCell
+        let itemCell = favoritesTable.dequeueReusableCell(withIdentifier: "item_cell", for: indexPath) as! ItemCell
+        if indexPath.section == 0 {
+            if matchedWeaponsIds.count > 0 {
                 let weapon = model.getWeaponsByWeaponId(weaponId: matchedWeaponsIds[indexPath.row])
+                weaponCell.modelWeapon(weapon, dmgRange: damageRangeForWeaponId[weapon.id], dpsRange: dpsRangeForWeaponId[weapon.id])
                 
-                model.setImageByWeaponId(weapon.id, imageView: cell.cellImage)
-                cell.backgroundLevel.formatCellGradients(cell: cell, levels: model.getLevelsByWeaponId(weapon.id))
-                cell.entityDetail.text = damageRangeForWeaponId[weapon.id]
-                cell.entityDetail2.text = dpsRangeForWeaponId[weapon.id]
-                cell.cellEntityName.text = weapon.name
-                
-                indexPathToWeaponId.updateValue(weapon.id, forKey: indexPath)
-                cell.tag = 0
-                
-                return cell
+                return weaponCell
             }
         }
-        if matchedItemsIds.count > 0 {
-            if indexPath.section == 1 || indexPath.section == 0 {
+        if indexPath.section == 1 || indexPath.section == 0 {
+            if matchedItemsIds.count > 0 {
                 let item = model.getItemsByItemId(itemId: matchedItemsIds[indexPath.row])
+                itemCell.modelItem(item)
                 
-                model.setImageByItemId(item.id, imageView: cell.cellImage)
-                cell.backgroundLevel.formatCellGradient(cell: cell, level: item.color)
-                cell.cellEntityName.text = item.name
-                cell.entityDetail.text = "nil"
-                cell.entityDetail2.text = "nil"
-                cell.entityDetail.isHidden = true
-                cell.entityDetail2.isHidden = true
-                
-                indexPathToItemId.updateValue(item.id, forKey: indexPath)
-                cell.tag = 1
-                
-                return cell
+                return itemCell
             }
         }
         
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = favoritesTable.dequeueReusableCell(withIdentifier: "favorite_cell", for: indexPath) as! FavoriteCell
-        cell.entityDetail.text = nil
-        cell.entityDetail2.text = nil
+        return weaponCell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -220,21 +260,35 @@ class FavoritesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let cell = favoritesTable.cellForRow(at: indexPath)
+        let weaponCell = favoritesTable.cellForRow(at: indexPath) as? WeaponCell
+        let itemCell = favoritesTable.cellForRow(at: indexPath) as? ItemCell
+        
         if editingStyle == .delete {
-            if indexPathToWeaponId.index(forKey: indexPath) != nil && cell?.tag == 0 {
-                favoriteStorage.removeObject(forKey: "weapon_like_\(String(describing: indexPathToWeaponId[indexPath]!))")
-                indexPathToWeaponId[indexPath] = nil
+            if weaponCell?.tag == 0 {
+                favoriteStorage.removeObject(forKey: "weapon_like_\(String(describing: weaponCell!.weaponId!))")
+                getFavorites()
+                if matchedWeaponsIds.count == 0 {
+                    let indexSet = IndexSet(arrayLiteral: indexPath.section)
+                    self.favoritesTable.deleteSections(indexSet, with: .automatic)
+                } else {
+                    self.favoritesTable.deleteRows(at: [indexPath], with: .automatic)
+                }
             }
             
-            if indexPathToItemId.index(forKey: indexPath) != nil && cell?.tag == 1 {
-                favoriteStorage.removeObject(forKey: "item_like_\(String(describing: indexPathToItemId[indexPath]!))")
-                indexPathToItemId[indexPath] = nil
+            if itemCell?.tag == 1 {
+                favoriteStorage.removeObject(forKey: "item_like_\(String(describing: itemCell!.itemId!))")
+                getFavorites()
+                if matchedItemsIds.count == 0 {
+                    let indexSet = IndexSet(arrayLiteral: indexPath.section)
+                    self.favoritesTable.deleteSections(indexSet, with: .automatic)
+                } else {
+                    self.favoritesTable.deleteRows(at: [indexPath], with: .automatic)
+                }
             }
             
-            getFavorites()
-            
-            reloadTable()
+            if matchedWeaponsIds.count == 0 && matchedItemsIds.count == 0 {
+                navigationController?.popToRootViewController(animated: true)
+            }
         }
     }
     
@@ -242,19 +296,17 @@ class FavoritesTableViewController: UITableViewController {
     
     private func prepareVisuals() {
         tableView.separatorColor = UIColor.black
-        statusAlert()
     }
     
-    
-    private func statusAlert() {
+    private func statusAlert(statusAlertInstance: StatusAlert) {
         StatusAlert.multiplePresentationsBehavior = .ignoreIfAlreadyPresenting
-        noFavorites.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
-        noFavorites.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
-        noFavorites.image = #imageLiteral(resourceName: "DislikeFullHighRes")
-        noFavorites.title = "Oh!"
-        noFavorites.message = "It seems you don't have any favorties. Go love your favorites on the ❤️ top right corner."
-        noFavorites.canBePickedOrDismissed = true
-        noFavorites.alertShowingDuration = TimeInterval(exactly: 3)!
+        statusAlertInstance.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
+        statusAlertInstance.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
+        statusAlertInstance.image = #imageLiteral(resourceName: "DislikeFullHighRes")
+        statusAlertInstance.title = "Oh!"
+        statusAlertInstance.message = "It seems you don't have any favorties. Go love your favorites on the ❤️ top right corner."
+        statusAlertInstance.canBePickedOrDismissed = true
+        statusAlertInstance.alertShowingDuration = TimeInterval(exactly: 4)!
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

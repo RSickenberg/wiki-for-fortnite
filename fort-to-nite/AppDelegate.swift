@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSAttributedStringKey.foregroundColor : UIColor.white,
             ], for: .highlighted)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "BurbankBigCondensed-bold", size: 13)!], for: .normal)
+        UITableView.appearance().separatorColor = UIColor.black
         return true
     }
     

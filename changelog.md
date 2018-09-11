@@ -142,7 +142,14 @@
 - Colors : New combinaison.
 
 # 1.0.5
-> Dev
+> Production
 
 - BACKEND : Order for weapons, items.
 - iPhone 5S, SE have now readable stats.
+
+# 1.0.6
+> Dev
+
+- UI : Enhanced logic on favorites table, 2 prototypes cells are here.
+- UI : Deletion is more fluid.
+- UI : Status Alert on like / dislike is more powerfull.

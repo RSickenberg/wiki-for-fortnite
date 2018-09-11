@@ -9,16 +9,6 @@
 import Foundation
 import ChameleonFramework
 
-class WeaponsLevels {
-    struct levels {
-        var grey = 0
-        var green = 1
-        var blue = 2
-        var purple = 3
-        var gold = 4
-    }
-}
-
 class FormatLevels {
 
     let shadows = ShadowLayers()

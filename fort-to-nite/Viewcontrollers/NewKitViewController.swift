@@ -19,7 +19,7 @@ class NewKitViewController {
         configuration.itemsView.titleFont = UIFont(name: "BurbankBigCondensed-Bold", size: 34)!
         configuration.itemsView.subtitleFont = UIFont(name: "BurbankBigRegular-Light", size: 21)!
         configuration.itemsView.autoTintImage = true
-        configuration.completionButton.title = "Discover your app"
+        configuration.completionButton.title = "Discover your app."
         let detailButton = WhatsNewViewController.DetailButton(
             title: "Learn more",
             action: .website(url: "https://rsickenberg.me/static/pages/fort-to-nite.html"),

@@ -28,6 +28,7 @@ class MoreTableViewController: UITableViewController {
     
     func prepareVisuals() {
         self.moreTableView.tableFooterView = UIView(frame: CGRect.zero)
+       self.moreTableView.separatorColor = UIColor.black
     }
     
     // MARK: - TableView
