@@ -107,7 +107,7 @@ class ItemCell: UITableViewCell {
     }
 }
 
-class FavoritesTableViewController: UITableViewController {
+class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var favoritesTable: UITableView!
     @IBAction func editFavoritesTable(_ sender: Any) {
@@ -172,7 +172,7 @@ class FavoritesTableViewController: UITableViewController {
 
     // MARK: - TableView
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         var number = 0
         
         if matchedWeaponsIds.count > 0 {
@@ -190,7 +190,7 @@ class FavoritesTableViewController: UITableViewController {
         return number
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if matchedItemsIds.count != 0 && matchedWeaponsIds.count != 0 {
             if section == 0 {
                 return matchedWeaponsIds.count
@@ -211,7 +211,7 @@ class FavoritesTableViewController: UITableViewController {
         return 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let weaponCell = favoritesTable.dequeueReusableCell(withIdentifier: "weapon_cell", for: indexPath) as! WeaponCell
         let itemCell = favoritesTable.dequeueReusableCell(withIdentifier: "item_cell", for: indexPath) as! ItemCell
         if indexPath.section == 0 {
@@ -234,7 +234,7 @@ class FavoritesTableViewController: UITableViewController {
         return weaponCell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if matchedItemsIds.count != 0 && matchedWeaponsIds.count != 0 {
             if section == 0 {
                 return "Weapons"
@@ -255,11 +255,11 @@ class FavoritesTableViewController: UITableViewController {
         return nil
     }
 
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let weaponCell = favoritesTable.cellForRow(at: indexPath) as? WeaponCell
         let itemCell = favoritesTable.cellForRow(at: indexPath) as? ItemCell
         
@@ -295,7 +295,7 @@ class FavoritesTableViewController: UITableViewController {
     // MARK: - Visuals
     
     private func prepareVisuals() {
-        tableView.separatorColor = UIColor.black
+        favoritesTable.separatorColor = UIColor.black
     }
     
     private func statusAlert(statusAlertInstance: StatusAlert) {
@@ -309,7 +309,7 @@ class FavoritesTableViewController: UITableViewController {
         statusAlertInstance.alertShowingDuration = TimeInterval(exactly: 4)!
     }
     
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.font = UIFont(name: "BurbankBigCondensed-Bold", size: 17)!
         header.textLabel?.textAlignment = .natural

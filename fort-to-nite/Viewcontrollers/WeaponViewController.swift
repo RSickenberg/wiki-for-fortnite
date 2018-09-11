@@ -9,12 +9,12 @@
 import UIKit
 import ChameleonFramework
 import SwiftSpinner
+import StoreKit
 
 extension UserDefaults {
     // check for is first launch - only true on first invocation after app install, false on all further invocations
     // Note: Store this value in AppDelegate if you have multiple places where you are checking for this flag$
     // https://stackoverflow.com/questions/27208103/detect-first-launch-of-ios-app
-    
     static func isFirstLaunch() -> Bool {
         let hasBeenLaunchedBeforeFlag = "hasBeenLaunchedBeforeFlag"
         let isFirstLaunch = !UserDefaults.standard.bool(forKey: hasBeenLaunchedBeforeFlag)
@@ -23,6 +23,18 @@ extension UserDefaults {
             UserDefaults.standard.synchronize()
         }
         return isFirstLaunch
+    }
+    
+    static func lastUpdate() -> Bool {
+        let lastVersion = "1.0.5"
+        let actualVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let isANewVersion = !UserDefaults.standard.bool(forKey: lastVersion)
+        
+        if (isANewVersion && lastVersion != actualVersion) {
+            UserDefaults.standard.set(true, forKey: lastVersion)
+        }
+        
+        return isANewVersion
     }
 }
 
@@ -41,6 +53,16 @@ class WeaponCollectionCell: UICollectionViewCell {
     func modelData(_ weapon: Weapons) {
         weaponName.text = weapon.name
         JsonService.list.setImageByWeaponId(weapon.id, imageView: cellimageView)
+        
+        if (weapon.is_removed == 1) {
+            self.weaponName.isEnabled = false
+            self.cellimageView.isUserInteractionEnabled = false
+            self.cellimageView.alpha = 0.5
+        } else {
+            self.weaponName.isEnabled = true
+            self.cellimageView.isUserInteractionEnabled = true
+            self.cellimageView.alpha = 1.0
+        }
     }
 }
 
@@ -52,6 +74,7 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     let list = JsonService.list
     let levels = FormatLevels()
     let isFirstLaunch = UserDefaults.isFirstLaunch()
+    let updateWelcome = UserDefaults.lastUpdate()
     var cellParentId: Int = 0
     var index: Int?
 
@@ -63,6 +86,18 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         if isFirstLaunch {
             SwiftSpinner.hide()
             self.present(NewKitViewController.whatsNewViewController, animated: true)
+        }
+        
+        if updateWelcome && !isFirstLaunch {
+            let twoSecondsFromNow = DispatchTime.now() + 3.0
+            DispatchQueue.main.asyncAfter(deadline: twoSecondsFromNow) { [navigationController] in
+                if navigationController?.topViewController is WeaponViewController {
+                    if #available(iOS 10.3, *) {
+                        SKStoreReviewController.requestReview()
+                        UserDefaults.standard.set(true, forKey: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String)!)
+                    }
+                }
+            }
         }
         
         backgroundGradient()

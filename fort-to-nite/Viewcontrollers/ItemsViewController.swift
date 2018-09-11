@@ -22,6 +22,16 @@ class ItemsCollectionCell: UICollectionViewCell {
     func modelData(_ item: Items) {
         cellItemLabel.text = item.name
         JsonService.list.setImageByItemId(item.id, imageView: cellImageView)
+        
+        if (item.is_removed == 1) {
+            self.cellItemLabel.isEnabled = false
+            self.cellImageView.isUserInteractionEnabled = false
+            self.cellImageView.alpha = 0.5
+        } else {
+            self.cellItemLabel.isEnabled = true
+            self.cellImageView.isUserInteractionEnabled = true
+            self.cellImageView.alpha = 1.0
+        }
     }
 }
 

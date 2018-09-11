@@ -33,7 +33,6 @@ class JsonService {
     var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
     //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
-    var json = [String: Any]()
     
     init() {
         if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {

@@ -153,3 +153,5 @@
 - UI : Enhanced logic on favorites table, 2 prototypes cells are here.
 - UI : Deletion is more fluid.
 - UI : Status Alert on like / dislike is more powerfull.
+- STORE : Request review on update.
+- BACKEND : Is_removed when a weapon / item is deinit from the game.
