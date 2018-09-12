@@ -109,7 +109,7 @@ class ItemCell: UITableViewCell {
 
 class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet var favoritesTable: UITableView!
+    @IBOutlet weak var favoritesTable: UITableView!
     @IBAction func editFavoritesTable(_ sender: Any) {
         if favoritesTable.isEditing {
             favoritesTable.setEditing(false, animated: true)
