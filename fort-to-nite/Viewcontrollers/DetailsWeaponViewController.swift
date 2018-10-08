@@ -245,7 +245,7 @@ class DetailsWeaponViewController: UIViewController {
 
     private func populateLabelsByValueAndLevels(_ level: Int) {
         let details = weaponModel.getDetailsByWeaponIdAndLevel(weaponId: weaponInfo.id, weaponLevel: level)
-        dpsLabel.text = String(Float(details.damage) * details.fireRate)
+        dpsLabel.text = String(Float(details.damage) * round(details.fireRate * 10) / 10)
         envdmgLabel.text = String(details.environementDamage)
 
         damageLabel.text = String(details.damage)

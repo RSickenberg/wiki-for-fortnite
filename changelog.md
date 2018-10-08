@@ -148,10 +148,18 @@
 - iPhone 5S, SE have now readable stats.
 
 # 1.0.6
-> Dev
+> Prod
 
 - UI : Enhanced logic on favorites table, 2 prototypes cells are here.
 - UI : Deletion is more fluid.
 - UI : Status Alert on like / dislike is more powerfull.
 - STORE : Request review on update.
 - BACKEND : Is_removed when a weapon / item is deinit from the game.
+
+# 1.0.7
+> Beta
+
+- UI : Favorites on the top navigation bar
+- BACKEND : Float rounded.
+- BACKEND : Pod updates
+- BACKEND : Swift 4.2.

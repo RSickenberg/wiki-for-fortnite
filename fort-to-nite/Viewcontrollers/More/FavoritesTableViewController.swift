@@ -367,11 +367,11 @@ class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITab
         for level in levels {
             if level == levels.first {
                 let minRange = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
-                range.append("\(Float(minRange.damage) * (minRange.fireRate)) - ")
+                range.append("\(Float(minRange.damage) * round((minRange.fireRate) * 10) / 10) - ")
             }
             if level == levels.last {
                 let maxRange = model.getDetailsByWeaponIdAndLevel(weaponId: weaponId, weaponLevel: level)
-                range.append("\(Float(maxRange.damage) * (maxRange.fireRate))")
+                range.append("\(Float(maxRange.damage) * round((maxRange.fireRate) * 10) / 10)")
             }
         }
         
