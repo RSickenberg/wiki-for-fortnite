@@ -32,7 +32,7 @@ class WeaponCell: UITableViewCell {
         UITableViewCell.shadows.setShadow(label: entityDetail2)
         
         if UIScreen.main.nativeBounds.height == 1136 { // Set a special constraint for small screens
-            NSLayoutConstraint(item: stackView, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: SuperView, attribute: NSLayoutAttribute.trailingMargin, multiplier: 1, constant: 0).isActive = true
+            NSLayoutConstraint(item: stackView, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.lessThanOrEqual, toItem: SuperView, attribute: NSLayoutConstraint.Attribute.trailingMargin, multiplier: 1, constant: 0).isActive = true
         }
     }
     
@@ -82,7 +82,7 @@ class ItemCell: UITableViewCell {
         UITableViewCell.shadows.setShadow(label: cellEntityName)
         
         if UIScreen.main.nativeBounds.height == 1136 { // Set a special constraint for small screens
-            NSLayoutConstraint(item: cellImage, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: cellImage, attribute: NSLayoutAttribute.trailingMargin, multiplier: 1, constant: 0).isActive = true
+            NSLayoutConstraint(item: cellImage, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.lessThanOrEqual, toItem: cellImage, attribute: NSLayoutConstraint.Attribute.trailingMargin, multiplier: 1, constant: 0).isActive = true
         }
     }
     
@@ -131,7 +131,7 @@ class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITab
     
     lazy var refresh: UIRefreshControl! = {
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(FavoritesTableViewController.reloadData(_:)), for: UIControlEvents.allEvents)
+        refreshControl.addTarget(self, action: #selector(FavoritesTableViewController.reloadData(_:)), for: UIControl.Event.allEvents)
         refreshControl.tintColor = UIColor.flatPurple
         
         return refreshControl
@@ -259,7 +259,7 @@ class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITab
         return true
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let weaponCell = favoritesTable.cellForRow(at: indexPath) as? WeaponCell
         let itemCell = favoritesTable.cellForRow(at: indexPath) as? ItemCell
         

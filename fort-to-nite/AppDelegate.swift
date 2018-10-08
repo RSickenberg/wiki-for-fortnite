@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var settings: UserDefaults?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
         //Fabric.with([Crashlytics.self])
@@ -33,15 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [
-                NSAttributedStringKey.font : UIFont(name: "BurbankBigCondensed-bold", size: 19)!,
-                NSAttributedStringKey.foregroundColor : UIColor.white,
+                NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-bold", size: 19)!,
+                NSAttributedString.Key.foregroundColor : UIColor.white,
             ], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [
-                NSAttributedStringKey.font : UIFont(name: "BurbankBigCondensed-bold", size: 17)!,
-                NSAttributedStringKey.foregroundColor : UIColor.white,
+                NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-bold", size: 17)!,
+                NSAttributedString.Key.foregroundColor : UIColor.white,
             ], for: .highlighted)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "BurbankBigCondensed-bold", size: 13)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-bold", size: 13)!], for: .normal)
         UITableView.appearance().separatorColor = UIColor.black
         return true
     }
@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 tabBar.selectedIndex = 2
                 
                 guard let nvc = tabBar.selectedViewController as? UINavigationController else { return false }
-                guard let vc = nvc.viewControllers.first as? FavoritesTableViewController else { return false }
+                //guard let vc = nvc.viewControllers.first as? FavoritesTableViewController else { return false }
                 WeaponViewController().getData()
                 nvc.popToRootViewController(animated: true)
                 

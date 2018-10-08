@@ -148,7 +148,7 @@
 - iPhone 5S, SE have now readable stats.
 
 # 1.0.6
-> Prod
+> Production
 
 - UI : Enhanced logic on favorites table, 2 prototypes cells are here.
 - UI : Deletion is more fluid.
