@@ -75,6 +75,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func handleQuickAction(shortCutItem: UIApplicationShortcutItem) -> Bool {
         guard let tabBar = self.window?.rootViewController as? UITabBarController else { return false }
+        tabBar.selectedIndex = 0
+        WeaponViewController().getData()
         
         var quickActionHandled = false
         let type = shortCutItem.type.components(separatedBy: ".").last!
@@ -82,12 +84,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch shortCutType {
             case .favortites:
                 tabBar.selectedIndex = 2
-                
-                guard let nvc = tabBar.selectedViewController as? UINavigationController else { return false }
-                //guard let vc = nvc.viewControllers.first as? FavoritesTableViewController else { return false }
-                WeaponViewController().getData()
+                guard let nvc = tabBar.viewControllers?.last as? UINavigationController else { return false }
+                guard let vc = nvc.viewControllers.first as? FavoritesTableViewController else { return false }
                 nvc.popToRootViewController(animated: true)
-                
+                vc.getFavorites()
+                vc.reloadTable()
                 quickActionHandled = true
             }
         }

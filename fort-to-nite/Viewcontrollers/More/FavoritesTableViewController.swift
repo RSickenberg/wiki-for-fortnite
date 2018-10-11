@@ -53,11 +53,11 @@ class WeaponCell: UITableViewCell {
     
     func modelWeapon(_ weapon: Weapons, dmgRange: String?, dpsRange: String?) {
         frame = UIScreen.main.bounds.standardized
+        UITableViewCell.backgroundHelper.formatCellGradients(cell: self, levels: JsonService.list.getLevelsByWeaponId(weapon.id))
         JsonService.list.setImageByWeaponId(weapon.id, imageView: cellImage)
         cellEntityName.text = weapon.name
         entityDetail.text = dmgRange
         entityDetail2.text = dpsRange
-        UITableViewCell.backgroundHelper.formatCellGradients(cell: self, levels: JsonService.list.getLevelsByWeaponId(weapon.id))
         weaponId = weapon.id
         tag = 0
     }
@@ -285,10 +285,6 @@ class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITab
                     self.favoritesTable.deleteRows(at: [indexPath], with: .automatic)
                 }
             }
-            
-            if matchedWeaponsIds.count == 0 && matchedItemsIds.count == 0 {
-                navigationController?.popToRootViewController(animated: true)
-            }
         }
     }
     
@@ -317,7 +313,7 @@ class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITab
 
     // MARK: - Handle Data
     
-    private func getFavorites() {
+    func getFavorites() {
         matchedItemsIds = []
         matchedWeaponsIds = []
         let rangeOfWeaponsId = model.getAllWeapons().count

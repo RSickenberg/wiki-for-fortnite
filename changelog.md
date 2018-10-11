@@ -159,7 +159,8 @@
 # 1.0.7
 > Beta
 
-- UI : Favorites on the top navigation bar
+- UI : Favorites on the top navigation bar.
+- UI : New color combinaisons.
 - BACKEND : Float rounded.
 - BACKEND : Pod updates
 - BACKEND : Swift 4.2.

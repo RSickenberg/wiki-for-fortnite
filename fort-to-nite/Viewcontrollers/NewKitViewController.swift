@@ -33,7 +33,7 @@ class NewKitViewController {
         title: "FORT-TO-NITE",
         items: [
             WhatsNew.Item(
-                title: "Data always up to date !",
+                title: "Data (always) up to date !",
                 subtitle: "We use a custom made data source.",
                 image: #imageLiteral(resourceName: "network")
             ),
