@@ -157,10 +157,15 @@
 - BACKEND : Is_removed when a weapon / item is deinit from the game.
 
 # 1.0.7
-> Beta
+> Production
 
 - UI : Favorites on the top navigation bar.
 - UI : New color combinaisons.
 - BACKEND : Float rounded.
 - BACKEND : Pod updates
 - BACKEND : Swift 4.2.
+
+# 1.0.8
+> Production
+
+- BUG : Fixed missing color combinaisons.
