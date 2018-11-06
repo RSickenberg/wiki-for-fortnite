@@ -5,13 +5,14 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Crashlytics (3.10.9):
-    - Fabric (~> 1.7.13)
-  - Fabric (1.7.13)
+  - Crashlytics (3.11.1):
+    - Fabric (~> 1.8.1)
+  - Fabric (1.8.2)
   - PKHUD (5.2.0)
-  - StatusAlert (0.12.1)
+  - Siren (3.8.0)
+  - StatusAlert (0.12.2)
   - SwiftSpinner (1.6.2)
-  - WhatsNewKit (1.1.2)
+  - WhatsNewKit (1.1.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Crashlytics
   - PKHUD
+  - Siren
   - StatusAlert (~> 0.12.1)
   - SwiftSpinner
   - WhatsNewKit (~> 1.1.1)
@@ -30,6 +32,7 @@ SPEC REPOS:
     - Crashlytics
     - Fabric
     - PKHUD
+    - Siren
     - StatusAlert
     - SwiftSpinner
     - WhatsNewKit
@@ -47,13 +50,14 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Crashlytics: 55e24fc23989680285a21cb1146578d9d18e432c
-  Fabric: 25d0963b691fc97be566392243ff0ecef5a68338
+  Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
+  Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
   PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
-  StatusAlert: 655a2b64184809e5cde031f7713dff3770965e8e
+  Siren: a815ad8d6ae7e62148ffc0b9859fd65d34890e3a
+  StatusAlert: c2935888a01e89efc0f4478d7c452140386559ea
   SwiftSpinner: 3a4c6dea425e5a31b908a8b1dd5dcd1ad4d96340
-  WhatsNewKit: caa478dd9efc4d501c2e4f33f5f59e0b90cbb3cb
+  WhatsNewKit: fa893666dd8dbbf4ded92c10d45526629d5cabf0
 
-PODFILE CHECKSUM: b142a2062ee1316ad515c729fef966d13be271ee
+PODFILE CHECKSUM: f2e3ad11315f2389826ac9dc55c3904a816010da
 
 COCOAPODS: 1.5.3

@@ -169,3 +169,9 @@
 > Production
 
 - BUG : Fixed missing color combinaisons.
+
+# 1.0.9
+> Production
+
+- UI : Added new color combinaions.
+- APP : Siren who notify user for updates.

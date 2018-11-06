@@ -10,6 +10,7 @@
 import UIKit
 import Crashlytics
 import StatusAlert
+import Siren
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,9 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var settings: UserDefaults?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let siren = Siren.shared
+        
+        siren.alertMessaging = SirenAlertMessaging(updateButtonMessage: NSAttributedString(string: "Update"),
+                                                   nextTimeButtonMessage: NSAttributedString(string: "Next Time"),
+                                                   skipVersionButtonMessage: NSAttributedString(string: "Skip this version"))
+        
+        siren.alertType = .option
+        siren.majorUpdateAlertType = .force
+        siren.minorUpdateAlertType = .option
+        siren.patchUpdateAlertType = .skip
+        siren.revisionUpdateAlertType = .skip
+        
         UIApplication.shared.statusBarStyle = .lightContent
-        //Fabric.with([Crashlytics.self])
         if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             print("Version : " + text)
         }
@@ -43,6 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ], for: .highlighted)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-bold", size: 13)!], for: .normal)
         UITableView.appearance().separatorColor = UIColor.black
+        
+        siren.checkVersion(checkType: .weekly)
         return true
     }
     
@@ -62,6 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        Siren.shared.checkVersion(checkType: .immediately)
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
