@@ -59,6 +59,9 @@ class FormatLevels {
         case [1, 2]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4FCA00")!, HexColor("00BFFF")!])
             break
+        case [1, 2, 3]:
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4FCA00")!, HexColor("00BFFF")!, HexColor("B83DF2")!])
+            break
         case [2, 3]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("00BFFF")!, HexColor("B83DF2")!])
             break
@@ -115,6 +118,9 @@ class FormatLevels {
         case [1, 2]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4FCA00")!, HexColor("00BFFF")!])
             break
+        case [1, 2, 3]:
+             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4FCA00")!, HexColor("00BFFF")!, HexColor("B83DF2")!])
+             break
         case [2, 3]:
             cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("00BFFF")!, HexColor("B83DF2")!])
             break
