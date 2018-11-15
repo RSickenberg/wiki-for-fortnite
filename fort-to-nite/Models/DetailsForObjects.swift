@@ -4,13 +4,14 @@
 //
 //  Created by Romain Sickenberg on 06.03.18.
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
+//
 //  README: You need to add only one weapon for all of his levels like (AR + Details for Grey level) -> (Details for green level) -> (Details for blue level) /!\ DON'T FORGET THE WEAPONID TO MATCH THE DETAILS WITH THE WEAPON
+//
 //          Grey : color 0 / detailLevel 0
 //          Green : color 1 / detailLevel 1
 //          Blue : color 2 / detailLevel 2
 //          Purple : color 3 / detailLevel 3
 //          Gold :  color 4 / detailLevel 4
-//
 //
 //  Since 3.4, weapons can have dissociated style, or colors, like: green / blue
 //  For new methods, please, take note of this.
@@ -28,6 +29,8 @@ class DetailsForObjects {
     private var itemsCollection = [Items]()
     private var itemsDetails = [ItemsDetails]()
     private var itemsCategory = [Int]()
+    
+    private var storeCollection = [Store]()
 
     // MARK: - Weapons
 
@@ -161,4 +164,12 @@ class DetailsForObjects {
         
         imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolderGray"), imageTransition: .crossDissolve(0.5))
     }
+    
+    /////////////////////////////////////////////////////////////////////////////////////////// STORE
+    // MARK: - Store
+    
+    func addStoreToDB(_ storeState: Store) {
+        storeCollection.append(storeState)
+    }
+    
 }

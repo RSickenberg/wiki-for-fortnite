@@ -17,8 +17,37 @@ struct jsonStruct: Decodable {
     let itemDetails: [ItemsDetails]
 }
 
+enum Throwable<T: Decodable>: Decodable {
+    case success(T)
+    case failure(Error)
+    
+    init(from decoder: Decoder) throws {
+        do {
+            let decoded = try T(from: decoder)
+            self = .success(decoded)
+        } catch let error {
+            self = .failure(error)
+        }
+    }
+}
+
+extension Throwable {
+    var value: T? {
+        switch self {
+        case .failure(_):
+            return nil
+        case .success(let value):
+            return value
+        }
+    }
+}
+
 enum ConnectionResult {
     case success(jsonStruct), failure(Error)
+}
+
+enum ConnectionStoreResult {
+    case success([Store]), failure(Error)
 }
 
 class JsonService {
@@ -33,6 +62,14 @@ class JsonService {
     var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
     //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
+    
+    // MARK: Store
+    
+    var storePath = URLRequest(url: URL(string: "https://api.fortnitetracker.com/v1/store")!)
+    
+    let storeHeader: HTTPHeaders = [
+        "TRN-Api-Key": "fe51eb10-38ee-40e8-a6f5-68187ae72bd3"
+    ]
     
     init() {
         if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
@@ -102,6 +139,48 @@ class JsonService {
                 
                 completion(.failure(error))
             }
+        }
+    }
+    
+    func fetchJsonStoreAlamo(completion: @escaping (ConnectionStoreResult) -> ()) {
+        Alamofire.request((storePath.url?.absoluteString)!, method: .get, headers: storeHeader).validate().responseJSON() { [weak self] response in
+            print("JSON: \(response.data?.count ?? 0) bytes downloaded")
+            print("JSON: Request: \(String(describing: response.request))")
+            print("JSON: Response: \(String(describing: response.response))")
+            print("JSON: Result: \(String(describing: response.result))")
+            
+            guard self != nil else { return }
+            
+            switch response.result {
+            case .success(_):
+                if let json = response.data {
+                    do {
+                        let jsonObject = try JSONDecoder().decode([Throwable<Store>].self, from: json)
+                        let store = jsonObject.compactMap { $0.value }
+                        
+                        for storeObject in store {
+                            JsonService.list.addStoreToDB(storeObject)
+                        }
+                        
+                        completion(.success(store))
+                    }
+                    catch let jsonErr {
+                        if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
+                            ErrorManager.showMessage("Json Status", message: jsonErr.localizedDescription)
+                            print(jsonErr)
+                        }
+                        
+                        completion(.failure(jsonErr))
+                    }
+                }
+            case .failure(let error):
+                if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
+                    ErrorManager.showMessage("Failure Status", message: error.localizedDescription)
+                }
+                
+                completion(.failure(error))
+            }
+            
         }
     }
 }

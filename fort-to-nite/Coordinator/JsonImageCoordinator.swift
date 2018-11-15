@@ -29,5 +29,10 @@ class JsonImageCoordinator {
                 completion(.failure(error))
             }
         }
+        
+        json.fetchJsonStoreAlamo() { [weak self] result in
+            guard self != nil else { return }
+            
+        }
     }
 }
