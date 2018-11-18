@@ -172,4 +172,8 @@ class DetailsForObjects {
         storeCollection.append(storeState)
     }
     
+    func getAllStoreItems() -> [Store] {
+        return storeCollection
+    }
+    
 }
