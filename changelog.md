@@ -175,3 +175,19 @@
 
 - UI : Added new color combinaions.
 - APP : Siren who notify user for updates.
+
+# 1.1
+> Beta
+
+- NEW : Have the Fortnite Market inside Fort-to-nite !
+- NEW : New tab bar icons.
+
+- UI : Card views to get current market items.
+- UI : Blury view to display the name.
+- UI : Price is displayed, a vBuck is show like in the game.
+- UI : Depending the rarity of the item, the background is formated.
+
+- BACKEND : A new model have been made to match the new requirements.
+- BACKEND : Fetch a new API when viewDidLoad.
+- BACKEND : New methods to call the model.
+- BACKEND : Store items are filtred by store category (daily, weekly).
