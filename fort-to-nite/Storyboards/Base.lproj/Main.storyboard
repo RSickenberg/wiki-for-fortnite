@@ -893,14 +893,14 @@
                                                     <rect key="frame" x="0.0" y="274" width="257.33333333333331" height="41"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-XY-kfJ">
-                                                            <rect key="frame" x="124.33333333333331" y="10" width="28.666666666666671" height="17"/>
+                                                            <rect key="frame" x="124.33333333333333" y="10" width="28.666666666666671" height="17"/>
                                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vbuck" translatesAutoresizingMaskIntoConstraints="NO" id="KRb-19-g7K">
-                                                            <rect key="frame" x="93.333333333333314" y="4" width="25" height="25"/>
+                                                            <rect key="frame" x="93.333333333333329" y="4" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="DK1-Rx-Krh"/>
                                                                 <constraint firstAttribute="width" constant="25" id="KGi-aY-p6H"/>
@@ -916,21 +916,39 @@
                                                         <constraint firstAttribute="bottom" secondItem="KRb-19-g7K" secondAttribute="bottom" constant="12" id="rCj-kk-MZp"/>
                                                     </constraints>
                                                 </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RST-j8-JF7" userLabel="blurryView">
+                                                    <rect key="frame" x="0.0" y="227" width="257" height="47"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUt-Gl-jJd">
+                                                            <rect key="frame" x="54" y="0.0" width="149" height="47"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="RST-j8-JF7" firstAttribute="leading" secondItem="6Ic-xc-taK" secondAttribute="leading" id="3ea-KP-sDf"/>
                                             <constraint firstAttribute="bottom" secondItem="Qed-Pp-ROh" secondAttribute="bottom" id="PNO-wr-htv"/>
                                             <constraint firstItem="X5V-o9-7Ot" firstAttribute="centerY" secondItem="6Ic-xc-taK" secondAttribute="centerY" id="QhH-eF-rPV"/>
                                             <constraint firstItem="Qed-Pp-ROh" firstAttribute="centerX" secondItem="X5V-o9-7Ot" secondAttribute="centerX" id="RF4-9p-5Em"/>
+                                            <constraint firstItem="Qed-Pp-ROh" firstAttribute="top" secondItem="RST-j8-JF7" secondAttribute="bottom" id="SVy-DO-MUy"/>
                                             <constraint firstItem="X5V-o9-7Ot" firstAttribute="leading" secondItem="6Ic-xc-taK" secondAttribute="leadingMargin" constant="2" id="T9H-iv-NCq"/>
                                             <constraint firstItem="Qed-Pp-ROh" firstAttribute="top" secondItem="6Ic-xc-taK" secondAttribute="top" constant="274" id="TCx-bG-vLx"/>
                                             <constraint firstItem="Qed-Pp-ROh" firstAttribute="leading" secondItem="6Ic-xc-taK" secondAttribute="leading" id="ZG1-70-OvL"/>
+                                            <constraint firstAttribute="trailing" secondItem="RST-j8-JF7" secondAttribute="trailing" id="beB-xr-tI8"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="X5V-o9-7Ot" secondAttribute="bottom" constant="14" id="gu0-0f-YnV"/>
+                                            <constraint firstItem="RST-j8-JF7" firstAttribute="top" secondItem="6Ic-xc-taK" secondAttribute="top" constant="227" id="yum-EN-knS"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="bluryView" destination="RST-j8-JF7" id="rnH-UA-eGh"/>
                                             <outlet property="cellGradiantPrice" destination="Qed-Pp-ROh" id="n3M-9h-S5G"/>
                                             <outlet property="storeImage" destination="X5V-o9-7Ot" id="1Rm-fv-fSu"/>
+                                            <outlet property="storeItemName" destination="RUt-Gl-jJd" id="sJH-9I-c35"/>
                                             <outlet property="storePrice" destination="Kwh-XY-kfJ" id="gof-fG-eDH"/>
                                         </connections>
                                     </collectionViewCell>

@@ -42,25 +42,38 @@ class StoreCellViewController: UICollectionViewCell {
     @IBOutlet var storeImage: UIImageView!
     @IBOutlet var cellGradiantPrice: UIView!
     @IBOutlet var storePrice: UILabel!
+    @IBOutlet var bluryView: UIView!
+    @IBOutlet var storeItemName: UILabel!
     
     func configure() {
         let shadowsOptions = ShadowLayers()
+        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.dark))
         storeImage.layer.cornerRadius = 8.0
         self.layer.cornerRadius = 6.5
-        //shadowsOptions.setGradientShadow(cell: cellGradiantPrice)
         
         // Gradiant
         cellGradiantPrice.backgroundColor = UIColor.flatBlack
         cellGradiantPrice.layer.borderWidth = 2.0
         
         shadowsOptions.setShadow(label: storePrice)
+        shadowsOptions.setShadow(label: storeItemName)
         storePrice.font.withSize(43)
+        
+        blurView.frame = bluryView.frame
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurView.contentView.addSubview(storeItemName)
+        blurView.bringSubviewToFront(storeItemName)
+        self.addSubview(blurView)
+        
+        NSLayoutConstraint(item: storeItemName, attribute: .centerX, relatedBy: .equal, toItem: bluryView, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: storeItemName, attribute: .centerY, relatedBy: .equal, toItem: bluryView, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
     }
     
     func modelData(store: Store) {
         let levels = FormatLevels()
         JsonService.list.setImageByStoreElementId(store.manifestId, storeImage)
         storePrice.text = String(store.vBucks)
+        storeItemName.text = store.name
         
         switch store.rarity {
         case "Handmade":
