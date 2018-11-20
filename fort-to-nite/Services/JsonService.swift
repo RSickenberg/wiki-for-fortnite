@@ -34,8 +34,8 @@ enum Throwable<T: Decodable>: Decodable {
 extension Throwable {
     var value: T? {
         switch self {
-        case .failure(_):
-            return nil
+        case .failure(let error):
+            return error as? T
         case .success(let value):
             return value
         }

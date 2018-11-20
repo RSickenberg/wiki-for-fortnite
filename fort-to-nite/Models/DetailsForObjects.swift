@@ -176,4 +176,19 @@ class DetailsForObjects {
         return storeCollection
     }
     
+    func getStoreItemByIndex(_ storeIndex: Int) -> Store {
+        return storeCollection[storeIndex]
+    }
+    
+    func getStoreItemByManifestId(_ storeId: Int) -> Store {
+        let key = storeCollection.index(where: { $0.manifestId == storeId })
+        
+        return storeCollection[key!]
+    }
+    
+    func setImageByStoreElementId(_ storeId: Int, _ imageView: UIImageView) {
+        let storeElement = getStoreItemByManifestId(storeId)
+        
+        imageView.af_setImage(withURL: URL(string: storeElement.imageUrl)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolderGray"), imageTransition: .crossDissolve(0.5) )
+    }
 }

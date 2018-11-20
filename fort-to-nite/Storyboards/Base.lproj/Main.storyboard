@@ -858,7 +858,7 @@
             </objects>
             <point key="canvasLocation" x="-887" y="3335"/>
         </scene>
-        <!--Store View Controller-->
+        <!--MARKET-->
         <scene sceneID="hmN-q6-hht">
             <objects>
                 <viewController id="Ce5-Ud-ljN" customClass="StoreViewController" customModule="fort_to_nite" customModuleProvider="target" sceneMemberID="viewController">
@@ -869,36 +869,69 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KKs-Cg-UiY">
                                 <rect key="frame" x="0.0" y="16" width="414" height="719"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rzB-nf-V8f">
-                                    <size key="itemSize" width="247" height="507"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="40" sectionInsetReference="safeArea" id="rzB-nf-V8f">
+                                    <size key="itemSize" width="257" height="315"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="store_object" id="6Ic-xc-taK" customClass="StoreCellViewController" customModule="fort_to_nite" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="58" width="247" height="507"/>
+                                        <rect key="frame" x="30" y="154" width="257" height="315"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="247" height="507"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="257" height="315"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gou-Ea-6br">
-                                                    <rect key="frame" x="103" y="243" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5V-o9-7Ot">
+                                                    <rect key="frame" x="10.000000000000014" y="22" width="237.33333333333337" height="271"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="X5V-o9-7Ot" secondAttribute="height" multiplier="207:376" constant="88.066489361702139" id="05j-HV-jRX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-Pp-ROh" userLabel="CellGradiant">
+                                                    <rect key="frame" x="0.0" y="274" width="257.33333333333331" height="41"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-XY-kfJ">
+                                                            <rect key="frame" x="124.33333333333331" y="10" width="28.666666666666671" height="17"/>
+                                                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vbuck" translatesAutoresizingMaskIntoConstraints="NO" id="KRb-19-g7K">
+                                                            <rect key="frame" x="93.333333333333314" y="4" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="DK1-Rx-Krh"/>
+                                                                <constraint firstAttribute="width" constant="25" id="KGi-aY-p6H"/>
+                                                                <constraint firstAttribute="width" secondItem="KRb-19-g7K" secondAttribute="height" multiplier="1:1" id="b5C-yD-FO2"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Kwh-XY-kfJ" firstAttribute="centerY" secondItem="Qed-Pp-ROh" secondAttribute="centerY" constant="-2" id="2td-eh-PJv"/>
+                                                        <constraint firstItem="Kwh-XY-kfJ" firstAttribute="centerX" secondItem="Qed-Pp-ROh" secondAttribute="centerX" constant="10" id="AeY-zD-tDO"/>
+                                                        <constraint firstItem="KRb-19-g7K" firstAttribute="top" secondItem="Qed-Pp-ROh" secondAttribute="top" constant="4" id="CfH-Mn-DiV"/>
+                                                        <constraint firstItem="Kwh-XY-kfJ" firstAttribute="leading" secondItem="KRb-19-g7K" secondAttribute="trailing" constant="6" id="WEu-gx-5xk"/>
+                                                        <constraint firstAttribute="bottom" secondItem="KRb-19-g7K" secondAttribute="bottom" constant="12" id="rCj-kk-MZp"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="gou-Ea-6br" firstAttribute="centerX" secondItem="6Ic-xc-taK" secondAttribute="centerX" id="KnY-kp-n41"/>
-                                            <constraint firstItem="gou-Ea-6br" firstAttribute="centerY" secondItem="6Ic-xc-taK" secondAttribute="centerY" id="UU6-EC-pry"/>
-                                            <constraint firstItem="gou-Ea-6br" firstAttribute="leading" secondItem="6Ic-xc-taK" secondAttribute="leadingMargin" constant="95" id="WY3-Wx-ZwZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qed-Pp-ROh" secondAttribute="bottom" id="PNO-wr-htv"/>
+                                            <constraint firstItem="X5V-o9-7Ot" firstAttribute="centerY" secondItem="6Ic-xc-taK" secondAttribute="centerY" id="QhH-eF-rPV"/>
+                                            <constraint firstItem="Qed-Pp-ROh" firstAttribute="centerX" secondItem="X5V-o9-7Ot" secondAttribute="centerX" id="RF4-9p-5Em"/>
+                                            <constraint firstItem="X5V-o9-7Ot" firstAttribute="leading" secondItem="6Ic-xc-taK" secondAttribute="leadingMargin" constant="2" id="T9H-iv-NCq"/>
+                                            <constraint firstItem="Qed-Pp-ROh" firstAttribute="top" secondItem="6Ic-xc-taK" secondAttribute="top" constant="274" id="TCx-bG-vLx"/>
+                                            <constraint firstItem="Qed-Pp-ROh" firstAttribute="leading" secondItem="6Ic-xc-taK" secondAttribute="leading" id="ZG1-70-OvL"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="X5V-o9-7Ot" secondAttribute="bottom" constant="14" id="gu0-0f-YnV"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="testLabel" destination="gou-Ea-6br" id="ENX-Ti-fuH"/>
+                                            <outlet property="cellGradiantPrice" destination="Qed-Pp-ROh" id="n3M-9h-S5G"/>
+                                            <outlet property="storeImage" destination="X5V-o9-7Ot" id="1Rm-fv-fSu"/>
+                                            <outlet property="storePrice" destination="Kwh-XY-kfJ" id="gof-fG-eDH"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -913,7 +946,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Bd-9F-icu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qqp-lh-ACl"/>
+                    <navigationItem key="navigationItem" title="MARKET" id="qqp-lh-ACl"/>
                     <connections>
                         <outlet property="collectionView" destination="KKs-Cg-UiY" id="5UR-Ha-ETo"/>
                     </connections>
@@ -1507,6 +1540,7 @@
         <image name="itemTabIcon" width="23" height="23"/>
         <image name="loveIconEmpty" width="54" height="54"/>
         <image name="shopTab" width="49.680000305175781" height="49.680000305175781"/>
+        <image name="vbuck" width="120" height="120"/>
         <image name="weaponTabIcon" width="23" height="23"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

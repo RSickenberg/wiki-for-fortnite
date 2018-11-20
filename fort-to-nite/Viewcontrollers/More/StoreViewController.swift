@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftSpinner
 
 enum StoreType {
     case daily
@@ -19,21 +20,69 @@ enum StoreType {
         case .weekly: return "Weekly Store object"
         }
     }
+}
+
+enum StoreRarity {
+    case uncomon
+    case rare
+    case epic
+    case legendary
     
-    func controller() -> StoreViewController {
-        return StoreViewController(events: self)
+    var title: String {
+        switch self {
+            case .uncomon: return "Handmade"
+            case .rare: return "Strudy"
+            case .epic: return "Quality"
+            case .legendary: return "Fine"
+        }
     }
 }
 
 class StoreCellViewController: UICollectionViewCell {
-    @IBOutlet var testLabel: UILabel!
+    @IBOutlet var storeImage: UIImageView!
+    @IBOutlet var cellGradiantPrice: UIView!
+    @IBOutlet var storePrice: UILabel!
+    
+    func configure() {
+        let shadowsOptions = ShadowLayers()
+        storeImage.layer.cornerRadius = 8.0
+        self.layer.cornerRadius = 6.5
+        //shadowsOptions.setGradientShadow(cell: cellGradiantPrice)
+        
+        // Gradiant
+        cellGradiantPrice.backgroundColor = UIColor.flatBlack
+        cellGradiantPrice.layer.borderWidth = 2.0
+        
+        shadowsOptions.setShadow(label: storePrice)
+        storePrice.font.withSize(43)
+    }
+    
+    func modelData(store: Store) {
+        let levels = FormatLevels()
+        JsonService.list.setImageByStoreElementId(store.manifestId, storeImage)
+        storePrice.text = String(store.vBucks)
+        
+        switch store.rarity {
+        case "Handmade":
+            levels.formatUIBackgroundViewFromLevel(view: self, level: 1)
+        case "Sturdy":
+            levels.formatUIBackgroundViewFromLevel(view: self, level: 2)
+        case "Quality":
+            levels.formatUIBackgroundViewFromLevel(view: self, level: 3)
+        case "Fine":
+            levels.formatUIBackgroundViewFromLevel(view: self, level: 4)
+        default:
+            self.backgroundColor = UIColor.clear
+        }
+    }
     
 }
 
-class StoreViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let list = JsonService.list
     var events: StoreType!
+    var storeRarity: StoreRarity!
 
     @IBOutlet var collectionView: UICollectionView!
     
@@ -42,11 +91,37 @@ class StoreViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.events = events
     }
     
+    convenience init(rarity: StoreRarity) {
+        self.init()
+        self.storeRarity = rarity
+    }
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         setVisuals()
-        
+        getData()
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    func getData() {
+        SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
+        SwiftSpinner.show("Getting last data!")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        JsonImageCoordinator.shared.syncJsonStore() { [weak self] result in
+            switch result {
+            case .success(_):
+                SwiftSpinner.hide()
+                self?.collectionView.reloadData()
+            case .failure(_):
+                SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
+                    self?.getData()
+                }, subtitle: "API may be unavailable, please retry")
+            }
+        }
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 
     // MARK: - Outlets
@@ -61,13 +136,20 @@ class StoreViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "store_object", for: indexPath) as! StoreCellViewController
-        
-        cell.testLabel.text = "Test"
-        cell.backgroundColor = UIColor.gray
+        let storeElement = list.getStoreItemByIndex(indexPath.row)
+
+        cell.layer.cornerRadius = 6.5
+        cell.configure()
+        cell.modelData(store: storeElement)
         
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 30
+    }
+    
+
     // MARK: - Visuals
     
     private func backgroundGradient() {
@@ -76,11 +158,10 @@ class StoreViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     private func setVisuals() {
         backgroundGradient()
-        title = "MARKET"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BurbankBigCondensed-bold", size: 21)!]
         view.clipsToBounds = true
         
         // CollectionView thing
-    
+        collectionView.isPagingEnabled = false
     }
 }
