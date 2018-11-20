@@ -158,7 +158,9 @@ class JsonService {
                         let jsonObject = try JSONDecoder().decode([Throwable<Store>].self, from: json)
                         let store = jsonObject.compactMap { $0.value }
                         
-                        for storeObject in store {
+                        let storeItems = store.sorted { $0.storeCategory > $1.storeCategory }
+                        
+                        for storeObject in storeItems {
                             JsonService.list.addStoreToDB(storeObject)
                         }
                         

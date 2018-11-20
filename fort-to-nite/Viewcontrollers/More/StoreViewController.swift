@@ -47,7 +47,7 @@ class StoreCellViewController: UICollectionViewCell {
     
     func configure() {
         let shadowsOptions = ShadowLayers()
-        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.dark))
+        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.light))
         storeImage.layer.cornerRadius = 8.0
         self.layer.cornerRadius = 6.5
         
