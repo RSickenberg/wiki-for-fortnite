@@ -90,7 +90,7 @@ class DetailsItemViewController: UIViewController {
 
     // MARK: - Data
 
-    func getLikeStorage() {
+    private func getLikeStorage() {
         if likeStorage.bool(forKey: "item_like_\(itemInfo.id)") {
             likeButton.image = #imageLiteral(resourceName: "loveIconFull")
             likeButtonState = true

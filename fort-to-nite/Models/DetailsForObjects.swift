@@ -31,6 +31,7 @@ class DetailsForObjects {
     private var itemsCategory = [Int]()
     
     private var storeCollection = [Store]()
+    private var jsonVersion: String?
 
     // MARK: - Weapons
 
@@ -190,5 +191,16 @@ class DetailsForObjects {
         let storeElement = getStoreItemByManifestId(storeId)
         
         imageView.af_setImage(withURL: URL(string: storeElement.imageUrl)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolderGray"), imageTransition: .crossDissolve(0.5) )
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////////// Others
+    // MARK: - MISC
+    
+    func setJsonVersion(_ version: String) {
+        jsonVersion = version
+    }
+    
+    func getJsonVersion() -> String {
+        return jsonVersion ?? ""
     }
 }

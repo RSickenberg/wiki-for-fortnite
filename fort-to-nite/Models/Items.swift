@@ -34,5 +34,4 @@ class Items: Decodable {
         self.group = group
         self.is_removed = is_removed
     }
-    
 }

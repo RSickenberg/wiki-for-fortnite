@@ -15,6 +15,7 @@ struct jsonStruct: Decodable {
     let details: [WeaponsDetails]
     let items: [Items]
     let itemDetails: [ItemsDetails]
+    let version: String?
 }
 
 enum Throwable<T: Decodable>: Decodable {
@@ -59,8 +60,8 @@ class JsonService {
 
     // MARK: - Declarations
     
-    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
-    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
+    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
+    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
     
     // MARK: Store
@@ -116,6 +117,8 @@ class JsonService {
                     for itemDetails in jsonObject.itemDetails {
                         JsonService.list.addItemDetailsToDB(itemDetails)
                     }
+                    
+                    JsonService.list.setJsonVersion(jsonObject.version ?? "")
                     
                     if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
                         ErrorManager.showMessage("Network debug", message: "Size: \(response.data?.count ?? 0) bytes    Response: \(response.result)")

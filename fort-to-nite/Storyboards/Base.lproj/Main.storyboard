@@ -14,6 +14,9 @@
         <array key="BurbankBigCondensed-Bold.otf">
             <string>BurbankBigCondensed-Bold</string>
         </array>
+        <array key="BurbankBigRegular-Light.otf">
+            <string>BurbankBigRegular-Light</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
@@ -80,7 +83,7 @@
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="s9s-gs-ec9">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
                                     <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -135,6 +138,45 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="t08-Cx-P8g" customClass="WeaponCollectionViewFooterCell" customModule="fort_to_nite" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="190" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bj-f7-Iix">
+                                            <rect key="frame" x="188" y="14" width="38" height="22"/>
+                                            <fontDescription key="fontDescription" name="BurbankBigRegular-Light" family="Burbank Big Regular" pointSize="22"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKS-yu-MDI">
+                                            <rect key="frame" x="8" y="8" width="398" height="2"/>
+                                            <color key="backgroundColor" red="0.91697731599999999" green="0.91697731599999999" blue="0.91697731599999999" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="g5g-c6-KOl"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uy-fg-tu7">
+                                            <rect key="frame" x="8" y="40" width="398" height="2"/>
+                                            <color key="backgroundColor" red="0.91697731599999999" green="0.91697731599999999" blue="0.91697731599999999" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="Hdp-wu-huz"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pKS-yu-MDI" firstAttribute="centerX" secondItem="3bj-f7-Iix" secondAttribute="centerX" id="8Pv-ld-sz1"/>
+                                        <constraint firstItem="9uy-fg-tu7" firstAttribute="leading" secondItem="t08-Cx-P8g" secondAttribute="leadingMargin" id="BZh-eX-LTV"/>
+                                        <constraint firstItem="3bj-f7-Iix" firstAttribute="centerX" secondItem="t08-Cx-P8g" secondAttribute="centerX" id="GFW-KF-RAT"/>
+                                        <constraint firstItem="3bj-f7-Iix" firstAttribute="centerY" secondItem="t08-Cx-P8g" secondAttribute="centerY" id="Hub-Hy-89m"/>
+                                        <constraint firstItem="pKS-yu-MDI" firstAttribute="leading" secondItem="t08-Cx-P8g" secondAttribute="leadingMargin" id="Ln9-hN-rtl"/>
+                                        <constraint firstItem="9uy-fg-tu7" firstAttribute="top" secondItem="3bj-f7-Iix" secondAttribute="bottom" constant="4" id="YfW-rU-O5x"/>
+                                        <constraint firstItem="3bj-f7-Iix" firstAttribute="top" secondItem="pKS-yu-MDI" secondAttribute="bottom" constant="4" id="pv3-N7-nwi"/>
+                                        <constraint firstItem="9uy-fg-tu7" firstAttribute="centerX" secondItem="3bj-f7-Iix" secondAttribute="centerX" id="tuN-RA-wVG"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="jsonVersion" destination="3bj-f7-Iix" id="D8m-Rl-IrO"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="avJ-w6-w38" id="SCv-4Y-RDg"/>
                                     <outlet property="delegate" destination="avJ-w6-w38" id="yGY-95-asa"/>
@@ -158,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M93-UU-5em" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="133.74384236453201"/>
+            <point key="canvasLocation" x="1443.4782608695652" y="133.69565217391306"/>
         </scene>
         <!--Weapons details-->
         <scene sceneID="vss-S6-Ma8">
@@ -873,7 +915,7 @@
                                     <size key="itemSize" width="257" height="315"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="30" minY="30" maxX="30" maxY="30"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="store_object" id="6Ic-xc-taK" customClass="StoreCellViewController" customModule="fort_to_nite" customModuleProvider="target">
@@ -920,7 +962,7 @@
                                                     <rect key="frame" x="0.0" y="227" width="257" height="47"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUt-Gl-jJd">
-                                                            <rect key="frame" x="54" y="0.0" width="149" height="47"/>
+                                                            <rect key="frame" x="26" y="0.0" width="205" height="47"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -972,53 +1014,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kow-P2-pVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149.27536231884059" y="3334.239130434783"/>
-        </scene>
-        <!--More-->
-        <scene sceneID="f7R-p8-2pR">
-            <objects>
-                <tableViewController storyboardIdentifier="favorites" id="BXP-KK-g2h" customClass="MoreTableViewController" customModule="fort_to_nite" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="121" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="yXf-04-zP3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.32941176470588235" green="0.49803921568627452" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.32941176470588235" green="0.49803921568627452" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favorties" textLabel="b2n-KW-VHt" rowHeight="121" style="IBUITableViewCellStyleDefault" id="Ioq-br-Chd" customClass="MoreCell" customModule="fort_to_nite" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="121"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ioq-br-Chd" id="dWu-o8-5HD">
-                                    <rect key="frame" x="0.0" y="0.0" width="376" height="120.66666666666667"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b2n-KW-VHt">
-                                            <rect key="frame" x="20" y="0.0" width="356" height="120.66666666666667"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="31"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="mainLabel" destination="b2n-KW-VHt" id="fhj-QR-I6I"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="BXP-KK-g2h" id="K62-jk-hj3"/>
-                            <outlet property="delegate" destination="BXP-KK-g2h" id="pth-Io-sqs"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="More" id="Pl0-6e-Frt"/>
-                    <connections>
-                        <outlet property="moreTableView" destination="yXf-04-zP3" id="7yN-DZ-RZS"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxp-Ng-K3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="628" y="1979"/>
         </scene>
         <!--FAVORITES-->
         <scene sceneID="Iov-ad-2aC">

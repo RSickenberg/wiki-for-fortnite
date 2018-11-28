@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftSpinner
+import StoreKit
 
 enum StoreType {
     case daily
@@ -48,7 +49,6 @@ class StoreCellViewController: UICollectionViewCell {
     func configure() {
         let shadowsOptions = ShadowLayers()
         let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.light))
-        storeImage.layer.cornerRadius = 8.0
         self.layer.cornerRadius = 6.5
         
         // Gradiant
@@ -161,7 +161,6 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 30
     }
-    
 
     // MARK: - Visuals
     

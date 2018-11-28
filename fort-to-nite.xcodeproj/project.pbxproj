@@ -11,7 +11,6 @@
 		0715AE092114A807007BD6F3 /* fort_to_niteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715AE082114A807007BD6F3 /* fort_to_niteUITests.swift */; };
 		0715AE192114AAA3007BD6F3 /* fort_to_niteUIScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715AE182114AAA3007BD6F3 /* fort_to_niteUIScreenshots.swift */; };
 		0715AE202114AAAC007BD6F3 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715AE102114AA2C007BD6F3 /* SnapshotHelper.swift */; };
-		071D137620DCEF8B00688BFC /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D137520DCEF8B00688BFC /* MoreTableViewController.swift */; };
 		071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E386020775BBE006CAFD2 /* ShadowLayers.swift */; };
 		07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */; };
 		0733FC582080F626004ECD7D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0733FC572080F626004ECD7D /* Settings.bundle */; };
@@ -68,7 +67,6 @@
 		0715AE162114AAA3007BD6F3 /* fort-to-niteUIScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fort-to-niteUIScreenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0715AE182114AAA3007BD6F3 /* fort_to_niteUIScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fort_to_niteUIScreenshots.swift; sourceTree = "<group>"; };
 		0715AE1A2114AAA3007BD6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		071D137520DCEF8B00688BFC /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		071E386020775BBE006CAFD2 /* ShadowLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLayers.swift; sourceTree = "<group>"; };
 		07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonImageCoordinator.swift; sourceTree = "<group>"; };
 		0733FC572080F626004ECD7D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 				073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */,
 				073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */,
 				07631E26207F93A90078267B /* DetailsItemViewController.swift */,
-				071D137520DCEF8B00688BFC /* MoreTableViewController.swift */,
 				07B1C9912100F47700DD7807 /* NewKitViewController.swift */,
 			);
 			path = Viewcontrollers;
@@ -541,7 +538,6 @@
 				073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */,
 				0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */,
 				076640792093516E0044900D /* JsonService.swift in Sources */,
-				071D137620DCEF8B00688BFC /* MoreTableViewController.swift in Sources */,
 				07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */,
 				07B1C9922100F47700DD7807 /* NewKitViewController.swift in Sources */,
 				073A373F204DAB00001D4AF5 /* Items.swift in Sources */,

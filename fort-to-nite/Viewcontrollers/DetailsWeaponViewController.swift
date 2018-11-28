@@ -153,7 +153,7 @@ class DetailsWeaponViewController: UIViewController {
     
     // MARK: - Logic
 
-    func prepareSegment() {
+    private func prepareSegment() {
         levelOfWeaponSwitch.removeAllSegments()
         let listOfLevels = weaponModel.getLevelsByWeaponId(weaponInfo.id)
         let titles = ["Common", "Atypical", "Rare", "Epic", "Legendary"]
@@ -163,7 +163,7 @@ class DetailsWeaponViewController: UIViewController {
         levelOfWeaponSwitch.selectedSegmentIndex = 0
     }
     
-    func getLikeStorage() {
+    private func getLikeStorage() {
         if likeStorage.bool(forKey: "weapon_like_\(weaponInfo.id)") {
             likeButton.image = #imageLiteral(resourceName: "loveIconFull")
             likeButtonState = true
