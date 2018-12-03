@@ -96,14 +96,14 @@ class StoreCellViewController: UICollectionViewCell {
     }
 }
 
-class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UIPopoverPresentationControllerDelegate {
 
     let list = JsonService.list
     var events: StoreType!
     var storeRarity: StoreRarity!
-    var gl: CAGradientLayer!
 
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var infoButton: UIButton!
     
     convenience init(events: StoreType) {
         self.init()
@@ -122,11 +122,7 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
-    override func viewDidLayoutSubviews() {
-        gl.frame = view.bounds
-    }
-    
+
     func getData() {
         SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
         SwiftSpinner.show("Getting last data!")
@@ -173,27 +169,30 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     }
 
     // MARK: - Visuals
-
-    private func backgroundGradient() {
-        let colorTop = UIColor(red: 55.0 / 255.0, green: 194.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 115.0 / 255.0, green: 50.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0).cgColor
-        
-        gl = CAGradientLayer()
-        gl.frame = view.bounds
-        gl.colors = [colorTop, colorBottom]
-        gl.locations = [0.0, 1.0]
-        gl.name = "background_gradient"
-        
-        view.backgroundColor = UIColor.clear
-        view.layer.insertSublayer(gl, at: 0)
-    }
     
     private func setVisuals() {
-        backgroundGradient()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BurbankBigCondensed-bold", size: 21)!]
         view.clipsToBounds = true
         
         // CollectionView thing
         collectionView.isPagingEnabled = false
+        
+        let gv = GradientView(frame: self.view.bounds)
+        self.view.insertSubview(gv, at: 0)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "disclamer" {
+            let popoverViewController = segue.destination
+            
+            popoverViewController.popoverPresentationController?.delegate = self
+            popoverViewController.popoverPresentationController?.sourceView = infoButton as UIView
+            popoverViewController.preferredContentSize = CGSize(width: 200, height: 50)
+            popoverViewController.popoverPresentationController?.sourceRect = infoButton.frame
+        }
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
     }
 }

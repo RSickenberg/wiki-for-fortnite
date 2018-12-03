@@ -45,25 +45,22 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     var cellParentId: Int = 0
     var index: Int?
-    var gl: CAGradientLayer!
 
     @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadData()
-        backgroundGradient()
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        let gv = GradientView(frame: self.view.bounds)
+        self.view.insertSubview(gv, at: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         reloadData()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        gl.frame = view.bounds
     }
 
     // MARK: - Data
@@ -109,19 +106,5 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         default:
             break
         }
-    }
-
-    private func backgroundGradient() {
-        let colorTop = UIColor(red: 55.0 / 255.0, green: 194.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 115.0 / 255.0, green: 50.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0).cgColor
-        
-        gl = CAGradientLayer()
-        gl.frame = view.bounds
-        gl.colors = [colorTop, colorBottom]
-        gl.locations = [0.0, 1.0]
-        gl.name = "background_gradient"
-        
-        view.backgroundColor = UIColor.clear
-        view.layer.insertSublayer(gl, at: 0)
     }
 }

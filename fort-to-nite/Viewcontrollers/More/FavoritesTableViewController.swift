@@ -92,11 +92,6 @@ class ItemCell: UITableViewCell {
         cellEntityName.text = nil
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.configure()
-    }
-    
     func modelItem(_ item: Items) {
         frame = UIScreen.main.bounds.standardized
         JsonService.list.setImageByItemId(item.id, imageView: cellImage)

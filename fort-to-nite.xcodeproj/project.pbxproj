@@ -34,6 +34,7 @@
 		07D460FA219D796800D0A8D6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D460F9219D796800D0A8D6 /* Store.swift */; };
 		07D460FC219DBA8000D0A8D6 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D460FB219DBA8000D0A8D6 /* StoreViewController.swift */; };
 		07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */; };
+		07D8EE1D21B5CB0C00904A46 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8EE1C21B5CB0C00904A46 /* GradientView.swift */; };
 		07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FC946C209C61970077D9B0 /* ErrorManager.swift */; };
 		4078F27132FA6ADC3B857935 /* Pods_fort_to_nite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		07D460F9219D796800D0A8D6 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		07D460FB219DBA8000D0A8D6 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
+		07D8EE1C21B5CB0C00904A46 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		07FC946C209C61970077D9B0 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fort_to_nite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +258,7 @@
 			children = (
 				070A2E7B2050766A00541779 /* WeaponsLevels.swift */,
 				071E386020775BBE006CAFD2 /* ShadowLayers.swift */,
+				07D8EE1C21B5CB0C00904A46 /* GradientView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			files = (
 				07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */,
 				07631E27207F93A90078267B /* DetailsItemViewController.swift in Sources */,
+				07D8EE1D21B5CB0C00904A46 /* GradientView.swift in Sources */,
 				07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */,
 				07493C9A20DD45BC00B7C5D1 /* FavoritesTableViewController.swift in Sources */,
 				07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */,

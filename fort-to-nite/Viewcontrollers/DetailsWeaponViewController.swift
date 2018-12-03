@@ -22,7 +22,6 @@ class DetailsWeaponViewController: UIViewController {
     var weaponInfo = Weapons()
     var weaponDetails = WeaponsDetails()
     var weaponModel = JsonService.list
-    var gl: CAGradientLayer!
     
     struct likeActions {
         let like: Bool
@@ -175,28 +174,9 @@ class DetailsWeaponViewController: UIViewController {
     }
 
     // MARK: - Visuals
-
-    private func backgroundGradient() {
-        let colorTop = UIColor(red: 55.0 / 255.0, green: 194.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 115.0 / 255.0, green: 50.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0).cgColor
-        
-        gl = CAGradientLayer()
-        gl.frame = view.bounds
-        gl.colors = [colorTop, colorBottom]
-        gl.locations = [0.0, 1.0]
-        gl.name = "background_gradient"
-        
-        view.backgroundColor = UIColor.clear
-        view.layer.insertSublayer(gl, at: 0)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        gl.frame = view.bounds
-    }
     
     private func prepareVisuals() {
         StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
-        backgroundGradient()
         
         detailsViewTitle.title = weaponInfo.name
         weaponModel.setImageByWeaponId(weaponInfo.id, imageView: weaponImage)
@@ -211,6 +191,9 @@ class DetailsWeaponViewController: UIViewController {
         styleLabels()
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let gv = GradientView(frame: self.view.bounds)
+        self.view.insertSubview(gv, at: 0)
     }
     
     private func statusAlert(statusAlertInstance: StatusAlert, action: likeActions) {

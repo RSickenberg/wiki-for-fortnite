@@ -50,7 +50,6 @@ class DetailsItemViewController: UIViewController {
     var itemDetails = ItemsDetails()
     var itemModel = JsonService.list
     var likeButtonState: Bool?
-    var gl: CAGradientLayer!
 
     // MARK: - Outlets
     
@@ -102,24 +101,6 @@ class DetailsItemViewController: UIViewController {
     }
 
     // MARK: - Visuals
-
-    private func backgroundGradient() {
-        let colorTop = UIColor(red: 55.0 / 255.0, green: 194.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 115.0 / 255.0, green: 50.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0).cgColor
-        
-        gl = CAGradientLayer()
-        gl.frame = view.bounds
-        gl.colors = [colorTop, colorBottom]
-        gl.locations = [0.0, 1.0]
-        gl.name = "background_gradient"
-        
-        view.backgroundColor = UIColor.clear
-        view.layer.insertSublayer(gl, at: 0)
-    }
-
-    override func viewDidLayoutSubviews() {
-        gl.frame = view.bounds
-    }
     
     private func getGradientValueForBackgroundImage() {
         FormatLevels().formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
@@ -156,13 +137,15 @@ class DetailsItemViewController: UIViewController {
     
     private func prepareVisuals() {
         StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
-        backgroundGradient()
         getGradientValueForBackgroundImage()
         styleLabels()
         itemModel.setImageByItemId(itemInfo.id, imageView: itemImage)
         titleView.title = itemInfo.name
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let gv = GradientView(frame: self.view.bounds)
+        self.view.insertSubview(gv, at: 0)
     }
     
     // MARK: - Values

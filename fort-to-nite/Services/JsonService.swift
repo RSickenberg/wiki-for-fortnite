@@ -76,6 +76,11 @@ class JsonService {
         if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
             jsonPath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             imagePath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+            storePath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        } else {
+            jsonPath.cachePolicy = .returnCacheDataElseLoad
+            imagePath.cachePolicy = .returnCacheDataElseLoad
+            storePath.cachePolicy = .returnCacheDataElseLoad
         }
     }
 
