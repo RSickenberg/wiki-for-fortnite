@@ -86,6 +86,11 @@ class ItemCell: UITableViewCell {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.configure()
+    }
+    
     override func prepareForReuse() {
         cellImage.af_cancelImageRequest()
         cellImage.image = nil
