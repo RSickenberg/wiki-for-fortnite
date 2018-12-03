@@ -36,7 +36,6 @@
 		07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */; };
 		07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FC946C209C61970077D9B0 /* ErrorManager.swift */; };
 		4078F27132FA6ADC3B857935 /* Pods_fort_to_nite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */; };
-		9E41EA36299FF0FB96442ED7 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +96,6 @@
 		07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
 		07FC946C209C61970077D9B0 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fort_to_nite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
 		C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99FDF51A974A26B2E116C33 /* Pods-fort-to-nite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fort-to-nite.release.xcconfig"; path = "Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite.release.xcconfig"; sourceTree = "<group>"; };
 		E531E0AFBF52C292F4A13E6C /* Pods-fort-to-nite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fort-to-nite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fort-to-nite/Pods-fort-to-nite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				070A2E7B2050766A00541779 /* WeaponsLevels.swift */,
-				9E41ED607C38987FCEC0A1B3 /* ColorsGradient.swift */,
 				071E386020775BBE006CAFD2 /* ShadowLayers.swift */,
 			);
 			path = Helpers;
@@ -548,7 +545,6 @@
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,
 				07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */,
 				070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */,
-				9E41EA36299FF0FB96442ED7 /* ColorsGradient.swift in Sources */,
 				07D460FC219DBA8000D0A8D6 /* StoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

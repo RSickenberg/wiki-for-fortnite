@@ -190,7 +190,12 @@ class DetailsForObjects {
     func setImageByStoreElementId(_ storeId: Int, _ imageView: UIImageView) {
         let storeElement = getStoreItemByManifestId(storeId)
         
-        imageView.af_setImage(withURL: URL(string: storeElement.imageUrl)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolderGray"), imageTransition: .crossDissolve(0.5) )
+        if (storeElement.imageUrl != "unknown") {
+            imageView.af_setImage(withURL: URL(string: storeElement.imageUrl)!, placeholderImage: UIImage(named: "storeimage"), imageTransition: .crossDissolve(0.5) )
+        }
+        else {
+            imageView.image = UIImage(named: "storeimage")
+        }
     }
     
     ////////////////////////////////////////////////////////////////////////////////////////// Others

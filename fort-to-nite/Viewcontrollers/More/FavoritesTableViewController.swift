@@ -158,6 +158,10 @@ class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITab
             noFavorites.showInKeyWindow()
         }
     }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        reloadTable()
+    }
 
     @objc private func reloadData(_ refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()

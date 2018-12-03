@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         siren.patchUpdateAlertType = .skip
         siren.revisionUpdateAlertType = .skip
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        //UIApplication.shared.statusBarStyle = .lightContent
         if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             print("Version : " + text)
         }

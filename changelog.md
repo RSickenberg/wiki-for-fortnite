@@ -193,3 +193,4 @@
 - BACKEND : New methods to call the model.
 - BACKEND : Store items are filtred by store category (daily, weekly).
 - BACKEND : Get a new endpoint for JSON version.
+- BUG : Fixed issues on background when rotation.

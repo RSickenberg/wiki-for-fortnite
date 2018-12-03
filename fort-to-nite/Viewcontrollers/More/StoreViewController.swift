@@ -40,11 +40,11 @@ enum StoreRarity {
 }
 
 class StoreCellViewController: UICollectionViewCell {
-    @IBOutlet var storeImage: UIImageView!
-    @IBOutlet var cellGradiantPrice: UIView!
-    @IBOutlet var storePrice: UILabel!
-    @IBOutlet var bluryView: UIView!
-    @IBOutlet var storeItemName: UILabel!
+    @IBOutlet weak var storeImage: UIImageView!
+    @IBOutlet weak var cellGradiantPrice: UIView!
+    @IBOutlet weak var storePrice: UILabel!
+    @IBOutlet weak var bluryView: UIView!
+    @IBOutlet weak var storeItemName: UILabel!
     
     func configure() {
         let shadowsOptions = ShadowLayers()
@@ -89,6 +89,11 @@ class StoreCellViewController: UICollectionViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        storeImage.af_cancelImageRequest()
+        storePrice.text = nil
+        storeItemName.text = nil
+    }
 }
 
 class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -96,6 +101,7 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     let list = JsonService.list
     var events: StoreType!
     var storeRarity: StoreRarity!
+    var gl: CAGradientLayer!
 
     @IBOutlet var collectionView: UICollectionView!
     
@@ -116,6 +122,11 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    override func viewDidLayoutSubviews() {
+        gl.frame = view.bounds
+    }
+
     
     func getData() {
         SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
@@ -163,9 +174,19 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     }
 
     // MARK: - Visuals
-    
+
     private func backgroundGradient() {
-        BackgroundColors().backgroundGradient(view: view)
+        let colorTop = UIColor(red: 55.0 / 255.0, green: 194.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 115.0 / 255.0, green: 50.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0).cgColor
+        
+        gl = CAGradientLayer()
+        gl.frame = view.bounds
+        gl.colors = [colorTop, colorBottom]
+        gl.locations = [0.0, 1.0]
+        gl.name = "background_gradient"
+        
+        view.backgroundColor = UIColor.clear
+        view.layer.insertSublayer(gl, at: 0)
     }
     
     private func setVisuals() {
