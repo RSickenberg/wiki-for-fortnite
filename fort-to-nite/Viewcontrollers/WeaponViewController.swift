@@ -58,7 +58,6 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     let levels = FormatLevels()
     let isFirstLaunch = UserDefaults.isFirstLaunch()
     let updateWelcome = UserDefaults.lastUpdate()
-//    var gl: CAGradientLayer!
     var cellParentId: Int = 0
     var index: Int?
 
@@ -124,10 +123,6 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     func reloadData() {
         collectionView?.reloadData()
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        gl.frame = view.bounds
-//    }
 
     // MARK: - Collection View
 
@@ -179,20 +174,4 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
             break
         }
     }
-
-    // MARK: - Visuals
-
-//    private func backgroundGradient() {
-//        let colorTop = UIColor(red: 55.0 / 255.0, green: 194.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0).cgColor
-//        let colorBottom = UIColor(red: 115.0 / 255.0, green: 50.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0).cgColor
-//
-//        gl = CAGradientLayer()
-//        gl.frame = view.bounds
-//        gl.colors = [colorTop, colorBottom]
-//        gl.locations = [0.0, 1.0]
-//        gl.name = "background_gradient"
-//
-//
-//        view.layer.insertSublayer(gl, at: 0)
-//    }
 }

@@ -32,8 +32,6 @@ class DetailsForObjects {
     
     private var storeCollection = [Store]()
     private var jsonVersion: String?
-    
-    private let imageCache = AutoPurgingImageCache()
 
     // MARK: - Weapons
 
