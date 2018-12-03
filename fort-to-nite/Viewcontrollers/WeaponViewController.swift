@@ -150,8 +150,10 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath) as! WeaponCollectionViewFooterCell
         let jsonVersion = list.getJsonVersion()
         footer.configure()
-        if (list.getJsonVersion() != "") {
+        if (jsonVersion != "") {
             footer.jsonVersion.text = "Data pulled from: V\(jsonVersion)"
+        } else {
+            footer.isHidden = true
         }
         return footer
     }
