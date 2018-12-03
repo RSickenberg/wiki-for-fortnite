@@ -100,11 +100,6 @@ class DetailsItemViewController: UIViewController {
             likeButtonState = false
         }
     }
-    
-    func viewDidLayoutSubviews(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        backgroundGradient()
-    }
-
 
     // MARK: - Visuals
 

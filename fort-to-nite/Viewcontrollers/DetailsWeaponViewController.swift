@@ -152,11 +152,6 @@ class DetailsWeaponViewController: UIViewController {
         getLikeStorage()
     }
     
-    func viewDidLayoutSubviews(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        backgroundGradient()
-    }
-
-    
     // MARK: - Logic
 
     private func prepareSegment() {

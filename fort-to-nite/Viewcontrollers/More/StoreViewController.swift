@@ -126,7 +126,6 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     override func viewDidLayoutSubviews() {
         gl.frame = view.bounds
     }
-
     
     func getData() {
         SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
