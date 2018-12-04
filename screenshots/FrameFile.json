@@ -1,0 +1,67 @@
+{
+	"device_frame_version": "latest",
+	"default": {
+		"keyword": {
+			"fonts": [
+				{
+					"font": "fonts/bc.otf",
+					"supported": ["de-DE", "en-US", "es-ES", "fr-FR", "it-IT", "nl-NL", "sv-SE", "pt-BR"]
+				}
+			]
+		},
+		"title": {
+			"fonts": [
+				{
+					"font": "fonts/bc.otf",
+					"supported": ["de-DE", "en-US", "es-ES", "fr-FR", "it-IT", "nl-NL", "sv-SE", "pt-BR"]
+				}
+			]
+		},
+		"background": "./background.jpg",
+		"padding": 50
+	},
+	"data": [
+		{
+			"filter": "main",
+			"title": {
+				"font": "fonts/bc.otf",
+				"color": "#FFFFFF"
+			}
+		},
+		{
+			"filter": "wpfv",
+			"title": {
+				"font": "fonts/bc.otf",
+				"color": "#FFFFFF"
+			}
+		},
+		{
+			"filter": "itm",
+			"title": {
+				"font": "fonts/bc.otf",
+				"color": "#FFFFFF"
+			}
+		},
+		{
+			"filter": "shld",
+			"title": {
+				"font": "fonts/bc.otf",
+				"color": "#FFFFFF"
+			}
+		},
+		{
+			"filter": "fav",
+			"title": {
+				"font": "fonts/bc.otf",
+				"color": "#FFFFFF"
+			}
+		},
+		{
+			"filter": "market",
+			"title": {
+				"font": "fonts/bc.otf",
+				"color": "#FFFFFF"
+			}
+		}
+	]
+}
