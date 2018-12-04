@@ -136,7 +136,7 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
             case .failure(_):
                 SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
                     self?.getData()
-                }, subtitle: "API may be unavailable, please retry")
+                }, subtitle: "API may be unavailable, please retry in one minute.")
             }
         }
         
