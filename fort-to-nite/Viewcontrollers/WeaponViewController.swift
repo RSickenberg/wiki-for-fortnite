@@ -45,6 +45,11 @@ class WeaponCollectionViewFooterCell : UICollectionViewCell {
     func configure() {
         let shadowsOptions = ShadowLayers()
         shadowsOptions.setShadow(label: jsonVersion)
+        self.isHidden = false
+    }
+    
+    func hide() {
+        self.isHidden = true
     }
     
 }
@@ -149,11 +154,11 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath) as! WeaponCollectionViewFooterCell
         let jsonVersion = list.getJsonVersion()
-        footer.configure()
         if (jsonVersion != "") {
+            footer.configure()
             footer.jsonVersion.text = "Data pulled from: V\(jsonVersion)"
         } else {
-            footer.isHidden = true
+            footer.hide()
         }
         return footer
     }
