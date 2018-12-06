@@ -153,7 +153,7 @@ class DetailsWeaponViewController: UIViewController {
     
     // MARK: - Logic
 
-    func prepareSegment() {
+    private func prepareSegment() {
         levelOfWeaponSwitch.removeAllSegments()
         let listOfLevels = weaponModel.getLevelsByWeaponId(weaponInfo.id)
         let titles = ["Common", "Atypical", "Rare", "Epic", "Legendary"]
@@ -163,7 +163,7 @@ class DetailsWeaponViewController: UIViewController {
         levelOfWeaponSwitch.selectedSegmentIndex = 0
     }
     
-    func getLikeStorage() {
+    private func getLikeStorage() {
         if likeStorage.bool(forKey: "weapon_like_\(weaponInfo.id)") {
             likeButton.image = #imageLiteral(resourceName: "loveIconFull")
             likeButtonState = true
@@ -174,14 +174,9 @@ class DetailsWeaponViewController: UIViewController {
     }
 
     // MARK: - Visuals
-
-    private func backgroundGradient() {
-        BackgroundColors().backgroundGradient(view: view)
-    }
     
     private func prepareVisuals() {
         StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
-        backgroundGradient()
         
         detailsViewTitle.title = weaponInfo.name
         weaponModel.setImageByWeaponId(weaponInfo.id, imageView: weaponImage)
@@ -196,6 +191,9 @@ class DetailsWeaponViewController: UIViewController {
         styleLabels()
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let gv = GradientView(frame: self.view.bounds)
+        self.view.insertSubview(gv, at: 0)
     }
     
     private func statusAlert(statusAlertInstance: StatusAlert, action: likeActions) {

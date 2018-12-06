@@ -38,35 +38,31 @@ class fort_to_niteUIScreenshots: XCTestCase {
     
     func testExample() {
         let app = XCUIApplication()
-        snapshot("01WeaponsCollections")
-        app.collectionViews.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.tap()
+        XCUIApplication().buttons["Discover your app."].tap()
+        sleep(1)
+        snapshot("01Main")
+        let collectionViewsQuery = app.collectionViews
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.tap()
+        snapshot("02WpFv")
         app.navigationBars["Assault Rifle (burst)"].buttons["Item"].tap()
-        sleep(3)
-        
-        app.tabBars.buttons["Weapons"].tap()
-        app.collectionViews.children(matching: .cell).element(boundBy: 2).children(matching: .other).element.tap()
-        snapshot("02Weapon1")
-        
-        let itemButton = app.navigationBars["Assault Rifle (SCAR)"].buttons["Item"]
-        itemButton.tap()
-        sleep(3)
-        
-        let tabBarsQuery = XCUIApplication().tabBars
-        tabBarsQuery.buttons["Weapons"].tap()
+        sleep(2)
+        let tabBarsQuery = app.tabBars
         tabBarsQuery.buttons["Items"].tap()
-        snapshot("03ItemsCollections")
-        app.collectionViews.children(matching: .cell).element(boundBy: 6).children(matching: .other).element.tap()
-        snapshot("04Item1")
-        app.navigationBars["Slurp juice"].buttons["Item"].tap()
-        sleep(3)
-        
-        app.tabBars.buttons["Items"].tap()
-        app.collectionViews.children(matching: .cell).element(boundBy: 4).children(matching: .other).element.tap()
-        app.navigationBars["Medium shield"].buttons["Item"].tap()
-        sleep(3)
-        app.tabBars.buttons["More"].tap()
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Your Favorites."]/*[[".cells.staticTexts[\"Your Favorites.\"]",".staticTexts[\"Your Favorites.\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        snapshot("05Favorites")
+        snapshot("03Itm")
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 4).children(matching: .other).element.children(matching: .image).element.tap()
+        snapshot("03shld")
+        app.navigationBars["Medium Shield"].buttons["Item"].tap()
+        sleep(2)
+        tabBarsQuery.buttons["Favorites"].tap()
+        XCUIApplication().tables.containing(.other, identifier:"Weapons").element.tap()
+        let weaponsTable = XCUIApplication().tables.containing(.other, identifier:"Weapons").element
+        weaponsTable.swipeDown()
+        sleep(2)
+        snapshot("04Fav")
+        tabBarsQuery.buttons["Market"].tap()
+        sleep(4)
+        snapshot("05Market")
+
     }
     
 }

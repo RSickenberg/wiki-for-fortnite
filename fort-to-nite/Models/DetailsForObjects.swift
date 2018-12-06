@@ -4,13 +4,14 @@
 //
 //  Created by Romain Sickenberg on 06.03.18.
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
+//
 //  README: You need to add only one weapon for all of his levels like (AR + Details for Grey level) -> (Details for green level) -> (Details for blue level) /!\ DON'T FORGET THE WEAPONID TO MATCH THE DETAILS WITH THE WEAPON
+//
 //          Grey : color 0 / detailLevel 0
 //          Green : color 1 / detailLevel 1
 //          Blue : color 2 / detailLevel 2
 //          Purple : color 3 / detailLevel 3
 //          Gold :  color 4 / detailLevel 4
-//
 //
 //  Since 3.4, weapons can have dissociated style, or colors, like: green / blue
 //  For new methods, please, take note of this.
@@ -28,6 +29,9 @@ class DetailsForObjects {
     private var itemsCollection = [Items]()
     private var itemsDetails = [ItemsDetails]()
     private var itemsCategory = [Int]()
+    
+    private var storeCollection = [Store]()
+    private var jsonVersion: String?
 
     // MARK: - Weapons
 
@@ -160,5 +164,48 @@ class DetailsForObjects {
         let url = (JsonService.shared.imagePath.url?.absoluteString)! + item.img
         
         imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolderGray"), imageTransition: .crossDissolve(0.5))
+    }
+    
+    /////////////////////////////////////////////////////////////////////////////////////////// STORE
+    // MARK: - Store
+    
+    func addStoreToDB(_ storeState: Store) {
+        storeCollection.append(storeState)
+    }
+    
+    func getAllStoreItems() -> [Store] {
+        return storeCollection
+    }
+    
+    func getStoreItemByIndex(_ storeIndex: Int) -> Store {
+        return storeCollection[storeIndex]
+    }
+    
+    func getStoreItemByManifestId(_ storeId: Int) -> Store {
+        let key = storeCollection.index(where: { $0.manifestId == storeId })
+        
+        return storeCollection[key!]
+    }
+    
+    func setImageByStoreElementId(_ storeId: Int, _ imageView: UIImageView) {
+        let storeElement = getStoreItemByManifestId(storeId)
+        
+        if (storeElement.imageUrl != "unknown") {
+            imageView.af_setImage(withURL: URL(string: storeElement.imageUrl)!, placeholderImage: UIImage(named: "storeimage"), imageTransition: .crossDissolve(0.5) )
+        }
+        else {
+            imageView.image = UIImage(named: "storeimage")
+        }
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////////// Others
+    // MARK: - MISC
+    
+    func setJsonVersion(_ version: String) {
+        jsonVersion = version
+    }
+    
+    func getJsonVersion() -> String {
+        return jsonVersion ?? ""
     }
 }

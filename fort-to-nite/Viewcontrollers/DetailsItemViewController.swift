@@ -90,7 +90,7 @@ class DetailsItemViewController: UIViewController {
 
     // MARK: - Data
 
-    func getLikeStorage() {
+    private func getLikeStorage() {
         if likeStorage.bool(forKey: "item_like_\(itemInfo.id)") {
             likeButton.image = #imageLiteral(resourceName: "loveIconFull")
             likeButtonState = true
@@ -101,11 +101,7 @@ class DetailsItemViewController: UIViewController {
     }
 
     // MARK: - Visuals
-
-    private func backgroundGradient() {
-        BackgroundColors().backgroundGradient(view: view)
-    }
-
+    
     private func getGradientValueForBackgroundImage() {
         FormatLevels().formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
         shadows.setShadow(image: itemImage)
@@ -141,13 +137,15 @@ class DetailsItemViewController: UIViewController {
     
     private func prepareVisuals() {
         StatusAlert.multiplePresentationsBehavior = .dismissCurrentlyPresented
-        backgroundGradient()
         getGradientValueForBackgroundImage()
         styleLabels()
         itemModel.setImageByItemId(itemInfo.id, imageView: itemImage)
         titleView.title = itemInfo.name
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let gv = GradientView(frame: self.view.bounds)
+        self.view.insertSubview(gv, at: 0)
     }
     
     // MARK: - Values

@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     enum ShortCut: String {
         case favortites = "favorite"
+        case market = "market"
     }
 
     var window: UIWindow?
@@ -104,8 +105,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 vc.getFavorites()
                 vc.reloadTable()
                 quickActionHandled = true
+                break
+            case .market:
+                tabBar.selectedIndex = 3
+                guard let nvc = tabBar.viewControllers?.last as? UINavigationController else { return false }
+                guard let vc = nvc.viewControllers.first as? StoreViewController else { return false }
+                nvc.popToRootViewController(animated: true)
+                vc.getData()
+                quickActionHandled = true
+                break
             }
         }
         return quickActionHandled
+    }
+}
+
+extension UserDefaults {
+    // check for is first launch - only true on first invocation after app install, false on all further invocations
+    // Note: Store this value in AppDelegate if you have multiple places where you are checking for this flag$
+    // https://stackoverflow.com/questions/27208103/detect-first-launch-of-ios-app
+    static func isFirstLaunch() -> Bool {
+        let hasBeenLaunchedBeforeFlag = "hasBeenLaunchedBeforeFlag"
+        let isFirstLaunch = !UserDefaults.standard.bool(forKey: hasBeenLaunchedBeforeFlag)
+        if (isFirstLaunch) {
+            UserDefaults.standard.set(true, forKey: hasBeenLaunchedBeforeFlag)
+            UserDefaults.standard.synchronize()
+        }
+        return isFirstLaunch
+    }
+    
+    static func lastUpdate() -> Bool {
+        let lastVersion = "1.0.9"
+        let actualVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let isANewVersion = !UserDefaults.standard.bool(forKey: lastVersion)
+        
+        if (isANewVersion && lastVersion != actualVersion) {
+            UserDefaults.standard.set(true, forKey: lastVersion)
+        }
+        
+        return isANewVersion
     }
 }

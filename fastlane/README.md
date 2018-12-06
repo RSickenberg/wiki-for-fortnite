@@ -31,6 +31,11 @@ fastlane ios after_integration
 fastlane ios beta
 ```
 Push a new beta build to TestFlight
+### ios frame
+```
+fastlane ios frame
+```
+Frame some screenshots
 
 ----
 

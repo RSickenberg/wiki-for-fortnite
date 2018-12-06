@@ -86,15 +86,15 @@ class ItemCell: UITableViewCell {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.configure()
+    }
+    
     override func prepareForReuse() {
         cellImage.af_cancelImageRequest()
         cellImage.image = nil
         cellEntityName.text = nil
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.configure()
     }
     
     func modelItem(_ item: Items) {
@@ -157,6 +157,10 @@ class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITab
             statusAlert(statusAlertInstance: noFavorites)
             noFavorites.showInKeyWindow()
         }
+    }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        reloadTable()
     }
 
     @objc private func reloadData(_ refreshControl: UIRefreshControl) {

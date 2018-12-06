@@ -11,33 +11,6 @@ import ChameleonFramework
 import SwiftSpinner
 import StoreKit
 
-extension UserDefaults {
-    // check for is first launch - only true on first invocation after app install, false on all further invocations
-    // Note: Store this value in AppDelegate if you have multiple places where you are checking for this flag$
-    // https://stackoverflow.com/questions/27208103/detect-first-launch-of-ios-app
-    static func isFirstLaunch() -> Bool {
-        let hasBeenLaunchedBeforeFlag = "hasBeenLaunchedBeforeFlag"
-        let isFirstLaunch = !UserDefaults.standard.bool(forKey: hasBeenLaunchedBeforeFlag)
-        if (isFirstLaunch) {
-            UserDefaults.standard.set(true, forKey: hasBeenLaunchedBeforeFlag)
-            UserDefaults.standard.synchronize()
-        }
-        return isFirstLaunch
-    }
-    
-    static func lastUpdate() -> Bool {
-        let lastVersion = "1.0.8"
-        let actualVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        let isANewVersion = !UserDefaults.standard.bool(forKey: lastVersion)
-        
-        if (isANewVersion && lastVersion != actualVersion) {
-            UserDefaults.standard.set(true, forKey: lastVersion)
-        }
-        
-        return isANewVersion
-    }
-}
-
 class WeaponCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellimageView: UIImageView!
     @IBOutlet weak var cellGradientName: UIView!
@@ -66,6 +39,21 @@ class WeaponCollectionCell: UICollectionViewCell {
     }
 }
 
+class WeaponCollectionViewFooterCell : UICollectionViewCell {
+    @IBOutlet weak var jsonVersion: UILabel!
+    
+    func configure() {
+        let shadowsOptions = ShadowLayers()
+        shadowsOptions.setShadow(label: jsonVersion)
+        self.isHidden = false
+    }
+    
+    func hide() {
+        self.isHidden = true
+    }
+    
+}
+
 class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     // MARK: - Declarations
@@ -89,7 +77,11 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         
         if updateWelcome && !isFirstLaunch {
-            let twoSecondsFromNow = DispatchTime.now() + 3.0
+            if (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String == "1.1.0") {
+                self.present(NewKitViewController.whatsNew11ViewController, animated: true)
+            }
+
+            let twoSecondsFromNow = DispatchTime.now() + 10.0
             DispatchQueue.main.asyncAfter(deadline: twoSecondsFromNow) { [navigationController] in
                 if navigationController?.topViewController is WeaponViewController {
                     if #available(iOS 10.3, *) {
@@ -100,7 +92,8 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
         }
         
-        backgroundGradient()
+        let gv = GradientView(frame: self.view.bounds)
+        self.view.insertSubview(gv, at: 0)
         getData()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -157,6 +150,18 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
 
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath) as! WeaponCollectionViewFooterCell
+        let jsonVersion = list.getJsonVersion()
+        if (jsonVersion != "") {
+            footer.configure()
+            footer.jsonVersion.text = "Data pulled from: V\(jsonVersion)"
+        } else {
+            footer.hide()
+        }
+        return footer
+    }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         index = indexPath.row
@@ -175,11 +180,5 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         default:
             break
         }
-    }
-
-    // MARK: - Visuals
-
-    private func backgroundGradient() {
-        BackgroundColors().backgroundGradient(view: view)
     }
 }

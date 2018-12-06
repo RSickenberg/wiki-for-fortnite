@@ -1,15 +1,15 @@
 PODS:
-  - Alamofire (4.7.3)
-  - AlamofireImage (3.4.1):
-    - Alamofire (~> 4.7)
+  - Alamofire (4.8.0)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Crashlytics (3.11.1):
-    - Fabric (~> 1.8.1)
-  - Fabric (1.8.2)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
   - PKHUD (5.2.0)
-  - Siren (3.8.0)
+  - Siren (3.9.1)
   - StatusAlert (0.12.2)
   - SwiftSpinner (1.6.2)
   - WhatsNewKit (1.1.3)
@@ -23,7 +23,7 @@ DEPENDENCIES:
   - Siren
   - StatusAlert (~> 0.12.1)
   - SwiftSpinner
-  - WhatsNewKit (~> 1.1.1)
+  - WhatsNewKit (~> 1.1.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -47,17 +47,17 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
-  Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
-  Siren: a815ad8d6ae7e62148ffc0b9859fd65d34890e3a
+  Siren: 22b68056e52c5b6707bcbfac09d2d16874ee098a
   StatusAlert: c2935888a01e89efc0f4478d7c452140386559ea
   SwiftSpinner: 3a4c6dea425e5a31b908a8b1dd5dcd1ad4d96340
   WhatsNewKit: fa893666dd8dbbf4ded92c10d45526629d5cabf0
 
-PODFILE CHECKSUM: f2e3ad11315f2389826ac9dc55c3904a816010da
+PODFILE CHECKSUM: 67728319cb009f93f10df73515e5434584c6b2fa
 
 COCOAPODS: 1.5.3

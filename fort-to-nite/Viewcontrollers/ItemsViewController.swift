@@ -51,9 +51,11 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadData()
-        backgroundGradient()
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        let gv = GradientView(frame: self.view.bounds)
+        self.view.insertSubview(gv, at: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,9 +106,5 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         default:
             break
         }
-    }
-
-    private func backgroundGradient() {
-        BackgroundColors().backgroundGradient(view: view)
     }
 }

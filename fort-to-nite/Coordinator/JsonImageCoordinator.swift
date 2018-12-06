@@ -30,4 +30,17 @@ class JsonImageCoordinator {
             }
         }
     }
+    
+    func syncJsonStore(completion: @escaping (ConnectionStoreResult) -> ()) {
+        json.fetchJsonStoreAlamo() { [weak self] result in
+            
+            guard self != nil else { return }
+            switch result {
+            case .success(let jsonData) :
+                completion(.success(jsonData))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
