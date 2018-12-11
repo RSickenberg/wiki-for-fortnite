@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-bold", size: 13)!], for: .normal)
         UITableView.appearance().separatorColor = UIColor.black
         
-        siren.checkVersion(checkType: .weekly)
+        siren.checkVersion(checkType: .immediately)
         return true
     }
     

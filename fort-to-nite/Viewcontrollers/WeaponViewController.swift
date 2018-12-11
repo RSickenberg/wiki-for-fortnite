@@ -77,10 +77,6 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         
         if updateWelcome && !isFirstLaunch {
-            if (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String == "1.1.0") {
-                self.present(NewKitViewController.whatsNew11ViewController, animated: true)
-            }
-
             let twoSecondsFromNow = DispatchTime.now() + 10.0
             DispatchQueue.main.asyncAfter(deadline: twoSecondsFromNow) { [navigationController] in
                 if navigationController?.topViewController is WeaponViewController {

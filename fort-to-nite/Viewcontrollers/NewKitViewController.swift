@@ -15,7 +15,6 @@ enum completionResult {
 
 class NewKitViewController {
     var configuration = WhatsNewViewController.Configuration()
-    var configuration11 = WhatsNewViewController.Configuration()
     
     init() {
         configuration.apply(theme: .darkOrange)
@@ -32,14 +31,6 @@ class NewKitViewController {
             titleColor: .orange
         )
         configuration.detailButton = detailButton
-        
-        configuration11 = configuration // Welcome 1.1, remove on 1.1.2?
-        
-        configuration11.completionButton.title = "Discover the 1.1"
-        configuration11.detailButton = nil
-        configuration11.completionButton.action = .custom(action: { [weak self] WhatsNewViewController in
-            
-        })
     }
     
     static let welcomeNew = WhatsNew(
@@ -68,35 +59,9 @@ class NewKitViewController {
         ]
     )
     
-    static let welcome11 = WhatsNew(
-        title: "Version 1.1",
-        items: [
-            WhatsNew.Item(
-                title: "Live Market",
-                subtitle: "Have a direct view of the market in the real game!",
-                image: nil
-            ),
-            WhatsNew.Item(
-                title: "New Icons",
-                subtitle: "Some icons have been redesigned to match the new ones",
-                image: nil
-            ),
-            WhatsNew.Item(
-                title: "4.5k Downloads!",
-                subtitle: "A huge thanks, Fort-to-nite passed top 25 in reference section!",
-                image: nil
-            )
-        ]
-    )
-    
     static let whatsNewViewController = WhatsNewViewController(
         whatsNew: welcomeNew,
         configuration: NewKitViewController().configuration
-    )
-    
-    static let whatsNew11ViewController = WhatsNewViewController(
-        whatsNew: welcome11,
-        configuration: NewKitViewController().configuration11
     )
     
     func getConnectionResult(completion: @escaping (completionResult) -> ()) {

@@ -177,7 +177,7 @@
 - APP : Siren who notify user for updates.
 
 # 1.1.0
-> Beta
+> Production
 
 - NEW : Have the Fortnite Market inside Fort-to-nite !
 - NEW : New tab bar icons.
@@ -194,3 +194,10 @@
 - BACKEND : Store items are filtred by store category (daily, weekly).
 - BACKEND : Get a new endpoint for JSON version.
 - BUG : Fixed issues on background when rotation.
+
+# 1.1.1
+> Prod
+
+- UI : Added color combinaisons of levels 1, 2, 3, 4, 5
+
+- BUG : Fixed a bug on start position about UIScrollView.
