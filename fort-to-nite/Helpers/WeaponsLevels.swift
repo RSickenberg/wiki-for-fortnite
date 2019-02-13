@@ -14,7 +14,7 @@ class FormatLevels {
     let shadows = ShadowLayers()
     let color0 = [HexColor("969696")!, HexColor("4A4A4A")!]
     let color1 = [HexColor("69E41A")!, HexColor("037E00")!]
-    let color2 = [HexColor("00BFFF")!, HexColor("005999")!]
+    let color2 = [HexColor("00BFFF")!, HexColor("004080")!]
     let color3 = [HexColor("D257FF")!, HexColor("530080")!]
     let color4 = [HexColor("FFD528")!, HexColor("805600")!]
 
@@ -88,19 +88,19 @@ class FormatLevels {
     func formatCellGradient(cell: UICollectionViewCell, level: Int) {
         switch level {
         case 0:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4A4A4A")!, HexColor("969696")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color0.reversed())
             break
         case 1:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("037E00")!, HexColor("69E41A")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color1.reversed())
             break
         case 2:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("004080")!, HexColor("00BFFF")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color2.reversed())
             break
         case 3:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("530080")!, HexColor("D257FF")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color3.reversed())
             break
         case 4:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("805600")!, HexColor("FFD528")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color4.reversed())
             break
         default:
             cell.backgroundColor = UIColor.black
@@ -145,19 +145,19 @@ class FormatLevels {
     func formatCellGradient(cell: UITableViewCell, level: Int) {
         switch level {
         case 0:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("4A4A4A")!, HexColor("969696")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color0.reversed())
             break
         case 1:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("037E00")!, HexColor("69E41A")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color1.reversed())
             break
         case 2:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("004080")!, HexColor("00BFFF")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color2.reversed())
             break
         case 3:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("530080")!, HexColor("D257FF")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color3.reversed())
             break
         case 4:
-            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: [HexColor("805600")!, HexColor("FFD528")!])
+            cell.backgroundColor = GradientColor(UIGradientStyle.diagonal, frame: cell.frame, colors: color4.reversed())
             break
         default:
             cell.backgroundColor = UIColor.black
