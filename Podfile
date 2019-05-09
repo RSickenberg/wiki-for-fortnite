@@ -14,7 +14,7 @@ target 'fort-to-nite' do
   pod 'StatusAlert', '~> 0.12.1'
   pod 'WhatsNewKit', '~> 1.1.3'
   pod 'SwiftSpinner'
-  pod 'Siren'
+  pod 'Siren', '~> 3.9.1'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|

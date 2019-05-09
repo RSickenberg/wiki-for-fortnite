@@ -62,7 +62,7 @@ class DetailsForObjects {
     }
     
     func getWeaponsByWeaponId(weaponId: Int) -> Weapons {
-        let key = weaponsCollection.index(where: { $0.id == weaponId })
+        let key = weaponsCollection.firstIndex(where: { $0.id == weaponId })
         
         return weaponsCollection[key!]
     }
@@ -72,13 +72,13 @@ class DetailsForObjects {
     }
 
     func getDetailsByWeaponId(weaponId: Int) -> WeaponsDetails {
-        let key = weaponsDetails.index(where: { $0.weaponId == weaponId })
+        let key = weaponsDetails.firstIndex(where: { $0.weaponId == weaponId })
 
         return weaponsDetails[key!]
     }
 
     func getDetailsByWeaponIdAndLevel(weaponId: Int, weaponLevel: Int) -> WeaponsDetails {
-        let key = weaponsDetails.index(where: { $0.weaponId == weaponId && $0.detailLevel == weaponLevel })
+        let key = weaponsDetails.firstIndex(where: { $0.weaponId == weaponId && $0.detailLevel == weaponLevel })
 
         return weaponsDetails[key!]
     }
@@ -140,7 +140,7 @@ class DetailsForObjects {
     }
     
     func getItemsByItemId(itemId: Int) -> Items {
-        let key = itemsCollection.index(where: { $0.id == itemId })
+        let key = itemsCollection.firstIndex(where: { $0.id == itemId })
         
         return itemsCollection[key!]
     }
@@ -154,7 +154,7 @@ class DetailsForObjects {
     }
 
     func getDetailsByItemId(itemId: Int) -> ItemsDetails {
-        let key = itemsDetails.index(where: { $0.itemId == itemId })
+        let key = itemsDetails.firstIndex(where: { $0.itemId == itemId })
 
         return itemsDetails[key!]
     }
@@ -182,7 +182,7 @@ class DetailsForObjects {
     }
     
     func getStoreItemByManifestId(_ storeId: Int) -> Store {
-        let key = storeCollection.index(where: { $0.manifestId == storeId })
+        let key = storeCollection.firstIndex(where: { $0.manifestId == storeId })
         
         return storeCollection[key!]
     }
