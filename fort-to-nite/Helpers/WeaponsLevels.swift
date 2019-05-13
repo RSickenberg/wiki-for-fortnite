@@ -17,9 +17,9 @@ class FormatLevels {
     let color2 = [HexColor("00BFFF")!, HexColor("004080")!]
     let color3 = [HexColor("D257FF")!, HexColor("530080")!]
     let color4 = [HexColor("FFD528")!, HexColor("805600")!]
+    let color5 = [HexColor("FF5D28")!, HexColor("E01F18")!]
 
     func formatUIBackgroundViewFromLevel(view: UIView, level: Int) {
-
         switch level {
         case 0:
             view.backgroundColor = GradientColor(UIGradientStyle.radial, frame: view.frame, colors: color0)
@@ -35,6 +35,9 @@ class FormatLevels {
             break
         case 4:
             view.backgroundColor = GradientColor(UIGradientStyle.radial, frame: view.frame, colors: color4)
+            break
+        case 5:
+            view.backgroundColor = GradientColor(UIGradientStyle.radial, frame: view.frame, colors: color5)
             break
         default:
             view.backgroundColor = GradientColor(UIGradientStyle.radial, frame: view.frame, colors: color1)

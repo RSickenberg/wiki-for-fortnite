@@ -82,10 +82,10 @@ class StoreCellViewController: UICollectionViewCell {
             levels.formatUIBackgroundViewFromLevel(view: self, level: 2)
         case "Quality":
             levels.formatUIBackgroundViewFromLevel(view: self, level: 3)
-        case "Fine":
+        case "Fine", "Legendary":
             levels.formatUIBackgroundViewFromLevel(view: self, level: 4)
         default:
-            self.backgroundColor = UIColor.clear
+            levels.formatUIBackgroundViewFromLevel(view: self, level: -1)
         }
     }
     
