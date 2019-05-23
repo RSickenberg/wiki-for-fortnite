@@ -196,8 +196,14 @@
 - BUG : Fixed issues on background when rotation.
 
 # 1.1.1
-> Prod
 
 - UI : Added color combinaisons of levels 1, 2, 3, 4, 5
 
 - BUG : Fixed a bug on start position about UIScrollView.
+
+# 1.1.2
+> Prod
+
+- UI: Fixed a bug about store when a key is not found.
+- Renamed app form "Fort-to-nite" => "Wiki for Fortnite".  😢
+- Changed the logo aswell.

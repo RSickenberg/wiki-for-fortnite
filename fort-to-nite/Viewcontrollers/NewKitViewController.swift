@@ -34,7 +34,7 @@ class NewKitViewController {
     }
     
     static let welcomeNew = WhatsNew(
-        title: "FORT-TO-NITE",
+        title: "Wiki for Fortnite",
         items: [
             WhatsNew.Item(
                 title: "Data (always) up to date !",
