@@ -28,6 +28,8 @@
 		0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749725C204E7169006048C6 /* DetailsForObjects.swift */; };
 		07631E27207F93A90078267B /* DetailsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07631E26207F93A90078267B /* DetailsItemViewController.swift */; };
 		076640792093516E0044900D /* JsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076640782093516E0044900D /* JsonService.swift */; };
+		076B4E28229E708000F398ED /* Throwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076B4E27229E708000F398ED /* Throwable.swift */; };
+		07714935229E700800C5BA37 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07714934229E700800C5BA37 /* UserDefaults.swift */; };
 		079449B02100FEB400682F03 /* BurbankBigRegular-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */; };
 		07B1C9922100F47700DD7807 /* NewKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1C9912100F47700DD7807 /* NewKitViewController.swift */; };
 		07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BDBDD7207D4FCB00BD5682 /* ItemsDetails.swift */; };
@@ -86,6 +88,8 @@
 		0749725C204E7169006048C6 /* DetailsForObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsForObjects.swift; sourceTree = "<group>"; };
 		07631E26207F93A90078267B /* DetailsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemViewController.swift; sourceTree = "<group>"; };
 		076640782093516E0044900D /* JsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
+		076B4E27229E708000F398ED /* Throwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throwable.swift; sourceTree = "<group>"; };
+		07714934229E700800C5BA37 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigRegular-Light.otf"; sourceTree = "<group>"; };
 		07B1C9912100F47700DD7807 /* NewKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKitViewController.swift; sourceTree = "<group>"; };
 		07B26FE5204ED15C008F9E3A /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = changelog.md; path = ../../changelog.md; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				073A3714204D7CBA001D4AF5 /* AppDelegate.swift */,
+				07714933229E6FF600C5BA37 /* Extensions */,
 				07FC946B209C618A0077D9B0 /* Managers */,
 				07281F2520AF0BBB0070BF57 /* Coordinator */,
 				073A372D204D8BB6001D4AF5 /* Helpers */,
@@ -287,6 +292,15 @@
 				076640782093516E0044900D /* JsonService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		07714933229E6FF600C5BA37 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07714934229E700800C5BA37 /* UserDefaults.swift */,
+				076B4E27229E708000F398ED /* Throwable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		07FC946B209C618A0077D9B0 /* Managers */ = {
@@ -537,6 +551,7 @@
 				07D8EE1D21B5CB0C00904A46 /* GradientView.swift in Sources */,
 				07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */,
 				07493C9A20DD45BC00B7C5D1 /* FavoritesTableViewController.swift in Sources */,
+				07714935229E700800C5BA37 /* UserDefaults.swift in Sources */,
 				07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */,
 				073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */,
 				0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */,
@@ -549,6 +564,7 @@
 				073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */,
 				07D460FA219D796800D0A8D6 /* Store.swift in Sources */,
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,
+				076B4E28229E708000F398ED /* Throwable.swift in Sources */,
 				07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */,
 				070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */,
 				07D460FC219DBA8000D0A8D6 /* StoreViewController.swift in Sources */,

@@ -32,17 +32,6 @@ enum Throwable<T: Decodable>: Decodable {
     }
 }
 
-extension Throwable {
-    var value: T? {
-        switch self {
-        case .failure(let error):
-            return error as? T
-        case .success(let value):
-            return value
-        }
-    }
-}
-
 enum ConnectionResult {
     case success(jsonStruct), failure(Error)
 }
