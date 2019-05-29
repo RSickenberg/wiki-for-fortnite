@@ -5,9 +5,9 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Crashlytics (3.12.0):
-    - Fabric (~> 1.9.0)
-  - Fabric (1.9.0)
+  - Crashlytics (3.13.1):
+    - Fabric (~> 1.10.1)
+  - Fabric (1.10.1)
   - Peek (5.2.0)
   - PKHUD (5.2.1)
   - Siren (3.9.2)
@@ -53,8 +53,8 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
-  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  Crashlytics: 5aa8e90dcbf2f34898b4f5a0037787531246cca0
+  Fabric: f6f21452846788bb44595d73e9909d79d328e617
   Peek: 77f6362167c00aab3f1147d92d51bdf80d259d45
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
   Siren: 579caf1c0296818bf46c0d90555c09014e189eb1
