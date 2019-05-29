@@ -135,7 +135,7 @@ extension UserDefaults {
     }
     
     static func lastUpdate() -> Bool {
-        let lastVersion = "1.1.1"
+        let lastVersion = "1.1.2"
         let actualVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let isANewVersion = !UserDefaults.standard.bool(forKey: lastVersion)
         
