@@ -377,6 +377,7 @@
 				073A370E204D7CBA001D4AF5 /* Frameworks */,
 				073A370F204D7CBA001D4AF5 /* Resources */,
 				69C050CC3CB90C75EE92D030 /* [CP] Embed Pods Frameworks */,
+				070C277722B0026D002E073F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -470,6 +471,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		070C277722B0026D002E073F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" 2b7f2649a89ec7162a4267caf217664a08962c85 50367c86428d4213370371894fe86ae1c9366798d1baa2dc1fe6a090fc7734a7 2b7f2649a89ec7162a4267caf217664a08962c85 50367c86428d4213370371894fe86ae1c9366798d1baa2dc1fe6a090fc7734a7\n";
+		};
 		69C050CC3CB90C75EE92D030 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,7 +503,6 @@
 				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 				"${BUILT_PRODUCTS_DIR}/WhatsNewKit/WhatsNewKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Peek/Peek.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -497,7 +514,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WhatsNewKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Peek.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

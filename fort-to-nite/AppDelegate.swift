@@ -11,6 +11,7 @@ import UIKit
 import Crashlytics
 import StatusAlert
 import Siren
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -57,6 +58,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITableView.appearance().separatorColor = UIColor.black
         
         siren.checkVersion(checkType: .immediately)
+        
+        Fabric.with([Crashlytics.self])
+        
         return true
     }
     

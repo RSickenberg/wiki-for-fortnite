@@ -8,7 +8,6 @@ PODS:
   - Crashlytics (3.13.1):
     - Fabric (~> 1.10.1)
   - Fabric (1.10.1)
-  - Peek (5.2.0)
   - PKHUD (5.2.1)
   - Siren (3.9.2)
   - StatusAlert (0.12.2)
@@ -20,7 +19,7 @@ DEPENDENCIES:
   - AlamofireImage
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Crashlytics
-  - Peek
+  - Fabric
   - PKHUD
   - Siren (~> 3.9.1)
   - StatusAlert (~> 0.12.1)
@@ -33,7 +32,6 @@ SPEC REPOS:
     - AlamofireImage
     - Crashlytics
     - Fabric
-    - Peek
     - PKHUD
     - Siren
     - StatusAlert
@@ -55,13 +53,12 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Crashlytics: 5aa8e90dcbf2f34898b4f5a0037787531246cca0
   Fabric: f6f21452846788bb44595d73e9909d79d328e617
-  Peek: 77f6362167c00aab3f1147d92d51bdf80d259d45
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
   Siren: 579caf1c0296818bf46c0d90555c09014e189eb1
   StatusAlert: c2935888a01e89efc0f4478d7c452140386559ea
   SwiftSpinner: 3a4c6dea425e5a31b908a8b1dd5dcd1ad4d96340
   WhatsNewKit: 4012e2195e96df01ff9bd556d4ca27d48d27f1b1
 
-PODFILE CHECKSUM: bf459066056a3768f421dce1c2eef83abfa46fd4
+PODFILE CHECKSUM: 3468623e61dfd85897fe654a2b4e75d09c5499e1
 
 COCOAPODS: 1.5.3
