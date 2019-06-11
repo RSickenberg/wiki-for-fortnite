@@ -15,7 +15,9 @@ target 'fort-to-nite' do
   pod 'WhatsNewKit', '~> 1.1.3'
   pod 'SwiftSpinner'
   pod 'Siren', '~> 3.9.1'
-  pod 'Peek', :configurations => ['Debug']
+  
+  pod 'Fabric'
+  
   # pod "CenteredCollectionView" or https://github.com/VladIacobIonut/Swinflate to rework store
   
   post_install do |installer|

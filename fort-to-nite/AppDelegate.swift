@@ -11,6 +11,7 @@ import UIKit
 import Crashlytics
 import StatusAlert
 import Siren
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -57,6 +58,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITableView.appearance().separatorColor = UIColor.black
         
         siren.checkVersion(checkType: .immediately)
+        
+        Fabric.with([Crashlytics.self])
+        Instabug.start(withToken: "466f23afecddc7edc1a3e3147ecf1344", invocationEvents: [.shake, .twoFingersSwipeLeft])
+        
         return true
     }
     
