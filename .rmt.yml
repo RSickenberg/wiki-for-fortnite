@@ -21,7 +21,7 @@ _default:
     version-generator: semantic            
     pre-release-actions:
         changelog-update:
-            format: markdown
+            format: semantic
             exclude-merge-commits: true
             file: autochangelog.md
         vcs-commit: ~
