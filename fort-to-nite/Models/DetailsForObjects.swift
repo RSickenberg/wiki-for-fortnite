@@ -32,6 +32,8 @@ class DetailsForObjects {
     
     private var storeCollection = [Store]()
     private var jsonVersion: String?
+    
+    private var messageFromJson = [Messages]()
 
     // MARK: - Weapons
 
@@ -207,5 +209,31 @@ class DetailsForObjects {
     
     func getJsonVersion() -> String {
         return jsonVersion ?? ""
+    }
+    
+    func setMessages(message: Messages) {
+        messageFromJson.append(message)
+    }
+    
+    func getMessages() -> [Messages] {
+        return messageFromJson
+    }
+    
+    func getLastMessage() -> Messages? {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "dd-MM-yy"
+        
+        var allDates = [Date]()
+        var maxDate: Date?
+        for message in messageFromJson {
+            guard message.date != nil else { break }
+            guard let trueDate = dateFormater.date(from: message.date!) else { break }
+            allDates.append(trueDate)
+        }
+        
+        guard !allDates.isEmpty else { return nil }
+        maxDate = allDates.reduce(Date.distantPast) { $0 > $1 ? $0 : $1 }
+        
+        return messageFromJson.first(where: {$0.date == dateFormater.string(from: maxDate!)})
     }
 }

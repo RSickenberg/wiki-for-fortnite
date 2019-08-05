@@ -13,6 +13,7 @@
 		0715AE202114AAAC007BD6F3 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715AE102114AA2C007BD6F3 /* SnapshotHelper.swift */; };
 		071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E386020775BBE006CAFD2 /* ShadowLayers.swift */; };
 		07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */; };
+		072F61C022F8128900E18C2A /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F61BF22F8128900E18C2A /* Messages.swift */; };
 		0733FC582080F626004ECD7D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0733FC572080F626004ECD7D /* Settings.bundle */; };
 		07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07378F2320506C38008B48D8 /* WeaponsDetails.swift */; };
 		073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3714204D7CBA001D4AF5 /* AppDelegate.swift */; };
@@ -71,6 +72,7 @@
 		0715AE1A2114AAA3007BD6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071E386020775BBE006CAFD2 /* ShadowLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLayers.swift; sourceTree = "<group>"; };
 		07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonImageCoordinator.swift; sourceTree = "<group>"; };
+		072F61BF22F8128900E18C2A /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		0733FC572080F626004ECD7D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		07378F2320506C38008B48D8 /* WeaponsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsDetails.swift; sourceTree = "<group>"; };
 		073A3711204D7CBA001D4AF5 /* fort-to-nite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fort-to-nite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +242,7 @@
 				073A373E204DAB00001D4AF5 /* Items.swift */,
 				0749725C204E7169006048C6 /* DetailsForObjects.swift */,
 				07D460F9219D796800D0A8D6 /* Store.swift */,
+				072F61BF22F8128900E18C2A /* Messages.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */,
+				072F61C022F8128900E18C2A /* Messages.swift in Sources */,
 				07631E27207F93A90078267B /* DetailsItemViewController.swift in Sources */,
 				07D8EE1D21B5CB0C00904A46 /* GradientView.swift in Sources */,
 				07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */,
@@ -775,7 +779,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -863,7 +867,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

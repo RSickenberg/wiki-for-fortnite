@@ -17,6 +17,7 @@ target 'fort-to-nite' do
   pod 'Siren', '~> 3.9.1'
   
   pod 'Fabric'
+  pod "SwiftMessages"
   
   # pod "CenteredCollectionView" or https://github.com/VladIacobIonut/Swinflate to rework store
   

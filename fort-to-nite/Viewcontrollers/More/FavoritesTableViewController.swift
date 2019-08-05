@@ -92,6 +92,7 @@ class ItemCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         cellImage.af_cancelImageRequest()
         cellImage.image = nil
         cellEntityName.text = nil

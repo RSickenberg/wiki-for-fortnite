@@ -40,6 +40,10 @@ enum ConnectionStoreResult {
     case success([Store]), failure(Error)
 }
 
+enum MessagesResult {
+    case success([Messages]), failure(Error)
+}
+
 class JsonService {
 
     // MARK: - Singletons
@@ -52,6 +56,7 @@ class JsonService {
     var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
     //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
+    var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages.json")!)
     
     // MARK: Store
     
@@ -181,5 +186,9 @@ class JsonService {
             }
             
         }
+    }
+    
+    func fetchMessagesAlamo(completion: @escaping (MessagesResult) -> ()) {
+        
     }
 }

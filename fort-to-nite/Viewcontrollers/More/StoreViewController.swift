@@ -90,6 +90,7 @@ class StoreCellViewController: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         storeImage.af_cancelImageRequest()
         storePrice.text = nil
         storeItemName.text = nil
