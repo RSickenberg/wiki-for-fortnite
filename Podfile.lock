@@ -11,6 +11,9 @@ PODS:
   - PKHUD (5.3.0)
   - Siren (3.9.2)
   - StatusAlert (0.12.2)
+  - SwiftMessages (7.0.0):
+    - SwiftMessages/App (= 7.0.0)
+  - SwiftMessages/App (7.0.0)
   - SwiftSpinner (2.0.0)
   - WhatsNewKit (1.1.9)
 
@@ -23,6 +26,7 @@ DEPENDENCIES:
   - PKHUD
   - Siren (~> 3.9.1)
   - StatusAlert (~> 0.12.1)
+  - SwiftMessages
   - SwiftSpinner
   - WhatsNewKit (~> 1.1.3)
 
@@ -35,6 +39,7 @@ SPEC REPOS:
     - PKHUD
     - Siren
     - StatusAlert
+    - SwiftMessages
     - SwiftSpinner
     - WhatsNewKit
 
@@ -56,9 +61,10 @@ SPEC CHECKSUMS:
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   Siren: 579caf1c0296818bf46c0d90555c09014e189eb1
   StatusAlert: c2935888a01e89efc0f4478d7c452140386559ea
+  SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
   SwiftSpinner: 77d972ab315bdc29b62bbedd128b88986969967e
   WhatsNewKit: 4012e2195e96df01ff9bd556d4ca27d48d27f1b1
 
-PODFILE CHECKSUM: 3468623e61dfd85897fe654a2b4e75d09c5499e1
+PODFILE CHECKSUM: 3fbfb1cce3fc2f1da6355d84b865922517f942b6
 
 COCOAPODS: 1.5.3
