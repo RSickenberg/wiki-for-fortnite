@@ -207,3 +207,15 @@
 - UI: Fixed a bug about store when a key is not found.
 - Renamed app form "Fort-to-nite" => "Wiki for Fortnite".  😢
 - Changed the logo aswell.
+
+# 1.1.3
+> Prod
+- Added Fabric.
+
+# 1.1.4
+> To review
+- Added new color combination for all rarety.
+
+# 1.1.5
+> Bêta
+- Added messages.
