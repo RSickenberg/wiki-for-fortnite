@@ -119,10 +119,41 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
         }
+        
+        JsonImageCoordinator.shared.syncMessages() { [weak self] messages in
+            switch messages {
+            case .success(_):
+                self?.getLastMessageIfAnyAndShow()
+                break
+            case.failure(_):
+                break
+            }
+        }
     }
     
     func reloadData() {
         collectionView?.reloadData()
+    }
+    
+    func getLastMessageIfAnyAndShow() {
+        let lastMessageHashShown = UserDefaults.standard.string(forKey: "LAST_MESSAGE_HASH_READ")
+        guard let lastMessage = list.getLastMessage() else { return }
+        guard lastMessage.data != nil else { return }
+        let titleFallBack = "Message from the Dev"
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "EEEE, MMM d, yyyy"
+        var dateString: String?
+        
+        if lastMessage.clearDate != nil {
+           dateString = dateFormater.string(from: lastMessage.clearDate!)
+        }
+        
+        if lastMessageHashShown == nil || (lastMessage.hash != nil && lastMessageHashShown != nil && lastMessageHashShown! != lastMessage.hash!) {
+            AlertsManager().show(title: dateString ?? titleFallBack, message: lastMessage.data!, style: .info, duration: .forever, buttonTitle: "Ok", interactiveHide: false, buttonTapHandler: {
+                guard lastMessage.hash != nil else { return }
+                UserDefaults.standard.set(lastMessage.hash, forKey: "LAST_MESSAGE_HASH_READ")
+            })
+        }
     }
 
     // MARK: - Collection View

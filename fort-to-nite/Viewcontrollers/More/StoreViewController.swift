@@ -125,23 +125,25 @@ class StoreViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     }
 
     func getData() {
-        SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
-        SwiftSpinner.show("Getting last data!")
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        JsonImageCoordinator.shared.syncJsonStore() { [weak self] result in
-            switch result {
-            case .success(_):
-                SwiftSpinner.hide()
-                self?.collectionView.reloadData()
-            case .failure(_):
-                SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
-                    self?.getData()
-                }, subtitle: "API may be unavailable, please retry in one minute.")
+        if list.countStoreElements() == 0 {
+            SwiftSpinner.setTitleFont(UIFont(name: "BurbankBigCondensed-Bold", size: 25)!)
+            SwiftSpinner.show("Getting last data!")
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            
+            JsonImageCoordinator.shared.syncJsonStore() { [weak self] result in
+                switch result {
+                case .success(_):
+                    SwiftSpinner.hide()
+                    self?.collectionView.reloadData()
+                case .failure(_):
+                    SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
+                        self?.getData()
+                    }, subtitle: "API may be unavailable, please retry in one minute.")
+                }
             }
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
-        
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 
     // MARK: - Outlets

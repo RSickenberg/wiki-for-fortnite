@@ -14,6 +14,8 @@
 		071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E386020775BBE006CAFD2 /* ShadowLayers.swift */; };
 		07281F2720AF0BCF0070BF57 /* JsonImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */; };
 		072F61C022F8128900E18C2A /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F61BF22F8128900E18C2A /* Messages.swift */; };
+		072F61C222F8342C00E18C2A /* MessagesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F61C122F8342C00E18C2A /* MessagesHelper.swift */; };
+		072F61C522F8392300E18C2A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F61C422F8392300E18C2A /* String.swift */; };
 		0733FC582080F626004ECD7D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0733FC572080F626004ECD7D /* Settings.bundle */; };
 		07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07378F2320506C38008B48D8 /* WeaponsDetails.swift */; };
 		073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A3714204D7CBA001D4AF5 /* AppDelegate.swift */; };
@@ -73,6 +75,8 @@
 		071E386020775BBE006CAFD2 /* ShadowLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLayers.swift; sourceTree = "<group>"; };
 		07281F2620AF0BCF0070BF57 /* JsonImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonImageCoordinator.swift; sourceTree = "<group>"; };
 		072F61BF22F8128900E18C2A /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		072F61C122F8342C00E18C2A /* MessagesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesHelper.swift; sourceTree = "<group>"; };
+		072F61C422F8392300E18C2A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		0733FC572080F626004ECD7D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		07378F2320506C38008B48D8 /* WeaponsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsDetails.swift; sourceTree = "<group>"; };
 		073A3711204D7CBA001D4AF5 /* fort-to-nite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fort-to-nite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +271,7 @@
 				070A2E7B2050766A00541779 /* WeaponsLevels.swift */,
 				071E386020775BBE006CAFD2 /* ShadowLayers.swift */,
 				07D8EE1C21B5CB0C00904A46 /* GradientView.swift */,
+				072F61C122F8342C00E18C2A /* MessagesHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			children = (
 				07714934229E700800C5BA37 /* UserDefaults.swift */,
 				076B4E27229E708000F398ED /* Throwable.swift */,
+				072F61C422F8392300E18C2A /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -584,12 +590,14 @@
 				071E386120775BBE006CAFD2 /* ShadowLayers.swift in Sources */,
 				073A373B204D93B5001D4AF5 /* DetailsWeaponViewController.swift in Sources */,
 				073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */,
+				072F61C522F8392300E18C2A /* String.swift in Sources */,
 				07D460FA219D796800D0A8D6 /* Store.swift in Sources */,
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,
 				076B4E28229E708000F398ED /* Throwable.swift in Sources */,
 				07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */,
 				070A2E7C2050766A00541779 /* WeaponsLevels.swift in Sources */,
 				07D460FC219DBA8000D0A8D6 /* StoreViewController.swift in Sources */,
+				072F61C222F8342C00E18C2A /* MessagesHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

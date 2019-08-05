@@ -189,6 +189,42 @@ class JsonService {
     }
     
     func fetchMessagesAlamo(completion: @escaping (MessagesResult) -> ()) {
-        
+        Alamofire.request((messagePath.url?.absoluteString)!, method: .get).validate().responseJSON() { [weak self] response in
+            print("JSON: \(response.data?.count ?? 0) bytes downloaded")
+            print("JSON: Request: \(String(describing: response.request))")
+            print("JSON: Response: \(String(describing: response.response))")
+            print("JSON: Result: \(String(describing: response.result))")
+            
+            guard self != nil else { return }
+            
+            switch response.result {
+            case .success(_):
+                if let json = response.data {
+                    do {
+                        let jsonObject = try JSONDecoder().decode([Throwable<Messages>].self, from: json)
+                        let messages = jsonObject.compactMap { $0.value }
+                        
+                        for message in messages {
+                            JsonService.list.setMessages(message: message)
+                        }
+                        
+                        completion(.success(messages))
+                    } catch let jsonErr {
+                        if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
+                            ErrorManager.showMessage("Json Status", message: jsonErr.localizedDescription)
+                            print(jsonErr)
+                        }
+                        
+                        completion(.failure(jsonErr))
+                    }
+                }
+            case .failure(let error):
+                if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
+                    ErrorManager.showMessage("Failure Status", message: error.localizedDescription)
+                }
+                
+                completion(.failure(error))
+            }
+        }
     }
 }

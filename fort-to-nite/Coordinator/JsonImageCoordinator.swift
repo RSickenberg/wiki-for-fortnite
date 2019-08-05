@@ -43,4 +43,17 @@ class JsonImageCoordinator {
             }
         }
     }
+    
+    func syncMessages(completion: @escaping (MessagesResult) -> ()) {
+        json.fetchMessagesAlamo() { [weak self] result in
+            guard self != nil else { return }
+            
+            switch result {
+            case .success(let messages):
+                completion(.success(messages))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

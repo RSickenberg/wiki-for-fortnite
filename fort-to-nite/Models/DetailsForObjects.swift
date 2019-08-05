@@ -200,6 +200,10 @@ class DetailsForObjects {
         }
     }
     
+    func countStoreElements() -> Int {
+        return storeCollection.count
+    }
+    
     ////////////////////////////////////////////////////////////////////////////////////////// Others
     // MARK: - MISC
     
@@ -212,7 +216,16 @@ class DetailsForObjects {
     }
     
     func setMessages(message: Messages) {
-        messageFromJson.append(message)
+        var toSaveMessage = message
+        if message.data != nil {
+            toSaveMessage.hash = message.data!.MD5(message.data!)
+        }
+        if message.date != nil {
+            let dateFormater = DateFormatter()
+            dateFormater.dateFormat = "dd-MM-yy"
+            toSaveMessage.clearDate = dateFormater.date(from: message.date!) ?? nil
+        }
+        messageFromJson.append(toSaveMessage)
     }
     
     func getMessages() -> [Messages] {
