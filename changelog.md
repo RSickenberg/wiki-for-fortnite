@@ -213,9 +213,14 @@
 - Added Fabric.
 
 # 1.1.4
-> To review
+> Prod
 - Added new color combination for all rarety.
 
 # 1.1.5
-> Bêta
+> Droped
 - Added messages.
+
+# 1.1.5.1
+> Patch
+
+- Fixed missing colors.
