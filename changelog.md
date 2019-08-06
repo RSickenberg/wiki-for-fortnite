@@ -220,7 +220,7 @@
 > Droped
 - Added messages.
 
-# 1.1.5.1
+# 1.1.6
 > Patch
 
 - Fixed missing colors.
