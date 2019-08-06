@@ -78,13 +78,13 @@ class DetailsItemViewController: UIViewController {
     /////////////////////////////////////////////////////////
 
     override func viewDidLoad() {
-        likeButtonState = false
+        super.viewDidLoad()
         prepareVisuals()
         displayValues()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(animated)
         getLikeStorage()
     }
 

@@ -16,6 +16,7 @@ class Weapons: Decodable {
     var img: String
     var group: Int
     var is_removed: Int
+    var details_is_limited: Bool?
     
     init() {
         id = 0

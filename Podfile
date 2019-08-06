@@ -15,6 +15,7 @@ target 'fort-to-nite' do
   pod 'WhatsNewKit', '~> 1.1.3'
   pod 'SwiftSpinner'
   pod 'Siren', '~> 3.9.1'
+  pod 'SwiftGen', '~> 5.3'
   
   pod 'Fabric'
   pod "SwiftMessages"

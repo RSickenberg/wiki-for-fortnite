@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wLQ-YX-0dw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wLQ-YX-0dw">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -229,7 +229,6 @@
                                                     <segment title="Epic"/>
                                                     <segment title="Legendary"/>
                                                 </segments>
-                                                <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="levelOfWeaponSwitch:" destination="b3M-qE-rbg" eventType="valueChanged" id="18i-oB-0hH"/>
                                                 </connections>
@@ -255,8 +254,8 @@
                                                     <constraint firstAttribute="height" constant="2" id="6Uj-1c-BPa"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfB-QE-lxd">
-                                                <rect key="frame" x="13.333333333333336" y="746" width="80" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfB-QE-lxd">
+                                                <rect key="frame" x="140.33333333333334" y="740.66666666666663" width="94.333333333333343" height="36.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="31"/>
                                                 <color key="textColor" red="0.90540393143135889" green="0.80537732874500023" blue="0.31326691694623809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -282,8 +281,8 @@
                                                     <constraint firstAttribute="height" constant="2" id="hGX-OE-2zR"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spread :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-Ib-fP1">
-                                                <rect key="frame" x="13.333333333333336" y="1038" width="80" height="43"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spread" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-Ib-fP1">
+                                                <rect key="frame" x="137.66666666666666" y="1038" width="100" height="43"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="43" id="WFJ-Pt-Xbx"/>
                                                 </constraints>
@@ -317,19 +316,19 @@
                                                 <rect key="frame" x="5" y="1423" width="362" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Horizontal" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYb-FO-KO2">
-                                                        <rect key="frame" x="0.0" y="10.666666666666742" width="60.666666666666664" height="19"/>
+                                                        <rect key="frame" x="0.0" y="8.9999999999999982" width="86.333333333333329" height="22.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="19"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertical" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2Q-fT-xog">
-                                                        <rect key="frame" x="94.333333333333329" y="11" width="43.999999999999986" height="18"/>
+                                                        <rect key="frame" x="103.33333333333333" y="9.6666666666667425" width="58.666666666666671" height="21"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Angle max" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-GQ-u0v">
-                                                        <rect key="frame" x="172.33333333333334" y="0.0" width="30" height="40"/>
+                                                        <rect key="frame" x="178.66666666666666" y="0.0" width="30" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="aM3-p1-UbG"/>
                                                             <constraint firstAttribute="height" constant="40" id="u9M-eh-bya"/>
@@ -339,7 +338,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angle min" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBI-Er-BPB">
-                                                        <rect key="frame" x="236" y="0.0" width="30" height="40"/>
+                                                        <rect key="frame" x="225.66666666666666" y="0.0" width="30" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Htj-uw-mRj"/>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="h5n-jL-CcE"/>
@@ -349,18 +348,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downsights" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7SM-kG-vpn">
-                                                        <rect key="frame" x="299.66666666666669" y="11.666666666666742" width="62.333333333333314" height="17"/>
+                                                        <rect key="frame" x="272.33333333333331" y="10" width="89.666666666666686" height="20"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recoil :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gym-lu-Shv">
-                                                <rect key="frame" x="13.333333333333336" y="1362" width="71.333333333333314" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="oi3-gM-ATi"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recoil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gym-lu-Shv">
+                                                <rect key="frame" x="144.33333333333334" y="1356.6666666666667" width="86.333333333333343" height="36.333333333333258"/>
                                                 <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="31"/>
                                                 <color key="textColor" red="0.90540393139999997" green="0.80537732870000001" blue="0.31326691690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -380,19 +376,19 @@
                                                         <size key="shadowOffset" width="1" height="-1"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Magazine size" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmU-9O-wcN">
-                                                        <rect key="frame" x="93.333333333333343" y="21" width="85.333333333333343" height="18"/>
+                                                        <rect key="frame" x="93.333333333333343" y="9" width="85.333333333333343" height="42"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Impact" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdt-fY-SfN">
-                                                        <rect key="frame" x="209" y="21" width="40.333333333333343" height="18"/>
+                                                        <rect key="frame" x="201" y="19.666666666666629" width="56" height="21"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reload Time" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgf-cD-CLw">
-                                                        <rect key="frame" x="279.66666666666669" y="21.666666666666629" width="85.333333333333314" height="17"/>
+                                                        <rect key="frame" x="279.66666666666669" y="10.333333333333371" width="85.333333333333314" height="39.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -403,25 +399,25 @@
                                                 <rect key="frame" x="5" y="887" width="365" height="31"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bep-8S-P3J">
-                                                        <rect key="frame" x="0.0" y="5" width="85.333333333333329" height="21"/>
+                                                        <rect key="frame" x="0.0" y="3.3333333333333712" width="85.333333333333329" height="24.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="m1I-kZ-fAj">
-                                                        <rect key="frame" x="93.333333333333343" y="5" width="85.333333333333343" height="21"/>
+                                                        <rect key="frame" x="93.333333333333343" y="3.3333333333333712" width="85.333333333333343" height="24.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="iY3-qO-1I9">
-                                                        <rect key="frame" x="186.66666666666666" y="5" width="84.999999999999972" height="21"/>
+                                                        <rect key="frame" x="186.66666666666666" y="3.3333333333333712" width="84.999999999999972" height="24.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="rqO-gA-z9I">
-                                                        <rect key="frame" x="279.66666666666669" y="5" width="85.333333333333314" height="21"/>
+                                                        <rect key="frame" x="279.66666666666669" y="3.3333333333333712" width="85.333333333333314" height="24.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -432,19 +428,19 @@
                                                 <rect key="frame" x="7" y="1101" width="361" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Base" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vD-rR-ci0">
-                                                        <rect key="frame" x="0.0" y="21" width="31.333333333333332" height="18"/>
+                                                        <rect key="frame" x="0.0" y="19.666666666666742" width="40.666666666666664" height="21"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprint" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPn-TP-qEC">
-                                                        <rect key="frame" x="51" y="21" width="34.666666666666657" height="18"/>
+                                                        <rect key="frame" x="48.666666666666657" y="19.666666666666742" width="48.333333333333343" height="21"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jump    &amp;               fall" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msd-oX-xpu">
-                                                        <rect key="frame" x="105.33333333333333" y="0.0" width="29.999999999999986" height="60"/>
+                                                        <rect key="frame" x="105" y="0.0" width="30" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="EcO-2n-GCh"/>
                                                             <constraint firstAttribute="height" constant="60" id="MDo-fI-EDk"/>
@@ -454,19 +450,19 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downsights" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pKX-ev-bI2">
-                                                        <rect key="frame" x="155" y="21" width="66" height="18"/>
+                                                        <rect key="frame" x="143" y="19.666666666666742" width="88" height="21"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standing" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-oA-3qW">
-                                                        <rect key="frame" x="240.66666666666663" y="21.666666666666742" width="47" height="17"/>
+                                                        <rect key="frame" x="239.00000000000003" y="20" width="68.333333333333343" height="20"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crouching" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9O-8q-tdv">
-                                                        <rect key="frame" x="307.33333333333331" y="21.666666666666742" width="53.666666666666686" height="17"/>
+                                                        <rect key="frame" x="315.33333333333331" y="20" width="45.666666666666686" height="20"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -477,37 +473,37 @@
                                                 <rect key="frame" x="5" y="1197" width="365" height="32"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJd-lC-2u0">
-                                                        <rect key="frame" x="0.0" y="5.6666666666667425" width="35.333333333333336" height="21"/>
+                                                        <rect key="frame" x="0.0" y="3.6666666666667442" width="44.666666666666664" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV2-fg-fQv">
-                                                        <rect key="frame" x="52.666666666666657" y="5.6666666666667425" width="35.333333333333343" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV2-fg-fQv">
+                                                        <rect key="frame" x="60.666666666666664" y="3.6666666666667442" width="28.666666666666664" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7i-h8-InF">
-                                                        <rect key="frame" x="104.66666666666667" y="5.6666666666667425" width="35.333333333333329" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7i-h8-InF">
+                                                        <rect key="frame" x="97.333333333333329" y="3.6666666666667442" width="49.666666666666671" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoF-3r-db7">
-                                                        <rect key="frame" x="172.33333333333334" y="5.6666666666667425" width="35.333333333333343" height="21"/>
+                                                        <rect key="frame" x="164.33333333333334" y="3.6666666666667442" width="49.666666666666657" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3b-qB-wWT">
-                                                        <rect key="frame" x="248.66666666666666" y="5.6666666666667425" width="35.333333333333343" height="21"/>
+                                                        <rect key="frame" x="250.33333333333334" y="3.6666666666667442" width="49.666666666666657" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C54-62-1n4">
-                                                        <rect key="frame" x="307.33333333333331" y="5.6666666666667425" width="57.666666666666686" height="21"/>
+                                                        <rect key="frame" x="315.33333333333331" y="3.6666666666667442" width="49.666666666666686" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -518,39 +514,39 @@
                                                 <rect key="frame" x="0.0" y="1510" width="370" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwU-aM-UsO">
-                                                        <rect key="frame" x="0.0" y="6" width="70.666666666666671" height="21"/>
+                                                        <rect key="frame" x="0.0" y="4.3333333333332593" width="96.333333333333329" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQn-s9-XR0">
-                                                        <rect key="frame" x="103.66666666666667" y="6" width="35.333333333333329" height="21"/>
+                                                        <rect key="frame" x="112.66666666666667" y="4.3333333333332593" width="49.666666666666671" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elW-bt-xZ9">
-                                                        <rect key="frame" x="174.66666666666666" y="6" width="35.333333333333343" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elW-bt-xZ9">
+                                                        <rect key="frame" x="174" y="4.3333333333332593" width="49.666666666666657" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-vh-V1V">
-                                                        <rect key="frame" x="238.33333333333334" y="6" width="35.333333333333343" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-vh-V1V">
+                                                        <rect key="frame" x="231.66666666666666" y="4.3333333333332593" width="27.999999999999972" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHE-8l-nFL">
-                                                        <rect key="frame" x="301.66666666666669" y="6" width="68.333333333333314" height="21"/>
+                                                        <rect key="frame" x="274.33333333333331" y="4.3333333333332593" width="95.666666666666686" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36E-n3-gJu">
-                                                <rect key="frame" x="13.333333333333336" y="428" width="78.333333333333314" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36E-n3-gJu">
+                                                <rect key="frame" x="139.33333333333334" y="422.66666666666669" width="96.666666666666657" height="36.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="31"/>
                                                 <color key="textColor" red="0.90540393139999997" green="0.80537732870000001" blue="0.31326691690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -566,19 +562,19 @@
                                                 <rect key="frame" x="5" y="479" width="365" height="54"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Damages + Head" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buC-uF-Tnr">
-                                                        <rect key="frame" x="0.0" y="18" width="116.33333333333333" height="18"/>
+                                                        <rect key="frame" x="0.0" y="6" width="116.33333333333333" height="42"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="DPS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lyO-Gt-pa9">
-                                                        <rect key="frame" x="124.33333333333334" y="18" width="116.33333333333334" height="18"/>
+                                                        <rect key="frame" x="124.33333333333334" y="16.666666666666629" width="116.33333333333334" height="21"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Fire rate" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f98-XW-7LL">
-                                                        <rect key="frame" x="248.66666666666666" y="18" width="116.33333333333334" height="18"/>
+                                                        <rect key="frame" x="248.66666666666666" y="16.666666666666629" width="116.33333333333334" height="21"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -603,19 +599,19 @@
                                                 <rect key="frame" x="5" y="549" width="365" height="39"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="U8F-3L-lgO">
-                                                        <rect key="frame" x="0.0" y="9" width="116.33333333333333" height="21"/>
+                                                        <rect key="frame" x="0.0" y="7.333333333333373" width="116.33333333333333" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mEA-99-kCF">
-                                                        <rect key="frame" x="124.33333333333334" y="9" width="116.33333333333334" height="21"/>
+                                                        <rect key="frame" x="124.33333333333334" y="7.333333333333373" width="116.33333333333334" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="DvX-qc-AA7">
-                                                        <rect key="frame" x="248.66666666666666" y="9" width="116.33333333333334" height="21"/>
+                                                        <rect key="frame" x="248.66666666666666" y="7.333333333333373" width="116.33333333333334" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -623,10 +619,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-xe-PLh">
-                                                <rect key="frame" x="45.666666666666657" y="585" width="35.333333333333343" height="34"/>
+                                                <rect key="frame" x="38.333333333333343" y="581.33333333333337" width="49.666666666666657" height="37.666666666666629"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4M-vc-jSc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="8"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="8"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="8" id="3uI-bE-1t4"/>
                                                         </constraints>
@@ -635,7 +631,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="usu-wB-URc">
-                                                        <rect key="frame" x="0.0" y="13" width="35.333333333333336" height="21"/>
+                                                        <rect key="frame" x="0.0" y="13.000000000000002" width="49.666666666666664" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="21"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -661,14 +657,11 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="vfB-QE-lxd" firstAttribute="leading" secondItem="36E-n3-gJu" secondAttribute="leading" id="04A-aa-o8z"/>
                                             <constraint firstItem="mVg-eS-0Kh" firstAttribute="top" secondItem="l1J-jr-g3v" secondAttribute="bottom" constant="10" id="0Tl-Nd-7b3"/>
                                             <constraint firstItem="jRY-L2-DLF" firstAttribute="top" secondItem="bNN-xt-2Gq" secondAttribute="bottom" constant="10" id="1UK-aV-AV7"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="36E-n3-gJu" secondAttribute="trailing" constant="283.67000000000002" id="1WJ-rq-exO"/>
                                             <constraint firstItem="6kr-6O-7xp" firstAttribute="top" secondItem="YAd-4u-Mwn" secondAttribute="bottom" constant="67" id="2k1-Fh-V78"/>
                                             <constraint firstItem="l1J-jr-g3v" firstAttribute="leading" secondItem="dQv-A8-REa" secondAttribute="leading" id="31C-6s-aKz"/>
                                             <constraint firstItem="vgW-c1-ktU" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" id="399-bk-Xob"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vfB-QE-lxd" secondAttribute="trailing" constant="20" symbolic="YES" id="3Zq-xF-vUJ"/>
                                             <constraint firstItem="IZW-6N-Dmr" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" constant="2" id="3kF-gc-vL6"/>
                                             <constraint firstItem="t1Q-LY-Mxm" firstAttribute="top" secondItem="fOm-xe-PLh" secondAttribute="bottom" constant="13" id="4ck-5F-ZKH"/>
                                             <constraint firstItem="05D-7w-hRa" firstAttribute="top" secondItem="gLK-Ib-fP1" secondAttribute="bottom" constant="8" id="4iJ-QX-5pp"/>
@@ -688,13 +681,13 @@
                                             <constraint firstItem="Qce-TF-ELA" firstAttribute="top" secondItem="05D-7w-hRa" secondAttribute="bottom" constant="80" id="BEv-di-X2Y"/>
                                             <constraint firstItem="t1Q-LY-Mxm" firstAttribute="top" secondItem="l1J-jr-g3v" secondAttribute="bottom" constant="93" id="Bmq-Oc-7TF"/>
                                             <constraint firstItem="iY3-qO-1I9" firstAttribute="centerX" secondItem="fdt-fY-SfN" secondAttribute="centerX" id="BwL-B8-krj"/>
-                                            <constraint firstItem="dQv-A8-REa" firstAttribute="top" secondItem="36E-n3-gJu" secondAttribute="bottom" constant="8" symbolic="YES" id="Cp9-J0-HHm"/>
                                             <constraint firstItem="xQk-vh-V1V" firstAttribute="centerX" secondItem="RBI-Er-BPB" secondAttribute="centerX" id="DEt-6c-nNr"/>
                                             <constraint firstItem="MbW-3f-6ia" firstAttribute="top" secondItem="vgW-c1-ktU" secondAttribute="bottom" constant="75" id="De5-nr-SKH"/>
                                             <constraint firstItem="aHE-8l-nFL" firstAttribute="centerX" secondItem="7SM-kG-vpn" secondAttribute="centerX" id="Dzx-pJ-Gyy"/>
                                             <constraint firstItem="bNN-xt-2Gq" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" id="E1q-mh-Bis"/>
                                             <constraint firstItem="gft-0I-yQF" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" constant="5" id="EWa-e9-WWF"/>
                                             <constraint firstItem="MbW-3f-6ia" firstAttribute="top" secondItem="B9L-tr-zPh" secondAttribute="bottom" constant="17" id="FVI-Xj-6Hi"/>
+                                            <constraint firstItem="36E-n3-gJu" firstAttribute="centerX" secondItem="HtC-4Q-Gf4" secondAttribute="centerX" id="GIn-jZ-Mah"/>
                                             <constraint firstAttribute="trailing" secondItem="05D-7w-hRa" secondAttribute="trailing" id="Gkn-F9-vlj"/>
                                             <constraint firstItem="fOm-xe-PLh" firstAttribute="centerX" secondItem="U8F-3L-lgO" secondAttribute="centerX" id="HH0-ZB-7GE"/>
                                             <constraint firstItem="Ktc-0X-edx" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" id="HVa-CT-5Sb"/>
@@ -703,6 +696,8 @@
                                             <constraint firstItem="YAd-4u-Mwn" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" id="Htp-KB-EpV"/>
                                             <constraint firstAttribute="trailing" secondItem="iMc-er-eoX" secondAttribute="trailing" constant="7" id="IL6-sN-Mbv"/>
                                             <constraint firstItem="G5I-hn-08a" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" constant="5" id="Jo9-r4-6Wq"/>
+                                            <constraint firstItem="gLK-Ib-fP1" firstAttribute="centerX" secondItem="HtC-4Q-Gf4" secondAttribute="centerX" id="K8a-V4-Fdq"/>
+                                            <constraint firstItem="Gym-lu-Shv" firstAttribute="centerX" secondItem="HtC-4Q-Gf4" secondAttribute="centerX" id="KKw-J0-88C"/>
                                             <constraint firstItem="DvX-qc-AA7" firstAttribute="centerX" secondItem="f98-XW-7LL" secondAttribute="centerX" id="KVC-yG-Tye"/>
                                             <constraint firstItem="mEA-99-kCF" firstAttribute="centerX" secondItem="lyO-Gt-pa9" secondAttribute="centerX" id="Khd-30-EcP"/>
                                             <constraint firstAttribute="trailing" secondItem="6kr-6O-7xp" secondAttribute="trailing" constant="2" id="LO2-IB-dtR"/>
@@ -713,7 +708,6 @@
                                             <constraint firstItem="YAd-4u-Mwn" firstAttribute="top" secondItem="jRY-L2-DLF" secondAttribute="bottom" constant="10" id="LsH-DP-7CT"/>
                                             <constraint firstItem="dQv-A8-REa" firstAttribute="top" secondItem="rBe-Vz-X3c" secondAttribute="bottom" constant="105" id="NLd-cJ-vL2"/>
                                             <constraint firstItem="U8F-3L-lgO" firstAttribute="centerX" secondItem="buC-uF-Tnr" secondAttribute="centerX" id="NU0-bx-Z7O"/>
-                                            <constraint firstItem="gLK-Ib-fP1" firstAttribute="centerX" secondItem="vfB-QE-lxd" secondAttribute="centerX" id="OBJ-Ez-Ea2"/>
                                             <constraint firstItem="iMc-er-eoX" firstAttribute="top" secondItem="05D-7w-hRa" secondAttribute="bottom" constant="10" id="P4i-V7-XAI"/>
                                             <constraint firstItem="05D-7w-hRa" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" id="Psn-GT-NI6"/>
                                             <constraint firstItem="vgW-c1-ktU" firstAttribute="top" secondItem="4pe-qJ-nKg" secondAttribute="bottom" constant="80" id="QjB-fg-KPK"/>
@@ -727,20 +721,19 @@
                                             <constraint firstAttribute="trailing" secondItem="pcX-gT-J7U" secondAttribute="trailing" constant="5" id="Wc9-PM-MNQ"/>
                                             <constraint firstItem="pcX-gT-J7U" firstAttribute="top" secondItem="dQv-A8-REa" secondAttribute="bottom" constant="10" id="Wd8-dC-oed"/>
                                             <constraint firstAttribute="trailing" secondItem="G5I-hn-08a" secondAttribute="trailing" constant="5" id="Wtb-Mt-03I"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gym-lu-Shv" secondAttribute="trailing" constant="20" symbolic="YES" id="YVV-Ba-OeW"/>
+                                            <constraint firstItem="vfB-QE-lxd" firstAttribute="centerX" secondItem="HtC-4Q-Gf4" secondAttribute="centerX" id="Yak-3m-8xo"/>
                                             <constraint firstAttribute="trailing" secondItem="dQv-A8-REa" secondAttribute="trailing" id="a6k-zF-CtD"/>
                                             <constraint firstAttribute="trailing" secondItem="mVg-eS-0Kh" secondAttribute="trailing" constant="5" id="aDq-Kk-f5h"/>
-                                            <constraint firstItem="Gym-lu-Shv" firstAttribute="leading" secondItem="gLK-Ib-fP1" secondAttribute="leading" id="bTx-dI-Z42"/>
                                             <constraint firstAttribute="trailing" secondItem="IZW-6N-Dmr" secondAttribute="trailing" constant="2" id="bo5-uE-6js"/>
                                             <constraint firstAttribute="trailing" secondItem="YAd-4u-Mwn" secondAttribute="trailing" id="cl1-IE-3h7"/>
                                             <constraint firstItem="rBe-Vz-X3c" firstAttribute="centerX" secondItem="HtC-4Q-Gf4" secondAttribute="centerX" id="d6a-sW-5oU"/>
-                                            <constraint firstItem="gLK-Ib-fP1" firstAttribute="top" secondItem="6kr-6O-7xp" secondAttribute="bottom" constant="100" id="fem-hl-ar0"/>
                                             <constraint firstItem="l1J-jr-g3v" firstAttribute="trailing" secondItem="dQv-A8-REa" secondAttribute="trailing" id="gHS-yW-jJq"/>
                                             <constraint firstItem="l1J-jr-g3v" firstAttribute="top" secondItem="pcX-gT-J7U" secondAttribute="bottom" constant="4" id="gIn-VB-2hk"/>
                                             <constraint firstItem="t1Q-LY-Mxm" firstAttribute="leading" secondItem="IZW-6N-Dmr" secondAttribute="leading" constant="-2" id="h0I-qF-iZY"/>
                                             <constraint firstItem="B9L-tr-zPh" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" id="jGb-3d-wXs"/>
                                             <constraint firstAttribute="trailing" secondItem="jRY-L2-DLF" secondAttribute="trailing" constant="5" id="ktx-rY-43E"/>
                                             <constraint firstItem="jRY-L2-DLF" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" constant="5" id="mmz-VL-gSL"/>
+                                            <constraint firstItem="dQv-A8-REa" firstAttribute="top" secondItem="36E-n3-gJu" secondAttribute="bottom" constant="8" symbolic="YES" id="msS-Xh-Q4d"/>
                                             <constraint firstAttribute="trailing" secondItem="bNN-xt-2Gq" secondAttribute="trailing" id="mtL-Sa-UkH"/>
                                             <constraint firstItem="m1I-kZ-fAj" firstAttribute="centerX" secondItem="mmU-9O-wcN" secondAttribute="centerX" id="nnC-w6-zSK"/>
                                             <constraint firstItem="YAd-4u-Mwn" firstAttribute="top" secondItem="bNN-xt-2Gq" secondAttribute="bottom" constant="80" id="nx2-DV-ooE"/>
@@ -756,7 +749,6 @@
                                             <constraint firstItem="rBe-Vz-X3c" firstAttribute="top" secondItem="IZW-6N-Dmr" secondAttribute="bottom" constant="21" id="sQm-Sq-rqc"/>
                                             <constraint firstItem="8za-2W-Xqs" firstAttribute="top" secondItem="YAd-4u-Mwn" secondAttribute="bottom" constant="18" id="sdF-tA-VzO"/>
                                             <constraint firstItem="6kr-6O-7xp" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" id="smV-fx-2he"/>
-                                            <constraint firstItem="gLK-Ib-fP1" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" constant="13.33" id="tTL-cV-qeb"/>
                                             <constraint firstItem="mVg-eS-0Kh" firstAttribute="centerX" secondItem="pcX-gT-J7U" secondAttribute="centerX" id="u5r-vB-GsZ"/>
                                             <constraint firstAttribute="trailing" secondItem="B9L-tr-zPh" secondAttribute="trailing" constant="5" id="uj4-Zv-ma3"/>
                                             <constraint firstItem="t1Q-LY-Mxm" firstAttribute="trailing" secondItem="bNN-xt-2Gq" secondAttribute="trailing" constant="3" id="uw2-NI-heu"/>
@@ -764,7 +756,6 @@
                                             <constraint firstItem="C54-62-1n4" firstAttribute="centerX" secondItem="v9O-8q-tdv" secondAttribute="centerX" id="wU4-9y-gfc"/>
                                             <constraint firstItem="pcX-gT-J7U" firstAttribute="leading" secondItem="HtC-4Q-Gf4" secondAttribute="leading" constant="5" id="wfz-SK-lgv"/>
                                             <constraint firstAttribute="trailing" secondItem="4pe-qJ-nKg" secondAttribute="trailing" id="x1d-vg-tAO"/>
-                                            <constraint firstItem="gLK-Ib-fP1" firstAttribute="leading" secondItem="36E-n3-gJu" secondAttribute="leading" id="xnd-y6-rO1"/>
                                             <constraint firstItem="vgW-c1-ktU" firstAttribute="top" secondItem="gft-0I-yQF" secondAttribute="bottom" constant="20" id="y1p-uO-Pyy"/>
                                             <constraint firstItem="6kr-6O-7xp" firstAttribute="top" secondItem="8za-2W-Xqs" secondAttribute="bottom" constant="18" id="yPA-w7-dIv"/>
                                             <constraint firstItem="KJd-lC-2u0" firstAttribute="centerX" secondItem="7vD-rR-ci0" secondAttribute="centerX" id="yh0-8T-qgp"/>
@@ -852,7 +843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03b-qn-kNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3088.8000000000002" y="133.37438423645321"/>
+            <point key="canvasLocation" x="3087.68115942029" y="132.92410714285714"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="cnV-Rv-RBj">
@@ -1374,8 +1365,8 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnT-q6-9Sv">
-                                                <rect key="frame" x="13" y="428" width="78.333333333333329" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnT-q6-9Sv">
+                                                <rect key="frame" x="154" y="428" width="67.333333333333314" height="31"/>
                                                 <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="31"/>
                                                 <color key="textColor" red="0.90540393139999997" green="0.80537732870000001" blue="0.31326691690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1450,8 +1441,8 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-hp-HIW">
-                                                <rect key="frame" x="13" y="739" width="78.666666666666671" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-hp-HIW">
+                                                <rect key="frame" x="153.66666666666666" y="739" width="67.666666666666657" height="31"/>
                                                 <fontDescription key="fontDescription" name="BurbankBigCondensed-Bold" family="Burbank Big Condensed" pointSize="31"/>
                                                 <color key="textColor" red="0.90540393139999997" green="0.80537732870000001" blue="0.31326691690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1475,36 +1466,33 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dnT-q6-9Sv" secondAttribute="trailing" constant="180" id="06Z-uL-YD7"/>
                                             <constraint firstAttribute="trailing" secondItem="GbO-4Q-QNn" secondAttribute="trailing" id="1sf-Hb-T9T"/>
                                             <constraint firstItem="BCp-rP-w7n" firstAttribute="top" secondItem="Yys-bZ-3KV" secondAttribute="bottom" constant="10" id="4xn-pQ-J9d"/>
                                             <constraint firstItem="BCp-rP-w7n" firstAttribute="top" secondItem="aba-oU-xnl" secondAttribute="bottom" constant="77" id="6I7-Ly-C0U"/>
                                             <constraint firstItem="GbO-4Q-QNn" firstAttribute="top" secondItem="HbS-xZ-dJE" secondAttribute="bottom" constant="10" id="8B9-AW-iu1"/>
                                             <constraint firstAttribute="bottom" secondItem="m6H-47-OP5" secondAttribute="bottom" constant="609" id="8Sx-dp-sMO"/>
+                                            <constraint firstItem="dnT-q6-9Sv" firstAttribute="centerX" secondItem="UMe-Mt-OY8" secondAttribute="centerX" id="8jk-3l-KP5"/>
                                             <constraint firstItem="GbO-4Q-QNn" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="9m6-Sx-0Ky"/>
                                             <constraint firstItem="Cgy-q5-FX7" firstAttribute="top" secondItem="GbO-4Q-QNn" secondAttribute="bottom" constant="77" id="A3K-F6-WJU"/>
                                             <constraint firstItem="jiO-lM-ieS" firstAttribute="top" secondItem="bzr-uc-xRF" secondAttribute="bottom" constant="10" id="C69-np-p4d"/>
                                             <constraint firstItem="fan-UY-jR4" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" constant="5" id="CAW-Dg-Yew"/>
+                                            <constraint firstItem="GUn-s4-L5V" firstAttribute="top" secondItem="dnT-q6-9Sv" secondAttribute="bottom" constant="8" id="EYN-6e-UNO"/>
                                             <constraint firstItem="m6H-47-OP5" firstAttribute="centerX" secondItem="UMe-Mt-OY8" secondAttribute="centerX" id="IGd-Jf-ySl"/>
                                             <constraint firstItem="fan-UY-jR4" firstAttribute="top" secondItem="GbO-4Q-QNn" secondAttribute="bottom" constant="10" id="KnW-h6-ZSq"/>
                                             <constraint firstAttribute="trailing" secondItem="Yys-bZ-3KV" secondAttribute="trailing" constant="5" id="MOb-xR-a1h"/>
-                                            <constraint firstItem="GUn-s4-L5V" firstAttribute="top" secondItem="dnT-q6-9Sv" secondAttribute="bottom" constant="8" symbolic="YES" id="O9w-NV-P8P"/>
                                             <constraint firstAttribute="trailing" secondItem="HbS-xZ-dJE" secondAttribute="trailing" constant="5" id="RBS-O9-brQ"/>
                                             <constraint firstItem="aba-oU-xnl" firstAttribute="width" secondItem="UMe-Mt-OY8" secondAttribute="width" id="RYK-Z3-tb5"/>
                                             <constraint firstItem="Yys-bZ-3KV" firstAttribute="top" secondItem="aba-oU-xnl" secondAttribute="bottom" constant="10" id="S4B-f5-pnK"/>
+                                            <constraint firstItem="JO3-hp-HIW" firstAttribute="centerX" secondItem="UMe-Mt-OY8" secondAttribute="centerX" id="W9p-EV-iTs"/>
                                             <constraint firstItem="Yys-bZ-3KV" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" constant="5" id="WUx-56-4mD"/>
                                             <constraint firstItem="Cgy-q5-FX7" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="Wi3-hR-INY"/>
                                             <constraint firstItem="GUn-s4-L5V" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="YFK-sd-Des"/>
-                                            <constraint firstItem="JO3-hp-HIW" firstAttribute="leading" secondItem="dnT-q6-9Sv" secondAttribute="leading" id="YhA-fI-DA0"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JO3-hp-HIW" secondAttribute="trailing" constant="20" symbolic="YES" id="Z4j-K1-DJW"/>
                                             <constraint firstItem="jiO-lM-ieS" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="azT-Ys-da0"/>
                                             <constraint firstItem="bzr-uc-xRF" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" constant="5" id="bxV-YA-Qjb"/>
                                             <constraint firstAttribute="trailing" secondItem="fan-UY-jR4" secondAttribute="trailing" constant="5" id="cQ2-Fh-z1P"/>
                                             <constraint firstAttribute="trailing" secondItem="GUn-s4-L5V" secondAttribute="trailing" id="era-wV-a6w"/>
                                             <constraint firstAttribute="trailing" secondItem="Cgy-q5-FX7" secondAttribute="trailing" id="esK-ij-T1k"/>
-                                            <constraint firstItem="JO3-hp-HIW" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" constant="13" id="fB1-l8-6h5"/>
                                             <constraint firstItem="m6H-47-OP5" firstAttribute="top" secondItem="UMe-Mt-OY8" secondAttribute="top" constant="58" id="fD5-IR-8VR"/>
-                                            <constraint firstItem="JO3-hp-HIW" firstAttribute="top" secondItem="Cgy-q5-FX7" secondAttribute="bottom" constant="112" id="hTe-vH-ehh"/>
                                             <constraint firstItem="HbS-xZ-dJE" firstAttribute="top" secondItem="GUn-s4-L5V" secondAttribute="bottom" constant="10" id="i4v-vp-ZwU"/>
                                             <constraint firstItem="BCp-rP-w7n" firstAttribute="leading" secondItem="UMe-Mt-OY8" secondAttribute="leading" id="mwn-mx-IZ4"/>
                                             <constraint firstAttribute="trailing" secondItem="bzr-uc-xRF" secondAttribute="trailing" constant="5" id="nJe-xr-GYR"/>
@@ -1601,11 +1589,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favTab" width="49.680000305175781" height="49.680000305175781"/>
+        <image name="favTab" width="23" height="23"/>
         <image name="itemTabIcon" width="23" height="23"/>
-        <image name="loveIconEmpty" width="54" height="54"/>
-        <image name="shopTab" width="49.680000305175781" height="49.680000305175781"/>
-        <image name="vbuck" width="120" height="120"/>
+        <image name="loveIconEmpty" width="25" height="25"/>
+        <image name="shopTab" width="23" height="23"/>
+        <image name="vbuck" width="80" height="80"/>
         <image name="weaponTabIcon" width="23" height="23"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -34,6 +34,9 @@
 		076B4E28229E708000F398ED /* Throwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076B4E27229E708000F398ED /* Throwable.swift */; };
 		07714935229E700800C5BA37 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07714934229E700800C5BA37 /* UserDefaults.swift */; };
 		079449B02100FEB400682F03 /* BurbankBigRegular-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */; };
+		07A926F422F9D7FB002DF911 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 07A926F322F9D7FB002DF911 /* swiftgen.yml */; };
+		07A926FA22F9DBAA002DF911 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A926F922F9DBAA002DF911 /* L10n.swift */; };
+		07A9270422F9DE79002DF911 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07A9270322F9DE79002DF911 /* Localizable.strings */; };
 		07B1C9922100F47700DD7807 /* NewKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1C9912100F47700DD7807 /* NewKitViewController.swift */; };
 		07BDBDD8207D4FCB00BD5682 /* ItemsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BDBDD7207D4FCB00BD5682 /* ItemsDetails.swift */; };
 		07D460FA219D796800D0A8D6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D460F9219D796800D0A8D6 /* Store.swift */; };
@@ -97,6 +100,9 @@
 		076B4E27229E708000F398ED /* Throwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throwable.swift; sourceTree = "<group>"; };
 		07714934229E700800C5BA37 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigRegular-Light.otf"; sourceTree = "<group>"; };
+		07A926F322F9D7FB002DF911 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
+		07A926F922F9DBAA002DF911 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		07A9270322F9DE79002DF911 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		07B1C9912100F47700DD7807 /* NewKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKitViewController.swift; sourceTree = "<group>"; };
 		07B26FE5204ED15C008F9E3A /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = changelog.md; path = ../../changelog.md; sourceTree = "<group>"; };
 		07B26FE6204ED15C008F9E3A /* toDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = toDo.txt; path = ../../toDo.txt; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 				0715AE072114A807007BD6F3 /* fort-to-niteUITests */,
 				0715AE172114AAA3007BD6F3 /* fort-to-niteUIScreenshots */,
 				073A3712204D7CBA001D4AF5 /* Products */,
+				07A926F322F9D7FB002DF911 /* swiftgen.yml */,
 				070E9E7B20CAB88900E0BEA9 /* Gemfile */,
 				070E9E7C20CAB88900E0BEA9 /* Gemfile.lock */,
 				60F826D321999B73E46CB9A5 /* Pods */,
@@ -202,16 +209,18 @@
 		073A3713204D7CBA001D4AF5 /* fort-to-nite */ = {
 			isa = PBXGroup;
 			children = (
+				07A9270322F9DE79002DF911 /* Localizable.strings */,
 				073A3714204D7CBA001D4AF5 /* AppDelegate.swift */,
-				07714933229E6FF600C5BA37 /* Extensions */,
-				07FC946B209C618A0077D9B0 /* Managers */,
+				07A926F222F9D7C2002DF911 /* Constants */,
 				07281F2520AF0BBB0070BF57 /* Coordinator */,
+				07714933229E6FF600C5BA37 /* Extensions */,
 				073A372D204D8BB6001D4AF5 /* Helpers */,
-				07664077209351360044900D /* Services */,
+				07FC946B209C618A0077D9B0 /* Managers */,
 				073A372B204D7D19001D4AF5 /* Models */,
-				073A372A204D7CDC001D4AF5 /* Viewcontrollers */,
-				073A3729204D7CC5001D4AF5 /* Storyboards */,
 				073A372C204D7D47001D4AF5 /* Ressources */,
+				07664077209351360044900D /* Services */,
+				073A3729204D7CC5001D4AF5 /* Storyboards */,
+				073A372A204D7CDC001D4AF5 /* Viewcontrollers */,
 			);
 			path = "fort-to-nite";
 			sourceTree = "<group>";
@@ -228,11 +237,11 @@
 		073A372A204D7CDC001D4AF5 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				07493C9820DD456200B7C5D1 /* More */,
-				07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */,
-				073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */,
-				073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */,
-				07631E26207F93A90078267B /* DetailsItemViewController.swift */,
+				07A926EF22F9D2AD002DF911 /* Favorites */,
+				07493C9820DD456200B7C5D1 /* Store */,
+				07A926F022F9D2B9002DF911 /* Weapons */,
+				07A926F122F9D2BF002DF911 /* Items */,
+				07A926EE22F9D29A002DF911 /* Details */,
 				07B1C9912100F47700DD7807 /* NewKitViewController.swift */,
 			);
 			path = Viewcontrollers;
@@ -285,13 +294,12 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		07493C9820DD456200B7C5D1 /* More */ = {
+		07493C9820DD456200B7C5D1 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				07493C9920DD45BC00B7C5D1 /* FavoritesTableViewController.swift */,
 				07D460FB219DBA8000D0A8D6 /* StoreViewController.swift */,
 			);
-			path = More;
+			path = Store;
 			sourceTree = "<group>";
 		};
 		07664077209351360044900D /* Services */ = {
@@ -310,6 +318,47 @@
 				072F61C422F8392300E18C2A /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07A926EE22F9D29A002DF911 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				073A373A204D93B5001D4AF5 /* DetailsWeaponViewController.swift */,
+				07631E26207F93A90078267B /* DetailsItemViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		07A926EF22F9D2AD002DF911 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				07493C9920DD45BC00B7C5D1 /* FavoritesTableViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		07A926F022F9D2B9002DF911 /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
+				07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */,
+			);
+			path = Weapons;
+			sourceTree = "<group>";
+		};
+		07A926F122F9D2BF002DF911 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				073A3733204D8EB8001D4AF5 /* ItemsViewController.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		07A926F222F9D7C2002DF911 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				07A926F922F9DBAA002DF911 /* L10n.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		07FC946B209C618A0077D9B0 /* Managers */ = {
@@ -469,9 +518,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0733FC582080F626004ECD7D /* Settings.bundle in Resources */,
+				07A926F422F9D7FB002DF911 /* swiftgen.yml in Resources */,
 				073A3722204D7CBB001D4AF5 /* LaunchScreen.storyboard in Resources */,
 				079449B02100FEB400682F03 /* BurbankBigRegular-Light.otf in Resources */,
 				073A371F204D7CBB001D4AF5 /* Assets.xcassets in Resources */,
+				07A9270422F9DE79002DF911 /* Localizable.strings in Resources */,
 				073A371A204D7CBA001D4AF5 /* Main.storyboard in Resources */,
 				073A3739204D90B9001D4AF5 /* BurbankBigCondensed-Bold.otf in Resources */,
 			);
@@ -583,6 +634,7 @@
 				07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */,
 				073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */,
 				0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */,
+				07A926FA22F9DBAA002DF911 /* L10n.swift in Sources */,
 				076640792093516E0044900D /* JsonService.swift in Sources */,
 				07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */,
 				07B1C9922100F47700DD7807 /* NewKitViewController.swift in Sources */,
@@ -741,6 +793,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -771,7 +824,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 28;
+				CURRENT_PROJECT_VERSION = 29;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -828,6 +881,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -858,7 +912,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 28;
+				CURRENT_PROJECT_VERSION = 29;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

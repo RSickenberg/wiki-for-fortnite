@@ -1,0 +1,6 @@
+input_dir: fort-to-nite
+output_dir: fort-to-nite/Constants
+strings:
+  templateName: structured-swift4
+  paths: Localizable.strings
+  output: L10n.swift

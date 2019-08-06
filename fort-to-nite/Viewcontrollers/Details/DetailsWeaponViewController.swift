@@ -142,12 +142,11 @@ class DetailsWeaponViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        likeButtonState = false
         prepareVisuals()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(animated)
         getLikeStorage()
     }
     
@@ -156,7 +155,7 @@ class DetailsWeaponViewController: UIViewController {
     private func prepareSegment() {
         levelOfWeaponSwitch.removeAllSegments()
         let listOfLevels = weaponModel.getLevelsByWeaponId(weaponInfo.id)
-        let titles = ["Common", "Atypical", "Rare", "Epic", "Legendary"]
+        let titles = [L10n.Rarety.common, L10n.Rarety.atypical, L10n.Rarety.rare, L10n.Rarety.epic, L10n.Rarety.legendary]
         for listOfLevel in listOfLevels {
             levelOfWeaponSwitch.insertSegment(withTitle: titles[listOfLevel], at: levelOfWeaponSwitch.numberOfSegments, animated: false)
         }
@@ -201,8 +200,8 @@ class DetailsWeaponViewController: UIViewController {
             statusAlertInstance.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
             statusAlertInstance.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
             statusAlertInstance.image = #imageLiteral(resourceName: "heartFullHighRes2")
-            statusAlertInstance.title = "It's liked!"
-            statusAlertInstance.message = "You can see your favorites on the more tab."
+            statusAlertInstance.title = L10n.Like.title
+            statusAlertInstance.message = L10n.Like.more
             statusAlertInstance.canBePickedOrDismissed = true
             statusAlertInstance.alertShowingDuration = TimeInterval(exactly: 2)!
         }
@@ -210,8 +209,8 @@ class DetailsWeaponViewController: UIViewController {
             statusAlertInstance.appearance.titleFont = UIFont(name: "BurbankBigCondensed-bold", size: 23)!
             statusAlertInstance.appearance.messageFont = UIFont(name: "BurbankBigCondensed-bold", size: 16)!
             statusAlertInstance.image = #imageLiteral(resourceName: "DislikeFullHighRes")
-            statusAlertInstance.title = "It's okay."
-            statusAlertInstance.message = "You can check other stuff."
+            statusAlertInstance.title = L10n.Dislike.title
+            statusAlertInstance.message = L10n.Dislike.more
             statusAlertInstance.canBePickedOrDismissed = true
             statusAlertInstance.alertShowingDuration = TimeInterval(exactly: 2)!
         }
@@ -265,6 +264,14 @@ class DetailsWeaponViewController: UIViewController {
         angleMaxLabel.text = String(details.recoilMaxAngle)
         angleMinLabel.text = String(details.recoilMinAngle)
         downsightsRecoilLabel.text = String(details.recoilDownsights)
+        
+        if weaponInfo.details_is_limited == true {
+            let labelsToDim = [spreadLabel, baseTitle, sprintTitle, jumpFallTitle, downsightsTitle, standingTitle, crouchingTitle, baseSpreadLabel, sprintSpreadLabel, jumpSpreadLabel, standingSpreadLabel, downsightsSpreadLabel, crouchingSpreadLabel, recoilLabel, horizontalRecoilTitle, verticalRecoilTitle, angleMaxTitle, angleMinTitle, downsightsRecoilTitle, horizontalLabel, verticalLabel, angleMaxLabel, angleMinLabel, downsightsRecoilLabel]
+            
+            for label in labelsToDim {
+                label?.alpha = 0.5
+            }
+        }
     }
 
     private func styleLabels() {

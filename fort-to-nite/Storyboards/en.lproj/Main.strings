@@ -1,0 +1,255 @@
+
+/* Class = "UILabel"; text = "over2"; ObjectID = "1Sc-3h-gcZ"; */
+"1Sc-3h-gcZ.text" = "over2";
+
+/* Class = "UILabel"; text = "Overall"; ObjectID = "36E-n3-gJu"; */
+"36E-n3-gJu.text" = "Overall";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3bj-f7-Iix"; */
+"3bj-f7-Iix.text" = "Label";
+
+/* Class = "UILabel"; text = "Angle max"; ObjectID = "4OT-GQ-u0v"; */
+"4OT-GQ-u0v.text" = "Angle max";
+
+/* Class = "UIViewController"; title = "Items details"; ObjectID = "4Wx-5e-YO4"; */
+"4Wx-5e-YO4.title" = "Items details";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "64q-1O-0vG"; */
+"64q-1O-0vG.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "ITEMS"; ObjectID = "6fd-9v-nn9"; */
+"6fd-9v-nn9.title" = "ITEMS";
+
+/* Class = "UILabel"; text = "Downsights"; ObjectID = "7SM-kG-vpn"; */
+"7SM-kG-vpn.text" = "Downsights";
+
+/* Class = "UILabel"; text = "Base"; ObjectID = "7vD-rR-ci0"; */
+"7vD-rR-ci0.text" = "Base";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "Bep-8S-P3J"; */
+"Bep-8S-P3J.text" = "value";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "C54-62-1n4"; */
+"C54-62-1n4.text" = "value";
+
+/* Class = "UILabel"; text = "D.range"; ObjectID = "DKn-Mf-EBm"; */
+"DKn-Mf-EBm.text" = "D.range";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "DvX-qc-AA7"; */
+"DvX-qc-AA7.text" = "value";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "E3b-qB-wWT"; */
+"E3b-qB-wWT.text" = "value";
+
+/* Class = "UILabel"; text = "Recoil"; ObjectID = "Gym-lu-Shv"; */
+"Gym-lu-Shv.text" = "Recoil";
+
+/* Class = "UIButton"; normalTitle = "MARKET"; ObjectID = "HAE-Ml-fng"; */
+"HAE-Ml-fng.normalTitle" = "MARKET";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "HV2-fg-fQv"; */
+"HV2-fg-fQv.text" = "value";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "HwU-aM-UsO"; */
+"HwU-aM-UsO.text" = "value";
+
+/* Class = "UITabBarItem"; title = "Weapons"; ObjectID = "I1D-mL-Lg4"; */
+"I1D-mL-Lg4.title" = "Weapons";
+
+/* Class = "UISegmentedControl"; IZW-6N-Dmr.segmentTitles[0] = "Common"; ObjectID = "IZW-6N-Dmr"; */
+"IZW-6N-Dmr.segmentTitles[0]" = "Common";
+
+/* Class = "UISegmentedControl"; IZW-6N-Dmr.segmentTitles[1] = "Atypical"; ObjectID = "IZW-6N-Dmr"; */
+"IZW-6N-Dmr.segmentTitles[1]" = "Atypical";
+
+/* Class = "UISegmentedControl"; IZW-6N-Dmr.segmentTitles[2] = "Rare"; ObjectID = "IZW-6N-Dmr"; */
+"IZW-6N-Dmr.segmentTitles[2]" = "Rare";
+
+/* Class = "UISegmentedControl"; IZW-6N-Dmr.segmentTitles[3] = "Epic"; ObjectID = "IZW-6N-Dmr"; */
+"IZW-6N-Dmr.segmentTitles[3]" = "Epic";
+
+/* Class = "UISegmentedControl"; IZW-6N-Dmr.segmentTitles[4] = "Legendary"; ObjectID = "IZW-6N-Dmr"; */
+"IZW-6N-Dmr.segmentTitles[4]" = "Legendary";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JJq-c6-Tzz"; */
+"JJq-c6-Tzz.text" = "Label";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "JO3-hp-HIW"; */
+"JO3-hp-HIW.text" = "Details";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "KJd-lC-2u0"; */
+"KJd-lC-2u0.text" = "value";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Kwh-XY-kfJ"; */
+"Kwh-XY-kfJ.text" = "Label";
+
+/* Class = "UILabel"; text = "over2"; ObjectID = "LLW-l5-WKa"; */
+"LLW-l5-WKa.text" = "over2";
+
+/* Class = "UINavigationItem"; title = "FAVORITES"; ObjectID = "Lm4-4E-8yW"; */
+"Lm4-4E-8yW.title" = "FAVORITES";
+
+/* Class = "UILabel"; text = "Jump    &               fall"; ObjectID = "Msd-oX-xpu"; */
+"Msd-oX-xpu.text" = "Jump    &               fall";
+
+/* Class = "UILabel"; text = "Angle min"; ObjectID = "RBI-Er-BPB"; */
+"RBI-Er-BPB.text" = "Angle min";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RUt-Gl-jJd"; */
+"RUt-Gl-jJd.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "STM-fA-qot"; */
+"STM-fA-qot.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "WEAPONS"; ObjectID = "ThC-yU-fPC"; */
+"ThC-yU-fPC.title" = "WEAPONS";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "U8F-3L-lgO"; */
+"U8F-3L-lgO.text" = "value";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "VZY-zK-Cbc"; */
+"VZY-zK-Cbc.title" = "Title";
+
+/* Class = "UILabel"; text = "Weapon name"; ObjectID = "Wmq-oQ-EqK"; */
+"Wmq-oQ-EqK.text" = "Weapon name";
+
+/* Class = "UILabel"; text = "over3"; ObjectID = "YSU-Co-xja"; */
+"YSU-Co-xja.text" = "over3";
+
+/* Class = "UITabBarItem"; title = "Market"; ObjectID = "ZiL-7H-Eon"; */
+"ZiL-7H-Eon.title" = "Market";
+
+/* Class = "UILabel"; text = "Standing"; ObjectID = "aEa-oA-3qW"; */
+"aEa-oA-3qW.text" = "Standing";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "aHE-8l-nFL"; */
+"aHE-8l-nFL.text" = "value";
+
+/* Class = "UIViewController"; title = "Weapons details"; ObjectID = "b3M-qE-rbg"; */
+"b3M-qE-rbg.title" = "Weapons details";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "bQn-s9-XR0"; */
+"bQn-s9-XR0.text" = "value";
+
+/* Class = "UILabel"; text = "Damages + Head"; ObjectID = "buC-uF-Tnr"; */
+"buC-uF-Tnr.text" = "Damages + Head";
+
+/* Class = "UILabel"; text = "over1"; ObjectID = "c0T-NV-0n9"; */
+"c0T-NV-0n9.text" = "over1";
+
+/* Class = "UILabel"; text = "over1"; ObjectID = "d1R-dZ-fGo"; */
+"d1R-dZ-fGo.text" = "over1";
+
+/* Class = "UILabel"; text = "over3"; ObjectID = "dFq-da-e6t"; */
+"dFq-da-e6t.text" = "over3";
+
+/* Class = "UILabel"; text = "over1"; ObjectID = "dU1-cn-toH"; */
+"dU1-cn-toH.text" = "over1";
+
+/* Class = "UILabel"; text = "Overall"; ObjectID = "dnT-q6-9Sv"; */
+"dnT-q6-9Sv.text" = "Overall";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "eBR-OQ-3Bi"; */
+"eBR-OQ-3Bi.title" = "Favorites";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "elW-bt-xZ9"; */
+"elW-bt-xZ9.text" = "value";
+
+/* Class = "UILabel"; text = "Fire rate"; ObjectID = "f98-XW-7LL"; */
+"f98-XW-7LL.text" = "Fire rate";
+
+/* Class = "UILabel"; text = "Data may be limited."; ObjectID = "fJ9-Oa-07H"; */
+"fJ9-Oa-07H.text" = "Data may be limited.";
+
+/* Class = "UILabel"; text = "Impact"; ObjectID = "fdt-fY-SfN"; */
+"fdt-fY-SfN.text" = "Impact";
+
+/* Class = "UILabel"; text = "Spread"; ObjectID = "gLK-Ib-fP1"; */
+"gLK-Ib-fP1.text" = "Spread";
+
+/* Class = "UILabel"; text = "over2"; ObjectID = "gmw-LF-oqt"; */
+"gmw-LF-oqt.text" = "over2";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "hd8-r6-SBy"; */
+"hd8-r6-SBy.title" = "Title";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "iY3-qO-1I9"; */
+"iY3-qO-1I9.text" = "value";
+
+/* Class = "UILabel"; text = "over3"; ObjectID = "k0Y-H0-6R8"; */
+"k0Y-H0-6R8.text" = "over3";
+
+/* Class = "UILabel"; text = "over1"; ObjectID = "kce-kj-pm5"; */
+"kce-kj-pm5.text" = "over1";
+
+/* Class = "UILabel"; text = "Sprint"; ObjectID = "lPn-TP-qEC"; */
+"lPn-TP-qEC.text" = "Sprint";
+
+/* Class = "UILabel"; text = "DPS"; ObjectID = "lyO-Gt-pa9"; */
+"lyO-Gt-pa9.text" = "DPS";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "m1I-kZ-fAj"; */
+"m1I-kZ-fAj.text" = "value";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "mEA-99-kCF"; */
+"mEA-99-kCF.text" = "value";
+
+/* Class = "UILabel"; text = "Magazine size"; ObjectID = "mmU-9O-wcN"; */
+"mmU-9O-wcN.text" = "Magazine size";
+
+/* Class = "UILabel"; text = "Downsights"; ObjectID = "pKX-ev-bI2"; */
+"pKX-ev-bI2.text" = "Downsights";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "psn-G8-pp2"; */
+"psn-G8-pp2.text" = "Label";
+
+/* Class = "UILabel"; text = "+"; ObjectID = "q4M-vc-jSc"; */
+"q4M-vc-jSc.text" = "+";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "rqO-gA-z9I"; */
+"rqO-gA-z9I.text" = "value";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "s7i-h8-InF"; */
+"s7i-h8-InF.text" = "value";
+
+/* Class = "UILabel"; text = "over2"; ObjectID = "t8T-It-kHU"; */
+"t8T-It-kHU.text" = "over2";
+
+/* Class = "UILabel"; text = "over3"; ObjectID = "tTl-4f-o0w"; */
+"tTl-4f-o0w.text" = "over3";
+
+/* Class = "UILabel"; text = "Item name"; ObjectID = "u88-We-8A2"; */
+"u88-We-8A2.text" = "Item name";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "usu-wB-URc"; */
+"usu-wB-URc.text" = "value";
+
+/* Class = "UILabel"; text = "FR.range"; ObjectID = "v0l-ba-8NO"; */
+"v0l-ba-8NO.text" = "FR.range";
+
+/* Class = "UILabel"; text = "Vertical"; ObjectID = "v2Q-fT-xog"; */
+"v2Q-fT-xog.text" = "Vertical";
+
+/* Class = "UILabel"; text = "Crouching"; ObjectID = "v9O-8q-tdv"; */
+"v9O-8q-tdv.text" = "Crouching";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "vfB-QE-lxd"; */
+"vfB-QE-lxd.text" = "Details";
+
+/* Class = "UITabBarItem"; title = "Items"; ObjectID = "wWP-Gr-trQ"; */
+"wWP-Gr-trQ.title" = "Items";
+
+/* Class = "UILabel"; text = "Reload Time"; ObjectID = "wgf-cD-CLw"; */
+"wgf-cD-CLw.text" = "Reload Time";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "xQk-vh-V1V"; */
+"xQk-vh-V1V.text" = "value";
+
+/* Class = "UILabel"; text = "Environnement Damages"; ObjectID = "y7F-yO-jw9"; */
+"y7F-yO-jw9.text" = "Environnement Damages";
+
+/* Class = "UILabel"; text = "Horizontal"; ObjectID = "zYb-FO-KO2"; */
+"zYb-FO-KO2.text" = "Horizontal";
+
+/* Class = "UILabel"; text = "value"; ObjectID = "zoF-3r-db7"; */
+"zoF-3r-db7.text" = "value";

@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  fort-to-nite
+
+  Created by Romain Sickenberg on 6.08.19.
+  Copyright © 2019 Romain Sickenberg. All rights reserved.
+*/
+
+"title.weapon" = "Weapons";
+"title.item" = "Items";
+
+"navigation.favorites" = "Favorites";
+"navigation.market" = "Market";
+
+"rarety.common" = "Common";
+"rarety.atypical" = "Atypical";
+"rarety.rare" = "Rare";
+"rarety.epic" = "Epic";
+"rarety.legendary" = "Legendary";
+
+"details.overall" = "Overall";
+"details.details" = "Details";
+"details.spread" = "Spread";
+"details.recoil" = "Recoil";
+
+"details.damages&Head" = "Damages + Head";
+"details.dps" = "DPS";
+"details.fire_rate" = "Fire rate";
+"details.env_dmgs" = "Environmental damages";
+"details.magazine" = "Magazine size";
+"details.impact" = "Impact";
+"details.reload" = "Reload time";
+
+"details.base" = "Base";
+"details.sprint" = "Sprint";
+"details.jump_fall" = "Jump & Fall";
+"details.downsights" = "Downsights";
+"details.crouching" = "Crouching";
+
+"details.horizontal" = "Horizontal";
+"details.vertical" = "Vertical";
+"details.max_angle" = "Angle max";
+"details.min_angle" = "Angle min";
+"details.downsights" = "Downsights";
+
+"details.capacity" = "Capactiy";
+"details.locations" = "Locations";
+"details.damages" = "Damages";
+"details.note" = "Note";
+"details.delay" = "Delay";
+
+"market.disclamer" = "Data may be limited.";
+
+"like.title" = "It's liked!";
+"like.more" = "You can see your favorites on the Favorites tab.";
+
+"dislike.title" = "It's okay.";
+"dislike.more" = "You can check other stuff.";
