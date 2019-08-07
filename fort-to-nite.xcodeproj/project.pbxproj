@@ -209,18 +209,19 @@
 		073A3713204D7CBA001D4AF5 /* fort-to-nite */ = {
 			isa = PBXGroup;
 			children = (
-				07A9270322F9DE79002DF911 /* Localizable.strings */,
 				073A3714204D7CBA001D4AF5 /* AppDelegate.swift */,
 				07A926F222F9D7C2002DF911 /* Constants */,
 				07281F2520AF0BBB0070BF57 /* Coordinator */,
 				07714933229E6FF600C5BA37 /* Extensions */,
 				073A372D204D8BB6001D4AF5 /* Helpers */,
+				07A9270322F9DE79002DF911 /* Localizable.strings */,
 				07FC946B209C618A0077D9B0 /* Managers */,
 				073A372B204D7D19001D4AF5 /* Models */,
 				073A372C204D7D47001D4AF5 /* Ressources */,
 				07664077209351360044900D /* Services */,
 				073A3729204D7CC5001D4AF5 /* Storyboards */,
 				073A372A204D7CDC001D4AF5 /* Viewcontrollers */,
+				07A9270522F9DEB0002DF911 /* Views */,
 			);
 			path = "fort-to-nite";
 			sourceTree = "<group>";
@@ -359,6 +360,13 @@
 				07A926F922F9DBAA002DF911 /* L10n.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		07A9270522F9DEB0002DF911 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		07FC946B209C618A0077D9B0 /* Managers */ = {

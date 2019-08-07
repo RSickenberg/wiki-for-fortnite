@@ -271,6 +271,24 @@ class DetailsWeaponViewController: UIViewController {
             for label in labelsToDim {
                 label?.alpha = 0.5
             }
+            
+            let disclamerLabel: UILabel = {
+                let label = UILabel()
+                label.translatesAutoresizingMaskIntoConstraints = false
+                label.text = L10n.Details.disclamer
+                label.font = UIFont(name: "BurbankBigCondensed-bold", size: 26)!
+                label.textColor = .white
+                
+                return label
+            }()
+            
+            self.view.addSubview(disclamerLabel)
+            shadowOptions.setShadow(label: disclamerLabel)
+            
+            NSLayoutConstraint.activate([
+                disclamerLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                disclamerLabel.bottomAnchor.constraint(equalTo: spreadLabel.topAnchor, constant: -15),
+            ])
         }
     }
 

@@ -50,6 +50,8 @@
 "details.delay" = "Delay";
 
 "market.disclamer" = "Data may be limited.";
+"details.disclamer" = "Data is unaccurate.";
+"details.disclamer_details" = "My source of detailed informations is not up to date anymore";
 
 "like.title" = "It's liked!";
 "like.more" = "You can see your favorites on the Favorites tab.";

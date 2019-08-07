@@ -222,5 +222,8 @@
 
 # 1.1.6
 > Patch
-
 - Fixed missing colors.
+
+# 1.2
+> WIP
+- Reworking some of the UI.

@@ -23,6 +23,10 @@ internal enum L10n {
     internal static let delay = L10n.tr("Localizable", "details.delay")
     /// Details
     internal static let details = L10n.tr("Localizable", "details.details")
+    /// Data is unaccurate.
+    internal static let disclamer = L10n.tr("Localizable", "details.disclamer")
+    /// My source of detailed informations is not up to date anymore
+    internal static let disclamerDetails = L10n.tr("Localizable", "details.disclamer_details")
     /// Downsights
     internal static let downsights = L10n.tr("Localizable", "details.downsights")
     /// DPS
