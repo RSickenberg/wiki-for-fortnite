@@ -38,9 +38,9 @@ class fort_to_niteUIScreenshots: XCTestCase {
     
     func testExample() {
         let app = XCUIApplication()
-        app.buttons["Discover your app."].tap()
-        app.staticTexts["Ok"].tap()
-        sleep(2)
+//        app.buttons["Discover your app."].tap()
+//        app.staticTexts["Ok"].tap()
+//        sleep(5)
         snapshot("01Main")
         
         let collectionViewsQuery = app.collectionViews
@@ -53,9 +53,11 @@ class fort_to_niteUIScreenshots: XCTestCase {
         tabBarsQuery.buttons["Items"].tap()
         sleep(3)
         snapshot("03Itm")
-        app.navigationBars["Chug Splash"].buttons["Item"].tap()
+        app.collectionViews.children(matching: .cell).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element.tap()
+        app.navigationBars["Remote Explosives"].buttons["Item"].tap()
         snapshot("04Splash")
         tabBarsQuery.buttons["Favorites"].tap()
+        sleep(3)
         snapshot("05Fav")
         tabBarsQuery.buttons["Market"].tap()
         sleep(6)
