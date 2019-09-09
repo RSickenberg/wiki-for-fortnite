@@ -38,9 +38,9 @@ class fort_to_niteUIScreenshots: XCTestCase {
     
     func testExample() {
         let app = XCUIApplication()
-//        app.buttons["Discover your app."].tap()
-//        app.staticTexts["Ok"].tap()
-//        sleep(5)
+        app.buttons["Discover your app."].tap()
+        app.staticTexts["Ok"].tap()
+        sleep(5)
         snapshot("01Main")
         
         let collectionViewsQuery = app.collectionViews
