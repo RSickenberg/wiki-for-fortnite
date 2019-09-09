@@ -53,15 +53,14 @@ class JsonService {
 
     // MARK: - Declarations
     
-    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
-    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
+    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
+    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
     var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages.json")!)
     
     // MARK: Store
     
     var storePath = URLRequest(url: URL(string: "https://api.fortnitetracker.com/v1/store")!)
-    
     let storeHeader: HTTPHeaders = [
         "TRN-Api-Key": "fe51eb10-38ee-40e8-a6f5-68187ae72bd3"
     ]
