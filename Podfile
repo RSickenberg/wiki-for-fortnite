@@ -1,20 +1,20 @@
 project 'fort-to-nite.xcodeproj'
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'fort-to-nite' do
   use_frameworks!
 
   # Pods for fortnite_wik
   pod 'Crashlytics'
-  pod 'ChameleonFramework/Swift' , :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/pommes/Chameleon.git'
   pod 'Alamofire'
   pod 'PKHUD'
   pod 'AlamofireImage'
   pod 'StatusAlert', '~> 0.12.1'
-  pod 'WhatsNewKit', '~> 1.1.3'
+  pod 'WhatsNewKit'
   pod 'SwiftSpinner'
-  pod 'Siren', '~> 3.9.1'
+  pod 'Siren'
   pod 'SwiftGen', '~> 5.3'
   
   pod 'Fabric'
@@ -24,11 +24,20 @@ target 'fort-to-nite' do
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|
-          if target.name == 'StatusAlert' or 'ChameleonFramework'
+          target.build_configurations.each do |config|
+              config.build_settings['SWIFT_VERSION'] = '5.0'
+          end
+          if target.name == 'StatusAlert' || target.name == 'ChameleonFramework'
               target.build_configurations.each do |config|
                   config.build_settings['SWIFT_VERSION'] = '4.0'
               end
           end
+      end
+  end
+  
+  pre_install do |installer|
+      installer.analysis_result.specifications.each do |s|
+          s.swift_version = '5.0' unless s.swift_version
       end
   end
 end

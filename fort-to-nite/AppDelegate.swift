@@ -26,16 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let siren = Siren.shared
-        
-        siren.alertMessaging = SirenAlertMessaging(updateButtonMessage: NSAttributedString(string: "Update"),
-                                                   nextTimeButtonMessage: NSAttributedString(string: "Next Time"),
-                                                   skipVersionButtonMessage: NSAttributedString(string: "Skip this version"))
-        
-        siren.alertType = .option
-        siren.majorUpdateAlertType = .force
-        siren.minorUpdateAlertType = .option
-        siren.patchUpdateAlertType = .skip
-        siren.revisionUpdateAlertType = .skip
+
+        siren.rulesManager = RulesManager.init(majorUpdateRules: .critical, minorUpdateRules: .persistent, patchUpdateRules: .hinting, revisionUpdateRules: .relaxed, showAlertAfterCurrentVersionHasBeenReleasedForDays: 1)
+        siren.wail()
         
         UIApplication.shared.statusBarStyle = .lightContent
         if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
@@ -58,8 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-Bold", size: 13)!], for: .normal)
         UITableView.appearance().separatorColor = UIColor.black
         
-        siren.checkVersion(checkType: .immediately)
-        
         Fabric.with([Crashlytics.self])
         
         return true
@@ -81,7 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-        Siren.shared.checkVersion(checkType: .immediately)
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
