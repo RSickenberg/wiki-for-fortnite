@@ -65,7 +65,7 @@ class ShadowLayers {
     }
     
     func setGradientShadow(cell: UIView) {
-        cell.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack])
+        cell.backgroundColor = GradientColor(UIGradientStyle.topToBottom, frame: cell.frame, colors: [UIColor.clear, UIColor.clear, UIColor.flatBlack()])
     }
     
 }

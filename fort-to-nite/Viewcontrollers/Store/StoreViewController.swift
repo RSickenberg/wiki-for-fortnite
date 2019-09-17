@@ -48,11 +48,17 @@ class StoreCellViewController: UICollectionViewCell {
     
     func configure() {
         let shadowsOptions = ShadowLayers()
-        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.light))
+        var blurView: UIVisualEffectView
+        if #available(iOS 13.0, *) {
+            blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.systemUltraThinMaterial))
+        } else {
+            // Fallback on earlier versions
+            blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.light))
+        }
         self.layer.cornerRadius = 6.5
         
         // Gradiant
-        cellGradiantPrice.backgroundColor = UIColor.flatBlack
+        cellGradiantPrice.backgroundColor = UIColor.flatBlack()
         cellGradiantPrice.layer.borderWidth = 2.0
         
         shadowsOptions.setShadow(label: storePrice)

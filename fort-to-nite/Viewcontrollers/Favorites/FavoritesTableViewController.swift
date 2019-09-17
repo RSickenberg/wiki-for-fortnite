@@ -133,7 +133,7 @@ class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITab
     lazy var refresh: UIRefreshControl! = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(FavoritesTableViewController.reloadData(_:)), for: UIControl.Event.allEvents)
-        refreshControl.tintColor = UIColor.flatPurple
+        refreshControl.tintColor = UIColor.flatPurple()
         
         return refreshControl
     }()

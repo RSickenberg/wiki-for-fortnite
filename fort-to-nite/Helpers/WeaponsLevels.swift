@@ -45,7 +45,7 @@ class FormatLevels {
         }
 
         view.layer.borderWidth = 8.5
-        view.layer.borderColor = UIColor.flatWhite.cgColor
+        view.layer.borderColor = UIColor.flatWhite().cgColor
         shadows.setShadow(view: view)
 
         view.layer.cornerRadius = 6.5

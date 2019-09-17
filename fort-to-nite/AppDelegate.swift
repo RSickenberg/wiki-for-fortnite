@@ -46,15 +46,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [
-                NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-bold", size: 19)!,
+                NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-Bold", size: 19)!,
                 NSAttributedString.Key.foregroundColor : UIColor.white,
             ], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [
-                NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-bold", size: 17)!,
+                NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-Bold", size: 17)!,
                 NSAttributedString.Key.foregroundColor : UIColor.white,
             ], for: .highlighted)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-bold", size: 13)!], for: .normal)
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-Bold", size: 13)!], for: .normal)
         UITableView.appearance().separatorColor = UIColor.black
         
         siren.checkVersion(checkType: .immediately)
