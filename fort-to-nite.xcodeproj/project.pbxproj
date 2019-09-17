@@ -43,6 +43,7 @@
 		07D460FC219DBA8000D0A8D6 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D460FB219DBA8000D0A8D6 /* StoreViewController.swift */; };
 		07D562C4204F1C1600AE5A68 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */; };
 		07D8EE1D21B5CB0C00904A46 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8EE1C21B5CB0C00904A46 /* GradientView.swift */; };
+		07F558DF2330D94B00AAE9AC /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F558DE2330D94B00AAE9AC /* SettingsHelper.swift */; };
 		07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FC946C209C61970077D9B0 /* ErrorManager.swift */; };
 		4078F27132FA6ADC3B857935 /* Pods_fort_to_nite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		07D460FB219DBA8000D0A8D6 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		07D562C3204F1C1600AE5A68 /* WeaponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
 		07D8EE1C21B5CB0C00904A46 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		07F558DE2330D94B00AAE9AC /* SettingsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 		07FC946C209C61970077D9B0 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		0D530E634A9A96CD4553F6C1 /* Pods_fort_to_nite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fort_to_nite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EC0D4F49CC1919CE98FE6F /* Pods_fortnite_wiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortnite_wiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 				071E386020775BBE006CAFD2 /* ShadowLayers.swift */,
 				07D8EE1C21B5CB0C00904A46 /* GradientView.swift */,
 				072F61C122F8342C00E18C2A /* MessagesHelper.swift */,
+				07F558DE2330D94B00AAE9AC /* SettingsHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				073A373B204D93B5001D4AF5 /* DetailsWeaponViewController.swift in Sources */,
 				073A373D204DAA34001D4AF5 /* Weapons.swift in Sources */,
 				072F61C522F8392300E18C2A /* String.swift in Sources */,
+				07F558DF2330D94B00AAE9AC /* SettingsHelper.swift in Sources */,
 				07D460FA219D796800D0A8D6 /* Store.swift in Sources */,
 				073A3715204D7CBA001D4AF5 /* AppDelegate.swift in Sources */,
 				076B4E28229E708000F398ED /* Throwable.swift in Sources */,
