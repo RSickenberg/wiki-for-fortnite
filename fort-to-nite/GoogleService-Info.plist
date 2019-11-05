@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>210665859025-vh3k8nu6douq0cml91u6lvm5brs166aa.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.210665859025-vh3k8nu6douq0cml91u6lvm5brs166aa</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8iqD6ZwgOmoD-MyjKMXXBGKXNFEAGI1g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>210665859025</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>me.romainsickenberg.fortnite-wiki</string>
+	<key>PROJECT_ID</key>
+	<string>wiki-for-fortnite</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wiki-for-fortnite.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:210665859025:ios:84b29f1ed708e5766422f0</string>
+	<key>DATABASE_URL</key>
+	<string>https://wiki-for-fortnite.firebaseio.com</string>
+</dict>
+</plist>
