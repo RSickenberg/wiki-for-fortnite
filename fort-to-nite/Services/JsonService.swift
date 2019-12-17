@@ -57,12 +57,12 @@ class JsonService {
 
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
 
-    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!) // GIT PROD
-    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!) // GIT STAGE
+    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!) // GIT PROD
+    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!) // GIT STAGE
     //var jsonPath = URLRequest(url: URL(string: "https://fortnitewikiserver.jcloud.ik-server.com/json")!) // DJAGO API !
 
-    // var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages.json")!) // GIT PROD
-    var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages_stage.json")!) // GIT STAGE
+    var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages.json")!) // GIT PROD
+    //var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages_stage.json")!) // GIT STAGE
     
     // MARK: Store
     
