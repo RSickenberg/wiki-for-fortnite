@@ -225,5 +225,10 @@
 - Fixed missing colors.
 
 # 1.2
-> WIP
+> Patch
 - Reworking some of the UI.
+
+# 2.0
+
+- Adapted application with the hoverall json changes.
+- Under the hood improvements.
