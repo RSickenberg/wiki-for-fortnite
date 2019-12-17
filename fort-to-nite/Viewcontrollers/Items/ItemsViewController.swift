@@ -23,7 +23,7 @@ class ItemsCollectionCell: UICollectionViewCell {
         cellItemLabel.text = item.name
         JsonService.list.setImageByItemId(item.id, imageView: cellImageView)
         
-        if (item.is_removed == 1) {
+        if (item.isRemoved) {
             self.cellItemLabel.isEnabled = false
             self.cellImageView.isUserInteractionEnabled = false
             self.cellImageView.alpha = 0.5
@@ -84,7 +84,7 @@ class ItemsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let item = list.getItemByIndex(index: indexPath.row)
         cell.configure()
         cell.modelData(item)
-        levels.formatCellGradient(cell: cell, level: item.color)
+        levels.formatCellGradient(cell: cell, level: item.variants)
 
         return cell
     }

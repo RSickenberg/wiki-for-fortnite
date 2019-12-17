@@ -243,7 +243,7 @@ class DetailsWeaponViewController: UIViewController {
     private func populateLabelsByValueAndLevels(_ level: Int) {
         let details = weaponModel.getDetailsByWeaponIdAndLevel(weaponId: weaponInfo.id, weaponLevel: level)
         dpsLabel.text = String(Float(details.damage) * round(details.fireRate * 10) / 10)
-        envdmgLabel.text = String(details.environementDamage)
+        envdmgLabel.text = String(details.environmentDamages)
 
         damageLabel.text = String(details.damage)
         headLabel.text = String(details.damageHead)
@@ -265,7 +265,7 @@ class DetailsWeaponViewController: UIViewController {
         angleMinLabel.text = String(details.recoilMinAngle)
         downsightsRecoilLabel.text = String(details.recoilDownsights)
         
-        if weaponInfo.details_is_limited == true {
+        if weaponInfo.isIncomplete == true {
             let labelsToDim = [spreadLabel, baseTitle, sprintTitle, jumpFallTitle, downsightsTitle, standingTitle, crouchingTitle, baseSpreadLabel, sprintSpreadLabel, jumpSpreadLabel, standingSpreadLabel, downsightsSpreadLabel, crouchingSpreadLabel, recoilLabel, horizontalRecoilTitle, verticalRecoilTitle, angleMaxTitle, angleMinTitle, downsightsRecoilTitle, horizontalLabel, verticalLabel, angleMaxLabel, angleMinLabel, downsightsRecoilLabel]
             
             for label in labelsToDim {

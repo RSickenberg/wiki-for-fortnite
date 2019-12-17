@@ -15,7 +15,9 @@ struct jsonStruct: Decodable {
     let details: [WeaponsDetails]
     let items: [Items]
     let itemDetails: [ItemsDetails]
+    let locations: [Locations]
     let version: String?
+    let season: String?
 }
 
 enum Throwable<T: Decodable>: Decodable {
@@ -52,11 +54,15 @@ class JsonService {
     static let list = DetailsForObjects()
 
     // MARK: - Declarations
-    
-    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!)
-    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!)
+
     var imagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/imgs/")!)
-    var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages.json")!)
+
+    //var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/prod.json")!) // GIT PROD
+    var jsonPath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/staging.json")!) // GIT STAGE
+    //var jsonPath = URLRequest(url: URL(string: "https://fortnitewikiserver.jcloud.ik-server.com/json")!) // DJAGO API !
+
+    // var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages.json")!) // GIT PROD
+    var messagePath = URLRequest(url: URL(string: "https://rsickenberg.me/secret/json/fortnite/messages_stage.json")!) // GIT STAGE
     
     // MARK: Store
     
@@ -70,10 +76,12 @@ class JsonService {
             jsonPath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             imagePath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             storePath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+            messagePath.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
         } else {
             jsonPath.cachePolicy = .returnCacheDataElseLoad
             imagePath.cachePolicy = .returnCacheDataElseLoad
             storePath.cachePolicy = .returnCacheDataElseLoad
+            messagePath.cachePolicy = .returnCacheDataElseLoad
         }
     }
 
@@ -92,7 +100,10 @@ class JsonService {
             case .success(_):
             if let json = response.data {
                 do {
-                    let jsonObject = try JSONDecoder().decode(jsonStruct.self, from: json)
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    
+                    let jsonObject = try decoder.decode(jsonStruct.self, from: json)
                     
                     let weapons = jsonObject.weapons.sorted { $0.group < $1.group }
 
@@ -112,11 +123,16 @@ class JsonService {
                         JsonService.list.addItemCategoryToDB(item.group)
                     }
 
+                    for location in jsonObject.locations {
+                        JsonService.list.addLocationToDB(location)
+                    }
+
                     for itemDetails in jsonObject.itemDetails {
                         JsonService.list.addItemDetailsToDB(itemDetails)
                     }
                     
                     JsonService.list.setJsonVersion(jsonObject.version ?? "")
+                    JsonService.list.setJsonSeason(jsonObject.season ?? "")
                     
                     if Bundle.main.infoDictionary?["devBuild"] as? Bool == true {
                         ErrorManager.showMessage("Network debug", message: "Size: \(response.data?.count ?? 0) bytes    Response: \(response.result)")
@@ -200,7 +216,8 @@ class JsonService {
             case .success(_):
                 if let json = response.data {
                     do {
-                        let jsonObject = try JSONDecoder().decode([Throwable<Messages>].self, from: json)
+                        let decoder = JSONDecoder()
+                        let jsonObject = try decoder.decode([Throwable<Messages>].self, from: json)
                         let messages = jsonObject.compactMap { $0.value }
                         
                         for message in messages {

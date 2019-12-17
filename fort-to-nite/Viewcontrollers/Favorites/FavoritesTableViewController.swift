@@ -102,7 +102,7 @@ class ItemCell: UITableViewCell {
         frame = UIScreen.main.bounds.standardized
         JsonService.list.setImageByItemId(item.id, imageView: cellImage)
         cellEntityName.text = item.name
-        UITableViewCell.backgroundHelper.formatCellGradient(cell: self, level: item.color)
+        UITableViewCell.backgroundHelper.formatCellGradient(cell: self, level: item.variants)
         itemId = item.id
         tag = 1
     }

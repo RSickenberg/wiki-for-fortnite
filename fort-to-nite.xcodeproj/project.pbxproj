@@ -35,6 +35,7 @@
 		07714935229E700800C5BA37 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07714934229E700800C5BA37 /* UserDefaults.swift */; };
 		079449B02100FEB400682F03 /* BurbankBigRegular-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */; };
 		07953480237182DB00C318CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0795347F237182DB00C318CA /* GoogleService-Info.plist */; };
+		079E87DA23A7E12700A8889A /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E87D923A7E12700A8889A /* Locations.swift */; };
 		07A926F422F9D7FB002DF911 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 07A926F322F9D7FB002DF911 /* swiftgen.yml */; };
 		07A926FA22F9DBAA002DF911 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A926F922F9DBAA002DF911 /* L10n.swift */; };
 		07A9270422F9DE79002DF911 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07A9270322F9DE79002DF911 /* Localizable.strings */; };
@@ -103,6 +104,7 @@
 		07714934229E700800C5BA37 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		079449AF2100FEB400682F03 /* BurbankBigRegular-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BurbankBigRegular-Light.otf"; sourceTree = "<group>"; };
 		0795347F237182DB00C318CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		079E87D923A7E12700A8889A /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		07A926F322F9D7FB002DF911 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		07A926F922F9DBAA002DF911 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		07A9270322F9DE79002DF911 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				0749725C204E7169006048C6 /* DetailsForObjects.swift */,
 				07D460F9219D796800D0A8D6 /* Store.swift */,
 				072F61BF22F8128900E18C2A /* Messages.swift */,
+				079E87D923A7E12700A8889A /* Locations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				07FC946D209C61970077D9B0 /* ErrorManager.swift in Sources */,
 				073A3734204D8EB8001D4AF5 /* ItemsViewController.swift in Sources */,
 				0749725D204E7169006048C6 /* DetailsForObjects.swift in Sources */,
+				079E87DA23A7E12700A8889A /* Locations.swift in Sources */,
 				07A926FA22F9DBAA002DF911 /* L10n.swift in Sources */,
 				076640792093516E0044900D /* JsonService.swift in Sources */,
 				07378F2420506C38008B48D8 /* WeaponsDetails.swift in Sources */,
@@ -891,7 +895,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 2.0;
 				PODS_PODFILE_DIR_PATH = "${SRCROOT}/";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fortnite-wiki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -980,7 +984,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 2.0;
 				PODS_PODFILE_DIR_PATH = "${SRCROOT}/";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.romainsickenberg.fortnite-wiki";
 				PRODUCT_NAME = "$(TARGET_NAME)";

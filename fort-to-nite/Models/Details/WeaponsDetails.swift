@@ -26,9 +26,9 @@ class WeaponsDetails: Decodable {
     var spreadStanding: Float
     var spreadCrouching: Float
     
-    var firingRateBurst: Float
+    var fireRateBurst: Float
     
-    var environementDamage: Float
+    var environmentDamages: Float
     
     var recoilHorizontal: Float
     var recoilVertical: Float
@@ -51,8 +51,8 @@ class WeaponsDetails: Decodable {
         spreadDownsights = 0.0
         spreadStanding = 0.0
         spreadCrouching = 0.0
-        firingRateBurst = 0.0
-        environementDamage = 0.0
+        fireRateBurst = 0.0
+        environmentDamages = 0.0
         recoilHorizontal = 0.0
         recoilVertical = 0.0
         recoilMaxAngle = 0.0
@@ -67,7 +67,7 @@ class WeaponsDetails: Decodable {
         self.damage = damage
         self.damageHead = damageHead
         self.fireRate = fireRate
-        self.firingRateBurst = firingRateBurst
+        self.fireRateBurst = firingRateBurst
         self.magazineSize = magazineSize
         self.reloadTime = reloadTime
         self.impact = impact
@@ -79,7 +79,7 @@ class WeaponsDetails: Decodable {
         self.spreadStanding = spreadStanding
         self.spreadCrouching = spreadCrouching
         
-        self.environementDamage = environementDamage
+        self.environmentDamages = environementDamage
         
         self.recoilHorizontal = recoilHorizontal
         self.recoilVertical = recoilVertical

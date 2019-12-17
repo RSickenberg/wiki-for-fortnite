@@ -32,8 +32,10 @@ class DetailsForObjects {
     
     private var storeCollection = [Store]()
     private var jsonVersion: String?
+    private var jsonSeason: String?
     
     private var messageFromJson = [Messages]()
+    private var LocationsFromJson = [Locations]()
 
     // MARK: - Weapons
 
@@ -111,7 +113,7 @@ class DetailsForObjects {
     
     func setImageByWeaponId(_ weaponId: Int, imageView: UIImageView!){
         let weapon = getWeaponsByWeaponId(weaponId: weaponId)
-        let url = (JsonService.shared.imagePath.url?.absoluteString)! + weapon.img
+        let url = (JsonService.shared.imagePath.url?.absoluteString)! + weapon.image
         
         imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "wPlaceHolderGray"), imageTransition: .crossDissolve(0.5))
     }
@@ -163,7 +165,7 @@ class DetailsForObjects {
     
     func setImageByItemId(_ itemId: Int, imageView: UIImageView!){
         let item = getItemsByItemId(itemId: itemId)
-        let url = (JsonService.shared.imagePath.url?.absoluteString)! + item.img
+        let url = (JsonService.shared.imagePath.url?.absoluteString)! + item.image
         
         imageView.af_setImage(withURL: URL(string: url)!, placeholderImage: #imageLiteral(resourceName: "iPlaceHolderGray"), imageTransition: .crossDissolve(0.5))
     }
@@ -214,18 +216,25 @@ class DetailsForObjects {
     func getJsonVersion() -> String {
         return jsonVersion ?? ""
     }
+
+    func setJsonSeason(_ season: String) {
+        jsonSeason = season
+    }
+
+    func getJsonSeason() -> String {
+        return jsonSeason ?? ""
+    }
     
     func setMessages(message: Messages) {
-        var toSaveMessage = message
-        if message.data != nil {
-            toSaveMessage.hash = message.data!.MD5(message.data!)
+        if let data = message.data {
+            message.hash = message.data!.MD5(data) ?? ""
         }
-        if message.date != nil {
+        if let date = message.date {
             let dateFormater = DateFormatter()
-            dateFormater.dateFormat = "dd-MM-yy"
-            toSaveMessage.clearDate = dateFormater.date(from: message.date!) ?? nil
+            dateFormater.dateFormat = "yyyy-MM-dd"
+            message.cleanDate = dateFormater.date(from: date)
         }
-        messageFromJson.append(toSaveMessage)
+        messageFromJson.append(message)
     }
     
     func getMessages() -> [Messages] {
@@ -234,8 +243,9 @@ class DetailsForObjects {
     
     func getLastMessage() -> Messages? {
         let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "dd-MM-yy"
-        
+        dateFormater.dateFormat = "yyyy-MM-dd"
+        dateFormater.locale = Locale(identifier: "en_US")
+
         var allDates = [Date]()
         var maxDate: Date?
         for message in messageFromJson {
@@ -249,4 +259,32 @@ class DetailsForObjects {
         
         return messageFromJson.first(where: {$0.date == dateFormater.string(from: maxDate!)})
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////// Locations
+    // MARK: - Locations
+
+    func addLocationToDB(_ location: Locations) {
+        LocationsFromJson.append(location)
+    }
+
+    func getLocationFromId(_ id: Int) -> Locations? {
+        guard let key = LocationsFromJson.firstIndex(where: {$0.id == id}) else { return nil }
+
+        return LocationsFromJson[key]
+    }
+
+    func getLocationNamesCastedFromIds(_ ids: [Int]) -> String? {
+        var locations = [String]()
+        var finalString = ""
+
+        for id in ids {
+            guard let key = LocationsFromJson.firstIndex(where: {$0.id == id}) else { break }
+
+            locations.append(LocationsFromJson[key].location)
+        }
+
+        finalString = locations.joined(separator: ", ")
+        return finalString
+    }
+
 }

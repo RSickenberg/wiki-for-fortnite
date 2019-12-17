@@ -27,7 +27,7 @@ class WeaponCollectionCell: UICollectionViewCell {
         weaponName.text = weapon.name
         JsonService.list.setImageByWeaponId(weapon.id, imageView: cellimageView)
         
-        if (weapon.is_removed == 1) {
+        if (weapon.isRemoved) {
             self.weaponName.isEnabled = false
             self.cellimageView.isUserInteractionEnabled = false
             self.cellimageView.alpha = 0.5
@@ -144,11 +144,11 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
         dateFormater.dateFormat = "EEEE, MMM d, yyyy"
         var dateString: String?
         
-        if lastMessage.clearDate != nil {
-           dateString = dateFormater.string(from: lastMessage.clearDate!)
+        if lastMessage.cleanDate != nil {
+            dateString = dateFormater.string(from: lastMessage.cleanDate!)
         }
         
-        if lastMessageHashShown == nil || (lastMessage.hash != nil && lastMessageHashShown != nil && lastMessageHashShown! != lastMessage.hash!) {
+        if lastMessageHashShown == nil || (lastMessage.hash != nil && lastMessageHashShown != nil && lastMessageHashShown! != lastMessage.hash) {
             AlertsManager().show(title: dateString ?? titleFallBack, message: lastMessage.data!, style: .info, duration: .forever, buttonTitle: "Ok", interactiveHide: false, buttonTapHandler: {
                 guard lastMessage.hash != nil else { return }
                 UserDefaults.standard.set(lastMessage.hash, forKey: "LAST_MESSAGE_HASH_READ")
@@ -181,9 +181,10 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath) as! WeaponCollectionViewFooterCell
         let jsonVersion = list.getJsonVersion()
-        if (jsonVersion != "") {
+        let seasonVersion = list.getJsonSeason()
+        if (jsonVersion != "" && seasonVersion != "") {
             footer.configure()
-            footer.jsonVersion.text = "Data pulled from: V\(jsonVersion)"
+            footer.jsonVersion.text = "Data pulled from: season \(seasonVersion) -> V\(jsonVersion)"
         } else {
             footer.hide()
         }

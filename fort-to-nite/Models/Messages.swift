@@ -8,11 +8,30 @@
 
 import Foundation
 
-struct Messages: Codable {
+class Messages: Codable {
+    private var storedDate: Date?
+    private var storedHash: String?
+
     var date: String?
     var data: String?
-    var hash: String?
-    var clearDate: Date?
+
+    var hash: String {
+        get {
+            return storedHash ?? ""
+        }
+        set(value) {
+            storedHash = value
+        }
+    }
+
+    var cleanDate : Date? {
+        get {
+            return storedDate
+        }
+        set(value) {
+            storedDate = value
+        }
+    }
     
     init() {
         date = nil

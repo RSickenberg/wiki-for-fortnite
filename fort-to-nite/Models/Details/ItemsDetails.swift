@@ -17,7 +17,7 @@ class ItemsDetails: Decodable {
     var shield: Int
     var delay: Double
     var damages: Int
-    var location: String
+    var location: [Int]
     var capacity: Int
     var comment: String
 
@@ -29,12 +29,12 @@ class ItemsDetails: Decodable {
         shield = 0
         delay = 0.0
         damages = 0
-        location = ""
+        location = [Int]()
         capacity = 0
         comment = ""
     }
 
-    init(itemId: Int, isHeal: Bool, isExplosive: Bool, heal: Int, shield: Int, delay: Double, damages: Int, location: String, capacity: Int, comment: String) {
+    init(itemId: Int, isHeal: Bool, isExplosive: Bool, heal: Int, shield: Int, delay: Double, damages: Int, location: [Int], capacity: Int, comment: String) {
         self.itemId = itemId
         self.isHeal = isHeal
         self.isExplosive = isExplosive

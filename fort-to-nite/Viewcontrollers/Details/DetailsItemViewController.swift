@@ -103,7 +103,7 @@ class DetailsItemViewController: UIViewController {
     // MARK: - Visuals
     
     private func getGradientValueForBackgroundImage() {
-        FormatLevels().formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.color)
+        FormatLevels().formatUIBackgroundViewFromLevel(view: backgroundImageView, level: itemInfo.variants)
         shadows.setShadow(image: itemImage)
     }
 
@@ -179,7 +179,8 @@ class DetailsItemViewController: UIViewController {
             detailsStackedValue1.isHidden = true
             
             detailsStackedTitle2.text = "Locations"
-            detailsStackedValue2.text = details.location
+            
+            detailsStackedValue2.text = itemModel.getLocationNamesCastedFromIds(details.location)
         }
         
         if (details.isHeal) {
@@ -214,7 +215,7 @@ class DetailsItemViewController: UIViewController {
             detailsStackedValue1.text = String(details.delay) + "s"
             
             detailsStackedTitle2.text = "Locations"
-            detailsStackedValue2.text = details.location
+            detailsStackedValue2.text = itemModel.getLocationNamesCastedFromIds(details.location)
         }
         
         if (details.comment != "") {
