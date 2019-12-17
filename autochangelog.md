@@ -1,4 +1,10 @@
 
+VERSION 2  API CHANGES WITH DJANGO APPLICATION
+==============================================
+
+   Version 2.0 - API Changes with Django Application
+      17/12/2019 14:25  2.0.0  initial release
+
 VERSION 1  Production
 =========================
 
