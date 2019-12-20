@@ -26,7 +26,7 @@ class NewKitViewController {
         configuration.completionButton.title = "Discover your app."
         let detailButton = WhatsNewViewController.DetailButton(
             title: "Learn more",
-            action: .website(url: "https://rsickenberg.me/static/pages/fort-to-nite.html"),
+            action: .website(url: "https://rsickenberg.me/pages/fort-to-nite.html"),
             titleFont: UIFont(name: "BurbankBigRegular-Light", size: 19)!,
             titleColor: .orange
         )
