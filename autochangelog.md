@@ -3,6 +3,7 @@ VERSION 2  API CHANGES WITH DJANGO APPLICATION
 ==============================================
 
    Version 2.0 - API Changes with Django Application
+      05/01/2020 11:23  2.0.2  Added iOS 10.3 support
       17/12/2019 14:41  2.0.1  Production URLS turn
       17/12/2019 14:25  2.0.0  initial release
 
