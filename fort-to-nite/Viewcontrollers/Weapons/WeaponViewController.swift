@@ -148,9 +148,9 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
             dateString = dateFormater.string(from: lastMessage.cleanDate!)
         }
         
-        if lastMessageHashShown == nil || (lastMessage.hash != nil && lastMessageHashShown != nil && lastMessageHashShown! != lastMessage.hash) {
+        if lastMessageHashShown == nil || (lastMessage.hash != "" && lastMessageHashShown != nil && lastMessageHashShown! != lastMessage.hash) {
             AlertsManager().show(title: dateString ?? titleFallBack, message: lastMessage.data!, style: .info, duration: .forever, buttonTitle: "Ok", interactiveHide: false, buttonTapHandler: {
-                guard lastMessage.hash != nil else { return }
+                guard lastMessage.hash != "" else { return }
                 UserDefaults.standard.set(lastMessage.hash, forKey: "LAST_MESSAGE_HASH_READ")
             })
         }

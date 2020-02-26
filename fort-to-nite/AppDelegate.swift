@@ -6,12 +6,14 @@
 //  Copyright © 2018 Romain Sickenberg. All rights reserved.
 //
 
-//import Fabric
 import UIKit
 import Crashlytics
 import StatusAlert
 import Siren
-import Firebase
+
+#if canImport(Firebase)
+    import Firebase
+#endif
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -51,8 +53,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "BurbankBigCondensed-Bold", size: 13)!], for: .normal)
         UITableView.appearance().separatorColor = UIColor.black
 
-        FirebaseApp.configure()
-        Fabric.with([Crashlytics.self])
+        #if canImport(Firebase)
+            FirebaseApp.configure()
+            Fabric.with([Crashlytics.self])
+        #endif
         
         return true
     }

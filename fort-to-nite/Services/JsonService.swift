@@ -88,7 +88,7 @@ class JsonService {
     // MARK: - Promises
     
     func fetchJsonAlamo(completion: @escaping (ConnectionResult) -> ()) {
-        Alamofire.request((jsonPath.url?.absoluteString)!, method: .get).validate().responseJSON() { [weak self] response in
+        AF.request((jsonPath.url?.absoluteString)!, method: .get).validate().responseJSON() { [weak self] response in
             print("JSON: \(response.data?.count ?? 0) bytes downloaded")
             print("JSON: Request: \(String(describing: response.request))")
             print("JSON: Response: \(String(describing: response.response))")
@@ -160,7 +160,7 @@ class JsonService {
     }
     
     func fetchJsonStoreAlamo(completion: @escaping (ConnectionStoreResult) -> ()) {
-        Alamofire.request((storePath.url?.absoluteString)!, method: .get, headers: storeHeader).validate().responseJSON() { [weak self] response in
+        AF.request((storePath.url?.absoluteString)!, method: .get, headers: storeHeader).validate().responseJSON() { [weak self] response in
             print("JSON: \(response.data?.count ?? 0) bytes downloaded")
             print("JSON: Request: \(String(describing: response.request))")
             print("JSON: Response: \(String(describing: response.response))")
@@ -204,7 +204,7 @@ class JsonService {
     }
     
     func fetchMessagesAlamo(completion: @escaping (MessagesResult) -> ()) {
-        Alamofire.request((messagePath.url?.absoluteString)!, method: .get).validate().responseJSON() { [weak self] response in
+        AF.request((messagePath.url?.absoluteString)!, method: .get).validate().responseJSON() { [weak self] response in
             print("JSON: \(response.data?.count ?? 0) bytes downloaded")
             print("JSON: Request: \(String(describing: response.request))")
             print("JSON: Response: \(String(describing: response.response))")

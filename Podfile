@@ -16,9 +16,9 @@ target 'fort-to-nite' do
   pod 'SwiftSpinner'
   pod 'Siren'
   pod 'SwiftGen', '~> 5.3'
-  
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Performance'
+
+#  pod 'Firebase/Analytics'
+#  pod 'Firebase/Performance'
   pod 'Fabric'
   pod "SwiftMessages"
   
@@ -32,6 +32,18 @@ target 'fort-to-nite' do
           if target.name == 'StatusAlert' || target.name == 'ChameleonFramework'
               target.build_configurations.each do |config|
                   config.build_settings['SWIFT_VERSION'] = '4.0'
+              end
+          end
+          if target.name == "Pods-fort-to-nite"
+              puts "Updating # to exclude Crashlytics/Fabric"
+              target.build_configurations.each do |config|
+                  xcconfig_path = config.base_configuration_reference.real_path
+                  xcconfig = File.read(xcconfig_path)
+                  xcconfig.sub!('-framework "Crashlytics"', '')
+                  xcconfig.sub!('-framework "Fabric"', '')
+                  xcconfig.sub!('-framework "Firebase/Analytics"', '')
+                  new_xcconfig = xcconfig + 'OTHER_LDFLAGS[sdk=iphone*] = -framework "Crashlytics" -framework "Fabric" -framework "Firebase/AnalyticsFirebase/Analytics"'
+                  File.open(xcconfig_path, "w") { |file| file << new_xcconfig }
               end
           end
       end
