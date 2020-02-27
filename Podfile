@@ -41,7 +41,6 @@ target 'fort-to-nite' do
                   xcconfig = File.read(xcconfig_path)
                   xcconfig.sub!('-framework "Crashlytics"', '')
                   xcconfig.sub!('-framework "Fabric"', '')
-                  xcconfig.sub!('-framework "Firebase/Analytics"', '')
                   new_xcconfig = xcconfig + 'OTHER_LDFLAGS[sdk=iphone*] = -framework "Crashlytics" -framework "Fabric" -framework "Firebase/AnalyticsFirebase/Analytics"'
                   File.open(xcconfig_path, "w") { |file| file << new_xcconfig }
               end
