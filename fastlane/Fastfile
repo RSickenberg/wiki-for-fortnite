@@ -63,7 +63,7 @@ platform :ios do
 
 end
 
-platform :macos do
+platform :mac do
   desc "Push a new beta build to TestFlight"
   lane :beta do
     ensure_git_status_clean
@@ -81,7 +81,7 @@ platform :macos do
         podfile: "Podfile",
         try_repo_update_on_error: true
     )
-    build_app(scheme: "fort_to_nite")
+    build_app(scheme: "fort_to_nite-catalyst")
     upload_to_testflight(skip_waiting_for_build_processing: true)
   end
 end
