@@ -17,8 +17,8 @@ target 'fort-to-nite' do
   pod 'Siren'
   pod 'SwiftGen', '~> 5.3'
 
-#  pod 'Firebase/Analytics'
-#  pod 'Firebase/Performance'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Performance'
   pod 'Fabric'
   pod "SwiftMessages"
   
