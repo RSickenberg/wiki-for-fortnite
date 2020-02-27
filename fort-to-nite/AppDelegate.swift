@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Crashlytics
 import StatusAlert
 import Siren
 
@@ -55,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         #if canImport(Firebase)
             FirebaseApp.configure()
-            Fabric.with([Crashlytics.self])
+            Fabric.with([])
         #endif
         
         return true

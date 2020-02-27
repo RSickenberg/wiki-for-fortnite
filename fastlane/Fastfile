@@ -62,3 +62,26 @@ platform :ios do
   end
 
 end
+
+platform :macos do
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    ensure_git_status_clean
+    prompt(
+        text: "Did you updated the version on root settings ?",
+        boolean: true
+    )
+    prompt(
+        text: "Did you set JSON to prod ?",
+        boolean: true
+    )
+    increment_build_number
+    cocoapods(
+        clean: true,
+        podfile: "Podfile",
+        try_repo_update_on_error: true
+    )
+    build_app(scheme: "fort_to_nite")
+    upload_to_testflight(skip_waiting_for_build_processing: true)
+  end
+end
