@@ -58,7 +58,21 @@ platform :ios do
 
   desc "Release a build to AppStore"
   lane :release do
-    sync_code_signing(type: "appstore")
+  ensure_git_status_clean
+    prompt(
+        text: "Did you updated the version on root settings ?",
+        boolean: true
+    )
+    prompt(
+        text: "Did you set JSON to prod ?",
+        boolean: true
+    )
+    increment_build_number
+    cocoapods(
+        clean: true,
+        podfile: "Podfile",
+        try_repo_update_on_error: true
+    )
     build_app(scheme: "fort_to_nite", include_bitcode: true)
     deliver(
         submit_for_review: true,
