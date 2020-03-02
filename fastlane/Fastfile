@@ -59,6 +59,8 @@ platform :ios do
   desc "Release a build to AppStore"
   lane :release do
   ensure_git_status_clean
+  get_certificates           # invokes cert
+  get_provisioning_profile   # invokes sigh
     prompt(
         text: "Did you updated the version on root settings ?",
         boolean: true
