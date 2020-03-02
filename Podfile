@@ -16,7 +16,7 @@ target 'fort-to-nite' do
   pod 'Siren'
   pod 'SwiftGen', '~> 5.3'
 
-#  pod 'Firebase/Analytics'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Performance'
   pod 'Firebase/Crashlytics'
   pod 'Fabric'
@@ -33,7 +33,7 @@ target 'fort-to-nite' do
               target.build_configurations.each do |config|
                   config.build_settings['SWIFT_VERSION'] = '4.0'
               end
-              if target.name.start_with?("Pods")
+              if target.name.start_with?("Pods") && project.target == 'fort-to-nite-catalyst'
                   puts "Updating #{target.name} to exclude Crashlytics/Fabric"
                   target.build_configurations.each do |config|
                       xcconfig_path = config.base_configuration_reference.real_path

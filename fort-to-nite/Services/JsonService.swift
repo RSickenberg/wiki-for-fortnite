@@ -92,7 +92,6 @@ class JsonService {
             print("JSON: \(response.data?.count ?? 0) bytes downloaded")
             print("JSON: Request: \(String(describing: response.request))")
             print("JSON: Response: \(String(describing: response.response))")
-            print("JSON: Result: \(String(describing: response.result))")
             
             guard self != nil else { return }
 
@@ -164,7 +163,6 @@ class JsonService {
             print("JSON: \(response.data?.count ?? 0) bytes downloaded")
             print("JSON: Request: \(String(describing: response.request))")
             print("JSON: Response: \(String(describing: response.response))")
-            print("JSON: Result: \(String(describing: response.result))")
             
             guard self != nil else { return }
             
@@ -208,7 +206,6 @@ class JsonService {
             print("JSON: \(response.data?.count ?? 0) bytes downloaded")
             print("JSON: Request: \(String(describing: response.request))")
             print("JSON: Response: \(String(describing: response.response))")
-            print("JSON: Result: \(String(describing: response.result))")
             
             guard self != nil else { return }
             
