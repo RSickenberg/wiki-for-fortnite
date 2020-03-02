@@ -59,7 +59,6 @@ platform :ios do
   desc "Release a build to AppStore"
   lane :release do
   ensure_git_status_clean
-  disable_automatic_code_signing(path: "fort-to-nite.xcodeproj")
     prompt(
         text: "Did you updated the version on root settings ?",
         boolean: true
@@ -75,7 +74,6 @@ platform :ios do
         try_repo_update_on_error: true
     )
     build_app(scheme: "fort_to_nite", include_bitcode: true)
-    enable_automatic_code_signing(path: "fort-to-nite.xcodeproj")
     deliver(
         submit_for_review: true,
         force: true,

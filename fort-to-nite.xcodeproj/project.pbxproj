@@ -1045,6 +1045,7 @@
 				CODE_SIGN_ENTITLEMENTS = "fort-to-nite/fort-to-nite.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 40;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 8268QCG5CG;
 				GCC_OPTIMIZATION_LEVEL = fast;
@@ -1077,6 +1078,7 @@
 				CODE_SIGN_ENTITLEMENTS = "fort-to-nite/fort-to-nite.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 40;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 8268QCG5CG;
 				INFOPLIST_FILE = "fort-to-nite copy-Info.plist";
@@ -1134,7 +1136,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 39;
+				CURRENT_PROJECT_VERSION = 40;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1168,6 +1170,7 @@
 				CODE_SIGN_ENTITLEMENTS = "fort-to-nite/fort-to-nite.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = 8268QCG5CG;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = "fort-to-nite/Ressources/Info.plist";
@@ -1225,7 +1228,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 39;
+				CURRENT_PROJECT_VERSION = 40;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1260,6 +1263,7 @@
 				CODE_SIGN_ENTITLEMENTS = "fort-to-nite/fort-to-nite.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = 8268QCG5CG;
 				INFOPLIST_FILE = "fort-to-nite/Ressources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
