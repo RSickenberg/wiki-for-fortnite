@@ -232,3 +232,10 @@
 
 - Adapted application with the hoverall json changes.
 - Under the hood improvements.
+
+# 2.0.5
+
+- Renamed the app ... again.
+- Improvements.
+- Mac Catalyst App.
+- Pod updates and migration to alamofire 5.

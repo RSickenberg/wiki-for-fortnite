@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "073A3710204D7CBA001D4AF5"
-               BuildableName = "fort-to-nite.app"
+               BuildableName = "FortPedia.app"
                BlueprintName = "fort-to-nite"
                ReferencedContainer = "container:fort-to-nite.xcodeproj">
             </BuildableReference>
@@ -27,6 +27,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "073A3710204D7CBA001D4AF5"
+            BuildableName = "FortPedia.app"
+            BlueprintName = "fort-to-nite"
+            ReferencedContainer = "container:fort-to-nite.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -49,17 +58,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "073A3710204D7CBA001D4AF5"
-            BuildableName = "fort-to-nite.app"
-            BlueprintName = "fort-to-nite"
-            ReferencedContainer = "container:fort-to-nite.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -76,13 +74,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "073A3710204D7CBA001D4AF5"
-            BuildableName = "fort-to-nite.app"
+            BuildableName = "FortPedia.app"
             BlueprintName = "fort-to-nite"
             ReferencedContainer = "container:fort-to-nite.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
       <LocationScenarioReference
          identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
          referenceType = "1">
@@ -99,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "073A3710204D7CBA001D4AF5"
-            BuildableName = "fort-to-nite.app"
+            BuildableName = "FortPedia.app"
             BlueprintName = "fort-to-nite"
             ReferencedContainer = "container:fort-to-nite.xcodeproj">
          </BuildableReference>

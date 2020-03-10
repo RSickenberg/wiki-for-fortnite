@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07280CFE2408173C00C1ADD0"
-               BuildableName = "fort-to-nite-catalyst.app"
+               BuildableName = "FortPedia.app"
                BlueprintName = "fort-to-nite-catalyst"
                ReferencedContainer = "container:fort-to-nite.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07280CFE2408173C00C1ADD0"
-            BuildableName = "fort-to-nite-catalyst.app"
+            BuildableName = "FortPedia.app"
             BlueprintName = "fort-to-nite-catalyst"
             ReferencedContainer = "container:fort-to-nite.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07280CFE2408173C00C1ADD0"
-            BuildableName = "fort-to-nite-catalyst.app"
+            BuildableName = "FortPedia.app"
             BlueprintName = "fort-to-nite-catalyst"
             ReferencedContainer = "container:fort-to-nite.xcodeproj">
          </BuildableReference>
