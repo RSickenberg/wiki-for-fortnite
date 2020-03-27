@@ -3,6 +3,7 @@ VERSION 2  API CHANGES WITH DJANGO APPLICATION
 ==============================================
 
    Version 2.0 - API Changes with Django Application
+      27/03/2020 12:31  2.0.6  More pod updates
       27/03/2020 12:31  2.0.5  Pod updates and different fixes
       27/03/2020 12:31  2.0.4  MacOS catalyst
       27/03/2020 12:31  2.0.3  Rename app
