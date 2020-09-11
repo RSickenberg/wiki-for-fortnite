@@ -110,7 +110,8 @@ class WeaponViewController: UIViewController, UICollectionViewDelegate, UICollec
                 case .success(_):
                     SwiftSpinner.hide()
                     self?.reloadData()
-                case .failure(_):
+                case .failure(let error):
+                    print(error.localizedDescription)
                     SwiftSpinner.show("Tap to retry", animated: false).addTapHandler({
                         self?.getData()
                     }, subtitle: "API is in maintenance, or a new update is available.")

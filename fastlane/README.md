@@ -50,6 +50,11 @@ Frame some screenshots
 fastlane mac beta
 ```
 Push a new beta build to TestFlight
+### mac frame
+```
+fastlane mac frame
+```
+Frame some screenshots
 
 ----
 

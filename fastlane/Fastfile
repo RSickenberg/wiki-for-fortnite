@@ -109,4 +109,8 @@ platform :mac do
     build_app(scheme: "fort_to_nite-catalyst")
     upload_to_testflight(skip_waiting_for_build_processing: true)
   end
+  desc "Frame some screenshots"
+  lane :frame do
+    frameit(path: './screenshots/en-US/')
+  end
 end
