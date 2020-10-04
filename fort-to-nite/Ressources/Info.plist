@@ -94,6 +94,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>devBuild</key>
-	<true/>
+	<false/>
 </dict>
 </plist>
